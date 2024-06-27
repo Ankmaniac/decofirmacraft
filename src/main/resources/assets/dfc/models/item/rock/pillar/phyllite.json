@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "dfc:block/rock/pillar/phyllite",
+  "textures": {
+    "layer0": "dfc:item/rock/pillar/phyllite"
+  }
+}

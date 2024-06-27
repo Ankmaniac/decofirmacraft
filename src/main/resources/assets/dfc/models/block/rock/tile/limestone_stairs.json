@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/tile/limestone",
+    "top": "dfc:block/rock/tile/limestone",
+    "side": "dfc:block/rock/tile/limestone"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/tile/schist",
+    "top": "dfc:block/rock/tile/schist",
+    "side": "dfc:block/rock/tile/schist"
+  }
+}

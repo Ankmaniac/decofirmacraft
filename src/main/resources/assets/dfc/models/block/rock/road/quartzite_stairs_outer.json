@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/road/quartzite",
+    "top": "dfc:block/rock/road/quartzite",
+    "side": "dfc:block/rock/road/quartzite"
+  }
+}

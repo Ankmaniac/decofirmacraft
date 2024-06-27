@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/road/chert",
+    "top": "dfc:block/rock/road/chert",
+    "side": "dfc:block/rock/road/chert"
+  }
+}
