@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -122,6 +123,10 @@ public class ColumnBlock extends Block {
                 double speedZ = RANDOM.nextDouble() * 20 - 10;
                 double offsetY = RANDOM.nextDouble() * 1;
                 level.addParticle(new BlockParticleOption(ParticleTypes.BLOCK, state), pos.getX() + 0.5, pos.getY() + offsetY, pos.getZ() + 0.5, speedX, -0.1, speedZ);
+            }
+
+            if (player instanceof ServerPlayer) {
+                ((ServerPlayer) player).swing(hand, true);
             }
 
             ColumnProperties currentStyle = state.getValue(STYLE);
