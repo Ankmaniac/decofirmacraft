@@ -180,9 +180,10 @@
   "block.dfc.rock.tile.marble_stairs": "Marble Tile Stairs",
   "block.dfc.rock.tile.marble_wall": "Marble Tile Wall",
   "block.dfc.rock.pillar.marble": "Marble Pillar",
-  "block.dfc.rock.aqueduct.tavertine": "Tavertine Aqueduct",
+  "block.dfc.rock.aqueduct.travertine": "Travertine Aqueduct",
   "block.dfc.rock.aqueduct.serpentine": "Serpentine Aqueduct",
   "block.dfc.rock.aqueduct.arkose": "Arkose Aqueduct",
   "block.dfc.rock.aqueduct.blueschist": "Blueschist Aqueduct",
-  "block.dfc.rock.aqueduct.tuff": "Tuff Aqueduct"
+  "block.dfc.rock.aqueduct.tuff": "Tuff Aqueduct",
+  "block.dfc.rock.column.marble": "Marble Column"
 }

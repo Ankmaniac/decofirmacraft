@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/aqueduct/south",
   "textures": {
-    "texture": "dfc:block/rock/bricks/tavertine",
-    "particle": "dfc:block/rock/bricks/tavertine"
+    "texture": "dfc:block/rock/bricks/travertine",
+    "particle": "dfc:block/rock/bricks/travertine"
   }
 }

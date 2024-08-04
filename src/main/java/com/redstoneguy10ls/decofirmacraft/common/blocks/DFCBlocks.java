@@ -1,5 +1,6 @@
 package com.redstoneguy10ls.decofirmacraft.common.blocks;
 
+import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.ColumnBlock;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomRockBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
@@ -11,6 +12,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
@@ -48,6 +51,13 @@ public class DFCBlocks {
             ))
     );
 
+    public static final Map<Rock, RegistryObject<Block>> ROCKS_COLUMNS = Helpers.mapOfKeys(Rock.class, rock ->(
+            register(("rock/column/"+ rock.name()), () -> new
+                    ColumnBlock(BlockBehaviour.Properties.of()
+                    .mapColor(rock.color())
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .strength(6.5f,10)
+                    .noOcclusion()))));
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> blockSupplier)
     {

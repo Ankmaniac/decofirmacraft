@@ -16,7 +16,7 @@ import java.util.Locale;
 import java.util.function.Supplier;
 
 public enum DFCRock implements RegistryRock {
-    TAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE, SandBlockType.WHITE),
+    TRAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.STONE, SandBlockType.WHITE),
     SERPENTINE(RockDisplayCategory.METAMORPHIC, MapColor.COLOR_GREEN, SandBlockType.GREEN),
     ARKOSE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_ORANGE, SandBlockType.RED),
     BLUESCHIST(RockDisplayCategory.METAMORPHIC, MapColor.COLOR_BLUE, SandBlockType.GREEN),
