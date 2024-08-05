@@ -1,0 +1,65 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "facing=east,half=lower,open=false": {
+      "model": "dfc:block/metal/gate/wrought_iron_bottom"
+    },
+    "facing=east,half=lower,open=true": {
+      "model": "dfc:block/metal/gate/wrought_iron_bottom_open",
+      "y": 90
+    },
+    "facing=east,half=upper,open=false": {
+      "model": "dfc:block/metal/gate/wrought_iron_top"
+    },
+    "facing=east,half=upper,open=true": {
+      "model": "dfc:block/metal/gate/wrought_iron_top_open",
+      "y": 90
+    },
+    "facing=north,half=lower,open=false": {
+      "model": "dfc:block/metal/gate/wrought_iron_bottom",
+      "y": 270
+    },
+    "facing=north,half=lower,open=true": {
+      "model": "dfc:block/metal/gate/wrought_iron_bottom_open"
+    },
+    "facing=north,half=upper,open=false": {
+      "model": "dfc:block/metal/gate/wrought_iron_top",
+      "y": 270
+    },
+    "facing=north,half=upper,open=true": {
+      "model": "dfc:block/metal/gate/wrought_iron_top_open"
+    },
+    "facing=south,half=lower,open=false": {
+      "model": "dfc:block/metal/gate/wrought_iron_bottom",
+      "y": 90
+    },
+    "facing=south,half=lower,open=true": {
+      "model": "dfc:block/metal/gate/wrought_iron_bottom_open",
+      "y": 180
+    },
+    "facing=south,half=upper,open=false": {
+      "model": "dfc:block/metal/gate/wrought_iron_top",
+      "y": 90
+    },
+    "facing=south,half=upper,open=true": {
+      "model": "dfc:block/metal/gate/wrought_iron_top_open",
+      "y": 180
+    },
+    "facing=west,half=lower,open=false": {
+      "model": "dfc:block/metal/gate/wrought_iron_bottom",
+      "y": 180
+    },
+    "facing=west,half=lower,open=true": {
+      "model": "dfc:block/metal/gate/wrought_iron_bottom_open",
+      "y": 270
+    },
+    "facing=west,half=upper,open=false": {
+      "model": "dfc:block/metal/gate/wrought_iron_top",
+      "y": 180
+    },
+    "facing=west,half=upper,open=true": {
+      "model": "dfc:block/metal/gate/wrought_iron_top_open",
+      "y": 270
+    }
+  }
+}
