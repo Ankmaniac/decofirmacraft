@@ -1,17 +1,21 @@
 package com.redstoneguy10ls.decofirmacraft.common.blocks;
 
+import com.redstoneguy10ls.decofirmacraft.common.blocks.metal.GateBlock;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.ColumnBlock;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomRockBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
 import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraftforge.registries.DeferredRegister;
@@ -51,6 +55,7 @@ public class DFCBlocks {
             ))
     );
 
+    //columns
     public static final Map<Rock, RegistryObject<Block>> ROCKS_COLUMNS = Helpers.mapOfKeys(Rock.class, rock ->(
             register(("rock/column/"+ rock.name()), () -> new
                     ColumnBlock(BlockBehaviour.Properties.of()
@@ -58,6 +63,19 @@ public class DFCBlocks {
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(6.5f,10)
                     .noOcclusion()))));
+
+    //metal gates not registering for some reason fix later
+//    public static final Map<Metal, RegistryObject<Block>> METAL_GATES = Helpers.mapOfKeys(Metal.class, metal ->(
+//            register(("metal/gate/"+ metal.name()), () -> new GateBlock(BlockBehaviour.Properties.of().noOcclusion()))));
+
+    public static final Map<Metal.Default, RegistryObject<Block>> METAL_GATES = Helpers.mapOfKeys(Metal.Default.class, Metal.Default::hasTools, metals ->(
+            register(("metal/gate/"+ metals.name()), () ->
+                    new GateBlock(BlockBehaviour.Properties.of()
+                            .mapColor(metals.mapColor())
+                            .requiresCorrectToolForDrops()
+                            .strength(6.0F, 7.0F)
+                            .sound(SoundType.METAL)
+                            .noOcclusion()))));
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> blockSupplier)
     {
