@@ -178,7 +178,7 @@ public class ColumnBlock extends Block {
 
     public boolean connects(BlockState adjacent)
     {
-        return Helpers.isBlock(adjacent, DFCTags.Blocks.Rock_Columns);
+        return Helpers.isBlock(adjacent, DFCTags.Blocks.ROCK_COLUMNS);
     }
 
     @Override

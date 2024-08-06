@@ -1,0 +1,13 @@
+{"replace": false,
+  "values": [
+    "dfc:metal/gate/bismuth_bronze",
+    "dfc:metal/gate/black_bronze",
+    "dfc:metal/gate/black_steel",
+    "dfc:metal/gate/blue_steel",
+    "dfc:metal/gate/bronze",
+    "dfc:metal/gate/copper",
+    "dfc:metal/gate/red_steel",
+    "dfc:metal/gate/steel",
+    "dfc:metal/gate/wrought_iron"
+  ]
+}
