@@ -64,10 +64,6 @@ public class DFCBlocks {
                     .strength(6.5f,10)
                     .noOcclusion()))));
 
-    //metal gates not registering for some reason fix later
-//    public static final Map<Metal, RegistryObject<Block>> METAL_GATES = Helpers.mapOfKeys(Metal.class, metal ->(
-//            register(("metal/gate/"+ metal.name()), () -> new GateBlock(BlockBehaviour.Properties.of().noOcclusion()))));
-
     public static final Map<Metal.Default, RegistryObject<Block>> METAL_GATES = Helpers.mapOfKeys(Metal.Default.class, Metal.Default::hasTools, metals ->(
             register(("metal/gate/"+ metals.name()), () ->
                     new GateBlock(BlockBehaviour.Properties.of()

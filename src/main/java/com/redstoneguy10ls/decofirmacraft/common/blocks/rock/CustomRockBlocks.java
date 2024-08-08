@@ -16,7 +16,9 @@ import java.util.function.Supplier;
 public enum CustomRockBlocks implements StringRepresentable {
     PILLAR((rock, self) -> new RotatedPillarBlock(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false),
     ROAD((rock, self) -> new RoadBlock(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),true),
-    TILE((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),true),;
+    TILE((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),true),
+    THIN_OUTLINE((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false),
+    THICK_OUTLINE((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false),;
     public static final CustomRockBlocks[] VALUES = values();
 
     public static CustomRockBlocks valueOf(int i){return i >= 0 && i < VALUES.length ? VALUES[i] : PILLAR;}

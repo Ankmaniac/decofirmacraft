@@ -10,6 +10,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -55,7 +56,11 @@ public class GateBlock extends Block {
             final BlockPos pos = ctx.getClickedPos();
             final BlockPos pos1 = pos.above();
             final boolean flag = level.hasNeighborSignal(pos) || level.hasNeighborSignal(pos1);
-            return this.defaultBlockState().setValue(FACING, facing).setValue(OPEN, flag).setValue(HALF, Half.BOTTOM).setValue(POWERED, flag);
+            if (pos.getY() < level.getMaxBuildHeight() - 1 && level.getBlockState(pos.above()).isAir()) {
+                return this.defaultBlockState().setValue(FACING, facing).setValue(OPEN, flag).setValue(HALF, Half.BOTTOM).setValue(POWERED, flag);
+            } else {
+                return null;
+            }
         }
         return null;
     }
@@ -78,7 +83,6 @@ public class GateBlock extends Block {
         }
     }
 
-    //incomplete finish later
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
         Direction direction = state.getValue(FACING);
@@ -115,20 +119,27 @@ public class GateBlock extends Block {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         state = state.cycle(OPEN);
-        world.setBlock(pos, state, 10);
-        world.playSound(null, pos, state.getValue(OPEN) ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F);
+        level.setBlock(pos, state, 10);
+        level.playSound(null, pos, state.getValue(OPEN) ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F);
 
         BlockPos otherHalfPos = state.getValue(HALF) == Half.BOTTOM ? pos.above() : pos.below();
-        BlockState otherHalfState = world.getBlockState(otherHalfPos);
+        BlockState otherHalfState = level.getBlockState(otherHalfPos);
+
         if (otherHalfState.getBlock() == this) {
             otherHalfState = otherHalfState.cycle(OPEN);
-            world.setBlock(otherHalfPos, otherHalfState, 10);
-            world.playSound(null, otherHalfPos, otherHalfState.getValue(OPEN) ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.setBlock(otherHalfPos, otherHalfState, 10);
+            level.playSound(null, otherHalfPos, otherHalfState.getValue(OPEN) ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F);
+            return InteractionResult.sidedSuccess(level.isClientSide);
         }
+        return InteractionResult.FAIL;
+    }
 
-        return InteractionResult.sidedSuccess(world.isClientSide);
+    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        BlockPos blockpos = pos.below();
+        BlockState blockstate = level.getBlockState(blockpos);
+        return state.getValue(HALF) == Half.BOTTOM ? blockstate.isFaceSturdy(level, blockpos, Direction.UP) : blockstate.is(this);
     }
 
     @Override

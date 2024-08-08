@@ -3,7 +3,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "dfc:block/rock/aqueduct/tavertine/base"
+        "model": "dfc:block/rock/aqueduct/travertine/base"
       }
     },
     {
@@ -11,7 +11,7 @@
         "north": "false"
       },
       "apply": {
-        "model": "dfc:block/rock/aqueduct/tavertine/north"
+        "model": "dfc:block/rock/aqueduct/travertine/north"
       }
     },
     {
@@ -19,7 +19,7 @@
         "east": "false"
       },
       "apply": {
-        "model": "dfc:block/rock/aqueduct/tavertine/east"
+        "model": "dfc:block/rock/aqueduct/travertine/east"
       }
     },
     {
@@ -27,7 +27,7 @@
         "south": "false"
       },
       "apply": {
-        "model": "dfc:block/rock/aqueduct/tavertine/south"
+        "model": "dfc:block/rock/aqueduct/travertine/south"
       }
     },
     {
@@ -35,7 +35,7 @@
         "west": "false"
       },
       "apply": {
-        "model": "dfc:block/rock/aqueduct/tavertine/west"
+        "model": "dfc:block/rock/aqueduct/travertine/west"
       }
     }
   ]
