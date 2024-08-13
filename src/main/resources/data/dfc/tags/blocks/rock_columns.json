@@ -1,7 +1,9 @@
 {"replace": false,
   "values": [
     "dfc:rock/column/andesite",
+    "dfc:rock/column/arkose",
     "dfc:rock/column/basalt",
+    "dfc:rock/column/blueschist",
     "dfc:rock/column/chalk",
     "dfc:rock/column/chert",
     "dfc:rock/column/claystone",
@@ -18,7 +20,10 @@
     "dfc:rock/column/quartzite",
     "dfc:rock/column/rhyolite",
     "dfc:rock/column/schist",
+    "dfc:rock/column/serpentine",
     "dfc:rock/column/shale",
-    "dfc:rock/column/slate"
+    "dfc:rock/column/slate",
+    "dfc:rock/column/travertine",
+    "dfc:rock/column/tuff"
   ]
 }

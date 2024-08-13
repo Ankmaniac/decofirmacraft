@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "dfc:block/rock/pressure_plate/arkose"
+    },
+    "powered=true": {
+      "model": "dfc:block/rock/pressure_plate/arkose_down"
+    }
+  }
+}

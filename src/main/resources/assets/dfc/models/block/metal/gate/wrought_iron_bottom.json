@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout",
 	"textures": {
 		"0": "dfc:block/metal/gate/wrought_iron_bottom",
 		"particle": "dfc:block/metal/gate/wrought_iron_bottom"

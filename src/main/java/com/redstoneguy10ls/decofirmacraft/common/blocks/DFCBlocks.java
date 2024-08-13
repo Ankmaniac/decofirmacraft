@@ -2,6 +2,7 @@ package com.redstoneguy10ls.decofirmacraft.common.blocks;
 
 import com.redstoneguy10ls.decofirmacraft.common.blocks.metal.GateBlock;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.ColumnBlock;
+import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomDFCRockBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomRockBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
@@ -17,7 +18,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
@@ -55,14 +55,19 @@ public class DFCBlocks {
             ))
     );
 
-    //columns
-    public static final Map<Rock, RegistryObject<Block>> ROCKS_COLUMNS = Helpers.mapOfKeys(Rock.class, rock ->(
-            register(("rock/column/"+ rock.name()), () -> new
-                    ColumnBlock(BlockBehaviour.Properties.of()
-                    .mapColor(rock.color())
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .strength(6.5f,10)
-                    .noOcclusion()))));
+    public static final Map<DFCRock, Map<CustomDFCRockBlocks, RegistryObject<Block>>> CUSTOM_DFC_ROCK_BLOCKS = Helpers.mapOfKeys(DFCRock.class, rock ->
+            Helpers.mapOfKeys(CustomDFCRockBlocks.class, type ->
+                    register(("rock/" + type.name() + "/" + rock.name()), () -> type.create(rock))
+            )
+    );
+
+    public static final Map<DFCRock, Map<CustomDFCRockBlocks, DecorationBlockRegistryObject>> DFC_ROCK_DECORATIONS = Helpers.mapOfKeys(DFCRock.class, rock ->
+            Helpers.mapOfKeys(CustomDFCRockBlocks.class, CustomDFCRockBlocks::hasVariants, type -> new DecorationBlockRegistryObject(
+                    register(("rock/" + type.name() + "/" + rock.name()) + "_slab", () -> type.createSlab(rock)),
+                    register(("rock/" + type.name() + "/" + rock.name()) + "_stairs", () -> type.createStairs(rock)),
+                    register(("rock/" + type.name() + "/" + rock.name()) + "_wall", () -> type.createWall(rock))
+            ))
+    );
 
     public static final Map<Metal.Default, RegistryObject<Block>> METAL_GATES = Helpers.mapOfKeys(Metal.Default.class, Metal.Default::hasTools, metals ->(
             register(("metal/gate/"+ metals.name()), () ->

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=base": {
+      "model": "dfc:block/rock/spike/travertine_base"
+    },
+    "part=middle": {
+      "model": "dfc:block/rock/spike/travertine_middle"
+    },
+    "part=tip": {
+      "model": "dfc:block/rock/spike/travertine_tip"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "dfc:block/rock/tile/blueschist_slab"
+    },
+    "type=top": {
+      "model": "dfc:block/rock/tile/blueschist_slab_top"
+    },
+    "type=double": {
+      "model": "dfc:block/rock/tile/blueschist"
+    }
+  }
+}

@@ -1,7 +1,9 @@
 package com.redstoneguy10ls.decofirmacraft.common.items;
 
 import com.redstoneguy10ls.decofirmacraft.common.blocks.DFCBlocks;
+import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomDFCRockBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomRockBlocks;
+import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -39,6 +41,18 @@ public class DFCTabs {
                 if(type.hasVariants())
                 {
                     accept(out, DFCBlocks.ROCK_DECORATIONS.get(rock).get(type));
+                }
+
+            }
+        }
+        for(DFCRock rock : DFCRock.VALUES)
+        {
+            for (CustomDFCRockBlocks type : CustomDFCRockBlocks.VALUES)
+            {
+                accept(out, DFCBlocks.CUSTOM_DFC_ROCK_BLOCKS, rock, type);
+                if(type.hasVariants())
+                {
+                    accept(out, DFCBlocks.DFC_ROCK_DECORATIONS.get(rock).get(type));
                 }
 
             }

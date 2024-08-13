@@ -1,0 +1,244 @@
+{
+  "variants": {
+    "down=true,facing=east,up=true,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_double_end",
+      "y": 90
+    },
+    "down=true,facing=north,up=true,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_double_end"
+    },
+    "down=true,facing=south,up=true,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_double_end",
+      "y": 180
+    },
+    "down=true,facing=west,up=true,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_double_end",
+      "y": 270
+    },
+    "down=false,facing=east,up=true,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_top",
+      "y": 90
+    },
+    "down=false,facing=north,up=true,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_top"
+    },
+    "down=false,facing=south,up=true,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_top",
+      "y": 180
+    },
+    "down=false,facing=west,up=true,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_top",
+      "y": 270
+    },
+    "down=true,facing=east,up=false,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_bottom",
+      "y": 90
+    },
+    "down=true,facing=north,up=false,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_bottom"
+    },
+    "down=true,facing=south,up=false,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_bottom",
+      "y": 180
+    },
+    "down=true,facing=west,up=false,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate_bottom",
+      "y": 270
+    },
+    "down=false,facing=east,up=false,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate",
+      "y": 90
+    },
+    "down=false,facing=north,up=false,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate"
+    },
+    "down=false,facing=south,up=false,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate",
+      "y": 180
+    },
+    "down=false,facing=west,up=false,style=doric": {
+      "model": "dfc:block/rock/column/conglomerate",
+      "y": 270
+    },
+    "down=true,facing=east,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_ionic",
+      "y": 90
+    },
+    "down=true,facing=north,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_ionic"
+    },
+    "down=true,facing=south,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_ionic",
+      "y": 180
+    },
+    "down=true,facing=west,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_ionic",
+      "y": 270
+    },
+    "down=false,facing=east,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_top_ionic",
+      "y": 90
+    },
+    "down=false,facing=north,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_top_ionic"
+    },
+    "down=false,facing=south,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_top_ionic",
+      "y": 180
+    },
+    "down=false,facing=west,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_top_ionic",
+      "y": 270
+    },
+    "down=true,facing=east,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_bottom",
+      "y": 90
+    },
+    "down=true,facing=north,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_bottom"
+    },
+    "down=true,facing=south,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_bottom",
+      "y": 180
+    },
+    "down=true,facing=west,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate_bottom",
+      "y": 270
+    },
+    "down=false,facing=east,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate",
+      "y": 90
+    },
+    "down=false,facing=north,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate"
+    },
+    "down=false,facing=south,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate",
+      "y": 180
+    },
+    "down=false,facing=west,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/conglomerate",
+      "y": 270
+    },
+    "down=true,facing=east,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_corinthian",
+      "y": 90
+    },
+    "down=true,facing=north,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_corinthian"
+    },
+    "down=true,facing=south,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_corinthian",
+      "y": 180
+    },
+    "down=true,facing=west,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_corinthian",
+      "y": 270
+    },
+    "down=false,facing=east,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_top_corinthian",
+      "y": 90
+    },
+    "down=false,facing=north,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_top_corinthian"
+    },
+    "down=false,facing=south,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_top_corinthian",
+      "y": 180
+    },
+    "down=false,facing=west,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_top_corinthian",
+      "y": 270
+    },
+    "down=true,facing=east,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_bottom",
+      "y": 90
+    },
+    "down=true,facing=north,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_bottom"
+    },
+    "down=true,facing=south,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_bottom",
+      "y": 180
+    },
+    "down=true,facing=west,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate_bottom",
+      "y": 270
+    },
+    "down=false,facing=east,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate",
+      "y": 90
+    },
+    "down=false,facing=north,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate"
+    },
+    "down=false,facing=south,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate",
+      "y": 180
+    },
+    "down=false,facing=west,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/conglomerate",
+      "y": 270
+    },
+    "down=true,facing=east,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_tuscan",
+      "y": 90
+    },
+    "down=true,facing=north,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_tuscan"
+    },
+    "down=true,facing=south,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_tuscan",
+      "y": 180
+    },
+    "down=true,facing=west,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_double_end_tuscan",
+      "y": 270
+    },
+    "down=false,facing=east,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_top_tuscan",
+      "y": 90
+    },
+    "down=false,facing=north,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_top_tuscan"
+    },
+    "down=false,facing=south,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_top_tuscan",
+      "y": 180
+    },
+    "down=false,facing=west,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_top_tuscan",
+      "y": 270
+    },
+    "down=true,facing=east,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_bottom_tuscan",
+      "y": 90
+    },
+    "down=true,facing=north,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_bottom_tuscan"
+    },
+    "down=true,facing=south,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_bottom_tuscan",
+      "y": 180
+    },
+    "down=true,facing=west,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_bottom_tuscan",
+      "y": 270
+    },
+    "down=false,facing=east,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_tuscan",
+      "y": 90
+    },
+    "down=false,facing=north,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_tuscan"
+    },
+    "down=false,facing=south,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_tuscan",
+      "y": 180
+    },
+    "down=false,facing=west,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/conglomerate_tuscan",
+      "y": 270
+    }
+  }
+}
