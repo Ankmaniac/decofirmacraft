@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/spike_base",
+  "textures": {
+    "all": "dfc:block/rock/raw/arkose",
+    "particle": "dfc:block/rock/raw/arkose"
+  }
+}

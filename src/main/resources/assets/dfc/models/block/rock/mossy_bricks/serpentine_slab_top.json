@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "dfc:block/rock/mossy_bricks/serpentine",
+    "top": "dfc:block/rock/mossy_bricks/serpentine",
+    "side": "dfc:block/rock/mossy_bricks/serpentine"
+  }
+}

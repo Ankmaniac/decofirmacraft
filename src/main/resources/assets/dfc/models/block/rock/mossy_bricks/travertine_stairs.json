@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/mossy_bricks/travertine",
+    "top": "dfc:block/rock/mossy_bricks/travertine",
+    "side": "dfc:block/rock/mossy_bricks/travertine"
+  }
+}

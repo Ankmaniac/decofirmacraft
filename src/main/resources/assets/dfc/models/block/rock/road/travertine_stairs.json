@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/road/travertine",
+    "top": "dfc:block/rock/road/travertine",
+    "side": "dfc:block/rock/road/travertine"
+  }
+}

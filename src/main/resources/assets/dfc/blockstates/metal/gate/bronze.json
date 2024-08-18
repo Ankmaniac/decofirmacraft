@@ -1,63 +1,63 @@
 {
   "variants": {
     "facing=east,half=bottom,open=false": {
-      "model": "dfc:block/metal/gate/wrought_iron_bottom",
+      "model": "dfc:block/metal/gate/bronze_bottom",
       "y": 90
     },
     "facing=east,half=bottom,open=true": {
-      "model": "dfc:block/metal/gate/wrought_iron_bottom_open",
+      "model": "dfc:block/metal/gate/bronze_bottom_open",
       "y": 90
     },
     "facing=east,half=top,open=false": {
-      "model": "dfc:block/metal/gate/wrought_iron_top",
+      "model": "dfc:block/metal/gate/bronze_top",
       "y": 90
     },
     "facing=east,half=top,open=true": {
-      "model": "dfc:block/metal/gate/wrought_iron_top_open",
+      "model": "dfc:block/metal/gate/bronze_top_open",
       "y": 90
     },
     "facing=north,half=bottom,open=false": {
-      "model": "dfc:block/metal/gate/wrought_iron_bottom"
+      "model": "dfc:block/metal/gate/bronze_bottom"
     },
     "facing=north,half=bottom,open=true": {
-      "model": "dfc:block/metal/gate/wrought_iron_bottom_open"
+      "model": "dfc:block/metal/gate/bronze_bottom_open"
     },
     "facing=north,half=top,open=false": {
-      "model": "dfc:block/metal/gate/wrought_iron_top"
+      "model": "dfc:block/metal/gate/bronze_top"
     },
     "facing=north,half=top,open=true": {
-      "model": "dfc:block/metal/gate/wrought_iron_top_open"
+      "model": "dfc:block/metal/gate/bronze_top_open"
     },
     "facing=south,half=bottom,open=false": {
-      "model": "dfc:block/metal/gate/wrought_iron_bottom",
+      "model": "dfc:block/metal/gate/bronze_bottom",
       "y": 180
     },
     "facing=south,half=bottom,open=true": {
-      "model": "dfc:block/metal/gate/wrought_iron_bottom_open",
+      "model": "dfc:block/metal/gate/bronze_bottom_open",
       "y": 180
     },
     "facing=south,half=top,open=false": {
-      "model": "dfc:block/metal/gate/wrought_iron_top",
+      "model": "dfc:block/metal/gate/bronze_top",
       "y": 180
     },
     "facing=south,half=top,open=true": {
-      "model": "dfc:block/metal/gate/wrought_iron_top_open",
+      "model": "dfc:block/metal/gate/bronze_top_open",
       "y": 180
     },
     "facing=west,half=bottom,open=false": {
-      "model": "dfc:block/metal/gate/wrought_iron_bottom",
+      "model": "dfc:block/metal/gate/bronze_bottom",
       "y": 270
     },
     "facing=west,half=bottom,open=true": {
-      "model": "dfc:block/metal/gate/wrought_iron_bottom_open",
+      "model": "dfc:block/metal/gate/bronze_bottom_open",
       "y": 270
     },
     "facing=west,half=top,open=false": {
-      "model": "dfc:block/metal/gate/wrought_iron_top",
+      "model": "dfc:block/metal/gate/bronze_top",
       "y": 270
     },
     "facing=west,half=top,open=true": {
-      "model": "dfc:block/metal/gate/wrought_iron_top_open",
+      "model": "dfc:block/metal/gate/bronze_top_open",
       "y": 270
     }
   }

@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/cobble/blueschist",
+    "top": "dfc:block/rock/cobble/blueschist",
+    "side": "dfc:block/rock/cobble/blueschist"
+  }
+}

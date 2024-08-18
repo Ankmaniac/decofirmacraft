@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/rock/cracked_bricks/travertine",
+    "top": "dfc:block/rock/cracked_bricks/travertine",
+    "side": "dfc:block/rock/cracked_bricks/travertine"
+  }
+}

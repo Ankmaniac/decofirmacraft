@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/rock/tile/blueschist",
+    "top": "dfc:block/rock/tile/blueschist",
+    "side": "dfc:block/rock/tile/blueschist"
+  }
+}

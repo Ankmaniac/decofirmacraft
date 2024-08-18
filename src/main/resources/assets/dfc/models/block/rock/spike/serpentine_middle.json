@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/spike_middle",
+  "textures": {
+    "all": "dfc:block/rock/raw/serpentine",
+    "particle": "dfc:block/rock/raw/serpentine"
+  }
+}

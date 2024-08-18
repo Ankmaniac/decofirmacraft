@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/rock/anvil",
+  "textures": {
+    "texture": "dfc:block/rock/raw/tuff"
+  }
+}
