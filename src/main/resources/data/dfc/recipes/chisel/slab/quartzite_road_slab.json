@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/road/quartzite",
+  "result": "dfc:rock/road/quartzite_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/road/quartzite_slab"
+  }
+}

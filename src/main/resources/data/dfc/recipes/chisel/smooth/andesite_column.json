@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/andesite",
+  "result": "dfc:rock/column/andesite",
+  "mode": "smooth"
+}

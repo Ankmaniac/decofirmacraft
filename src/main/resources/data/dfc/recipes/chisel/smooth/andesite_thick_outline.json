@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/smooth/andesite",
+  "result": "dfc:rock/thick_outline/andesite",
+  "mode": "smooth"
+}

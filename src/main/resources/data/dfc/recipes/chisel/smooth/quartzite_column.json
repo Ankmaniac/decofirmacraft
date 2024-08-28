@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/quartzite",
+  "result": "dfc:rock/column/quartzite",
+  "mode": "smooth"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/smooth/limestone",
+  "result": "dfc:rock/thick_outline/limestone",
+  "mode": "smooth"
+}

@@ -1,0 +1,55 @@
+{
+  "variants": {
+    "count=1": [
+      {
+        "model": "dfc:block/rock/loose/blueschist_1",
+        "y": 90
+      },
+      {
+        "model": "dfc:block/rock/loose/blueschist_1"
+      },
+      {
+        "model": "dfc:block/rock/loose/blueschist_1",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/rock/loose/blueschist_1",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "dfc:block/rock/loose/blueschist_2",
+        "y": 90
+      },
+      {
+        "model": "dfc:block/rock/loose/blueschist_2"
+      },
+      {
+        "model": "dfc:block/rock/loose/blueschist_2",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/rock/loose/blueschist_2",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "dfc:block/rock/loose/blueschist_3",
+        "y": 90
+      },
+      {
+        "model": "dfc:block/rock/loose/blueschist_3"
+      },
+      {
+        "model": "dfc:block/rock/loose/blueschist_3",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/rock/loose/blueschist_3",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/road/quartzite"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/road/quartzite_wall",
+    "count": 6
+  }
+}

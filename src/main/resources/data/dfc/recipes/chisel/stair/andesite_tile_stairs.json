@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/andesite",
+  "result": "dfc:rock/tile/andesite_stairs",
+  "mode": "stair"
+}

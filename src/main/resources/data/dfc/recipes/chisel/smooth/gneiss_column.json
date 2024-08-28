@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/gneiss",
+  "result": "dfc:rock/column/gneiss",
+  "mode": "smooth"
+}

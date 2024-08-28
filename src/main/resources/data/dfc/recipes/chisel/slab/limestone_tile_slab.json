@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/limestone",
+  "result": "dfc:rock/tile/limestone_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/tile/limestone_slab"
+  }
+}

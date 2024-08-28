@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/road/arkose"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/road/arkose_stairs",
+    "count": 8
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/tile/dacite"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/tile/dacite_stairs",
+    "count": 8
+  }
+}

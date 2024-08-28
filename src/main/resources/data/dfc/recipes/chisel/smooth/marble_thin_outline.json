@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/thick_outline/marble",
+  "result": "dfc:rock/thin_outline/marble",
+  "mode": "smooth"
+}

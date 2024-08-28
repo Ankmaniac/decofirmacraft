@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/claystone",
+  "result": "dfc:rock/tile/claystone_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/tile/claystone_slab"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/gabbro",
+  "result": "dfc:rock/tile/gabbro_stairs",
+  "mode": "stair"
+}

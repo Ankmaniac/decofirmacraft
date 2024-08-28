@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:metal/bars/bismuth_bronze"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/gate/bismuth_bronze",
+    "count": 3
+  }
+}

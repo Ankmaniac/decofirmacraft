@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BMB",
+    "MMM",
+    "BMB"
+  ],
+  "key": {
+    "M": {
+      "item": "tfc:brick/gneiss"
+    },
+    "B": {
+      "item": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/road/gneiss",
+    "count": 4
+  }
+}

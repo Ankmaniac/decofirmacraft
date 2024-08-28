@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/quartzite",
+  "result": "dfc:rock/tile/quartzite_stairs",
+  "mode": "stair"
+}

@@ -39,7 +39,6 @@ public class DFCBlocks {
             )
     );
 
-
     //pillar,roads,tiles
     public static final Map<Rock, Map<CustomRockBlocks, RegistryObject<Block>>> CUSTOM_ROCK_BLOCKS = Helpers.mapOfKeys(Rock.class, rock ->
             Helpers.mapOfKeys(CustomRockBlocks.class, type ->

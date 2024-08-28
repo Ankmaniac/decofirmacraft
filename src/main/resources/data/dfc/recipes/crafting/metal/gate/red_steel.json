@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:metal/bars/red_steel"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/gate/red_steel",
+    "count": 3
+  }
+}

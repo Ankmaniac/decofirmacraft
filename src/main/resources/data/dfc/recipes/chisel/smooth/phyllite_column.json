@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/phyllite",
+  "result": "dfc:rock/column/phyllite",
+  "mode": "smooth"
+}

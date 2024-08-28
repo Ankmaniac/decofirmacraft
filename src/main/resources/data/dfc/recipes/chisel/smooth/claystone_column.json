@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/claystone",
+  "result": "dfc:rock/column/claystone",
+  "mode": "smooth"
+}

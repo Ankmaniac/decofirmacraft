@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/tile/basalt"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/tile/basalt_slab",
+    "count": 6
+  }
+}

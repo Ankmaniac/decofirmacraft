@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/smooth/dacite",
+  "result": "dfc:rock/thick_outline/dacite",
+  "mode": "smooth"
+}

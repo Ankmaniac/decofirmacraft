@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/road/slate"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/road/slate_stairs",
+    "count": 8
+  }
+}

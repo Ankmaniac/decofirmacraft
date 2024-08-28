@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/road/shale",
+  "result": "dfc:rock/road/shale_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/road/shale_slab"
+  }
+}

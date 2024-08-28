@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:rock/loose/arkose",
+    "dfc:rock/mossy_loose/arkose",
+    "dfc:rock/loose/blueschist",
+    "dfc:rock/mossy_loose/blueschist",
+    "dfc:rock/loose/serpentine",
+    "dfc:rock/mossy_loose/serpentine",
+    "dfc:rock/loose/travertine",
+    "dfc:rock/mossy_loose/travertine",
+    "dfc:rock/loose/tuff",
+    "dfc:rock/mossy_loose/tuff"
+  ]
+}

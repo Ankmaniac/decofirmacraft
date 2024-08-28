@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/serpentine",
+  "result": "dfc:rock/column/serpentine",
+  "mode": "smooth"
+}

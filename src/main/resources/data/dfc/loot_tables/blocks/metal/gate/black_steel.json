@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "loot_pool",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dfc:metal/gate/black_steel",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "dfc:metal/gate/black_steel",
+              "properties": {
+                "half": "bottom"
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

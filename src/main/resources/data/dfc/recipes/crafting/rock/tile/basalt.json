@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MBM",
+    "BBB",
+    "MBM"
+  ],
+  "key": {
+    "M": {
+      "item": "tfc:brick/basalt"
+    },
+    "B": {
+      "item": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/tile/basalt",
+    "count": 4
+  }
+}

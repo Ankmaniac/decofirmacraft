@@ -1,3 +1,6 @@
 {
-  "texture": "dfc:item/metal/gate/bismuth_bronze"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dfc:item/metal/gate/bismuth_bronze"
+  }
 }

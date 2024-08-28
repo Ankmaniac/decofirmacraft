@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/chert",
+  "result": "dfc:rock/tile/chert_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/tile/chert_slab"
+  }
+}

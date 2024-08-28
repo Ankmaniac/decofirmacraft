@@ -1,0 +1,12 @@
+{"replace": false,
+  "values": [
+    "dfc:rock/bricks/arkose",
+    "dfc:rock/bricks/blueschist",
+    "dfc:rock/bricks/serpentine",
+    "dfc:rock/bricks/travertine",
+    "dfc:rock/bricks/tuff",
+    "#tfc:rock/chiseled_bricks",
+    "#tfc:rock/cracked_bricks",
+    "#tfc:rock/mossy_bricks"
+  ]
+}

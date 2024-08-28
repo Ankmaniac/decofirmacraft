@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/basalt",
+  "result": "dfc:rock/column/basalt",
+  "mode": "smooth"
+}

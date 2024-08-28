@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/travertine",
+  "result": "dfc:rock/tile/travertine_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/tile/travertine_slab"
+  }
+}

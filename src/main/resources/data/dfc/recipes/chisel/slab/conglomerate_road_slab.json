@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/road/conglomerate",
+  "result": "dfc:rock/road/conglomerate_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/road/conglomerate_slab"
+  }
+}

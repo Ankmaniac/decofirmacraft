@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/road/dacite",
+  "result": "dfc:rock/road/dacite_stairs",
+  "mode": "stair"
+}

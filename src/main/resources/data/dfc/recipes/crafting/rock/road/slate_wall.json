@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/road/slate"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/road/slate_wall",
+    "count": 6
+  }
+}

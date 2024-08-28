@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BMB",
+    "MMM",
+    "BMB"
+  ],
+  "key": {
+    "M": {
+      "item": "tfc:brick/diorite"
+    },
+    "B": {
+      "item": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/road/diorite",
+    "count": 4
+  }
+}

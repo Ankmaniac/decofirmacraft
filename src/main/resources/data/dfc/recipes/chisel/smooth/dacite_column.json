@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/dacite",
+  "result": "dfc:rock/column/dacite",
+  "mode": "smooth"
+}

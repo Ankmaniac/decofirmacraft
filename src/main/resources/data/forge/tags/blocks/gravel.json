@@ -1,0 +1,9 @@
+{"replace": false,
+  "values": [
+    "dfc:rock/gravel/arkose",
+    "dfc:rock/gravel/blueschist",
+    "dfc:rock/gravel/serpentine",
+    "dfc:rock/gravel/travertine",
+    "dfc:rock/gravel/tuff"
+  ]
+}

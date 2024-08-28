@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/diorite",
+  "result": "dfc:rock/tile/diorite_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/tile/diorite_slab"
+  }
+}

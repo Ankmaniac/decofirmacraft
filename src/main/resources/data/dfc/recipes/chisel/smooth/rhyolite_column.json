@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/rhyolite",
+  "result": "dfc:rock/column/rhyolite",
+  "mode": "smooth"
+}

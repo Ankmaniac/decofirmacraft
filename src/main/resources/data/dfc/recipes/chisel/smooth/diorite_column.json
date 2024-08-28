@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/diorite",
+  "result": "dfc:rock/column/diorite",
+  "mode": "smooth"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/road/slate",
+  "result": "dfc:rock/road/slate_stairs",
+  "mode": "stair"
+}

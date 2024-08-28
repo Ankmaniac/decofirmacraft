@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/raw/arkose_slab"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/pillar/arkose",
+    "count": 1
+  }
+}

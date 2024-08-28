@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/road/diorite",
+  "result": "dfc:rock/road/diorite_stairs",
+  "mode": "stair"
+}

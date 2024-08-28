@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BMB",
+    "MMM",
+    "BMB"
+  ],
+  "key": {
+    "M": {
+      "item": "tfc:brick/chert"
+    },
+    "B": {
+      "item": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/road/chert",
+    "count": 4
+  }
+}

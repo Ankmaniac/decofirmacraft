@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/gabbro",
+  "result": "dfc:rock/column/gabbro",
+  "mode": "smooth"
+}

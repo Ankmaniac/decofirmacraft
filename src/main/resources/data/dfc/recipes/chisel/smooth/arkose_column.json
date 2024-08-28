@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/arkose",
+  "result": "dfc:rock/column/arkose",
+  "mode": "smooth"
+}

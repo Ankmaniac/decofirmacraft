@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/tile/conglomerate"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/tile/conglomerate_wall",
+    "count": 6
+  }
+}

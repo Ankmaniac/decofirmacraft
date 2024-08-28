@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/smooth/chert",
+  "result": "dfc:rock/thick_outline/chert",
+  "mode": "smooth"
+}

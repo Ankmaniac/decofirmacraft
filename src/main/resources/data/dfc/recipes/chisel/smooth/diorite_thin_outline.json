@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/thick_outline/diorite",
+  "result": "dfc:rock/thin_outline/diorite",
+  "mode": "smooth"
+}

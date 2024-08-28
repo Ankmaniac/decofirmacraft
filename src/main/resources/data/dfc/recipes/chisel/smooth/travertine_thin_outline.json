@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/thick_outline/travertine",
+  "result": "dfc:rock/thin_outline/travertine",
+  "mode": "smooth"
+}

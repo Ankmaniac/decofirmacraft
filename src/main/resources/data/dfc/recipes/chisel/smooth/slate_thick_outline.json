@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/smooth/slate",
+  "result": "dfc:rock/thick_outline/slate",
+  "mode": "smooth"
+}

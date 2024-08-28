@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/road/granite"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/road/granite_slab",
+    "count": 6
+  }
+}

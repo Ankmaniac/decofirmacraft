@@ -50,6 +50,7 @@ public enum DFCRock implements RegistryRock {
     {
         return color;
     }
+
     @Override
     public Supplier<? extends Block> getBlock(Rock.BlockType type)
     {

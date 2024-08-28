@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/chalk",
+  "result": "dfc:rock/column/chalk",
+  "mode": "smooth"
+}

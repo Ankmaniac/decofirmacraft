@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/serpentine",
+  "result": "dfc:rock/tile/serpentine_stairs",
+  "mode": "stair"
+}

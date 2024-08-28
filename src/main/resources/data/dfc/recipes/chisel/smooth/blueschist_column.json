@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/blueschist",
+  "result": "dfc:rock/column/blueschist",
+  "mode": "smooth"
+}

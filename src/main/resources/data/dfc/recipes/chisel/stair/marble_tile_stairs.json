@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/marble",
+  "result": "dfc:rock/tile/marble_stairs",
+  "mode": "stair"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/road/dacite"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/road/dacite_wall",
+    "count": 6
+  }
+}

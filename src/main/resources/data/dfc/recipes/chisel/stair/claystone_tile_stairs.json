@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/tile/claystone",
+  "result": "dfc:rock/tile/claystone_stairs",
+  "mode": "stair"
+}

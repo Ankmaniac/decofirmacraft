@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/pillar/chert",
+  "result": "dfc:rock/column/chert",
+  "mode": "smooth"
+}

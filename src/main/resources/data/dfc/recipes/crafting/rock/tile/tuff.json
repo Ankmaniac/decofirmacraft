@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MBM",
+    "BBB",
+    "MBM"
+  ],
+  "key": {
+    "M": {
+      "item": "dfc:brick/tuff"
+    },
+    "B": {
+      "item": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/tile/tuff",
+    "count": 4
+  }
+}

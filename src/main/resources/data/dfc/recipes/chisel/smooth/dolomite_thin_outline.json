@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/thick_outline/dolomite",
+  "result": "dfc:rock/thin_outline/dolomite",
+  "mode": "smooth"
+}

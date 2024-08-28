@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/road/limestone",
+  "result": "dfc:rock/road/limestone_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/road/limestone_slab"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/road/gneiss",
+  "result": "dfc:rock/road/gneiss_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/road/gneiss_slab"
+  }
+}
