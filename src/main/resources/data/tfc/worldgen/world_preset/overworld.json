@@ -64,7 +64,8 @@
               {
                 "id": "mafic",
                 "layers": {
-                  "gabbro": "serpentine"
+                  "gabbro": "serpentine",
+                  "serpentine": "bottom"
                 }
               },
               {
