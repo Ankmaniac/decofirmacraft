@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dfc:block/rock/mossy_mossy_bricks/serpentine"
+      "model": "dfc:block/rock/mossy_bricks/serpentine"
     }
   }
 }

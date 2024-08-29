@@ -3,7 +3,7 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "dfc:block/rock/column/chalk",
-		"particle": "dfc:block/rock/raw/chalk"
+		"particle": "tfc:block/rock/raw/chalk"
 	},
 	"elements": [
 		{

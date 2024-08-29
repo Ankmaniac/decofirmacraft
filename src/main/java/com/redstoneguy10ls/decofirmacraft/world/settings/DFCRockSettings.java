@@ -2,6 +2,7 @@ package com.redstoneguy10ls.decofirmacraft.world.settings;
 
 import com.redstoneguy10ls.decofirmacraft.common.blocks.DFCBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
+import com.redstoneguy10ls.decofirmacraft.util.DFCHelpers;
 import net.dries007.tfc.common.blocks.SandstoneBlockType;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -16,13 +17,13 @@ import java.util.Optional;
 
 import static net.dries007.tfc.world.settings.RockSettings.register;
 
-public record DFCRockSettings(Block raw, Block hardened, Block gravel, Block cobble, Block sand, Block sandstone, Optional<Block> spike, Optional<Block> loose, Optional<Block> mossyLoose) {
+public class DFCRockSettings{
 
     public static void registerDFCRocks()
     {
         for (DFCRock rock : DFCRock.values())
         {
-            final ResourceLocation id = Helpers.identifier(rock.getSerializedName());
+            final ResourceLocation id = DFCHelpers.identifier(rock.getSerializedName());
             final Map<Rock.BlockType, RegistryObject<Block>> blocks = DFCBlocks.CUSTOM_ROCK_TYPES.get(rock);
 
             register(id, new RockSettings(

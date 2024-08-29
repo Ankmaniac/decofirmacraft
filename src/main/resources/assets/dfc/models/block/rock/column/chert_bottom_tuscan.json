@@ -3,7 +3,7 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "dfc:block/rock/column/chert",
-		"particle": "dfc:block/rock/raw/chert"
+		"particle": "tfc:block/rock/raw/chert"
 	},
 	"elements": [
 		{

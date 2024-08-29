@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "dfc:rock/loose/blue_schist",
-    "dfc:rock/mossy_loose/blue_schist",
+    "dfc:rock/loose/blueschist",
+    "dfc:rock/mossy_loose/blueschist",
     "dfc:rock/loose/serpentine",
     "dfc:rock/mossy_loose/serpentine"
   ]
