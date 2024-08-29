@@ -1,0 +1,6 @@
+{
+  "parent": "dfc:block/rock/spike/tuff_base",
+  "textures": {
+    "layer0": "dfc:block/rock/raw/tuff"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "parent": "block/pressure_plate_down",
   "textures": {
-    "all": "dfc:block/rock/raw/tuff"
+    "texture": "dfc:block/rock/raw/tuff"
   }
 }

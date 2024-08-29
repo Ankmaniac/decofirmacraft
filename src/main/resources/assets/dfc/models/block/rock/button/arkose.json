@@ -1,6 +1,6 @@
 {
   "parent": "block/button",
   "textures": {
-    "all": "dfc:block/rock/raw/arkose"
+    "texture": "dfc:block/rock/raw/arkose"
   }
 }

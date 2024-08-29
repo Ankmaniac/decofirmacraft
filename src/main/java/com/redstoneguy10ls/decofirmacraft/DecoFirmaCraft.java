@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.DFCBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCTabs;
+import com.redstoneguy10ls.decofirmacraft.world.settings.DFCRockSettings;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -29,5 +30,6 @@ public class DecoFirmaCraft {
     }
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        DFCRockSettings.registerDFCRocks();
     }
 }

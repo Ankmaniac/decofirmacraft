@@ -6,7 +6,9 @@ import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomRockBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.SelfTests;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -29,6 +31,10 @@ public class DFCTabs {
 
     public static final DFCTabs.CreativeTabHolder ROCKS =
             register("rock_tab", () -> new ItemStack(DFCBlocks.CUSTOM_ROCK_BLOCKS.get(Rock.ANDESITE).get(CustomRockBlocks.PILLAR).get()), DFCTabs::fillRock);
+    public static final DFCTabs.CreativeTabHolder ORES =
+            register("ore_tab", () -> new ItemStack(DFCBlocks.DFC_ROCK_ORES.get(DFCRock.ARKOSE).get(Ore.DIAMOND).get()), DFCTabs::fillOre);
+//    public static final DFCTabs.CreativeTabHolder METAL =
+//            register("metal_tab", () -> new ItemStack(DFCBlocks.METAL_GATES.get(Metal.Default.WROUGHT_IRON).get()), DFCTabs::fillMetal);
 
 
     private static void fillRock(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
@@ -57,7 +63,42 @@ public class DFCTabs {
 
             }
         }
+        for(DFCRock rock : DFCRock.VALUES)
+        {
+            for (Rock.BlockType type : Rock.BlockType.VALUES)
+            {
+                accept(out, DFCBlocks.CUSTOM_ROCK_TYPES, rock, type);
+                if(type.hasVariants())
+                {
+                    accept(out, DFCBlocks.CUSTOM_DFC_ROCK_DECORATIONS.get(rock).get(type));
+                }
+            }
+            accept(out, DFCItems.DFC_BRICKS, rock);
+        }
     }
+
+    private static void fillOre(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        for(Ore ore : Ore.values())
+        {
+            if (ore.isGraded())
+            {
+                DFCBlocks.DFC_ROCK_GRADED_ORES.values().forEach(map -> map.get(ore).values().forEach(reg -> accept(out, reg)));
+            }
+            else
+            {
+                DFCBlocks.DFC_ROCK_ORES.values().forEach(map -> accept(out, map, ore));
+            }
+        }
+    }
+
+//    private static void fillMetal(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+//    {
+//        for(Metal.Default metal : Metal.Default.values())
+//        {
+//            accept(out, DFCBlocks.METAL_GATES.get(metal));
+//        }
+//    }
 
 
     private static <T extends ItemLike, R extends Supplier<T>> void accept(CreativeModeTab.Output out, R reg)

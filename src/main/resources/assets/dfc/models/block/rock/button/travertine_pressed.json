@@ -1,6 +1,6 @@
 {
   "parent": "block/button_pressed",
   "textures": {
-    "all": "dfc:block/rock/raw/travertine"
+    "texture": "dfc:block/rock/raw/travertine"
   }
 }

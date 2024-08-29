@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "dfc:block/rock/raw/serpentine",
+    "overlay": "tfc:block/ore/halite"
+  }
+}

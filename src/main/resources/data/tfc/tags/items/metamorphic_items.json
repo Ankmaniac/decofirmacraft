@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "dfc:item/brick/blue_schist",
-    "dfc:item/brick/serpentine",
+    "dfc:brick/blue_schist",
+    "dfc:brick/serpentine",
     "#tfc:metamorphic_rocks",
     "dfc:rock/smooth/blue_schist",
     "dfc:rock/smooth/serpentine",

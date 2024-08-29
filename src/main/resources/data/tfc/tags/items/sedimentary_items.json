@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "dfc:item/brick/arkose",
-    "dfc:item/brick/travertine",
+    "dfc:brick/arkose",
+    "dfc:brick/travertine",
     "#tfc:sedimentary_rocks",
     "dfc:rock/smooth/arkose",
     "dfc:rock/smooth/travertine",

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "dfc:block/rock/raw/tuff",
+    "overlay": "tfc:block/ore/saltpeter"
+  }
+}

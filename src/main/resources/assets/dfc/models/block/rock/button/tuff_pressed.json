@@ -1,6 +1,6 @@
 {
   "parent": "block/button_pressed",
   "textures": {
-    "all": "dfc:block/rock/raw/tuff"
+    "texture": "dfc:block/rock/raw/tuff"
   }
 }

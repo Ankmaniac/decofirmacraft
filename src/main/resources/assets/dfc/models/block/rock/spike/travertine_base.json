@@ -1,7 +1,7 @@
 {
   "parent": "tfc:block/rock/spike_base",
   "textures": {
-    "all": "dfc:block/rock/raw/travertine",
+    "texture": "dfc:block/rock/raw/travertine",
     "particle": "dfc:block/rock/raw/travertine"
   }
 }

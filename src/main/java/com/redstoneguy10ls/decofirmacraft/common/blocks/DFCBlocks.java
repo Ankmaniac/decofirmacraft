@@ -6,8 +6,15 @@ import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomDFCRockBlocks
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomRockBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
+import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
+import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.TFCMagmaBlock;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockAnvilBlock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
@@ -18,6 +25,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
@@ -37,6 +45,22 @@ public class DFCBlocks {
             Helpers.mapOfKeys(Rock.BlockType.class, type ->
                     register(("rock/" + type.name() + "/" + rock.name()), () -> type.create(rock))
             )
+    );
+
+    public static final Map<DFCRock, Map<Rock.BlockType, DecorationBlockRegistryObject>> CUSTOM_DFC_ROCK_DECORATIONS = Helpers.mapOfKeys(DFCRock.class, rock ->
+            Helpers.mapOfKeys(Rock.BlockType.class, Rock.BlockType::hasVariants, type -> new DecorationBlockRegistryObject(
+                    register(("rock/" + type.name() + "/" + rock.name()) + "_slab", () -> type.createSlab(rock)),
+                    register(("rock/" + type.name() + "/" + rock.name()) + "_stairs", () -> type.createStairs(rock)),
+                    register(("rock/" + type.name() + "/" + rock.name()) + "_wall", () -> type.createWall(rock))
+            ))
+    );
+
+    public static final Map<DFCRock, RegistryObject<Block>> DFC_ROCK_ANVILS = Helpers.mapOfKeys(DFCRock.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock ->
+            register("rock/anvil/" + rock.name(), () -> new RockAnvilBlock(ExtendedProperties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(2, 10).requiresCorrectToolForDrops().blockEntity(TFCBlockEntities.ANVIL), DFCBlocks.CUSTOM_ROCK_TYPES.get(rock).get(Rock.BlockType.RAW)))
+    );
+
+    public static final Map<DFCRock, RegistryObject<Block>> DFC_MAGMA_BLOCKS = Helpers.mapOfKeys(DFCRock.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock ->
+            register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(TFCBlocks::always)))
     );
 
     //pillar,roads,tiles
@@ -66,6 +90,19 @@ public class DFCBlocks {
                     register(("rock/" + type.name() + "/" + rock.name()) + "_stairs", () -> type.createStairs(rock)),
                     register(("rock/" + type.name() + "/" + rock.name()) + "_wall", () -> type.createWall(rock))
             ))
+    );
+
+    public static final Map<DFCRock, Map<Ore, RegistryObject<Block>>> DFC_ROCK_ORES = Helpers.mapOfKeys(DFCRock.class, rock ->
+            Helpers.mapOfKeys(Ore.class, ore -> !ore.isGraded(), ore ->
+                    register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+            )
+    );
+    public static final Map<DFCRock, Map<Ore, Map<Ore.Grade, RegistryObject<Block>>>> DFC_ROCK_GRADED_ORES = Helpers.mapOfKeys(DFCRock.class, rock ->
+            Helpers.mapOfKeys(Ore.class, Ore::isGraded, ore ->
+                    Helpers.mapOfKeys(Ore.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+                    )
+            )
     );
 
     public static final Map<Metal.Default, RegistryObject<Block>> METAL_GATES = Helpers.mapOfKeys(Metal.Default.class, Metal.Default::hasTools, metals ->(

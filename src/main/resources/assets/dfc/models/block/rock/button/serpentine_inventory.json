@@ -1,6 +1,6 @@
 {
   "parent": "block/button_inventory",
   "textures": {
-    "all": "dfc:block/rock/raw/serpentine"
+    "texture": "dfc:block/rock/raw/serpentine"
   }
 }

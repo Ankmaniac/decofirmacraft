@@ -1,7 +1,7 @@
 {
   "parent": "tfc:block/rock/spike_tip",
   "textures": {
-    "all": "dfc:block/rock/raw/tuff",
+    "texture": "dfc:block/rock/raw/tuff",
     "particle": "dfc:block/rock/raw/tuff"
   }
 }

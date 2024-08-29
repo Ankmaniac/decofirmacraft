@@ -59,25 +59,25 @@ public enum DFCRock implements RegistryRock {
     @Override
     public Supplier<? extends Block> getAnvil()
     {
-        return TFCBlocks.ROCK_ANVILS.get(this);
+        return DFCBlocks.DFC_ROCK_ANVILS.get(this);
     }
 
     @Override
     public Supplier<? extends SlabBlock> getSlab(Rock.BlockType type)
     {
-        return TFCBlocks.ROCK_DECORATIONS.get(this).get(type).slab();
+        return DFCBlocks.CUSTOM_DFC_ROCK_DECORATIONS.get(this).get(type).slab();
     }
 
     @Override
     public Supplier<? extends StairBlock> getStair(Rock.BlockType type)
     {
-        return TFCBlocks.ROCK_DECORATIONS.get(this).get(type).stair();
+        return DFCBlocks.CUSTOM_DFC_ROCK_DECORATIONS.get(this).get(type).stair();
     }
 
     @Override
     public Supplier<? extends WallBlock> getWall(Rock.BlockType type)
     {
-        return TFCBlocks.ROCK_DECORATIONS.get(this).get(type).wall();
+        return DFCBlocks.CUSTOM_DFC_ROCK_DECORATIONS.get(this).get(type).wall();
     }
 
     @Override

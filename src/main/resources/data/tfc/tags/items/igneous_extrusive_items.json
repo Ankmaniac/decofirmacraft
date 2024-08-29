@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "dfc:item/brick/tuff",
+    "dfc:brick/tuff",
     "#tfc:igneous_extrusive_rocks",
     "dfc:rock/smooth/tuff",
     "dfc:rock/smooth/tuff_slab",
