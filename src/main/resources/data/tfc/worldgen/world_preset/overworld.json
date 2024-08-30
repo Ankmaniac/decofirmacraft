@@ -50,6 +50,12 @@
             ],
             "layers": [
               {
+                "id": "serpentine",
+                "layers": {
+                  "serpentine": "bottom"
+                }
+              },
+              {
                 "id": "felsic",
                 "layers": {
                   "granite": "bottom"
@@ -108,12 +114,6 @@
                 "id": "marble",
                 "layers": {
                   "marble": "bottom"
-                }
-              },
-              {
-                "id": "serpentine",
-                "layers": {
-                  "serpentine": "bottom"
                 }
               },
               {

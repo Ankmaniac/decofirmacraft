@@ -7,10 +7,7 @@ import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomRockBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
-import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
-import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.TFCBlocks;
-import net.dries007.tfc.common.blocks.TFCMagmaBlock;
+import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockAnvilBlock;
@@ -102,6 +99,11 @@ public class DFCBlocks {
                     Helpers.mapOfKeys(Ore.Grade.class, grade ->
                             register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
                     )
+            )
+    );
+    public static final Map<DFCRock, Map<OreDeposit, RegistryObject<Block>>> DFC_ORE_DEPOSITS = Helpers.mapOfKeys(DFCRock.class, rock ->
+            Helpers.mapOfKeys(OreDeposit.class, ore ->
+                    register("deposit/" + ore.name() + "/" + rock.name(), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.GRAVEL).strength(rock.category().hardness(2.0f)))) // Same hardness as gravel
             )
     );
 

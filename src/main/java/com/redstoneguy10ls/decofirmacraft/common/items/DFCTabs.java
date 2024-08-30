@@ -6,6 +6,7 @@ import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomRockBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
+import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.Metal;
@@ -89,6 +90,10 @@ public class DFCTabs {
             {
                 DFCBlocks.DFC_ROCK_ORES.values().forEach(map -> accept(out, map, ore));
             }
+        }
+        for (OreDeposit deposit : OreDeposit.values())
+        {
+            DFCBlocks.DFC_ORE_DEPOSITS.values().forEach(map -> accept(out, map, deposit));
         }
     }
 

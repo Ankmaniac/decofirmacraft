@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "dfc:block/rock/gravel/arkose",
+    "overlay": "tfc:block/deposit/cassiterite"
+  }
+}

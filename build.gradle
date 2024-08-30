@@ -117,7 +117,7 @@ dependencies {
     
     implementation fg.deobf("curse.maven:fusionctm-854949:5129294")
 
-    implementation fg.deobf("curse.maven:terrafirmacraft-302973:5276689")
+    implementation fg.deobf("curse.maven:terrafirmacraft-302973:5571484")
 
 }
 
