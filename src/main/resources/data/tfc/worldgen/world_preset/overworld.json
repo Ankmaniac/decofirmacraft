@@ -142,6 +142,7 @@
                   "slate": "phyllite",
                   "marble": "bottom",
                   "serpentine": "bottom",
+                  "blueschist": "bottom",
                   "quartzite": "bottom",
                   "diorite": "sedimentary",
                   "granite": "sedimentary",
