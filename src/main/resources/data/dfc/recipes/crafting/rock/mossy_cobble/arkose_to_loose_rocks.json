@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dfc:rock/mossy_cobble/arkose"
+    }
+  ],
+  "result": {
+    "item": "dfc:rock/mossy_loose/arkose",
+    "count": 4
+  }
+}

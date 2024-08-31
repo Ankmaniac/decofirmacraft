@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/poor_sphalerite/arkose",
+    "dfc:ore/poor_sphalerite/blueschist",
+    "dfc:ore/poor_sphalerite/serpentine",
+    "dfc:ore/poor_sphalerite/travertine",
+    "dfc:ore/poor_sphalerite/tuff"
+ ]
+}

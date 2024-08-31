@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/poor_native_silver/arkose",
+    "dfc:ore/poor_native_silver/blueschist",
+    "dfc:ore/poor_native_silver/serpentine",
+    "dfc:ore/poor_native_silver/travertine",
+    "dfc:ore/poor_native_silver/tuff"
+ ]
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/raw/serpentine",
+  "result": "dfc:rock/smooth/serpentine",
+  "mode": "smooth"
+}

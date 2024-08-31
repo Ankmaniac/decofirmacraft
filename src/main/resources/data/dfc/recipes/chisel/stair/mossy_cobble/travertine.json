@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/mossy_cobble/travertine",
+  "result": "dfc:rock/mossy_cobble/travertine_stairs",
+  "mode": "stair"
+}

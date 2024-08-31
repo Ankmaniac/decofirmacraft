@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/smooth/arkose",
+  "result": "dfc:rock/smooth/arkose_stairs",
+  "mode": "stair"
+}

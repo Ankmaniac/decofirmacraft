@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/normal_native_gold/arkose",
+    "dfc:ore/normal_native_gold/blueschist",
+    "dfc:ore/normal_native_gold/serpentine",
+    "dfc:ore/normal_native_gold/travertine",
+    "dfc:ore/normal_native_gold/tuff"
+ ]
+}

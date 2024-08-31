@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "MXM"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:brick/travertine"
+    },
+    "M": {
+      "tag": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/aqueduct/travertine"
+  }
+}

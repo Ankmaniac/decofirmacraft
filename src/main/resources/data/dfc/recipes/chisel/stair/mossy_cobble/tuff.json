@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/mossy_cobble/tuff",
+  "result": "dfc:rock/mossy_cobble/tuff_stairs",
+  "mode": "stair"
+}

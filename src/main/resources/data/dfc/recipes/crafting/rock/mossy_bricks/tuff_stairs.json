@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/mossy_bricks/tuff"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/mossy_bricks/tuff_stairs",
+    "count": 8
+  }
+}

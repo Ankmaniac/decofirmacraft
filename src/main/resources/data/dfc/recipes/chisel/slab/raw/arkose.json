@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/raw/arkose",
+  "result": "dfc:rock/raw/arkose_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/raw/arkose_slab"
+  }
+}

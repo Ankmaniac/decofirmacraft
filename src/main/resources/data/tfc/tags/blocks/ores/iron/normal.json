@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/normal_hematite/arkose",
+    "dfc:ore/normal_hematite/blueschist",
+    "dfc:ore/normal_hematite/serpentine",
+    "dfc:ore/normal_hematite/travertine",
+    "dfc:ore/normal_hematite/tuff",
+    "dfc:ore/normal_magnetite/arkose",
+    "dfc:ore/normal_magnetite/blueschist",
+    "dfc:ore/normal_magnetite/serpentine",
+    "dfc:ore/normal_magnetite/travertine",
+    "dfc:ore/normal_magnetite/tuff",
+    "dfc:ore/normal_limonite/arkose",
+    "dfc:ore/normal_limonite/blueschist",
+    "dfc:ore/normal_limonite/serpentine",
+    "dfc:ore/normal_limonite/travertine",
+    "dfc:ore/normal_limonite/tuff"
+ ]
+}

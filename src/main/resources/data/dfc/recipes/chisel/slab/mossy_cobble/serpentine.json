@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/mossy_cobble/serpentine",
+  "result": "dfc:rock/mossy_cobble/serpentine_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/mossy_cobble/serpentine_slab"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:rock/spike/tuff",
+  "copy_input": true
+}

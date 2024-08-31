@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_bismuthinite/blueschist",
+  "result": "dfc:ore/poor_bismuthinite/blueschist"
+}

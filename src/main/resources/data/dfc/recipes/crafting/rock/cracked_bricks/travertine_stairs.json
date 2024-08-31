@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/cracked_bricks/travertine"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/cracked_bricks/travertine_stairs",
+    "count": 8
+  }
+}

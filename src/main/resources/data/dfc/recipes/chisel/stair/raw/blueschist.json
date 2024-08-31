@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/raw/blueschist",
+  "result": "dfc:rock/raw/blueschist_stairs",
+  "mode": "stair"
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/emerald/arkose",
+    "dfc:ore/emerald/blueschist",
+    "dfc:ore/emerald/serpentine",
+    "dfc:ore/emerald/travertine",
+    "dfc:ore/emerald/tuff"
+  ]
+}

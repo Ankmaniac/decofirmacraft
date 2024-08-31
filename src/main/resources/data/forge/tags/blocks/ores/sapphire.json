@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/sapphire/arkose",
+    "dfc:ore/sapphire/blueschist",
+    "dfc:ore/sapphire/serpentine",
+    "dfc:ore/sapphire/travertine",
+    "dfc:ore/sapphire/tuff"
+  ]
+}

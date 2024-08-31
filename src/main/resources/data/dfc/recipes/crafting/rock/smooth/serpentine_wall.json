@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/smooth/serpentine"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/smooth/serpentine_wall",
+    "count": 6
+  }
+}

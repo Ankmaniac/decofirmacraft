@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/ruby/arkose",
+    "dfc:ore/ruby/blueschist",
+    "dfc:ore/ruby/serpentine",
+    "dfc:ore/ruby/travertine",
+    "dfc:ore/ruby/tuff"
+  ]
+}

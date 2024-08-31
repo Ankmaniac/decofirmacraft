@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/rich_native_copper/arkose",
+    "dfc:ore/rich_native_copper/blueschist",
+    "dfc:ore/rich_native_copper/serpentine",
+    "dfc:ore/rich_native_copper/travertine",
+    "dfc:ore/rich_native_copper/tuff",
+    "dfc:ore/rich_malachite/arkose",
+    "dfc:ore/rich_malachite/blueschist",
+    "dfc:ore/rich_malachite/serpentine",
+    "dfc:ore/rich_malachite/travertine",
+    "dfc:ore/rich_malachite/tuff",
+    "dfc:ore/rich_tetrahedrite/arkose",
+    "dfc:ore/rich_tetrahedrite/blueschist",
+    "dfc:ore/rich_tetrahedrite/serpentine",
+    "dfc:ore/rich_tetrahedrite/travertine",
+    "dfc:ore/rich_tetrahedrite/tuff"
+ ]
+}

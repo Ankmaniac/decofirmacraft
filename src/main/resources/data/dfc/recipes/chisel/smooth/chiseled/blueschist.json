@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/bricks/blueschist",
+  "result": "dfc:rock/chiseled/blueschist",
+  "mode": "smooth"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/mossy_bricks/travertine",
+  "result": "dfc:rock/mossy_bricks/travertine_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/mossy_bricks/travertine_slab"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/bricks/blueschist",
+  "result": "dfc:rock/bricks/blueschist_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/bricks/blueschist_slab"
+  }
+}

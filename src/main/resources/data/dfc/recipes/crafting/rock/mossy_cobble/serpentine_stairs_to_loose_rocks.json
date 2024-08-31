@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dfc:rock/mossy_cobble/serpentine_stairs"
+    }
+  ],
+  "result": {
+    "item": "dfc:rock/mossy_loose/serpentine",
+    "count": 3
+  }
+}

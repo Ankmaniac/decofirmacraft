@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_native_silver/arkose",
+  "result": "dfc:ore/normal_native_silver/arkose"
+}

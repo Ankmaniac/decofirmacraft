@@ -1,7 +1,8 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube_column",
   "textures": {
-    "all": "dfc:block/rock/chiseled/travertine",
+    "end": "dfc:block/rock/raw/travertine",
+    "side": "dfc:block/rock/chiseled/travertine",
     "particle": "dfc:block/rock/chiseled/travertine"
   }
 }

@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_hematite/arkose",
+  "result": "dfc:ore/poor_hematite/arkose"
+}

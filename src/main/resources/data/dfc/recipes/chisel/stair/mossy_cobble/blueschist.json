@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/mossy_cobble/blueschist",
+  "result": "dfc:rock/mossy_cobble/blueschist_stairs",
+  "mode": "stair"
+}

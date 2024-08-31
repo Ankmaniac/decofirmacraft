@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/raw/arkose"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/raw/arkose_wall",
+    "count": 6
+  }
+}

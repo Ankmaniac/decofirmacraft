@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dfc:rock/cobble/serpentine"
+    }
+  ],
+  "result": {
+    "item": "dfc:rock/loose/serpentine",
+    "count": 4
+  }
+}

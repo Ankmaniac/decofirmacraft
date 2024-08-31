@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_malachite/serpentine",
+  "result": "dfc:ore/poor_malachite/serpentine"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/bricks/travertine"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/bricks/travertine_wall",
+    "count": 6
+  }
+}

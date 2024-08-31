@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_bismuthinite/tuff",
+  "result": "dfc:ore/normal_bismuthinite/tuff"
+}

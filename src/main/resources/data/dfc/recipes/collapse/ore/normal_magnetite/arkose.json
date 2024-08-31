@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_magnetite/arkose",
+  "result": "dfc:ore/normal_magnetite/arkose"
+}

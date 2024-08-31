@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/graphite/arkose",
+    "dfc:ore/graphite/blueschist",
+    "dfc:ore/graphite/serpentine",
+    "dfc:ore/graphite/travertine",
+    "dfc:ore/graphite/tuff"
+  ]
+}

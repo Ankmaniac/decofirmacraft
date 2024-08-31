@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:rock/button/arkose",
+    "dfc:rock/button/blueschist",
+    "dfc:rock/button/serpentine",
+    "dfc:rock/button/travertine",
+    "dfc:rock/button/tuff"
+  ]
+}

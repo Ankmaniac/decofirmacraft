@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/saltpeter/arkose",
+    "dfc:ore/saltpeter/blueschist",
+    "dfc:ore/saltpeter/serpentine",
+    "dfc:ore/saltpeter/travertine",
+    "dfc:ore/saltpeter/tuff"
+  ]
+}

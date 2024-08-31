@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_tetrahedrite/travertine",
+  "result": "dfc:ore/normal_tetrahedrite/travertine"
+}

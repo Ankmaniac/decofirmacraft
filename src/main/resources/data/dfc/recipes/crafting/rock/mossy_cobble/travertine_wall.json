@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/mossy_cobble/travertine"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/mossy_cobble/travertine_wall",
+    "count": 6
+  }
+}

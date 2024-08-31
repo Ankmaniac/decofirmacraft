@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/rich_bismuthinite/arkose",
+    "dfc:ore/rich_bismuthinite/blueschist",
+    "dfc:ore/rich_bismuthinite/serpentine",
+    "dfc:ore/rich_bismuthinite/travertine",
+    "dfc:ore/rich_bismuthinite/tuff"
+ ]
+}

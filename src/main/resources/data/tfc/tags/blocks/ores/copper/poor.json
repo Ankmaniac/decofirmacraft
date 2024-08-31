@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/poor_native_copper/arkose",
+    "dfc:ore/poor_native_copper/blueschist",
+    "dfc:ore/poor_native_copper/serpentine",
+    "dfc:ore/poor_native_copper/travertine",
+    "dfc:ore/poor_native_copper/tuff",
+    "dfc:ore/poor_malachite/arkose",
+    "dfc:ore/poor_malachite/blueschist",
+    "dfc:ore/poor_malachite/serpentine",
+    "dfc:ore/poor_malachite/travertine",
+    "dfc:ore/poor_malachite/tuff",
+    "dfc:ore/poor_tetrahedrite/arkose",
+    "dfc:ore/poor_tetrahedrite/blueschist",
+    "dfc:ore/poor_tetrahedrite/serpentine",
+    "dfc:ore/poor_tetrahedrite/travertine",
+    "dfc:ore/poor_tetrahedrite/tuff"
+ ]
+}

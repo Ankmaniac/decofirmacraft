@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/smooth/arkose",
+  "result": "dfc:rock/smooth/arkose_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/smooth/arkose_slab"
+  }
+}

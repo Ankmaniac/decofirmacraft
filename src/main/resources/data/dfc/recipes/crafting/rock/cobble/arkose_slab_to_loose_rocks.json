@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dfc:rock/cobble/arkose_slab"
+    }
+  ],
+  "result": {
+    "item": "dfc:rock/loose/arkose",
+    "count": 2
+  }
+}

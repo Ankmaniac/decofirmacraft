@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_limonite/serpentine",
+  "result": "dfc:ore/normal_limonite/serpentine"
+}

@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_limonite/arkose",
+  "result": "dfc:ore/normal_limonite/arkose"
+}

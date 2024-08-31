@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/normal_cassiterite/arkose",
+    "dfc:ore/normal_cassiterite/blueschist",
+    "dfc:ore/normal_cassiterite/serpentine",
+    "dfc:ore/normal_cassiterite/travertine",
+    "dfc:ore/normal_cassiterite/tuff"
+ ]
+}

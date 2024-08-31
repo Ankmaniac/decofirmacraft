@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/raw/serpentine",
+  "result": "dfc:rock/raw/serpentine_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/raw/serpentine_slab"
+  }
+}

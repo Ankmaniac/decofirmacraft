@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/raw/tuff"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/raw/tuff_wall",
+    "count": 6
+  }
+}

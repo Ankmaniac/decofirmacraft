@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_malachite/blueschist",
+  "result": "dfc:ore/normal_malachite/blueschist"
+}

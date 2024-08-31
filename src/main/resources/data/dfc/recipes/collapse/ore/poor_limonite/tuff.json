@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_limonite/tuff",
+  "result": "dfc:ore/poor_limonite/tuff"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dfc:rock/mossy_cobble/arkose_stairs"
+    }
+  ],
+  "result": {
+    "item": "dfc:rock/mossy_loose/arkose",
+    "count": 3
+  }
+}

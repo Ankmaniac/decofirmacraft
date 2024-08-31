@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/smooth/blueschist"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/smooth/blueschist_wall",
+    "count": 6
+  }
+}

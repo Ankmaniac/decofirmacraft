@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dfc:rock/mossy_cobble/travertine_stairs"
+    }
+  ],
+  "result": {
+    "item": "dfc:rock/mossy_loose/travertine",
+    "count": 3
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_malachite/arkose",
+  "result": "dfc:ore/normal_malachite/arkose"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dfc:rock/cobble/tuff"
+    }
+  ],
+  "result": {
+    "item": "dfc:rock/loose/tuff",
+    "count": 4
+  }
+}

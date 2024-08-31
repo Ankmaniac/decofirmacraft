@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/rich_hematite/arkose",
+    "dfc:ore/rich_hematite/blueschist",
+    "dfc:ore/rich_hematite/serpentine",
+    "dfc:ore/rich_hematite/travertine",
+    "dfc:ore/rich_hematite/tuff",
+    "dfc:ore/rich_magnetite/arkose",
+    "dfc:ore/rich_magnetite/blueschist",
+    "dfc:ore/rich_magnetite/serpentine",
+    "dfc:ore/rich_magnetite/travertine",
+    "dfc:ore/rich_magnetite/tuff",
+    "dfc:ore/rich_limonite/arkose",
+    "dfc:ore/rich_limonite/blueschist",
+    "dfc:ore/rich_limonite/serpentine",
+    "dfc:ore/rich_limonite/travertine",
+    "dfc:ore/rich_limonite/tuff"
+ ]
+}

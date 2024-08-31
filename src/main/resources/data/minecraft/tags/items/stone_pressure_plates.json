@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:rock/pressure_plate/arkose",
+    "dfc:rock/pressure_plate/blueschist",
+    "dfc:rock/pressure_plate/serpentine",
+    "dfc:rock/pressure_plate/travertine",
+    "dfc:rock/pressure_plate/tuff"
+  ]
+}

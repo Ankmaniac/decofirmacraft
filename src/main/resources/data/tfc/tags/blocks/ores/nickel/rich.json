@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/rich_garnierite/arkose",
+    "dfc:ore/rich_garnierite/blueschist",
+    "dfc:ore/rich_garnierite/serpentine",
+    "dfc:ore/rich_garnierite/travertine",
+    "dfc:ore/rich_garnierite/tuff"
+ ]
+}

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dfc:block/rock/mossy_mossy_bricks/blueschist"
+      "model": "dfc:block/rock/mossy_bricks/blueschist"
     }
   }
 }

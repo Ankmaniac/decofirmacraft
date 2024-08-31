@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_tetrahedrite/arkose",
+  "result": "dfc:ore/poor_tetrahedrite/arkose"
+}

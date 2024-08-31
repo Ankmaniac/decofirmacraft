@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/hardened/arkose",
+  "result": "dfc:rock/smooth/arkose",
+  "mode": "smooth"
+}

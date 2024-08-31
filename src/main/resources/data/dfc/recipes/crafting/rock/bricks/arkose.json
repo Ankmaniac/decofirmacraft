@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XMX",
+    "MXM",
+    "XMX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:brick/arkose"
+    },
+    "M": {
+      "tag": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/bricks/arkose",
+    "count": 4
+  }
+}

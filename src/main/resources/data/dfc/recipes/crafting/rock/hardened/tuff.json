@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XMX",
+    "MXM",
+    "XMX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/raw/tuff"
+    },
+    "M": {
+      "tag": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/hardened/tuff",
+    "count": 2
+  }
+}

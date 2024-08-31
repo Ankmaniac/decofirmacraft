@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/mossy_bricks/arkose",
+  "result": "dfc:rock/mossy_bricks/arkose_stairs",
+  "mode": "stair"
+}

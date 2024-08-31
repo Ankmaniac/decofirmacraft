@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_garnierite/arkose",
+  "result": "dfc:ore/normal_garnierite/arkose"
+}

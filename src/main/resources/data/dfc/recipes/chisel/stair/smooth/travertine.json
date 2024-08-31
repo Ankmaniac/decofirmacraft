@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/smooth/travertine",
+  "result": "dfc:rock/smooth/travertine_stairs",
+  "mode": "stair"
+}

@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_garnierite/tuff",
+  "result": "dfc:ore/poor_garnierite/tuff"
+}

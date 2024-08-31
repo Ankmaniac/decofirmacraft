@@ -1,0 +1,17 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+      "item": "dfc:rock/bricks/tuff"
+      },
+      {
+        "tag": "tfc:hammers"
+      }
+    ],
+    "result": {
+      "item": "dfc:rock/cracked_bricks/tuff"
+    }
+  }
+}

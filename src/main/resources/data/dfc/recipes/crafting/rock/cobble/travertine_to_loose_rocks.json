@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dfc:rock/cobble/travertine"
+    }
+  ],
+  "result": {
+    "item": "dfc:rock/loose/travertine",
+    "count": 4
+  }
+}

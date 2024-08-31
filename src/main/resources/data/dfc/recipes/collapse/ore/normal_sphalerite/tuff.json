@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_sphalerite/tuff",
+  "result": "dfc:ore/normal_sphalerite/tuff"
+}

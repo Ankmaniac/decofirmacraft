@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "dfc:rock/smooth/tuff",
+  "result": "dfc:rock/smooth/tuff_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "dfc:rock/smooth/tuff_slab"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "tag": "tfc:chisels"
+      },
+      {
+        "item": "dfc:brick/travertine"
+      },
+      {
+        "item": "dfc:brick/travertine"
+      }
+    ],
+    "result": {
+      "item": "dfc:rock/pressure_plate/travertine"
+    }
+  }
+}

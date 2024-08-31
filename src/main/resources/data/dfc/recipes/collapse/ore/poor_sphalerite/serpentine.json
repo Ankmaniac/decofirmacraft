@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_sphalerite/serpentine",
+  "result": "dfc:ore/poor_sphalerite/serpentine"
+}

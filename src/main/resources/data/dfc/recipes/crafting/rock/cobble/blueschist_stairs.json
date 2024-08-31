@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/cobble/blueschist"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/cobble/blueschist_stairs",
+    "count": 8
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dfc:rock/cobble/blueschist_wall"
+    }
+  ],
+  "result": {
+    "item": "dfc:rock/loose/blueschist",
+    "count": 4
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:rock/raw/serpentine"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/raw/serpentine_slab",
+    "count": 6
+  }
+}

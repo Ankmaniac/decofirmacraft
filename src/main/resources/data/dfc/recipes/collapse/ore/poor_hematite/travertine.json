@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_hematite/travertine",
+  "result": "dfc:ore/poor_hematite/travertine"
+}
