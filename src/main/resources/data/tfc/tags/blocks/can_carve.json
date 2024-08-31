@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:rock/raw/arkose",
+    "dfc:rock/hardened/arkose",
+    "dfc:rock/gravel/arkose",
+    "dfc:rock/cobble/arkose",
+    "dfc:rock/raw/blueschist",
+    "dfc:rock/hardened/blueschist",
+    "dfc:rock/gravel/blueschist",
+    "dfc:rock/cobble/blueschist",
+    "dfc:rock/raw/serpentine",
+    "dfc:rock/hardened/serpentine",
+    "dfc:rock/gravel/serpentine",
+    "dfc:rock/cobble/serpentine",
+    "dfc:rock/raw/travertine",
+    "dfc:rock/hardened/travertine",
+    "dfc:rock/gravel/travertine",
+    "dfc:rock/cobble/travertine",
+    "dfc:rock/raw/tuff",
+    "dfc:rock/hardened/tuff",
+    "dfc:rock/gravel/tuff",
+    "dfc:rock/cobble/tuff"
+  ]
+}
