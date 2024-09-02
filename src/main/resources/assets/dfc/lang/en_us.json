@@ -801,7 +801,11 @@
   "item.dfc.brick.serpentine": "Serpentine Brick",
   "item.dfc.brick.travertine": "Travertine Brick",
   "item.dfc.brick.tuff": "Tuff Brick",
-  
+
+  "dfc.creative_tab.rock_tab": "DFC Rocks",
+  "dfc.creative_tab.ore_tab": "DFC Ores",
+  "dfc.creative_tab.metal_tab": "DFC Metals",
+
   "block.dfc.ore.normal_native_copper.arkose.prospected": "Native Copper",
   "block.dfc.ore.poor_native_copper.arkose.prospected": "Native Copper",
   "block.dfc.ore.rich_native_copper.arkose.prospected": "Native Copper",

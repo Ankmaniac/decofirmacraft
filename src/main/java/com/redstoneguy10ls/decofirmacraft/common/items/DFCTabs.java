@@ -1,8 +1,10 @@
 package com.redstoneguy10ls.decofirmacraft.common.items;
 
 import com.redstoneguy10ls.decofirmacraft.common.blocks.DFCBlocks;
+import com.redstoneguy10ls.decofirmacraft.common.blocks.metal.DFCMetal;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomDFCRockBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomRockBlocks;
+import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCOre;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
@@ -34,8 +36,8 @@ public class DFCTabs {
             register("rock_tab", () -> new ItemStack(DFCBlocks.CUSTOM_ROCK_BLOCKS.get(Rock.ANDESITE).get(CustomRockBlocks.PILLAR).get()), DFCTabs::fillRock);
     public static final DFCTabs.CreativeTabHolder ORES =
             register("ore_tab", () -> new ItemStack(DFCBlocks.DFC_ROCK_ORES.get(DFCRock.ARKOSE).get(Ore.DIAMOND).get()), DFCTabs::fillOre);
-//    public static final DFCTabs.CreativeTabHolder METAL =
-//            register("metal_tab", () -> new ItemStack(DFCBlocks.METAL_GATES.get(Metal.Default.WROUGHT_IRON).get()), DFCTabs::fillMetal);
+    public static final DFCTabs.CreativeTabHolder METAL =
+            register("metal_tab", () -> new ItemStack(DFCBlocks.METAL_GATES.get(Metal.Default.WROUGHT_IRON).get()), DFCTabs::fillMetal);
 
 
     private static void fillRock(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
@@ -80,6 +82,17 @@ public class DFCTabs {
 
     private static void fillOre(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
+        for(DFCOre ore : DFCOre.values())
+        {
+            if (ore.isGraded())
+            {
+                DFCBlocks.DFC_GRADED_ORES.values().forEach(map -> map.get(ore).values().forEach(reg -> accept(out, reg)));
+            }
+            else
+            {
+                DFCBlocks.DFC_ORES.values().forEach(map -> accept(out, map, ore));
+            }
+        }
         for(Ore ore : Ore.values())
         {
             if (ore.isGraded())
@@ -91,19 +104,60 @@ public class DFCTabs {
                 DFCBlocks.DFC_ROCK_ORES.values().forEach(map -> accept(out, map, ore));
             }
         }
+        for(DFCOre ore : DFCOre.values())
+        {
+            if (ore.isGraded())
+            {
+                DFCBlocks.DFC_ROCK_DFC_GRADED_ORES.values().forEach(map -> map.get(ore).values().forEach(reg -> accept(out, reg)));
+            }
+            else
+            {
+                DFCBlocks.DFC_ROCK_DFC_ORES.values().forEach(map -> accept(out, map, ore));
+            }
+        }
         for (OreDeposit deposit : OreDeposit.values())
         {
             DFCBlocks.DFC_ORE_DEPOSITS.values().forEach(map -> accept(out, map, deposit));
         }
     }
 
-//    private static void fillMetal(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
-//    {
-//        for(Metal.Default metal : Metal.Default.values())
-//        {
-//            accept(out, DFCBlocks.METAL_GATES.get(metal));
-//        }
-//    }
+    private static void fillMetal(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        for(Metal.Default metal : Metal.Default.values())
+        {
+            if(metal.hasUtilities()) {
+                accept(out, DFCBlocks.METAL_GATES.get(metal));
+            }
+        }
+        for(Metal.Default metal : Metal.Default.values())
+        {
+            for(DFCMetal.DFCBlockType type : DFCMetal.DFCBlockType.values())
+            {
+                accept(out, DFCBlocks.METALS_DFC_BLOCKS, metal, type);
+            }
+        }
+        for(DFCMetal.DFCDefault dfcmetal : DFCMetal.DFCDefault.values())
+        {
+            for (DFCMetal.DFCBlockType type : DFCMetal.DFCBlockType.values())
+            {
+                accept(out, DFCBlocks.DFC_METALS_DFC_BLOCKS, dfcmetal, type);
+            }
+        }
+        for(DFCMetal.DFCDefault dfcmetal : DFCMetal.DFCDefault.values())
+        {
+            for (Metal.BlockType type : Metal.BlockType.values())
+            {
+                accept(out, DFCBlocks.DFC_METALS, dfcmetal, type);
+            }
+        }
+        for(DFCMetal.DFCDefault dfcmetal : DFCMetal.DFCDefault.values())
+        {
+            for (DFCMetal.DFCDefault.DFCItemType type : DFCMetal.DFCDefault.DFCItemType.values())
+            {
+                accept(out, DFCItems.METAL_ITEMS, dfcmetal, type);
+            }
+        }
+    }
 
 
     private static <T extends ItemLike, R extends Supplier<T>> void accept(CreativeModeTab.Output out, R reg)

@@ -2,6 +2,7 @@ package com.redstoneguy10ls.decofirmacraft;
 
 import com.mojang.logging.LogUtils;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.DFCBlocks;
+import com.redstoneguy10ls.decofirmacraft.common.blocks.DFCFluids;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCTabs;
 import com.redstoneguy10ls.decofirmacraft.world.settings.DFCRockSettings;
@@ -24,6 +25,7 @@ public class DecoFirmaCraft {
         MinecraftForge.EVENT_BUS.register(this);
 
         DFCBlocks.BLOCKS.register(bus);
+        DFCFluids.FLUIDS.register(bus);
         DFCItems.ITEMS.register(bus);
         DFCTabs.CREATIVE_TABS.register(bus);
 

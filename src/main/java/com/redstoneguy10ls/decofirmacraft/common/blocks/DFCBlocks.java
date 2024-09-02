@@ -1,10 +1,8 @@
 package com.redstoneguy10ls.decofirmacraft.common.blocks;
 
+import com.redstoneguy10ls.decofirmacraft.common.blocks.metal.DFCMetal;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.metal.GateBlock;
-import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.ColumnBlock;
-import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomDFCRockBlocks;
-import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.CustomRockBlocks;
-import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.DFCRock;
+import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.*;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.*;
@@ -20,6 +18,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -94,6 +94,7 @@ public class DFCBlocks {
                     register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
             )
     );
+
     public static final Map<DFCRock, Map<Ore, Map<Ore.Grade, RegistryObject<Block>>>> DFC_ROCK_GRADED_ORES = Helpers.mapOfKeys(DFCRock.class, rock ->
             Helpers.mapOfKeys(Ore.class, Ore::isGraded, ore ->
                     Helpers.mapOfKeys(Ore.Grade.class, grade ->
@@ -101,12 +102,58 @@ public class DFCBlocks {
                     )
             )
     );
+
+    public static final Map<Rock, Map<DFCOre, RegistryObject<Block>>> DFC_ORES = Helpers.mapOfKeys(Rock.class, rock ->
+            Helpers.mapOfKeys(DFCOre.class, ore -> !ore.isGraded(), ore ->
+                    register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+            )
+    );
+
+    public static final Map<Rock, Map<DFCOre, Map<Ore.Grade, RegistryObject<Block>>>> DFC_GRADED_ORES = Helpers.mapOfKeys(Rock.class, rock ->
+            Helpers.mapOfKeys(DFCOre.class, DFCOre::isGraded, ore ->
+                    Helpers.mapOfKeys(Ore.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+                    )
+            )
+    );
+
+    public static final Map<DFCRock, Map<DFCOre, RegistryObject<Block>>> DFC_ROCK_DFC_ORES = Helpers.mapOfKeys(DFCRock.class, rock ->
+            Helpers.mapOfKeys(DFCOre.class, ore -> !ore.isGraded(), ore ->
+                    register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+            )
+    );
+
+    public static final Map<DFCRock, Map<DFCOre, Map<Ore.Grade, RegistryObject<Block>>>> DFC_ROCK_DFC_GRADED_ORES = Helpers.mapOfKeys(DFCRock.class, rock ->
+            Helpers.mapOfKeys(DFCOre.class, DFCOre::isGraded, ore ->
+                    Helpers.mapOfKeys(Ore.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+                    )
+            )
+    );
+
     public static final Map<DFCRock, Map<OreDeposit, RegistryObject<Block>>> DFC_ORE_DEPOSITS = Helpers.mapOfKeys(DFCRock.class, rock ->
             Helpers.mapOfKeys(OreDeposit.class, ore ->
                     register("deposit/" + ore.name() + "/" + rock.name(), () -> new Block(Block.Properties.of().mapColor(MapColor.STONE).sound(SoundType.GRAVEL).strength(rock.category().hardness(2.0f)))) // Same hardness as gravel
             )
     );
 
+    public static final Map<DFCMetal.DFCDefault, Map<Metal.BlockType, RegistryObject<Block>>> DFC_METALS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
+            Helpers.mapOfKeys(Metal.BlockType.class, type -> type.has(Metal.Default.BISMUTH), type ->
+                    register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
+            )
+    );
+
+    public static final Map<Metal.Default, Map<DFCMetal.DFCBlockType, RegistryObject<Block>>> METALS_DFC_BLOCKS = Helpers.mapOfKeys(Metal.Default.class, Metal.Default::hasParts, metal ->
+            Helpers.mapOfKeys(DFCMetal.DFCBlockType.class, type ->
+                    register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
+            )
+    );
+
+    public static final Map<DFCMetal.DFCDefault, Map<DFCMetal.DFCBlockType, RegistryObject<Block>>> DFC_METALS_DFC_BLOCKS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
+            Helpers.mapOfKeys(DFCMetal.DFCBlockType.class, type ->
+                    register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
+            )
+    );
     public static final Map<Metal.Default, RegistryObject<Block>> METAL_GATES = Helpers.mapOfKeys(Metal.Default.class, Metal.Default::hasTools, metals ->(
             register(("metal/gate/"+ metals.name()), () ->
                     new GateBlock(BlockBehaviour.Properties.of()
@@ -116,13 +163,25 @@ public class DFCBlocks {
                             .sound(SoundType.METAL)
                             .noOcclusion()))));
 
+
+
+    public static final Map<DFCMetal.DFCDefault, RegistryObject<LiquidBlock>> DFC_METAL_FLUIDS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
+            registerNoItem("metal/fluid/" + metal.name(), () -> new LiquidBlock(DFCFluids.METALS.get(metal).source(), BlockBehaviour.Properties.copy(Blocks.LAVA).noLootTable()))
+    );
+
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> blockSupplier)
     {
         return register(name, blockSupplier, (Function<T, ? extends BlockItem>) null);
     }
+
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier)
     {
         return register(name, blockSupplier, block -> new BlockItem(block, new Item.Properties()));
+    }
+
+    private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier, Item.Properties blockItemProperties)
+    {
+        return register(name, blockSupplier, block -> new BlockItem(block, blockItemProperties));
     }
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier, @Nullable Function<T, ? extends BlockItem> blockItemFactory)
