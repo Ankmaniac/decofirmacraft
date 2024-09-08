@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ingots/alumina",
+    "#forge:ingots/aluminum",
+    "#forge:ingots/lead",
+    "#forge:ingots/pewter",
+    "#forge:ingots/platinum"
+  ]
+}

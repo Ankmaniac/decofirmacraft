@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/gypsum/arkose",
+    "dfc:ore/gypsum/blueschist",
+    "dfc:ore/gypsum/serpentine",
+    "dfc:ore/gypsum/travertine",
+    "dfc:ore/gypsum/tuff"
+  ]
+}

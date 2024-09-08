@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/bricks/black_steel_stairs"
+  },
+  "heat_capacity": 2.143,
+  "forging_temperature": 891,
+  "welding_temperature": 1188
+}

@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/block/platinum",
+    "dfc:metal/block/platinum_slab",
+    "dfc:metal/block/platinum_stairs",
+    "dfc:metal/smooth/platinum",
+    "dfc:metal/smooth/platinum_slab",
+    "dfc:metal/smooth/platinum_stairs",
+    "dfc:metal/bricks/platinum",
+    "dfc:metal/bricks/platinum_slab",
+    "dfc:metal/bricks/platinum_stairs",
+    "dfc:metal/cut/platinum",
+    "dfc:metal/cut/platinum_slab",
+    "dfc:metal/cut/platinum_stairs",
+    "dfc:metal/pillar/platinum"
+  ]
+}

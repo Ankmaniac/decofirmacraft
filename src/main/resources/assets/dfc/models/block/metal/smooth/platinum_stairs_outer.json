@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "dfc:block/metal/smooth/platinum",
+    "top": "dfc:block/metal/smooth/platinum",
+    "side": "dfc:block/metal/smooth/platinum"
+  }
+}

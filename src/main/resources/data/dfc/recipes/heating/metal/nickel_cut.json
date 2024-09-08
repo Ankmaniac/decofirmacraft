@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/cut/nickel"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/nickel",
+    "amount": 25
+  },
+  "temperature": 1453
+}

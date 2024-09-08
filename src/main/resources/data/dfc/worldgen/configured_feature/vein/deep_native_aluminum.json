@@ -1,0 +1,81 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 80,
+    "density": 0.5,
+    "min_y": -60,
+    "max_y": 0,
+    "size": 15,
+    "random_name": "deep_native_aluminum",
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "weight": 15,
+            "block": "dfc:ore/poor_native_aluminum/granite"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/normal_native_aluminum/granite"
+          },
+          {
+            "weight": 60,
+            "block": "dfc:ore/rich_native_aluminum/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "weight": 15,
+            "block": "dfc:ore/poor_native_aluminum/diorite"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/normal_native_aluminum/diorite"
+          },
+          {
+            "weight": 60,
+            "block": "dfc:ore/rich_native_aluminum/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "weight": 15,
+            "block": "dfc:ore/poor_native_aluminum/gabbro"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/normal_native_aluminum/gabbro"
+          },
+          {
+            "weight": 60,
+            "block": "dfc:ore/rich_native_aluminum/gabbro"
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 0,
+      "depth": 35,
+      "underground_rarity": 1,
+      "underground_count": 4,
+      "blocks": [
+        {
+          "block": "dfc:ore/small_native_aluminum"
+        }
+      ]
+    }
+  }
+}

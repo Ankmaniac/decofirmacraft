@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/smooth/steel_stairs"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/steel",
+    "amount": 18
+  },
+  "temperature": 1540
+}

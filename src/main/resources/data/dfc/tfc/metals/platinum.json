@@ -1,0 +1,16 @@
+{
+  "tier": 3,
+  "fluid": "dfc:metal/platinum",
+  "melt_temperature": 1540,
+  "specific_heat_capacity": 0.00857,
+  "ingots": {
+    "tag": "forge:ingots/platinum"
+  },
+  "double_ingots": {
+    "tag": "forge:double_ingots/platinum"
+  },
+  "sheets": {
+    "tag": "forge:sheets/platinum"
+  },
+  "__comment__": "forge temp: 924 weld temp: 1232"
+}

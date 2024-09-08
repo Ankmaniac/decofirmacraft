@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/metal/pillar/platinum"
+    },
+    "axis=z": {
+      "model": "dfc:block/metal/pillar/platinum",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "dfc:block/metal/pillar/platinum",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

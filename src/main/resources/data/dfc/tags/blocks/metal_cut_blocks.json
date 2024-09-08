@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/cut/alumina",
+    "dfc:metal/cut/aluminum",
+    "dfc:metal/cut/lead",
+    "dfc:metal/cut/pewter",
+    "dfc:metal/cut/platinum",
+    "dfc:metal/cut/bismuth",
+    "dfc:metal/cut/bismuth_bronze",
+    "dfc:metal/cut/black_bronze",
+    "dfc:metal/cut/bronze",
+    "dfc:metal/cut/brass",
+    "dfc:metal/cut/copper",
+    "dfc:metal/cut/gold",
+    "dfc:metal/cut/nickel",
+    "dfc:metal/cut/rose_gold",
+    "dfc:metal/cut/silver",
+    "dfc:metal/cut/tin",
+    "dfc:metal/cut/zinc",
+    "dfc:metal/cut/sterling_silver",
+    "dfc:metal/cut/wrought_iron",
+    "dfc:metal/cut/cast_iron",
+    "dfc:metal/cut/steel",
+    "dfc:metal/cut/black_steel",
+    "dfc:metal/cut/blue_steel",
+    "dfc:metal/cut/red_steel"
+  ]
+}

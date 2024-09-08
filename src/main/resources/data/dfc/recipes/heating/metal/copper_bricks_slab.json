@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/bricks/copper_slab"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/copper",
+    "amount": 12
+  },
+  "temperature": 1080
+}

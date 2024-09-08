@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/ingot/pewter"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/pewter",
+    "amount": 100
+  },
+  "temperature": 340
+}

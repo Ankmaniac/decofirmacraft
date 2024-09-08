@@ -1,0 +1,16 @@
+{
+  "tier": 2,
+  "fluid": "dfc:metal/pewter",
+  "melt_temperature": 340,
+  "specific_heat_capacity": 0.02143,
+  "ingots": {
+    "tag": "forge:ingots/pewter"
+  },
+  "double_ingots": {
+    "tag": "forge:double_ingots/pewter"
+  },
+  "sheets": {
+    "tag": "forge:sheets/pewter"
+  },
+  "__comment__": "forge temp: 204 weld temp: 272"
+}

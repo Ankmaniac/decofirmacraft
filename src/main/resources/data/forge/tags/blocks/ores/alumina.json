@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#dfc:ores/alumina/poor",
+    "#dfc:ores/alumina/normal",
+    "#dfc:ores/alumina/rich"
+  ]
+}

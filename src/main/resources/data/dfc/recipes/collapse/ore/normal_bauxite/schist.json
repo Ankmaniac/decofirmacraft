@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_bauxite/schist",
+  "result": "dfc:ore/normal_bauxite/schist"
+}

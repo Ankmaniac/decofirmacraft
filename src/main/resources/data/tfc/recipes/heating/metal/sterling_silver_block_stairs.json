@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfc:metal/block/sterling_silver_stairs"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/sterling_silver",
+    "amount": 18
+  },
+  "temperature": 912
+}

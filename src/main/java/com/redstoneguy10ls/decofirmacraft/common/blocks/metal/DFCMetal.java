@@ -10,10 +10,7 @@ import net.dries007.tfc.util.registry.RegistryMetal;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -28,7 +25,7 @@ public final class DFCMetal {
 
     public enum DFCDefault implements RegistryMetal {
         ALUMINUM(0xFFD9D8C5, MapColor.COLOR_LIGHT_GRAY, Rarity.UNCOMMON, true, false, false),
-        ALUMINA(0xFFD9D8C5, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, false, false, false),
+        ALUMINA(0xFFE3E3DC, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, true, false, false),
         LEAD(0xFF7E789C, MapColor.COLOR_PURPLE, Rarity.COMMON, true, false, false),
         PEWTER(0xFFBBBD9F, MapColor.COLOR_YELLOW, Rarity.COMMON, true, false, false),
         PLATINUM(0xFFDCF2F5, MapColor.COLOR_LIGHT_BLUE, Rarity.COMMON, true, false, false);
@@ -138,7 +135,7 @@ public final class DFCMetal {
         BRICKS(metal -> new Block(BlockBehaviour.Properties.of().mapColor(metal.mapColor()).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL))),
         BRICKS_SLAB(metal -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(metal.mapColor()).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL))),
         BRICKS_STAIRS(metal -> new StairBlock(() -> metal.getFullBlock().get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(metal.mapColor()).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL))),
-        PILLAR(metal -> new Block(BlockBehaviour.Properties.of().mapColor(metal.mapColor()).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+        PILLAR(metal -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(metal.mapColor()).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
         private final Function<RegistryMetal, Block> blockFactory;
         private final BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory;

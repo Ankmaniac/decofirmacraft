@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/smooth/blue_steel"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/smooth/blue_steel_stairs",
+    "count": 8
+  }
+}

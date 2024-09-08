@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "dfc:block/metal/cut/silver",
+    "top": "dfc:block/metal/cut/silver",
+    "side": "dfc:block/metal/cut/silver"
+  }
+}

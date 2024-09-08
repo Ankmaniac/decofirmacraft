@@ -1,0 +1,14 @@
+{
+  "type": "tfc:blast_furnace",
+  "fluid": {
+    "ingredient": "dfc:metal/alumina",
+    "amount": 1
+  },
+  "result": {
+    "fluid": "dfc:metal/aluminum",
+    "amount": 1
+  },
+  "catalyst": {
+    "tag": "dfc:cryolite"
+  }
+}

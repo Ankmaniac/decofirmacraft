@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:sheets/alumina",
+    "#forge:sheets/aluminum",
+    "#forge:sheets/lead",
+    "#forge:sheets/pewter",
+    "#forge:sheets/platinum"
+  ]
+}

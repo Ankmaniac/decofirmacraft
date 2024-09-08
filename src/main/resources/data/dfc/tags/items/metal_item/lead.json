@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/block/lead",
+    "dfc:metal/block/lead_slab",
+    "dfc:metal/block/lead_stairs",
+    "dfc:metal/smooth/lead",
+    "dfc:metal/smooth/lead_slab",
+    "dfc:metal/smooth/lead_stairs",
+    "dfc:metal/bricks/lead",
+    "dfc:metal/bricks/lead_slab",
+    "dfc:metal/bricks/lead_stairs",
+    "dfc:metal/cut/lead",
+    "dfc:metal/cut/lead_slab",
+    "dfc:metal/cut/lead_stairs",
+    "dfc:metal/pillar/lead"
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 100,
+    "density": 0.25,
+    "min_y": 40,
+    "max_y": 70,
+    "size": 15,
+    "random_name": "normal_native_aluminum",
+    "biomes": "#tfc:is_volcanic",
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "dfc:ore/poor_native_aluminum/rhyolite"
+          },
+          {
+            "weight": 40,
+            "block": "dfc:ore/normal_native_aluminum/rhyolite"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/rich_native_aluminum/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "dfc:ore/poor_native_aluminum/basalt"
+          },
+          {
+            "weight": 40,
+            "block": "dfc:ore/normal_native_aluminum/basalt"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/rich_native_aluminum/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "dfc:ore/poor_native_aluminum/andesite"
+          },
+          {
+            "weight": 40,
+            "block": "dfc:ore/normal_native_aluminum/andesite"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/rich_native_aluminum/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "dfc:ore/poor_native_aluminum/dacite"
+          },
+          {
+            "weight": 40,
+            "block": "dfc:ore/normal_native_aluminum/dacite"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/rich_native_aluminum/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "dfc:ore/poor_native_aluminum/granite"
+          },
+          {
+            "weight": 40,
+            "block": "dfc:ore/normal_native_aluminum/granite"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/rich_native_aluminum/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "dfc:ore/poor_native_aluminum/diorite"
+          },
+          {
+            "weight": 40,
+            "block": "dfc:ore/normal_native_aluminum/diorite"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/rich_native_aluminum/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "dfc:ore/poor_native_aluminum/gabbro"
+          },
+          {
+            "weight": 40,
+            "block": "dfc:ore/normal_native_aluminum/gabbro"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/rich_native_aluminum/gabbro"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "dfc:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "dfc:ore/poor_native_aluminum/tuff"
+          },
+          {
+            "weight": 40,
+            "block": "dfc:ore/normal_native_aluminum/tuff"
+          },
+          {
+            "weight": 25,
+            "block": "dfc:ore/rich_native_aluminum/tuff"
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 40,
+      "depth": 35,
+      "underground_rarity": 1,
+      "underground_count": 0,
+      "blocks": [
+        {
+          "block": "dfc:ore/small_native_aluminum"
+        }
+      ]
+    }
+  }
+}

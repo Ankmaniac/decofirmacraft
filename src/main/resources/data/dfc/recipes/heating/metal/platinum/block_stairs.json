@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/block/platinum_stairs"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/platinum",
+    "amount": 18
+  },
+  "temperature": 1540
+}

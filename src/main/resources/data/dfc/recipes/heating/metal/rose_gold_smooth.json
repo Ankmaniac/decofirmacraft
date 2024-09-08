@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/smooth/rose_gold"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/rose_gold",
+    "amount": 25
+  },
+  "temperature": 960
+}

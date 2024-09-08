@@ -1,0 +1,13 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "tag": "forge:sheets/platinum"
+  },
+  "second_input": {
+    "tag": "forge:sheets/platinum"
+  },
+  "tier": 2,
+  "result": {
+    "item": "dfc:metal/double_sheet/platinum"
+  }
+}

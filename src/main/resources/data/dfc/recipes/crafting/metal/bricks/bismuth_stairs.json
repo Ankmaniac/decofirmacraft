@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/bricks/bismuth"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/bricks/bismuth_stairs",
+    "count": 8
+  }
+}

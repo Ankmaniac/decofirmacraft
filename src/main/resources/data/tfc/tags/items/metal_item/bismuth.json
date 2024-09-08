@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/smooth/bismuth",
+    "dfc:metal/smooth/bismuth_slab",
+    "dfc:metal/smooth/bismuth_stairs",
+    "dfc:metal/bricks/bismuth",
+    "dfc:metal/bricks/bismuth_slab",
+    "dfc:metal/bricks/bismuth_stairs",
+    "dfc:metal/cut/bismuth",
+    "dfc:metal/cut/bismuth_slab",
+    "dfc:metal/cut/bismuth_stairs",
+    "dfc:metal/pillar/bismuth"
+  ]
+}

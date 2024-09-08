@@ -1,0 +1,15 @@
+{
+  "type": "tfc:anvil",
+  "input": {
+    "tag": "forge:double_ingots/lead"
+  },
+  "result": {
+    "item": "dfc:metal/sheet/lead"
+  },
+  "tier": 1,
+  "rules": [
+    "hit_last",
+    "hit_second_last",
+    "hit_third_last"
+  ]
+}

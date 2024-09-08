@@ -1,0 +1,13 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "tag": "forge:ingots/platinum"
+  },
+  "second_input": {
+    "tag": "forge:ingots/platinum"
+  },
+  "tier": 2,
+  "result": {
+    "item": "dfc:metal/double_ingot/platinum"
+  }
+}

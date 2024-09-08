@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_galena/dacite",
+  "result": "dfc:ore/normal_galena/dacite"
+}

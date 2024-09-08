@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/cut/alumina"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/cut/alumina_stairs",
+    "count": 8
+  }
+}

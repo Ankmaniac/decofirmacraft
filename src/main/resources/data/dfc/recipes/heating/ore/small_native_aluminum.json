@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:ore/small_native_aluminum"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/aluminum",
+    "amount": 10
+  },
+  "temperature": 1540
+}

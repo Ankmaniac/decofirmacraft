@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/bricks/lead_stairs"
+  },
+  "heat_capacity": 3.571,
+  "forging_temperature": 204,
+  "welding_temperature": 272
+}

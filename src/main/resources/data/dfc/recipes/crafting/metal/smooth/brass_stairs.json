@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/smooth/brass"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/smooth/brass_stairs",
+    "count": 8
+  }
+}

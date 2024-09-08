@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/smooth/aluminum_slab"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/aluminum",
+    "amount": 12
+  },
+  "temperature": 1540
+}

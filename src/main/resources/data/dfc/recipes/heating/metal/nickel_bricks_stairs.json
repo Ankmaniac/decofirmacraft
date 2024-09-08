@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/bricks/nickel_stairs"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/nickel",
+    "amount": 18
+  },
+  "temperature": 1453
+}

@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/bricks/steel"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/steel",
+    "amount": 25
+  },
+  "temperature": 1540
+}

@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_native_platinum/basalt",
+  "result": "dfc:ore/poor_native_platinum/basalt"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/smooth/lead"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/smooth/lead_stairs",
+    "count": 8
+  }
+}

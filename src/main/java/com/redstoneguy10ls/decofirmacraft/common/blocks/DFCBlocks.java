@@ -23,6 +23,7 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
@@ -115,6 +116,15 @@ public class DFCBlocks {
                             register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
                     )
             )
+    );
+
+    public static final Map<DFCOre, RegistryObject<Block>> DFC_SMALL_ORES = Helpers.mapOfKeys(DFCOre.class, DFCOre::isGraded, type ->
+            register(("ore/small_" + type.name()), () -> GroundcoverBlock.looseOre(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.GRASS)
+                    .strength(0.05F, 0.0F)
+                    .sound(SoundType.NETHER_ORE)
+                    .noCollission()
+                    .pushReaction(PushReaction.DESTROY)))
     );
 
     public static final Map<DFCRock, Map<DFCOre, RegistryObject<Block>>> DFC_ROCK_DFC_ORES = Helpers.mapOfKeys(DFCRock.class, rock ->

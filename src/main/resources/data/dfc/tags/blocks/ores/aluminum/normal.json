@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/normal_native_aluminum/granite",
+    "dfc:ore/normal_native_aluminum/diorite",
+    "dfc:ore/normal_native_aluminum/gabbro",
+    "dfc:ore/normal_native_aluminum/shale",
+    "dfc:ore/normal_native_aluminum/claystone",
+    "dfc:ore/normal_native_aluminum/limestone",
+    "dfc:ore/normal_native_aluminum/conglomerate",
+    "dfc:ore/normal_native_aluminum/dolomite",
+    "dfc:ore/normal_native_aluminum/chert",
+    "dfc:ore/normal_native_aluminum/chalk",
+    "dfc:ore/normal_native_aluminum/rhyolite",
+    "dfc:ore/normal_native_aluminum/basalt",
+    "dfc:ore/normal_native_aluminum/andesite",
+    "dfc:ore/normal_native_aluminum/dacite",
+    "dfc:ore/normal_native_aluminum/quartzite",
+    "dfc:ore/normal_native_aluminum/slate",
+    "dfc:ore/normal_native_aluminum/phyllite",
+    "dfc:ore/normal_native_aluminum/schist",
+    "dfc:ore/normal_native_aluminum/gneiss",
+    "dfc:ore/normal_native_aluminum/marble",
+    "dfc:ore/normal_native_aluminum/arkose",
+    "dfc:ore/normal_native_aluminum/blueschist",
+    "dfc:ore/normal_native_aluminum/serpentine",
+    "dfc:ore/normal_native_aluminum/travertine",
+    "dfc:ore/normal_native_aluminum/tuff"
+  ]
+}

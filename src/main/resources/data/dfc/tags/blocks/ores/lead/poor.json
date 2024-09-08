@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/poor_galena/granite",
+    "dfc:ore/poor_galena/diorite",
+    "dfc:ore/poor_galena/gabbro",
+    "dfc:ore/poor_galena/shale",
+    "dfc:ore/poor_galena/claystone",
+    "dfc:ore/poor_galena/limestone",
+    "dfc:ore/poor_galena/conglomerate",
+    "dfc:ore/poor_galena/dolomite",
+    "dfc:ore/poor_galena/chert",
+    "dfc:ore/poor_galena/chalk",
+    "dfc:ore/poor_galena/rhyolite",
+    "dfc:ore/poor_galena/basalt",
+    "dfc:ore/poor_galena/andesite",
+    "dfc:ore/poor_galena/dacite",
+    "dfc:ore/poor_galena/quartzite",
+    "dfc:ore/poor_galena/slate",
+    "dfc:ore/poor_galena/phyllite",
+    "dfc:ore/poor_galena/schist",
+    "dfc:ore/poor_galena/gneiss",
+    "dfc:ore/poor_galena/marble",
+    "dfc:ore/poor_galena/arkose",
+    "dfc:ore/poor_galena/blueschist",
+    "dfc:ore/poor_galena/serpentine",
+    "dfc:ore/poor_galena/travertine",
+    "dfc:ore/poor_galena/tuff"
+  ]
+}

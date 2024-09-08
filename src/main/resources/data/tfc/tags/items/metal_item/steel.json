@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/smooth/steel",
+    "dfc:metal/smooth/steel_slab",
+    "dfc:metal/smooth/steel_stairs",
+    "dfc:metal/bricks/steel",
+    "dfc:metal/bricks/steel_slab",
+    "dfc:metal/bricks/steel_stairs",
+    "dfc:metal/cut/steel",
+    "dfc:metal/cut/steel_slab",
+    "dfc:metal/cut/steel_stairs",
+    "dfc:metal/pillar/steel"
+  ]
+}

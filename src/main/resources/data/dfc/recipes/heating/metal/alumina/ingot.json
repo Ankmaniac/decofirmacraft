@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/ingot/alumina"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/alumina",
+    "amount": 100
+  },
+  "temperature": 1535
+}

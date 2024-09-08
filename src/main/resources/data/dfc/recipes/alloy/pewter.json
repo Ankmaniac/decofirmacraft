@@ -1,0 +1,21 @@
+{
+  "type": "tfc:alloy",
+  "result": "dfc:pewter",
+  "contents": [
+    {
+      "metal": "tfc:tin",
+      "min": 0.5,
+      "max": 0.7
+    },
+    {
+      "metal": "dfc:lead",
+      "min": 0.0,
+      "max": 0.3
+    },
+    {
+      "metal": "tfc:bismuth",
+      "min": 0.0,
+      "max": 0.2
+    }
+  ]
+}

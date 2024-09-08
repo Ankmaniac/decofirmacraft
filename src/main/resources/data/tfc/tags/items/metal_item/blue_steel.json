@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/smooth/blue_steel",
+    "dfc:metal/smooth/blue_steel_slab",
+    "dfc:metal/smooth/blue_steel_stairs",
+    "dfc:metal/bricks/blue_steel",
+    "dfc:metal/bricks/blue_steel_slab",
+    "dfc:metal/bricks/blue_steel_stairs",
+    "dfc:metal/cut/blue_steel",
+    "dfc:metal/cut/blue_steel_slab",
+    "dfc:metal/cut/blue_steel_stairs",
+    "dfc:metal/pillar/blue_steel"
+  ]
+}

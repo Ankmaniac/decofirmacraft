@@ -82,6 +82,23 @@ public class DFCTabs {
 
     private static void fillOre(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
+        for (DFCOre ore : DFCOre.values())
+        {
+            if (ore.isGraded())
+            {
+                accept(out, DFCBlocks.DFC_SMALL_ORES, ore);
+                accept(out, DFCItems.GRADED_ORES, ore, Ore.Grade.POOR);
+                accept(out, DFCItems.GRADED_ORES, ore, Ore.Grade.NORMAL);
+                accept(out, DFCItems.GRADED_ORES, ore, Ore.Grade.RICH);
+            }
+        }
+        for (DFCOre ore : DFCOre.values())
+        {
+            if (!ore.isGraded())
+            {
+                accept(out, DFCItems.ORES, ore);
+            }
+        }
         for(DFCOre ore : DFCOre.values())
         {
             if (ore.isGraded())
@@ -123,6 +140,13 @@ public class DFCTabs {
 
     private static void fillMetal(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
+        for(DFCMetal.DFCDefault dfcmetal : DFCMetal.DFCDefault.values())
+        {
+            for (DFCMetal.DFCDefault.DFCItemType type : DFCMetal.DFCDefault.DFCItemType.values())
+            {
+                accept(out, DFCItems.METAL_ITEMS, dfcmetal, type);
+            }
+        }
         for(Metal.Default metal : Metal.Default.values())
         {
             if(metal.hasUtilities()) {
@@ -148,13 +172,6 @@ public class DFCTabs {
             for (Metal.BlockType type : Metal.BlockType.values())
             {
                 accept(out, DFCBlocks.DFC_METALS, dfcmetal, type);
-            }
-        }
-        for(DFCMetal.DFCDefault dfcmetal : DFCMetal.DFCDefault.values())
-        {
-            for (DFCMetal.DFCDefault.DFCItemType type : DFCMetal.DFCDefault.DFCItemType.values())
-            {
-                accept(out, DFCItems.METAL_ITEMS, dfcmetal, type);
             }
         }
     }

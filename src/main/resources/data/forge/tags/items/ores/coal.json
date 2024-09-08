@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/bituminous_coal/arkose",
+    "dfc:ore/bituminous_coal/blueschist",
+    "dfc:ore/bituminous_coal/serpentine",
+    "dfc:ore/bituminous_coal/travertine",
+    "dfc:ore/bituminous_coal/tuff",
+    "dfc:ore/lignite/arkose",
+    "dfc:ore/lignite/blueschist",
+    "dfc:ore/lignite/serpentine",
+    "dfc:ore/lignite/travertine",
+    "dfc:ore/lignite/tuff"
+  ]
+}

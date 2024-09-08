@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/smooth/rose_gold",
+    "dfc:metal/smooth/rose_gold_slab",
+    "dfc:metal/smooth/rose_gold_stairs",
+    "dfc:metal/bricks/rose_gold",
+    "dfc:metal/bricks/rose_gold_slab",
+    "dfc:metal/bricks/rose_gold_stairs",
+    "dfc:metal/cut/rose_gold",
+    "dfc:metal/cut/rose_gold_slab",
+    "dfc:metal/cut/rose_gold_stairs",
+    "dfc:metal/pillar/rose_gold"
+  ]
+}

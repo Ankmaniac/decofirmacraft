@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/asbestos",
+    "dfc:ore/normal_bauxite",
+    "dfc:ore/normal_galena",
+    "dfc:ore/normal_native_aluminum",
+    "dfc:ore/normal_native_platinum",
+    "dfc:ore/poor_bauxite",
+    "dfc:ore/poor_galena",
+    "dfc:ore/poor_native_aluminum",
+    "dfc:ore/poor_native_platinum",
+    "dfc:ore/rich_bauxite",
+    "dfc:ore/rich_galena",
+    "dfc:ore/rich_native_aluminum",
+    "dfc:ore/rich_native_platinum"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "tag": "forge:sheets/lead"
+  },
+  "heat_capacity": 9.524,
+  "forging_temperature": 204,
+  "welding_temperature": 272
+}

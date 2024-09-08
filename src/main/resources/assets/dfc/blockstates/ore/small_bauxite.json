@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "dfc:block/groundcover/bauxite",
+        "y": 90
+      },
+      {
+        "model": "dfc:block/groundcover/bauxite"
+      },
+      {
+        "model": "dfc:block/groundcover/bauxite",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/groundcover/bauxite",
+        "y": 270
+      }
+    ]
+  }
+}

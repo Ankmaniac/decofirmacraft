@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:vein/deep_native_aluminum",
+    "dfc:vein/deep_native_platinum",
+    "dfc:vein/normal_native_aluminum",
+    "dfc:vein/surface_bauxite",
+    "dfc:vein/surface_galena"
+  ]
+}

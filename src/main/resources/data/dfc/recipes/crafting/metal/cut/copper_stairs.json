@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/cut/copper"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/cut/copper_stairs",
+    "count": 8
+  }
+}

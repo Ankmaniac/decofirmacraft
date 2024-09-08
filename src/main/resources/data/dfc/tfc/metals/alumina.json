@@ -1,0 +1,16 @@
+{
+  "tier": 2,
+  "fluid": "dfc:metal/alumina",
+  "melt_temperature": 1535,
+  "specific_heat_capacity": 0.00857,
+  "ingots": {
+    "tag": "forge:ingots/alumina"
+  },
+  "double_ingots": {
+    "tag": "forge:double_ingots/alumina"
+  },
+  "sheets": {
+    "tag": "forge:sheets/alumina"
+  },
+  "__comment__": "forge temp: 921 weld temp: 1228"
+}

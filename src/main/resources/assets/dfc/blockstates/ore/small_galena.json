@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "dfc:block/groundcover/galena",
+        "y": 90
+      },
+      {
+        "model": "dfc:block/groundcover/galena"
+      },
+      {
+        "model": "dfc:block/groundcover/galena",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/groundcover/galena",
+        "y": 270
+      }
+    ]
+  }
+}

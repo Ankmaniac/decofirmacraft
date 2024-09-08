@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/cut/brass_stairs"
+  },
+  "heat_capacity": 2.143,
+  "forging_temperature": 558,
+  "welding_temperature": 744
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/cut/nickel"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/cut/nickel_slab",
+    "count": 6
+  }
+}

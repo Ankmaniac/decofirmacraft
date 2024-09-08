@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/metal/bricks/nickel",
+    "particle": "dfc:block/metal/bricks/nickel"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:double_sheets/alumina",
+    "#forge:double_sheets/aluminum",
+    "#forge:double_sheets/lead",
+    "#forge:double_sheets/pewter",
+    "#forge:double_sheets/platinum"
+  ]
+}

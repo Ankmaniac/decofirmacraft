@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_galena/slate",
+  "result": "dfc:ore/poor_galena/slate"
+}

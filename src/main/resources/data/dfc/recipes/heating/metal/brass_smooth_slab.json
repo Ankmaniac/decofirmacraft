@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/smooth/brass_slab"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/brass",
+    "amount": 12
+  },
+  "temperature": 930
+}

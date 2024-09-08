@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/sheet/lead"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/lead",
+    "amount": 200
+  },
+  "temperature": 370
+}

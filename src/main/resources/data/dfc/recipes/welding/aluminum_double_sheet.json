@@ -1,0 +1,13 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "tag": "forge:sheets/aluminum"
+  },
+  "second_input": {
+    "tag": "forge:sheets/aluminum"
+  },
+  "tier": 2,
+  "result": {
+    "item": "dfc:metal/double_sheet/aluminum"
+  }
+}

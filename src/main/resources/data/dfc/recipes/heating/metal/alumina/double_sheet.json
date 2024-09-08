@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/double_sheet/alumina"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/alumina",
+    "amount": 400
+  },
+  "temperature": 1535
+}

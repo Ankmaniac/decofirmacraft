@@ -1,0 +1,16 @@
+{
+  "tier": 1,
+  "fluid": "dfc:metal/lead",
+  "melt_temperature": 370,
+  "specific_heat_capacity": 0.02143,
+  "ingots": {
+    "tag": "forge:ingots/lead"
+  },
+  "double_ingots": {
+    "tag": "forge:double_ingots/lead"
+  },
+  "sheets": {
+    "tag": "forge:sheets/lead"
+  },
+  "__comment__": "forge temp: 222 weld temp: 296"
+}

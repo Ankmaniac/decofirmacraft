@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfc:metal/block/zinc_slab"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/zinc",
+    "amount": 12
+  },
+  "temperature": 420
+}

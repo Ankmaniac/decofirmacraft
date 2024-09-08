@@ -1,0 +1,16 @@
+{
+  "type": "tfc:anvil",
+  "input": {
+    "tag": "forge:ingots/lead"
+  },
+  "result": {
+    "item": "dfc:metal/rod/lead",
+    "count": 2
+  },
+  "tier": 1,
+  "rules": [
+    "bend_last",
+    "draw_second_last",
+    "draw_third_last"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/smooth/platinum"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/smooth/platinum_slab",
+    "count": 6
+  }
+}

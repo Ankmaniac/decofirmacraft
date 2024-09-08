@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/normal_bauxite/granite",
+    "dfc:ore/normal_bauxite/diorite",
+    "dfc:ore/normal_bauxite/gabbro",
+    "dfc:ore/normal_bauxite/shale",
+    "dfc:ore/normal_bauxite/claystone",
+    "dfc:ore/normal_bauxite/limestone",
+    "dfc:ore/normal_bauxite/conglomerate",
+    "dfc:ore/normal_bauxite/dolomite",
+    "dfc:ore/normal_bauxite/chert",
+    "dfc:ore/normal_bauxite/chalk",
+    "dfc:ore/normal_bauxite/rhyolite",
+    "dfc:ore/normal_bauxite/basalt",
+    "dfc:ore/normal_bauxite/andesite",
+    "dfc:ore/normal_bauxite/dacite",
+    "dfc:ore/normal_bauxite/quartzite",
+    "dfc:ore/normal_bauxite/slate",
+    "dfc:ore/normal_bauxite/phyllite",
+    "dfc:ore/normal_bauxite/schist",
+    "dfc:ore/normal_bauxite/gneiss",
+    "dfc:ore/normal_bauxite/marble",
+    "dfc:ore/normal_bauxite/arkose",
+    "dfc:ore/normal_bauxite/blueschist",
+    "dfc:ore/normal_bauxite/serpentine",
+    "dfc:ore/normal_bauxite/travertine",
+    "dfc:ore/normal_bauxite/tuff"
+  ]
+}

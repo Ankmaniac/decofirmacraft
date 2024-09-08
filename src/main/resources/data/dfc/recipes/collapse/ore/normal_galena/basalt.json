@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_galena/basalt",
+  "result": "dfc:ore/normal_galena/basalt"
+}

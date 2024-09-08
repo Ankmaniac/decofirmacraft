@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "dfc:ore/small_bauxite"
+    },
+    {
+      "item": "dfc:ore/normal_bauxite"
+    },
+    {
+      "item": "dfc:ore/poor_bauxite"
+    },
+    {
+      "item": "dfc:ore/rich_bauxite"
+    }
+  ],
+  "heat_capacity": 1.143,
+  "forging_temperature": 921,
+  "welding_temperature": 1228
+}

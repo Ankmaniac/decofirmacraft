@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/cut/pewter"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/cut/pewter_stairs",
+    "count": 8
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/lapis_lazuli/arkose",
+    "dfc:ore/lapis_lazuli/blueschist",
+    "dfc:ore/lapis_lazuli/serpentine",
+    "dfc:ore/lapis_lazuli/travertine",
+    "dfc:ore/lapis_lazuli/tuff"
+  ]
+}

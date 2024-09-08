@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/asbestos/granite",
+    "dfc:ore/asbestos/diorite",
+    "dfc:ore/asbestos/gabbro",
+    "dfc:ore/asbestos/shale",
+    "dfc:ore/asbestos/claystone",
+    "dfc:ore/asbestos/limestone",
+    "dfc:ore/asbestos/conglomerate",
+    "dfc:ore/asbestos/dolomite",
+    "dfc:ore/asbestos/chert",
+    "dfc:ore/asbestos/chalk",
+    "dfc:ore/asbestos/rhyolite",
+    "dfc:ore/asbestos/basalt",
+    "dfc:ore/asbestos/andesite",
+    "dfc:ore/asbestos/dacite",
+    "dfc:ore/asbestos/quartzite",
+    "dfc:ore/asbestos/slate",
+    "dfc:ore/asbestos/phyllite",
+    "dfc:ore/asbestos/schist",
+    "dfc:ore/asbestos/gneiss",
+    "dfc:ore/asbestos/marble",
+    "dfc:ore/asbestos/arkose",
+    "dfc:ore/asbestos/blueschist",
+    "dfc:ore/asbestos/serpentine",
+    "dfc:ore/asbestos/travertine",
+    "dfc:ore/asbestos/tuff"
+  ]
+}

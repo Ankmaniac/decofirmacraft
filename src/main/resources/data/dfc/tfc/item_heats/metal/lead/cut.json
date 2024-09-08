@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/cut/lead"
+  },
+  "heat_capacity": 4.762,
+  "forging_temperature": 222,
+  "welding_temperature": 296
+}

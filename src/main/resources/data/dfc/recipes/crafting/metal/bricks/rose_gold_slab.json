@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/bricks/rose_gold"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/bricks/rose_gold_slab",
+    "count": 6
+  }
+}

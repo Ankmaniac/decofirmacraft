@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/bricks/gold_slab"
+  },
+  "heat_capacity": 0.833,
+  "forging_temperature": 636,
+  "welding_temperature": 848
+}

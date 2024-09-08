@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/smooth/bronze_stairs"
+  },
+  "heat_capacity": 2.143,
+  "forging_temperature": 570,
+  "welding_temperature": 760
+}

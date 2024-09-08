@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_galena/diorite",
+  "result": "dfc:ore/normal_galena/diorite"
+}

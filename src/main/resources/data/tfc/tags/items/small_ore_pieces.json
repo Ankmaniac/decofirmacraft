@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/small_bauxite",
+    "dfc:ore/small_galena",
+    "dfc:ore/small_native_aluminum",
+    "dfc:ore/small_native_platinum"
+  ]
+}

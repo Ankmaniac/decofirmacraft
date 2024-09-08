@@ -280,6 +280,18 @@
     "dfc:ore/pyrite/tuff",
     "dfc:ore/ruby/tuff",
     "dfc:ore/sapphire/tuff",
-    "dfc:ore/topaz/tuff"
+    "dfc:ore/topaz/tuff",
+    "#dfc:ores/alumina/normal",
+    "#dfc:ores/alumina/poor",
+    "#dfc:ores/alumina/rich",
+    "#dfc:ores/aluminum/normal",
+    "#dfc:ores/aluminum/poor",
+    "#dfc:ores/aluminum/rich",
+    "#dfc:ores/lead/normal",
+    "#dfc:ores/lead/poor",
+    "#dfc:ores/lead/rich",
+    "#dfc:ores/platinum/normal",
+    "#dfc:ores/platinum/poor",
+    "#dfc:ores/platinum/rich"
   ]
 }

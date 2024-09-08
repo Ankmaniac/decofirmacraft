@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/smooth/brass"
+  },
+  "heat_capacity": 2.857,
+  "forging_temperature": 558,
+  "welding_temperature": 744
+}

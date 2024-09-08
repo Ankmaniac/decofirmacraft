@@ -1,0 +1,21 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dfc:metal/sheet/aluminum"
+      },
+      {
+        "tag": "tfc:rock/bricks"
+      },
+      {
+        "tag": "tfc:hammers"
+      }
+    ],
+    "result": {
+      "item": "dfc:metal/bricks/aluminum",
+      "count": 8
+    }
+  }
+}

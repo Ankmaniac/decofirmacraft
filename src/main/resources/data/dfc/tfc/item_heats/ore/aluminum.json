@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "dfc:ore/small_native_aluminum"
+    },
+    {
+      "item": "dfc:ore/normal_native_aluminum"
+    },
+    {
+      "item": "dfc:ore/poor_native_aluminum"
+    },
+    {
+      "item": "dfc:ore/rich_native_aluminum"
+    }
+  ],
+  "heat_capacity": 1.143,
+  "forging_temperature": 921,
+  "welding_temperature": 1228
+}

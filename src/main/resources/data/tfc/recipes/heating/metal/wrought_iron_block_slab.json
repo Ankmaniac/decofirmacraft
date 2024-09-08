@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfc:metal/block/wrought_iron_slab"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/cast_iron",
+    "amount": 12
+  },
+  "temperature": 1535
+}

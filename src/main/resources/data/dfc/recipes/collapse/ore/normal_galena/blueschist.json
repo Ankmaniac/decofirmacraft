@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_galena/blueschist",
+  "result": "dfc:ore/normal_galena/blueschist"
+}

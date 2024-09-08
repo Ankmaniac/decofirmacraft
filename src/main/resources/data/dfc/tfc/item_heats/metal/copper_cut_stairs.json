@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/cut/copper_stairs"
+  },
+  "heat_capacity": 2.143,
+  "forging_temperature": 648,
+  "welding_temperature": 864
+}

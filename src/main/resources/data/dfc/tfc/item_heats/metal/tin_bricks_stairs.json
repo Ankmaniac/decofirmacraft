@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/bricks/tin_stairs"
+  },
+  "heat_capacity": 5.357,
+  "forging_temperature": 138,
+  "welding_temperature": 184
+}

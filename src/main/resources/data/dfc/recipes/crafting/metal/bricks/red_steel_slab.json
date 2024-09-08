@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/bricks/red_steel"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/bricks/red_steel_slab",
+    "count": 6
+  }
+}

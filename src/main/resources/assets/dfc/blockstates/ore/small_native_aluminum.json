@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "dfc:block/groundcover/native_aluminum",
+        "y": 90
+      },
+      {
+        "model": "dfc:block/groundcover/native_aluminum"
+      },
+      {
+        "model": "dfc:block/groundcover/native_aluminum",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/groundcover/native_aluminum",
+        "y": 270
+      }
+    ]
+  }
+}

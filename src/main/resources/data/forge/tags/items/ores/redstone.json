@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/cinnabar/arkose",
+    "dfc:ore/cinnabar/blueschist",
+    "dfc:ore/cinnabar/serpentine",
+    "dfc:ore/cinnabar/travertine",
+    "dfc:ore/cinnabar/tuff",
+    "dfc:ore/cryolite/arkose",
+    "dfc:ore/cryolite/blueschist",
+    "dfc:ore/cryolite/serpentine",
+    "dfc:ore/cryolite/travertine",
+    "dfc:ore/cryolite/tuff"
+  ]
+}

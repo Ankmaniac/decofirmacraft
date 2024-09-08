@@ -1,0 +1,21 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "tfc:metal/sheet/steel"
+      },
+      {
+        "tag": "dfc:rock/pillars"
+      },
+      {
+        "tag": "tfc:hammers"
+      }
+    ],
+    "result": {
+      "item": "dfc:metal/pillar/steel",
+      "count": 8
+    }
+  }
+}

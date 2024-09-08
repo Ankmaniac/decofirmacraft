@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/cut/aluminum_stairs"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/aluminum",
+    "amount": 18
+  },
+  "temperature": 1540
+}

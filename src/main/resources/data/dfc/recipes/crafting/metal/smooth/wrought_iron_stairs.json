@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:metal/smooth/wrought_iron"
+    }
+  },
+  "result": {
+    "item": "dfc:metal/smooth/wrought_iron_stairs",
+    "count": 8
+  }
+}

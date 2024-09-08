@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/smooth/copper_slab"
+  },
+  "heat_capacity": 1.429,
+  "forging_temperature": 648,
+  "welding_temperature": 864
+}

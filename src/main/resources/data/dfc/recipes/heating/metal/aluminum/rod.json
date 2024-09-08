@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/rod/aluminum"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/aluminum",
+    "amount": 50
+  },
+  "temperature": 1540
+}

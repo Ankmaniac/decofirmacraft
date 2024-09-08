@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/smooth/rose_gold_stairs"
+  },
+  "heat_capacity": 2.143,
+  "forging_temperature": 576,
+  "welding_temperature": 768
+}

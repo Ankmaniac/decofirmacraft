@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/double_ingot/alumina",
+    "dfc:metal/double_ingot/aluminum",
+    "dfc:metal/double_ingot/lead",
+    "dfc:metal/double_ingot/pewter",
+    "dfc:metal/double_ingot/platinum"
+  ]
+}

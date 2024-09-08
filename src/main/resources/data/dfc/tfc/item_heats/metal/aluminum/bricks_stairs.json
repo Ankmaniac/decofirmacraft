@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/bricks/aluminum_stairs"
+  },
+  "heat_capacity": 2.143,
+  "forging_temperature": 924,
+  "welding_temperature": 1232
+}

@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/smooth/bismuth_bronze"
+  },
+  "heat_capacity": 2.857,
+  "forging_temperature": 591,
+  "welding_temperature": 788
+}

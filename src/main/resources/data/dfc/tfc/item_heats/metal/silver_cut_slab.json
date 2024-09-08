@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/cut/silver_slab"
+  },
+  "heat_capacity": 1.042,
+  "forging_temperature": 577,
+  "welding_temperature": 769
+}

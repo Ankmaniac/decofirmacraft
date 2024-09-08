@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/smooth/lead"
+  },
+  "heat_capacity": 4.762,
+  "forging_temperature": 204,
+  "welding_temperature": 272
+}

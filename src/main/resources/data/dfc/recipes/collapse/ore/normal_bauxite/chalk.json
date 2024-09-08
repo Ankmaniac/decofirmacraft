@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_bauxite/chalk",
+  "result": "dfc:ore/normal_bauxite/chalk"
+}

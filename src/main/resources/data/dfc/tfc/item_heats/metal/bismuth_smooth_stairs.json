@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/smooth/bismuth_stairs"
+  },
+  "heat_capacity": 5.357,
+  "forging_temperature": 162,
+  "welding_temperature": 216
+}

@@ -1,0 +1,8 @@
+[compatibility]
+# Defines additional metal sheet textures that should be added to the block atlas, as they would be otherwise unused, for use in ingot piles and metal sheet blocks.
+# For Pack Makers: When adding a Metal via a datapack, with a custom texture "domain:block/my_texture", and you get missing textures in ingot piles and sheet blocks, that texture needs to be added here
+additionalMetalSheetTextures = ["dfc:block/metal/full/alumina"]
+additionalMetalSheetTextures = ["dfc:block/metal/full/aluminum"]
+additionalMetalSheetTextures = ["dfc:block/metal/full/lead"]
+additionalMetalSheetTextures = ["dfc:block/metal/full/pewter"]
+additionalMetalSheetTextures = ["dfc:block/metal/full/platinum"]

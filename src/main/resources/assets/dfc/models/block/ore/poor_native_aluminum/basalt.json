@@ -1,0 +1,8 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfc:block/rock/raw/basalt",
+    "overlay": "dfc:block/ore/poor_native_aluminum"
+  }
+}

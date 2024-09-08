@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/smooth/bismuth_bronze_stairs"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/bismuth_bronze",
+    "amount": 18
+  },
+  "temperature": 985
+}

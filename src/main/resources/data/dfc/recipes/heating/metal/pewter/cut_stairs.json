@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/cut/pewter_stairs"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/pewter",
+    "amount": 18
+  },
+  "temperature": 340
+}

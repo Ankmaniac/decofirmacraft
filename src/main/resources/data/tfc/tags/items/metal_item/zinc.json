@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/smooth/zinc",
+    "dfc:metal/smooth/zinc_slab",
+    "dfc:metal/smooth/zinc_stairs",
+    "dfc:metal/bricks/zinc",
+    "dfc:metal/bricks/zinc_slab",
+    "dfc:metal/bricks/zinc_stairs",
+    "dfc:metal/cut/zinc",
+    "dfc:metal/cut/zinc_slab",
+    "dfc:metal/cut/zinc_stairs",
+    "dfc:metal/pillar/zinc"
+  ]
+}

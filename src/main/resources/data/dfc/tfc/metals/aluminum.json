@@ -1,0 +1,16 @@
+{
+  "tier": 3,
+  "fluid": "dfc:metal/aluminum",
+  "melt_temperature": 1540,
+  "specific_heat_capacity": 0.00857,
+  "ingots": {
+    "tag": "forge:ingots/aluminum"
+  },
+  "double_ingots": {
+    "tag": "forge:double_ingots/aluminum"
+  },
+  "sheets": {
+    "tag": "forge:sheets/aluminum"
+  },
+  "__comment__": "forge temp: 924 weld temp: 1232"
+}

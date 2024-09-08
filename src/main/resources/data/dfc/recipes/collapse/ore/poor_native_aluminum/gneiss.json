@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/normal_native_aluminum/gneiss",
+  "result": "dfc:ore/poor_native_aluminum/gneiss"
+}

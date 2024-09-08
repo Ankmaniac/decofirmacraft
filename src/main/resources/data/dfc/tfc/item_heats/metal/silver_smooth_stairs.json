@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/smooth/silver_stairs"
+  },
+  "heat_capacity": 1.563,
+  "forging_temperature": 577,
+  "welding_temperature": 769
+}

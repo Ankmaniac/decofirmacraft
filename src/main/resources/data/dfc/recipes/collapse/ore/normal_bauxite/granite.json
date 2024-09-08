@@ -1,0 +1,5 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": "dfc:ore/rich_bauxite/granite",
+  "result": "dfc:ore/normal_bauxite/granite"
+}

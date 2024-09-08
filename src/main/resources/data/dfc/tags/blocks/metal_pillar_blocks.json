@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/pillar/alumina",
+    "dfc:metal/pillar/aluminum",
+    "dfc:metal/pillar/lead",
+    "dfc:metal/pillar/pewter",
+    "dfc:metal/pillar/platinum",
+    "dfc:metal/pillar/bismuth",
+    "dfc:metal/pillar/bismuth_bronze",
+    "dfc:metal/pillar/black_bronze",
+    "dfc:metal/pillar/bronze",
+    "dfc:metal/pillar/brass",
+    "dfc:metal/pillar/copper",
+    "dfc:metal/pillar/gold",
+    "dfc:metal/pillar/nickel",
+    "dfc:metal/pillar/rose_gold",
+    "dfc:metal/pillar/silver",
+    "dfc:metal/pillar/tin",
+    "dfc:metal/pillar/zinc",
+    "dfc:metal/pillar/sterling_silver",
+    "dfc:metal/pillar/wrought_iron",
+    "dfc:metal/pillar/cast_iron",
+    "dfc:metal/pillar/steel",
+    "dfc:metal/pillar/black_steel",
+    "dfc:metal/pillar/blue_steel",
+    "dfc:metal/pillar/red_steel"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/smooth/sterling_silver",
+    "dfc:metal/smooth/sterling_silver_slab",
+    "dfc:metal/smooth/sterling_silver_stairs",
+    "dfc:metal/bricks/sterling_silver",
+    "dfc:metal/bricks/sterling_silver_slab",
+    "dfc:metal/bricks/sterling_silver_stairs",
+    "dfc:metal/cut/sterling_silver",
+    "dfc:metal/cut/sterling_silver_slab",
+    "dfc:metal/cut/sterling_silver_stairs",
+    "dfc:metal/pillar/sterling_silver"
+  ]
+}

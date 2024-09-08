@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/ingot/platinum"
+  },
+  "result_fluid": {
+    "fluid": "dfc:metal/platinum",
+    "amount": 100
+  },
+  "temperature": 1540
+}

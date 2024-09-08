@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/poor_native_platinum/granite",
+    "dfc:ore/poor_native_platinum/diorite",
+    "dfc:ore/poor_native_platinum/gabbro",
+    "dfc:ore/poor_native_platinum/shale",
+    "dfc:ore/poor_native_platinum/claystone",
+    "dfc:ore/poor_native_platinum/limestone",
+    "dfc:ore/poor_native_platinum/conglomerate",
+    "dfc:ore/poor_native_platinum/dolomite",
+    "dfc:ore/poor_native_platinum/chert",
+    "dfc:ore/poor_native_platinum/chalk",
+    "dfc:ore/poor_native_platinum/rhyolite",
+    "dfc:ore/poor_native_platinum/basalt",
+    "dfc:ore/poor_native_platinum/andesite",
+    "dfc:ore/poor_native_platinum/dacite",
+    "dfc:ore/poor_native_platinum/quartzite",
+    "dfc:ore/poor_native_platinum/slate",
+    "dfc:ore/poor_native_platinum/phyllite",
+    "dfc:ore/poor_native_platinum/schist",
+    "dfc:ore/poor_native_platinum/gneiss",
+    "dfc:ore/poor_native_platinum/marble",
+    "dfc:ore/poor_native_platinum/arkose",
+    "dfc:ore/poor_native_platinum/blueschist",
+    "dfc:ore/poor_native_platinum/serpentine",
+    "dfc:ore/poor_native_platinum/travertine",
+    "dfc:ore/poor_native_platinum/tuff"
+  ]
+}

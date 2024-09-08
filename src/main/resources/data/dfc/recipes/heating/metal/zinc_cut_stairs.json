@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/cut/zinc_stairs"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/zinc",
+    "amount": 18
+  },
+  "temperature": 420
+}

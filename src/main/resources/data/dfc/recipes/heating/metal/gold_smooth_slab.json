@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:metal/smooth/gold_slab"
+  },
+  "result_fluid": {
+    "fluid": "tfc:metal/gold",
+    "amount": 12
+  },
+  "temperature": 1060
+}

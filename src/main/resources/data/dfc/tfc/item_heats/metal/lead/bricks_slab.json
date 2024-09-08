@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/bricks/lead_slab"
+  },
+  "heat_capacity": 2.381,
+  "forging_temperature": 222,
+  "welding_temperature": 296
+}

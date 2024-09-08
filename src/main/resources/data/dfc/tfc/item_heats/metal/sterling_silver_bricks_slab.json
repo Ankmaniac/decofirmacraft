@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "dfc:metal/bricks/sterling_silver_slab"
+  },
+  "heat_capacity": 1.429,
+  "forging_temperature": 570,
+  "welding_temperature": 760
+}

@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/block/pewter",
+    "dfc:metal/block/pewter_slab",
+    "dfc:metal/block/pewter_stairs",
+    "dfc:metal/smooth/pewter",
+    "dfc:metal/smooth/pewter_slab",
+    "dfc:metal/smooth/pewter_stairs",
+    "dfc:metal/bricks/pewter",
+    "dfc:metal/bricks/pewter_slab",
+    "dfc:metal/bricks/pewter_stairs",
+    "dfc:metal/cut/pewter",
+    "dfc:metal/cut/pewter_slab",
+    "dfc:metal/cut/pewter_stairs",
+    "dfc:metal/pillar/pewter"
+  ]
+}
