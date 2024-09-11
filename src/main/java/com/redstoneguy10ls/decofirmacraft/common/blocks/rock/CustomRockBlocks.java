@@ -71,10 +71,10 @@ public enum CustomRockBlocks implements StringRepresentable {
         final BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(1.5f, 10).requiresCorrectToolForDrops();
         return new WallBlock(properties);
     }
+
     @Override
     public String getSerializedName()
     {
         return serializedName;
     }
-
 }

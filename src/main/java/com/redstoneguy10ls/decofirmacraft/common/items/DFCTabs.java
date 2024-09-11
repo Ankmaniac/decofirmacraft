@@ -16,6 +16,7 @@ import net.dries007.tfc.util.SelfTests;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
@@ -38,6 +39,8 @@ public class DFCTabs {
             register("ore_tab", () -> new ItemStack(DFCBlocks.DFC_ROCK_ORES.get(DFCRock.ARKOSE).get(Ore.DIAMOND).get()), DFCTabs::fillOre);
     public static final DFCTabs.CreativeTabHolder METAL =
             register("metal_tab", () -> new ItemStack(DFCBlocks.METAL_GATES.get(Metal.Default.WROUGHT_IRON).get()), DFCTabs::fillMetal);
+    public static final DFCTabs.CreativeTabHolder CERAMICS =
+            register("ceramics_tab", () -> new ItemStack(DFCBlocks.PAINTED_SHINGLES.get(DyeColor.RED).get()), DFCTabs::fillCeramics);
 
 
     private static void fillRock(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
@@ -175,6 +178,39 @@ public class DFCTabs {
             }
         }
     }
+
+    private static void fillCeramics(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        accept(out, DFCBlocks.PLAIN_TILES);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.PAINTED_TILES, dye);
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_TILES, dye);
+        }
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.GLAZED_TILES, dye);
+        }
+        accept(out, DFCBlocks.PLAIN_SMALL_TILES);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.SMALL_PAINTED_TILES, dye);
+            accept(out, DFCBlocks.SMALL_TERRACOTTA_PAINTED_TILES, dye);
+        }
+        accept(out, DFCBlocks.PLAIN_SHINGLES);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.PAINTED_SHINGLES, dye);
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_SHINGLES, dye);
+        }
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.PAINTED_BRICKS, dye);
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_BRICKS, dye);
+        }
+
+    }
+
 
 
     private static <T extends ItemLike, R extends Supplier<T>> void accept(CreativeModeTab.Output out, R reg)
