@@ -4,7 +4,7 @@
     "item": "tfc:ceramic/fire_ingot_mold"
   },
   "fluid": {
-    "ingredient": "dfc:metal/alumina",
+    "ingredient": "dfc:metal/dfc_alumina",
     "amount": 100
   },
   "result": {

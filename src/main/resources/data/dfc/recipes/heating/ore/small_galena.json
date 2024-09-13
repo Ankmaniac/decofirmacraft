@@ -4,7 +4,7 @@
     "item": "dfc:ore/small_galena"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/lead",
+    "fluid": "dfc:metal/dfc_lead",
     "amount": 10
   },
   "temperature": 370

@@ -4,7 +4,7 @@
     "item": "dfc:metal/rod/alumina"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/alumina",
+    "fluid": "dfc:metal/dfc_alumina",
     "amount": 50
   },
   "temperature": 1535

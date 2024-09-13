@@ -1,6 +1,6 @@
 {
   "tier": 2,
-  "fluid": "dfc:metal/pewter",
+  "fluid": "dfc:metal/dfc_pewter",
   "melt_temperature": 340,
   "specific_heat_capacity": 0.02143,
   "ingots": {

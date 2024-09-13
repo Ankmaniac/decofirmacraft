@@ -4,7 +4,7 @@
     "item": "dfc:ore/rich_native_platinum"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/platinum",
+    "fluid": "dfc:metal/dfc_platinum",
     "amount": 35
   },
   "temperature": 1540

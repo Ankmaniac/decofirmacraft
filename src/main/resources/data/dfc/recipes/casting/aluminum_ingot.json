@@ -4,7 +4,7 @@
     "item": "tfc:ceramic/ingot_mold"
   },
   "fluid": {
-    "ingredient": "dfc:metal/aluminum",
+    "ingredient": "dfc:metal/dfc_aluminum",
     "amount": 100
   },
   "result": {

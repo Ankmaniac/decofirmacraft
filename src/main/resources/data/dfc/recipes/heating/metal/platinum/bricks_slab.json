@@ -4,7 +4,7 @@
     "item": "dfc:metal/bricks/platinum_slab"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/platinum",
+    "fluid": "dfc:metal/dfc_platinum",
     "amount": 12
   },
   "temperature": 1540

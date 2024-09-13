@@ -4,7 +4,7 @@
     "item": "dfc:metal/rod/platinum"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/platinum",
+    "fluid": "dfc:metal/dfc_platinum",
     "amount": 50
   },
   "temperature": 1540

@@ -4,7 +4,7 @@
     "item": "tfc:ceramic/ingot_mold"
   },
   "fluid": {
-    "ingredient": "dfc:metal/pewter",
+    "ingredient": "dfc:metal/dfc_pewter",
     "amount": 100
   },
   "result": {

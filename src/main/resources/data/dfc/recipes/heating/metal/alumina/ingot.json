@@ -4,7 +4,7 @@
     "item": "dfc:metal/ingot/alumina"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/alumina",
+    "fluid": "dfc:metal/dfc_alumina",
     "amount": 100
   },
   "temperature": 1535

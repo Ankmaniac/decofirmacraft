@@ -4,7 +4,7 @@
     "item": "tfc:ceramic/ingot_mold"
   },
   "fluid": {
-    "ingredient": "dfc:metal/lead",
+    "ingredient": "dfc:metal/dfc_lead",
     "amount": 100
   },
   "result": {

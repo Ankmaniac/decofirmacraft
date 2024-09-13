@@ -4,7 +4,7 @@
     "item": "dfc:metal/smooth/platinum_stairs"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/platinum",
+    "fluid": "dfc:metal/dfc_platinum",
     "amount": 18
   },
   "temperature": 1540

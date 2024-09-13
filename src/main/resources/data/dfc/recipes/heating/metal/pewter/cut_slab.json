@@ -4,7 +4,7 @@
     "item": "dfc:metal/cut/pewter_slab"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/pewter",
+    "fluid": "dfc:metal/dfc_pewter",
     "amount": 12
   },
   "temperature": 340

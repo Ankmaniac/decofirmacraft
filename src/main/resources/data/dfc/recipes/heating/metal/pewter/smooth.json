@@ -4,7 +4,7 @@
     "item": "dfc:metal/smooth/pewter"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/pewter",
+    "fluid": "dfc:metal/dfc_pewter",
     "amount": 25
   },
   "temperature": 340

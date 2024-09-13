@@ -4,7 +4,7 @@
     "item": "dfc:metal/ingot/pewter"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/pewter",
+    "fluid": "dfc:metal/dfc_pewter",
     "amount": 100
   },
   "temperature": 340

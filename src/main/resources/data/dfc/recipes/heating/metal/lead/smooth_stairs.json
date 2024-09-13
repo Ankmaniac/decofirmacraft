@@ -4,7 +4,7 @@
     "item": "dfc:metal/smooth/lead_stairs"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/lead",
+    "fluid": "dfc:metal/dfc_lead",
     "amount": 18
   },
   "temperature": 370

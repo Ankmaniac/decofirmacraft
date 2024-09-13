@@ -4,7 +4,7 @@
     "item": "dfc:metal/bricks/lead"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/lead",
+    "fluid": "dfc:metal/dfc_lead",
     "amount": 25
   },
   "temperature": 370

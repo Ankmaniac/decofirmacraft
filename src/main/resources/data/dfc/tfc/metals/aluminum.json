@@ -1,6 +1,6 @@
 {
   "tier": 3,
-  "fluid": "dfc:metal/aluminum",
+  "fluid": "dfc:metal/dfc_aluminum",
   "melt_temperature": 1540,
   "specific_heat_capacity": 0.00857,
   "ingots": {

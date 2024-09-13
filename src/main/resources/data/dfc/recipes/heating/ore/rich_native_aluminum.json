@@ -4,7 +4,7 @@
     "item": "dfc:ore/rich_native_aluminum"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/aluminum",
+    "fluid": "dfc:metal/dfc_aluminum",
     "amount": 35
   },
   "temperature": 1540

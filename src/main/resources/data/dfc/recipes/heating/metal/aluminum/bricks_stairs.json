@@ -4,7 +4,7 @@
     "item": "dfc:metal/bricks/aluminum_stairs"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/aluminum",
+    "fluid": "dfc:metal/dfc_aluminum",
     "amount": 18
   },
   "temperature": 1540

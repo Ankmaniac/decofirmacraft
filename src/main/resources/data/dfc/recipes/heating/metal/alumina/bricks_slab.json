@@ -4,7 +4,7 @@
     "item": "dfc:metal/bricks/alumina_slab"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/alumina",
+    "fluid": "dfc:metal/dfc_alumina",
     "amount": 12
   },
   "temperature": 1535

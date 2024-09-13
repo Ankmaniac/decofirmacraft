@@ -4,7 +4,7 @@
     "item": "dfc:metal/smooth/alumina"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/alumina",
+    "fluid": "dfc:metal/dfc_alumina",
     "amount": 25
   },
   "temperature": 1535

@@ -4,7 +4,7 @@
     "item": "dfc:metal/sheet/lead"
   },
   "result_fluid": {
-    "fluid": "dfc:metal/lead",
+    "fluid": "dfc:metal/dfc_lead",
     "amount": 200
   },
   "temperature": 370
