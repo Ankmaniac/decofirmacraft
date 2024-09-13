@@ -30,7 +30,7 @@ public class DFCFluids {
 
     public static final Map<DFCMetal.DFCDefault, FluidRegistryObject<ForgeFlowingFluid>> METALS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal
             -> register(
-            "metal/" + metal.getSerializedName(),
+            "metal/dfc_" + metal.getSerializedName(),
             properties -> properties
                     .block(DFCBlocks.DFC_METAL_FLUIDS.get(metal))
                     .bucket(DFCItems.DFC_METAL_FLUID_BUCKETS.get(metal))
