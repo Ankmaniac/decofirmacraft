@@ -1,0 +1,15 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfc:clay",
+  "pattern": [
+    "XX XX",
+    "XX XX",
+    "     ",
+    "XX XX",
+    "XX XX"
+  ],
+  "result": {
+    "item": "dfc:ceramic/unfired_tile",
+    "count": 5
+  }
+}

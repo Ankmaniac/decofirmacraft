@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/purple"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/purple"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/purple"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/purple"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/purple"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/purple"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/purple"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/purple"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "dfc:ceramic/tiles/glazed/purple"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:ceramic/tiles/small/lime"
+    }
+  },
+  "result": {
+    "item": "dfc:ceramic/tiles/small/lime_wall",
+    "count": 6
+  }
+}

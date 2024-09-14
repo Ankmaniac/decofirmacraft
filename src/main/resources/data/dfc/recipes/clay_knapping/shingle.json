@@ -1,0 +1,15 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfc:clay",
+  "pattern": [
+    " XXX ",
+    "X   X",
+    "     ",
+    " XXX ",
+    "X   X"
+  ],
+  "result": {
+    "item": "dfc:ceramic/unfired_shingle",
+    "count": 5
+  }
+}

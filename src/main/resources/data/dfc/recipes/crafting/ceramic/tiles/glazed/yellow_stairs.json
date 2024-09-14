@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:ceramic/tiles/glazed/yellow"
+    }
+  },
+  "result": {
+    "item": "dfc:ceramic/tiles/glazed/yellow_stairs",
+    "count": 8
+  }
+}

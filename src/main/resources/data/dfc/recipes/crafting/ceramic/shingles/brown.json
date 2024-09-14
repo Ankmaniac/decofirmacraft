@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "dfc:ceramic/shingles/plain"
+    },
+    {
+      "item": "dfc:ceramic/shingles/plain"
+    },
+    {
+      "item": "dfc:ceramic/shingles/plain"
+    },
+    {
+      "item": "dfc:ceramic/shingles/plain"
+    },
+    {
+      "item": "dfc:ceramic/shingles/plain"
+    },
+    {
+      "item": "dfc:ceramic/shingles/plain"
+    },
+    {
+      "item": "dfc:ceramic/shingles/plain"
+    },
+    {
+      "item": "dfc:ceramic/shingles/plain"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "dfc:ceramic/shingles/brown"
+  }
+}

@@ -173,7 +173,7 @@ public class DFCBlocks {
 
     public static final RegistryObject<Block> PLAIN_TILES = register("ceramic/tiles/normal/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
     public static final RegistryObject<Block> PLAIN_SMALL_TILES = register("ceramic/tiles/small/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    public static final RegistryObject<Block> PLAIN_SHINGLES = register("ceramic/shingles/plain", () -> new StairBlock(() -> PLAIN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final RegistryObject<Block> PLAIN_SHINGLES = register("ceramic/shingles/plain", () -> new StairBlock(() -> PLAIN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).requiresCorrectToolForDrops().strength(1.5F, 6.0F).noOcclusion()));
     public static final Map<DyeColor, RegistryObject<Block>> PAINTED_TILES = Helpers.mapOfKeys(DyeColor.class, color ->
             register(("ceramic/tiles/normal/" + color.getName()), () -> new Block(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
     public static final Map<DyeColor, RegistryObject<Block>> TERRACOTTA_PAINTED_TILES = Helpers.mapOfKeys(DyeColor.class, color ->
@@ -185,13 +185,52 @@ public class DFCBlocks {
     public static final Map<DyeColor, RegistryObject<Block>> SMALL_TERRACOTTA_PAINTED_TILES = Helpers.mapOfKeys(DyeColor.class, color ->
             register(("ceramic/tiles/small/terracotta_" + color.getName()), () -> new Block(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
     public static final Map<DyeColor, RegistryObject<Block>> PAINTED_BRICKS = Helpers.mapOfKeys(DyeColor.class, color ->
-            register(("ceramic/bricks/" + color.getName()), () -> new Block(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
+            register(("ceramic/bricks/" + color.getName()), () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
     public static final Map<DyeColor, RegistryObject<Block>> TERRACOTTA_PAINTED_BRICKS = Helpers.mapOfKeys(DyeColor.class, color ->
-            register(("ceramic/bricks/terracotta_" + color.getName()), () -> new Block(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
+            register(("ceramic/bricks/terracotta_" + color.getName()), () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
     public static final Map<DyeColor, RegistryObject<Block>> PAINTED_SHINGLES = Helpers.mapOfKeys(DyeColor.class, color ->
-            register(("ceramic/shingles/" + color.getName()), () -> new StairBlock(() -> PAINTED_TILES.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
+            register(("ceramic/shingles/" + color.getName()), () -> new StairBlock(() -> PAINTED_TILES.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F).noOcclusion())));
     public static final Map<DyeColor, RegistryObject<Block>> TERRACOTTA_PAINTED_SHINGLES = Helpers.mapOfKeys(DyeColor.class, color ->
             register(("ceramic/shingles/terracotta_" + color.getName()), () -> new StairBlock(() -> PAINTED_TILES.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
+
+    public static final DecorationBlockRegistryObject PLAIN_TILES_DECORATIONS = new DecorationBlockRegistryObject(
+            register(("ceramic/tiles/normal/plain_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/normal/plain_stairs"), () -> new StairBlock(() -> PLAIN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/normal/plain_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
+    public static final Map<DyeColor, DecorationBlockRegistryObject> PAINTED_TILES_DECORATIONS = Helpers.mapOfKeys(DyeColor.class, color -> new DecorationBlockRegistryObject(
+            register(("ceramic/tiles/normal/" + color.getName() + "_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/normal/" + color.getName() + "_stairs"), () -> new StairBlock(() -> PAINTED_TILES.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/normal/" + color.getName() + "_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F)))));
+    public static final Map<DyeColor, DecorationBlockRegistryObject> TERRACOTTA_PAINTED_TILES_DECORATIONS = Helpers.mapOfKeys(DyeColor.class, color -> new DecorationBlockRegistryObject(
+            register(("ceramic/tiles/normal/terracotta_" + color.getName() + "_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/normal/terracotta_" + color.getName() + "_stairs"), () -> new StairBlock(() -> TERRACOTTA_PAINTED_TILES.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/normal/terracotta_" + color.getName() + "_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F)))));
+    public static final Map<DyeColor, DecorationBlockRegistryObject> GLAZED_TILES_DECORATIONS = Helpers.mapOfKeys(DyeColor.class, color -> new DecorationBlockRegistryObject(
+            register(("ceramic/tiles/glazed/" + color.getName() + "_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/glazed/" + color.getName() + "_stairs"), () -> new StairBlock(() -> GLAZED_TILES.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/glazed/" + color.getName() + "_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F)))));
+
+    public static final DecorationBlockRegistryObject PLAIN_SMALL_TILES_DECORATIONS = new DecorationBlockRegistryObject(
+            register(("ceramic/tiles/small/plain_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/small/plain_stairs"), () -> new StairBlock(() -> PLAIN_SMALL_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/small/plain_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
+    public static final Map<DyeColor, DecorationBlockRegistryObject> SMALL_PAINTED_TILES_DECORATIONS = Helpers.mapOfKeys(DyeColor.class, color -> new DecorationBlockRegistryObject(
+            register(("ceramic/tiles/small/" + color.getName() + "_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/small/" + color.getName() + "_stairs"), () -> new StairBlock(() -> SMALL_PAINTED_TILES.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/small/" + color.getName() + "_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F)))));
+    public static final Map<DyeColor, DecorationBlockRegistryObject> SMALL_TERRACOTTA_PAINTED_TILES_DECORATIONS = Helpers.mapOfKeys(DyeColor.class, color -> new DecorationBlockRegistryObject(
+            register(("ceramic/tiles/small/terracotta_" + color.getName() + "_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/small/terracotta_" + color.getName() + "_stairs"), () -> new StairBlock(() -> SMALL_TERRACOTTA_PAINTED_TILES.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/tiles/small/terracotta_" + color.getName() + "_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F)))));
+
+    public static final Map<DyeColor, DecorationBlockRegistryObject> PAINTED_BRICKS_DECORATIONS = Helpers.mapOfKeys(DyeColor.class, color -> new DecorationBlockRegistryObject(
+            register(("ceramic/bricks/" + color.getName() + "_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/bricks/" + color.getName() + "_stairs"), () -> new StairBlock(() -> PAINTED_BRICKS.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/bricks/" + color.getName() + "_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F)))));
+    public static final Map<DyeColor, DecorationBlockRegistryObject> TERRACOTTA_PAINTED_BRICKS_DECORATIONS = Helpers.mapOfKeys(DyeColor.class, color -> new DecorationBlockRegistryObject(
+            register(("ceramic/bricks/terracotta_" + color.getName() + "_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/bricks/terracotta_" + color.getName() + "_stairs"), () -> new StairBlock(() -> TERRACOTTA_PAINTED_BRICKS.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
+            register(("ceramic/bricks/terracotta_" + color.getName() + "_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F)))));
 
 
 

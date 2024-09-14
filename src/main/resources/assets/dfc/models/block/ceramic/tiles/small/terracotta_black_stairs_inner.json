@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "dfc:block/ceramic/tiles/small/terracotta_black",
+    "top": "dfc:block/ceramic/tiles/small/terracotta_black",
+    "side": "dfc:block/ceramic/tiles/small/terracotta_black"
+  }
+}

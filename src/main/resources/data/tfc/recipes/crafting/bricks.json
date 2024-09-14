@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "YXY",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:brick"
+    },
+    "Y": {
+      "tag": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "minecraft:bricks",
+    "count": 4
+  }
+}

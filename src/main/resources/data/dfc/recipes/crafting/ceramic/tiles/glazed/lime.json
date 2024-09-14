@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:lime_dye"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/lime"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/lime"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/lime"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/lime"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/lime"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/lime"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/lime"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/lime"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "dfc:ceramic/tiles/glazed/lime"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:ceramic/bricks/lime"
+    }
+  },
+  "result": {
+    "item": "dfc:ceramic/bricks/lime_stairs",
+    "count": 8
+  }
+}

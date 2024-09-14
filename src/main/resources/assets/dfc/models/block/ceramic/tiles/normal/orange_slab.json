@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/ceramic/tiles/normal/orange",
+    "top": "dfc:block/ceramic/tiles/normal/orange",
+    "side": "dfc:block/ceramic/tiles/normal/orange"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/plain"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/plain"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/plain"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/plain"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/plain"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/plain"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/plain"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/plain"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "dfc:ceramic/tiles/normal/yellow"
+  }
+}

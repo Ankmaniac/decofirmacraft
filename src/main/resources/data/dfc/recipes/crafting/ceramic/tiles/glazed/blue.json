@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/blue"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/blue"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/blue"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/blue"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/blue"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/blue"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/blue"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/blue"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "dfc:ceramic/tiles/glazed/blue"
+  }
+}

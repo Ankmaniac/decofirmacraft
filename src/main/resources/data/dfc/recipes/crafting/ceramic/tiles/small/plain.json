@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "YXY",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:ceramic/tile"
+    },
+    "Y": {
+      "tag": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:ceramic/tiles/small/plain",
+    "count": 4
+  }
+}

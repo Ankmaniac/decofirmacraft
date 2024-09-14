@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/ceramic/tiles/small/terracotta_purple",
+    "top": "dfc:block/ceramic/tiles/small/terracotta_purple",
+    "side": "dfc:block/ceramic/tiles/small/terracotta_purple"
+  }
+}

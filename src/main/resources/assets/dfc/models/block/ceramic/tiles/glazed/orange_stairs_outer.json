@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "dfc:block/ceramic/tiles/glazed/orange",
+    "top": "dfc:block/ceramic/tiles/glazed/orange",
+    "side": "dfc:block/ceramic/tiles/glazed/orange"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/ceramic/tiles/normal/terracotta_white"
+  }
+}

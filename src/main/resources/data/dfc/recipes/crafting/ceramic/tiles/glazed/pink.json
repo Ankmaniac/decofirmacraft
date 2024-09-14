@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:pink_dye"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/pink"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/pink"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/pink"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/pink"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/pink"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/pink"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/pink"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/pink"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "dfc:ceramic/tiles/glazed/pink"
+  }
+}

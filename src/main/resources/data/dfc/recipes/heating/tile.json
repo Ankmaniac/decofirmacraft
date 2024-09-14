@@ -1,0 +1,10 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "dfc:ceramic/unfired_tile"
+  },
+  "result_item": {
+    "item": "dfc:ceramic/tile"
+  },
+  "temperature": 1399
+}

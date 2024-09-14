@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ceramic/unfired_shingle",
+    "dfc:ceramic/unfired_tile"
+  ]
+}

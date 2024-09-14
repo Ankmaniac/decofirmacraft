@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/brown"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/brown"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/brown"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/brown"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/brown"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/brown"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/brown"
+    },
+    {
+      "item": "dfc:ceramic/tiles/normal/brown"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "dfc:ceramic/tiles/glazed/brown"
+  }
+}

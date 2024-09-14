@@ -182,33 +182,53 @@ public class DFCTabs {
     private static void fillCeramics(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
         accept(out, DFCBlocks.PLAIN_TILES);
+        accept(out, DFCBlocks.PLAIN_TILES_DECORATIONS);
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.PAINTED_TILES, dye);
+            accept(out, DFCBlocks.PAINTED_TILES_DECORATIONS.get(dye));
+        }
+        for(DyeColor dye : DyeColor.values())
+        {
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_TILES, dye);
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_TILES_DECORATIONS.get(dye));
         }
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.GLAZED_TILES, dye);
+            accept(out, DFCBlocks.GLAZED_TILES_DECORATIONS.get(dye));
         }
         accept(out, DFCBlocks.PLAIN_SMALL_TILES);
+        accept(out, DFCBlocks.PLAIN_SMALL_TILES_DECORATIONS);
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.SMALL_PAINTED_TILES, dye);
+            accept(out, DFCBlocks.SMALL_PAINTED_TILES_DECORATIONS.get(dye));
+        }
+        for(DyeColor dye : DyeColor.values())
+        {
             accept(out, DFCBlocks.SMALL_TERRACOTTA_PAINTED_TILES, dye);
+            accept(out, DFCBlocks.SMALL_TERRACOTTA_PAINTED_TILES_DECORATIONS.get(dye));
+        }
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.PAINTED_BRICKS, dye);
+            accept(out, DFCBlocks.PAINTED_BRICKS_DECORATIONS.get(dye));
+        }
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_BRICKS, dye);
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_BRICKS_DECORATIONS.get(dye));
         }
         accept(out, DFCBlocks.PLAIN_SHINGLES);
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.PAINTED_SHINGLES, dye);
-            accept(out, DFCBlocks.TERRACOTTA_PAINTED_SHINGLES, dye);
         }
         for(DyeColor dye : DyeColor.values())
         {
-            accept(out, DFCBlocks.PAINTED_BRICKS, dye);
-            accept(out, DFCBlocks.TERRACOTTA_PAINTED_BRICKS, dye);
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_SHINGLES, dye);
         }
-
     }
 
 
