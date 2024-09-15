@@ -181,6 +181,10 @@ public class DFCTabs {
 
     private static void fillCeramics(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
+        accept(out, DFCItems.UNFIRED_SHINGLE);
+        accept(out, DFCItems.SHINGLE);
+        accept(out, DFCItems.UNFIRED_TILE);
+        accept(out, DFCItems.TILE);
         accept(out, DFCBlocks.PLAIN_TILES);
         accept(out, DFCBlocks.PLAIN_TILES_DECORATIONS);
         for(DyeColor dye : DyeColor.values())
