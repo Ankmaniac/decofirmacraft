@@ -53,6 +53,8 @@ public class DFCItems {
     public static final RegistryObject<Item> UNFIRED_SHINGLE = register("ceramic/unfired_shingle");
     public static final RegistryObject<Item> SHINGLE = register("ceramic/shingle");
 
+    public static final RegistryObject<Item> PAINTBRUSH = register("paintbrush");
+
     private static RegistryObject<Item> register(String name)
     {
         return register(name, () -> new Item(new Item.Properties()));

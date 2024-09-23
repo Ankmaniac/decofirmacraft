@@ -31,6 +31,7 @@ public class DFCTags {
         public static final TagKey<Block> NORMAL_PLATINUM_ORE = create("ores/platinum/normal");
         public static final TagKey<Block> POOR_PLATINUM_ORE = create("ores/platinum/poor");
         public static final TagKey<Block> RICH_PLATINUM_ORE = create("ores/platinum/rich");
+        public static final TagKey<Block> PLASTERABLE_BLOCKS = create("plasterable_blocks");
 
         private static TagKey<Block> create(String id)
         {
