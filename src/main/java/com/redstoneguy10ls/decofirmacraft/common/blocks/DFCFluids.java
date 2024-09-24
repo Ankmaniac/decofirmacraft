@@ -2,10 +2,8 @@ package com.redstoneguy10ls.decofirmacraft.common.blocks;
 
 import com.redstoneguy10ls.decofirmacraft.common.blocks.metal.DFCMetal;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
-import net.dries007.tfc.common.fluids.ExtendedFluidType;
-import net.dries007.tfc.common.fluids.FluidRegistryObject;
-import net.dries007.tfc.common.fluids.FluidTypeClientProperties;
-import net.dries007.tfc.common.fluids.MoltenFluid;
+import net.dries007.tfc.client.TFCColors;
+import net.dries007.tfc.common.fluids.*;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.minecraft.sounds.SoundEvents;
@@ -42,6 +40,21 @@ public class DFCFluids {
             MoltenFluid.Source::new,
             MoltenFluid.Flowing::new
     ));
+
+    public static final FluidRegistryObject<ForgeFlowingFluid> PLASTER = register(
+            "plaster",
+            properties -> properties
+                    .block(DFCBlocks.PLASTER_FLUID)
+                    .bucket(DFCItems.PLASTER_FLUID_BUCKET),
+            waterLike()
+                    .descriptionId("fluid.dfc.plaster"),
+            new FluidTypeClientProperties(
+                    ALPHA_MASK | 0xF2F1BF, (level, pos) -> level.getBlockTint(pos, TFCColors.SALT_WATER) | TFCFluids.ALPHA_MASK,
+                    WATER_STILL, WATER_FLOW, WATER_OVERLAY, UNDERWATER_LOCATION
+            ),
+            MixingFluid.Source::new,
+            MixingFluid.Flowing::new
+    );
 
 
 

@@ -32,6 +32,7 @@ public class DFCTags {
         public static final TagKey<Block> POOR_PLATINUM_ORE = create("ores/platinum/poor");
         public static final TagKey<Block> RICH_PLATINUM_ORE = create("ores/platinum/rich");
         public static final TagKey<Block> PLASTERABLE_BLOCKS = create("plasterable_blocks");
+        public static final TagKey<Block> MINEABLE_WITH_PAINTBRUSH = create("mineable_with_paintbrush"); //its stupid this needs to exist
 
         private static TagKey<Block> create(String id)
         {

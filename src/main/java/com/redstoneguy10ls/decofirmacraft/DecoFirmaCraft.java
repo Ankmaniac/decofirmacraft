@@ -5,6 +5,8 @@ import com.redstoneguy10ls.decofirmacraft.common.blocks.DFCBlocks;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.DFCFluids;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCTabs;
+import com.redstoneguy10ls.decofirmacraft.common.recipes.DFCRecipeSerializers;
+import com.redstoneguy10ls.decofirmacraft.common.recipes.DFCRecipeTypes;
 import com.redstoneguy10ls.decofirmacraft.world.settings.DFCRockSettings;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,6 +30,8 @@ public class DecoFirmaCraft {
         DFCFluids.FLUIDS.register(bus);
         DFCItems.ITEMS.register(bus);
         DFCTabs.CREATIVE_TABS.register(bus);
+        DFCRecipeTypes.RECIPE_TYPES.register(bus);
+        DFCRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
 
     }
     private void commonSetup(final FMLCommonSetupEvent event)

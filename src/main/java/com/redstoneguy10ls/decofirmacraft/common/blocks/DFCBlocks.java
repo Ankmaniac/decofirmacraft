@@ -233,11 +233,20 @@ public class DFCBlocks {
             register(("ceramic/bricks/terracotta_" + color.getName() + "_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F)))));
 
 
+    public static final RegistryObject<Block> PLAIN_PLASTER = register("plaster/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+
+    public static final Map<DyeColor, RegistryObject<Block>> PAINTED_PLASTER = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("plaster/" + color.getName()), () -> new Block(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
+    public static final Map<DyeColor, RegistryObject<Block>> TERRACOTTA_PAINTED_PLASTER = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("plaster/terracotta_" + color.getName()), () -> new Block(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
+
+
 
     public static final Map<DFCMetal.DFCDefault, RegistryObject<LiquidBlock>> DFC_METAL_FLUIDS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
             registerNoItem("metal/fluid/" + metal.name(), () -> new LiquidBlock(DFCFluids.METALS.get(metal).source(), BlockBehaviour.Properties.copy(Blocks.LAVA).noLootTable()))
     );
 
+    public static final RegistryObject<LiquidBlock> PLASTER_FLUID = registerNoItem("fluid/plaster", () -> new LiquidBlock(DFCFluids.PLASTER.flowing(), BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> blockSupplier)
     {
