@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "block": "minecraft:bricks"
+  },
+  "copy_input": false,
+  "result": "dfc:ceramic/bricks/red",
+  "fluid_ingredient": {
+    "fluid": "tfc:red_dye"
+  },
+  "fluid_amount": 40
+}

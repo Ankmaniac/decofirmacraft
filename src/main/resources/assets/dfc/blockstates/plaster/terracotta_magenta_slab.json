@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dfc:block/plaster/terracotta_magenta_slab"
+    },
+    "type=top": {
+      "model": "dfc:block/plaster/terracotta_magenta_slab_top"
+    },
+    "type=double": {
+      "model": "dfc:block/plaster/terracotta_magenta"
+    }
+  }
+}

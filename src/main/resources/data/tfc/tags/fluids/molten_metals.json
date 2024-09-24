@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/dfc_alumina",
+    "dfc:metal/dfc_aluminum",
+    "dfc:metal/dfc_lead",
+    "dfc:metal/dfc_pewter",
+    "dfc:metal/dfc_platinum"
+  ]
+}
