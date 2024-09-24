@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:plaster_stairs"
+  },
+  "copy_input": true,
+  "result": "dfc:plaster/light_blue_stairs",
+  "fluid_ingredient": {
+    "fluid": "tfc:light_blue_dye"
+  },
+  "fluid_amount": 30
+}

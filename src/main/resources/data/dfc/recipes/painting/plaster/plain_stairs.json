@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:plasterable_stairs"
+  },
+  "copy_input": true,
+  "result": "dfc:plaster/plain_stairs",
+  "fluid_ingredient": {
+    "fluid": "dfc:plaster"
+  },
+  "fluid_amount": 30
+}

@@ -41,6 +41,8 @@ public class DFCTabs {
             register("metal_tab", () -> new ItemStack(DFCBlocks.METAL_GATES.get(Metal.Default.WROUGHT_IRON).get()), DFCTabs::fillMetal);
     public static final DFCTabs.CreativeTabHolder CERAMICS =
             register("ceramics_tab", () -> new ItemStack(DFCBlocks.PAINTED_SHINGLES.get(DyeColor.RED).get()), DFCTabs::fillCeramics);
+    public static final DFCTabs.CreativeTabHolder MISC =
+            register("misc_tab", () -> new ItemStack(DFCBlocks.PLAIN_PLASTER.get()), DFCTabs::fillMisc);
 
 
     private static void fillRock(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
@@ -235,6 +237,26 @@ public class DFCTabs {
         }
     }
 
+    private static void fillMisc(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        accept(out, DFCItems.PAINTBRUSH);
+        accept(out, DFCItems.PLASTER_FLUID_BUCKET);
+        accept(out, DFCBlocks.PLAIN_PLASTER);
+        accept(out, DFCBlocks.PLAIN_PLASTER_SLAB);
+        accept(out, DFCBlocks.PLAIN_PLASTER_STAIRS);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.PAINTED_PLASTER, dye);
+            accept(out, DFCBlocks.PAINTED_PLASTER_SLABS, dye);
+            accept(out, DFCBlocks.PAINTED_PLASTER_STAIRS, dye);
+        }
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER, dye);
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_SLABS, dye);
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_STAIRS, dye);
+        }
+    }
 
 
     private static <T extends ItemLike, R extends Supplier<T>> void accept(CreativeModeTab.Output out, R reg)

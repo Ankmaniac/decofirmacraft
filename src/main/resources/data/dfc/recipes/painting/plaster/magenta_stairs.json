@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:plaster_stairs"
+  },
+  "copy_input": true,
+  "result": "dfc:plaster/magenta_stairs",
+  "fluid_ingredient": {
+    "fluid": "tfc:magenta_dye"
+  },
+  "fluid_amount": 30
+}

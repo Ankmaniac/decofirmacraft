@@ -11,6 +11,7 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.IFluidHandler;
+import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class DFCHelpers {
@@ -35,5 +36,17 @@ public class DFCHelpers {
         }
 
         return new FluidStack(fluid, amount);
+    }
+    public static FluidStack getFluidFromItem(ItemStack stack) {
+        // Check if the item is a fluid handler (e.g., a bucket or fluid container)
+        if (stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent()) {
+            LazyOptional<IFluidHandlerItem> fluidHandlerCap = stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM);
+
+            if (fluidHandlerCap.isPresent()) {
+                IFluidHandlerItem fluidHandler = fluidHandlerCap.orElseThrow(IllegalStateException::new);
+                return fluidHandler.getFluidInTank(0); // Get fluid from the first tank
+            }
+        }
+        return FluidStack.EMPTY; // Return empty if no fluid is present
     }
 }

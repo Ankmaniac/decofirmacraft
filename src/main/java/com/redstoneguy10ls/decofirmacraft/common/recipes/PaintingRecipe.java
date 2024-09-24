@@ -26,6 +26,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -36,28 +37,35 @@ import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import org.jetbrains.annotations.Nullable;
 
 public class PaintingRecipe extends SimpleBlockRecipe {
-    public static Either<BlockState, InteractionResult> computeResult(Player player, BlockState state, BlockHitResult hit, boolean informWhy)
-    {
+    public static Either<BlockState, InteractionResult> computeResult(Player player, BlockState state, BlockHitResult hit, boolean informWhy) {
         final ItemStack held = player.getMainHandItem();
-        if (Helpers.isItem(held, DFCItems.PAINTBRUSH.get()) && DFCHelpers.isHoldingFluidContainerInOffhand(player))
-        {
+
+        if (Helpers.isItem(held, DFCItems.PAINTBRUSH.get()) && DFCHelpers.isHoldingFluidContainerInOffhand(player)) {
             final BlockPos pos = hit.getBlockPos();
-            final PaintingRecipe recipe = PaintingRecipe.getRecipe(state, held);
-            if (recipe == null)
-            {
+            FluidStack fluidInHand = DFCHelpers.getFluidFromItem(player.getOffhandItem());
+            final PaintingRecipe recipe = PaintingRecipe.getRecipe(state, held, fluidInHand);
+
+            if (recipe == null) {
                 if (informWhy) complain(player, "no_recipe");
-                return Either.<BlockState, InteractionResult>right(InteractionResult.PASS);
-            }
-            else
-            {
-                @Nullable BlockState painted = recipe.getBlockCraftingResult(state);
-                if (painted == null)
-                {
+                return Either.right(InteractionResult.PASS);
+            } else {
+                @Nullable BlockState painted;
+
+                if (recipe.copyInputState) {
+                    // Copy the blockstate from the input state
+                    painted = recipe.copyBlockState(state);
+                } else {
+                    // Use the predefined output block state
+                    painted = recipe.getBlockCraftingResult(state);
+                }
+
+                if (painted == null) {
                     if (informWhy) complain(player, "cannot_place");
                     return Either.right(InteractionResult.FAIL);
                 }
 
-                if (consumeFluidIfPresent(player, recipe.getFluidAmount())) {
+                // Pass the fluid ingredient from the recipe for proper validation
+                if (consumeFluidIfPresent(player, recipe.getFluidAmount(), recipe.getFluidIngredient())) {
                     return Either.left(painted);
                 } else {
                     if (informWhy) complain(player, "not_enough_fluid");
@@ -68,22 +76,43 @@ public class PaintingRecipe extends SimpleBlockRecipe {
         return Either.right(InteractionResult.PASS);
     }
 
+    @Nullable
+    public BlockState copyBlockState(BlockState inputState) {
+        BlockState newState = outputState;
+
+        // Iterate through all the properties of the input block state
+        for (Property<?> property : inputState.getProperties()) {
+            // Use capture helper to get the correct value type for the property
+            newState = copyProperty(inputState, newState, property);
+        }
+
+        return newState;
+    }
+
+    @SuppressWarnings("unchecked")
+    private <T extends Comparable<T>> BlockState copyProperty(BlockState inputState, BlockState newState, Property<T> property) {
+        T value = inputState.getValue(property);
+        return newState.setValue(property, value);
+    }
+
     private static void complain(Player player, String message)
     {
         player.displayClientMessage(Component.translatable("dfc.painting." + message), true);
     }
 
-    public static boolean consumeFluidIfPresent(Player player, int amount) {
+    public static boolean consumeFluidIfPresent(Player player, int amount, @Nullable FluidStack fluidIngredient) {
         ItemStack offHandStack = player.getOffhandItem();
 
-        if (offHandStack.getItem() instanceof BucketItem || offHandStack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent()) {
-            LazyOptional<IFluidHandlerItem> fluidHandlerCap = offHandStack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM);
+        // Check if the off-hand item contains a fluid handler (bucket or other fluid container)
+        LazyOptional<IFluidHandlerItem> fluidHandlerCap = offHandStack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM);
 
-            if (fluidHandlerCap.isPresent()) {
-                IFluidHandlerItem fluidHandler = fluidHandlerCap.orElseThrow(IllegalStateException::new);
-                FluidStack fluidInItem = fluidHandler.getFluidInTank(0);
+        if (fluidHandlerCap.isPresent()) {
+            IFluidHandlerItem fluidHandler = fluidHandlerCap.orElseThrow(IllegalStateException::new);
+            FluidStack fluidInItem = fluidHandler.getFluidInTank(0);
 
-                if (fluidInItem.getAmount() >= amount) {
+            // Verify that the fluid in the container matches the required fluid ingredient
+            if (fluidIngredient != null && !fluidIngredient.isEmpty()) {
+                if (fluidInItem.getFluid() == fluidIngredient.getFluid() && fluidInItem.getAmount() >= amount) {
                     fluidHandler.drain(amount, IFluidHandler.FluidAction.EXECUTE);
                     return true;
                 }
@@ -95,16 +124,20 @@ public class PaintingRecipe extends SimpleBlockRecipe {
     public static final IndirectHashCollection<Block, PaintingRecipe> CACHE = IndirectHashCollection.createForRecipe(recipe -> recipe.getBlockIngredient().blocks(), DFCRecipeTypes.PAINTING);
 
     @Nullable
-    public static PaintingRecipe getRecipe(BlockState state, ItemStack held)
-    {
-        for (PaintingRecipe recipe : CACHE.getAll(state.getBlock()))
-        {
-            if (recipe.matches(state, held))
-            {
-                return recipe;
+    public static PaintingRecipe getRecipe(BlockState state, ItemStack held, @Nullable FluidStack fluidInHand) {
+        PaintingRecipe bestMatch = null;
+
+        // Iterate through all recipes for the block tag
+        for (PaintingRecipe recipe : CACHE.getAll(state.getBlock())) {
+            // Check if the block state matches, and then test the item and fluid ingredients
+            if (recipe.matches(state, held, fluidInHand)) {
+                if (bestMatch == null || isMoreSpecificMatch(recipe, bestMatch)) {
+                    bestMatch = recipe;  // Keep track of the best (most specific) match
+                }
             }
         }
-        return null;
+
+        return bestMatch;
     }
 
     @Nullable
@@ -134,13 +167,51 @@ public class PaintingRecipe extends SimpleBlockRecipe {
         return DFCRecipeTypes.PAINTING.get();
     }
 
-    public boolean matches(BlockState state, ItemStack stack)
-    {
-        if (itemIngredient != null && !itemIngredient.test(stack))
-        {
+    public boolean matches(BlockState state, ItemStack stack, @Nullable FluidStack fluidInHand) {
+        // First, check if the block state matches
+        if (!matches(state)) {
             return false;
         }
-        return matches(state);
+
+        // Check if the item ingredient matches
+        if (itemIngredient != null && !itemIngredient.test(stack)) {
+            return false;
+        }
+
+        // Check if the fluid ingredient matches (if a fluid ingredient is defined in the recipe)
+        if (fluidIngredient != null && !fluidIngredient.isEmpty()) {
+            if (fluidInHand == null || fluidInHand.isEmpty()) {
+                return false; // No fluid in hand, but recipe requires fluid
+            }
+
+            // Check if the fluid in hand matches the fluid ingredient in the recipe
+            if (!fluidInHand.isFluidEqual(fluidIngredient) || fluidInHand.getAmount() < fluidAmount) {
+                return false;
+            }
+        }
+
+        return true;  // All conditions are met
+    }
+
+    private static boolean isMoreSpecificMatch(PaintingRecipe candidate, PaintingRecipe currentBest) {
+        int candidateSpecificity = 0;
+        int currentSpecificity = 0;
+
+        if (candidate.getItemIngredient() != null) {
+            candidateSpecificity++;
+        }
+        if (candidate.getFluidIngredient() != null && !candidate.getFluidIngredient().isEmpty()) {
+            candidateSpecificity++;
+        }
+
+        if (currentBest.getItemIngredient() != null) {
+            currentSpecificity++;
+        }
+        if (currentBest.getFluidIngredient() != null && !currentBest.getFluidIngredient().isEmpty()) {
+            currentSpecificity++;
+        }
+
+        return candidateSpecificity > currentSpecificity;
     }
 
     @Nullable

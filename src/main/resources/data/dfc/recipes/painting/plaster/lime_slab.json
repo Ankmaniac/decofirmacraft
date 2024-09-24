@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:plaster_slabs"
+  },
+  "copy_input": true,
+  "result": "dfc:plaster/lime_slab",
+  "fluid_ingredient": {
+    "fluid": "tfc:lime_dye"
+  },
+  "fluid_amount": 20
+}

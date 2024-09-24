@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:plaster_blocks"
+  },
+  "copy_input": false,
+  "result": "dfc:plaster/red",
+  "fluid_ingredient": {
+    "fluid": "tfc:red_dye"
+  },
+  "fluid_amount": 40
+}
