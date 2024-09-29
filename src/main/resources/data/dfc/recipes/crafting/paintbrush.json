@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y "
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wool_yarn"
+    },
+    "M": {
+      "item": "tfc:metal/rod/brass"
+    }
+  },
+  "result": {
+    "item": "dfc:paintbrush"
+  }
+}

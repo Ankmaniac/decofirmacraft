@@ -188,33 +188,40 @@ public class DFCTabs {
         accept(out, DFCItems.UNFIRED_TILE);
         accept(out, DFCItems.TILE);
         accept(out, DFCBlocks.PLAIN_TILES);
-        accept(out, DFCBlocks.PLAIN_TILES_DECORATIONS);
+        accept(out, DFCBlocks.PLAIN_TILES_SLAB);
+        accept(out, DFCBlocks.PLAIN_TILES_STAIRS);
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.PAINTED_TILES, dye);
-            accept(out, DFCBlocks.PAINTED_TILES_DECORATIONS.get(dye));
+            accept(out, DFCBlocks.PAINTED_TILES_SLABS, dye);
+            accept(out, DFCBlocks.PAINTED_TILES_STAIRS, dye);
         }
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_TILES, dye);
-            accept(out, DFCBlocks.TERRACOTTA_PAINTED_TILES_DECORATIONS.get(dye));
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_TILES_SLABS, dye);
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_TILES_STAIRS, dye);
         }
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.GLAZED_TILES, dye);
-            accept(out, DFCBlocks.GLAZED_TILES_DECORATIONS.get(dye));
+            accept(out, DFCBlocks.GLAZED_TILES_SLABS, dye);
+            accept(out, DFCBlocks.GLAZED_TILES_STAIRS, dye);
         }
         accept(out, DFCBlocks.PLAIN_SMALL_TILES);
-        accept(out, DFCBlocks.PLAIN_SMALL_TILES_DECORATIONS);
+        accept(out, DFCBlocks.PLAIN_SMALL_TILES_SLAB);
+        accept(out, DFCBlocks.PLAIN_SMALL_TILES_STAIRS);
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.SMALL_PAINTED_TILES, dye);
-            accept(out, DFCBlocks.SMALL_PAINTED_TILES_DECORATIONS.get(dye));
+            accept(out, DFCBlocks.SMALL_PAINTED_TILES_SLABS, dye);
+            accept(out, DFCBlocks.SMALL_PAINTED_TILES_STAIRS, dye);
         }
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.SMALL_TERRACOTTA_PAINTED_TILES, dye);
-            accept(out, DFCBlocks.SMALL_TERRACOTTA_PAINTED_TILES_DECORATIONS.get(dye));
+            accept(out, DFCBlocks.SMALL_TERRACOTTA_PAINTED_TILES_SLABS, dye);
+            accept(out, DFCBlocks.SMALL_TERRACOTTA_PAINTED_TILES_STAIRS, dye);
         }
         for(DyeColor dye : DyeColor.values())
         {
@@ -240,21 +247,25 @@ public class DFCTabs {
     private static void fillMisc(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
         accept(out, DFCItems.PAINTBRUSH);
+        accept(out, DFCItems.GYPSUM_POWDER);
         accept(out, DFCItems.PLASTER_FLUID_BUCKET);
         accept(out, DFCBlocks.PLAIN_PLASTER);
         accept(out, DFCBlocks.PLAIN_PLASTER_SLAB);
         accept(out, DFCBlocks.PLAIN_PLASTER_STAIRS);
+        accept(out, DFCBlocks.PLAIN_PLASTER_PILLAR);
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.PAINTED_PLASTER, dye);
             accept(out, DFCBlocks.PAINTED_PLASTER_SLABS, dye);
             accept(out, DFCBlocks.PAINTED_PLASTER_STAIRS, dye);
+            accept(out, DFCBlocks.PAINTED_PLASTER_PILLARS, dye);
         }
         for(DyeColor dye : DyeColor.values())
         {
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER, dye);
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_SLABS, dye);
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_STAIRS, dye);
+            accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_PILLARS, dye);
         }
     }
 

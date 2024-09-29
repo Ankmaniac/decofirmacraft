@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "dfc:block/plaster/yellow",
-    "top": "dfc:block/plaster/yellow",
-    "side": "dfc:block/plaster/yellow"
-  }
-}

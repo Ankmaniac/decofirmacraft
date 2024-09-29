@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:plaster_slabs"
+  },
+  "copy_input": true,
+  "result": "dfc:plaster/smooth/light_gray_slab",
+  "fluid_ingredient": {
+    "fluid": "tfc:light_gray_dye"
+  },
+  "fluid_amount": 20
+}

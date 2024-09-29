@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/plaster/pillar/orange"
+    },
+    "axis=z": {
+      "model": "dfc:block/plaster/pillar/orange",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "dfc:block/plaster/pillar/orange",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

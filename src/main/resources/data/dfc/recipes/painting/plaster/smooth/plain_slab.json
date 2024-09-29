@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:plasterable_slabs"
+  },
+  "copy_input": true,
+  "result": "dfc:plaster/smooth/plain_slab",
+  "fluid_ingredient": {
+    "fluid": "dfc:plaster"
+  },
+  "fluid_amount": 20
+}

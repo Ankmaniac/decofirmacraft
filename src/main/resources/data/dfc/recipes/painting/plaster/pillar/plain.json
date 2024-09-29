@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:plasterable_pillars"
+  },
+  "copy_input": true,
+  "result": "dfc:plaster/pillar/plain",
+  "fluid_ingredient": {
+    "fluid": "dfc:plaster"
+  },
+  "fluid_amount": 40
+}

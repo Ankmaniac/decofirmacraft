@@ -51,6 +51,8 @@ public class DFCItems {
 
     public static final RegistryObject<Item> PAINTBRUSH = register("paintbrush", () -> new PaintbrushItem(TFCTiers.BRONZE, new Item.Properties()));
 
+    public static final RegistryObject<Item> GYPSUM_POWDER = register("powder/gypsum");
+
 
     public static final Map<DFCMetal.DFCDefault, RegistryObject<BucketItem>> DFC_METAL_FLUID_BUCKETS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
             register("bucket/metal/" + metal.name(), () -> new BucketItem(DFCFluids.METALS.get(metal).source(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))

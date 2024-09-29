@@ -1,8 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "dfc:block/plaster/orange",
-    "top": "dfc:block/plaster/orange",
-    "side": "dfc:block/plaster/orange"
-  }
-}

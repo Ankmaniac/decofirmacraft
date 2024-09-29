@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "dfc:block/plaster/smooth/orange",
+    "top": "dfc:block/plaster/smooth/orange",
+    "side": "dfc:block/plaster/smooth/orange"
+  }
+}

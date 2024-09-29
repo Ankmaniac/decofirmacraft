@@ -1,8 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "dfc:block/plaster/terracotta_red",
-    "top": "dfc:block/plaster/terracotta_red",
-    "side": "dfc:block/plaster/terracotta_red"
-  }
-}
