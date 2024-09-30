@@ -1,0 +1,14 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "copper",
+    "sapphire",
+    "basin_pour"
+  ],
+  "batch": {
+    "tag": "dfc:leaded_glass_batches_tier_3"
+  },
+  "result": {
+    "item": "dfc:glass/block/leaded/cyan"
+  }
+}

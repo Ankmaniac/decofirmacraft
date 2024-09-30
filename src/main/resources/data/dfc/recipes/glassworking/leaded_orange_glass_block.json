@@ -1,0 +1,13 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "pyrite",
+    "basin_pour"
+  ],
+  "batch": {
+    "item": "dfc:leaded_silica_glass_batch"
+  },
+  "result": {
+    "item": "dfc:glass/block/leaded/orange"
+  }
+}

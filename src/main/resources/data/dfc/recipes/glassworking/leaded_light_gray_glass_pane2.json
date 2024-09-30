@@ -1,0 +1,15 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "soda_ash",
+    "graphite",
+    "soda_ash",
+    "table_pour"
+  ],
+  "batch": {
+    "tag": "dfc:leaded_glass_batches"
+  },
+  "result": {
+    "item": "dfc:light_gray_poured_leaded_glass"
+  }
+}

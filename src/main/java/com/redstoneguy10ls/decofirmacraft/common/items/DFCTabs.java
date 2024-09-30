@@ -267,6 +267,39 @@ public class DFCTabs {
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_STAIRS, dye);
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_PILLARS, dye);
         }
+        accept(out, DFCBlocks.FOGGY_GLASS);
+        accept(out, DFCBlocks.FOGGY_GLASS_PANE);
+        accept(out, DFCBlocks.LEADED_GLASS);
+        accept(out, DFCBlocks.LEADED_GLASS_PANE);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.STAINED_LEADED_GLASS, dye);
+            accept(out, DFCBlocks.STAINED_LEADED_GLASS_PANE.get(dye));
+        }
+        accept(out, DFCItems.GLASS_BRICK);
+        accept(out, DFCItems.FOGGY_BRICK);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCItems.STAINED_GLASS_BRICK, dye);
+        }
+        accept(out, DFCBlocks.GLASS_BRICKS);
+        accept(out, DFCBlocks.GLASS_BRICKS_PANE);
+        accept(out, DFCBlocks.FOGGY_GLASS_BRICKS);
+        accept(out, DFCBlocks.FOGGY_GLASS_BRICKS_PANE);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.STAINED_GLASS_BRICKS, dye);
+            accept(out, DFCBlocks.STAINED_GLASS_BRICKS_PANE.get(dye));
+        }
+        accept(out, DFCBlocks.GLASS_TILES);
+        accept(out, DFCBlocks.GLASS_TILES_PANE);
+        accept(out, DFCBlocks.FOGGY_GLASS_TILES);
+        accept(out, DFCBlocks.FOGGY_GLASS_TILES_PANE);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.STAINED_GLASS_TILES, dye);
+            accept(out, DFCBlocks.STAINED_GLASS_TILES_PANE.get(dye));
+        }
     }
 
 

@@ -1,0 +1,22 @@
+{
+  "type": "tfc:advanced_shapeless_crafting",
+  "ingredients": [
+    {
+      "tag": "dfc:leaded_glass_batches"
+    },
+    {
+      "item": "tfc:ceramic_blowpipe"
+    }
+  ],
+  "result": {
+    "stack": {
+      "item": "tfc:ceramic_blowpipe_with_glass"
+    },
+    "modifiers": [
+      "tfc:add_glass"
+    ]
+  },
+  "primary_ingredient": {
+    "tag": "dfc:leaded_glass_batches"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/template_poured_glass",
+  "textures": {
+    "all": "dfc:block/glass/leaded/yellow"
+  }
+}

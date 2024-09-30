@@ -1,0 +1,12 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "basin_pour"
+  ],
+  "batch": {
+    "item": "dfc:leaded_silica_glass_batch"
+  },
+  "result": {
+    "item": "dfc:glass/block/leaded/glass"
+  }
+}

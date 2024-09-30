@@ -9,6 +9,7 @@ import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.DeferredRegister;
@@ -57,6 +58,19 @@ public class DFCItems {
     public static final Map<DFCMetal.DFCDefault, RegistryObject<BucketItem>> DFC_METAL_FLUID_BUCKETS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
             register("bucket/metal/" + metal.name(), () -> new BucketItem(DFCFluids.METALS.get(metal).source(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))
     );
+
+    public static final RegistryObject<Item> LEADED_HEMATITIC_GLASS_BATCH = register("leaded_hematitic_glass_batch");
+    public static final RegistryObject<Item> LEADED_OLIVINE_GLASS_BATCH = register("leaded_olivine_glass_batch");
+    public static final RegistryObject<Item> LEADED_SILICA_GLASS_BATCH = register("leaded_silica_glass_batch");
+    public static final RegistryObject<Item> LEADED_VOLCANIC_GLASS_BATCH = register("leaded_volcanic_glass_batch");
+
+    public static final RegistryObject<Item> GLASS_BRICK = register("glass/brick/plain");
+    public static final RegistryObject<Item> FOGGY_BRICK = register("glass/brick/foggy");
+    public static final Map<DyeColor, RegistryObject<Item>> STAINED_GLASS_BRICK = Helpers.mapOfKeys(DyeColor.class, color ->
+            register("glass/brick/" + color.getName())
+    );
+
+
 
     public static final RegistryObject<BucketItem> PLASTER_FLUID_BUCKET = register("bucket/plaster", () -> new BucketItem(DFCFluids.PLASTER.source(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 

@@ -4,13 +4,13 @@ import com.redstoneguy10ls.decofirmacraft.common.blocks.metal.DFCMetal;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.metal.GateBlock;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.*;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
+import com.redstoneguy10ls.decofirmacraft.util.PouredLeadedGlassColors;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockAnvilBlock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
-import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
@@ -248,6 +248,42 @@ public class DFCBlocks {
             register(("plaster/smooth/terracotta_" + color.getName() + "_stairs"), () -> new StairBlock(() -> TERRACOTTA_PAINTED_PLASTER.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
     public static final Map<DyeColor, RegistryObject<Block>> TERRACOTTA_PAINTED_PLASTER_PILLARS = Helpers.mapOfKeys(DyeColor.class, color ->
             register(("plaster/pillar/terracotta_" + color.getName()), () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))));
+
+    public static final RegistryObject<Block> LEADED_GLASS = register("glass/block/leaded/plain", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LEADED_GLASS_PANE = register("glass/pane/leaded/plain", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).requiresCorrectToolForDrops()));
+
+    public static final Map<DyeColor, RegistryObject<Block>> STAINED_LEADED_GLASS = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("glass/block/leaded/" + color.getName()), () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops())));
+    public static final Map<DyeColor, RegistryObject<Block>> STAINED_LEADED_GLASS_PANE = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("glass/pane/leaded/" + color.getName()), () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops())));
+
+    public static final Map<DyeColor, RegistryObject<Block>> COLORED_POURED_LEADED_GLASS = Helpers.mapOfKeys(DyeColor.class, color -> register(color.getSerializedName() + "_poured_leaded_glass", () -> new PouredGlassBlock(ExtendedProperties.of().pushReaction(PushReaction.DESTROY).strength(0.3F).sound(SoundType.GLASS).noOcclusion().requiresCorrectToolForDrops(), () -> PouredLeadedGlassColors.getLeadedStainedGlass(color))));
+    public static final RegistryObject<Block> POURED_LEADED_GLASS = register("plain_poured_leaded_glass", () -> new PouredGlassBlock(ExtendedProperties.of().strength(0.3F).sound(SoundType.GLASS).pushReaction(PushReaction.DESTROY).noOcclusion().requiresCorrectToolForDrops(), () -> DFCBlocks.LEADED_GLASS_PANE.get().asItem()));
+
+    public static final RegistryObject<Block> FOGGY_GLASS = register("glass/block/foggy", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> FOGGY_GLASS_PANE = register("glass/pane/foggy", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GLASS_BRICKS = register("glass/block/bricks/plain", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GLASS_BRICKS_PANE = register("glass/pane/bricks/plain", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> FOGGY_GLASS_BRICKS = register("glass/block/bricks/foggy", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> FOGGY_GLASS_BRICKS_PANE = register("glass/pane/bricks/foggy", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).requiresCorrectToolForDrops()));
+
+    public static final Map<DyeColor, RegistryObject<Block>> STAINED_GLASS_BRICKS = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("glass/block/bricks/" + color.getName()), () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops())));
+    public static final Map<DyeColor, RegistryObject<Block>> STAINED_GLASS_BRICKS_PANE = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("glass/pane/bricks/" + color.getName()), () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops())));
+
+    public static final RegistryObject<Block> GLASS_TILES = register("glass/block/tiles/plain", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GLASS_TILES_PANE = register("glass/pane/tiles/plain", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> FOGGY_GLASS_TILES = register("glass/block/tiles/foggy", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> FOGGY_GLASS_TILES_PANE = register("glass/pane/tiles/foggy", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).requiresCorrectToolForDrops()));
+
+    public static final Map<DyeColor, RegistryObject<Block>> STAINED_GLASS_TILES = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("glass/block/tiles/" + color.getName()), () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops())));
+    public static final Map<DyeColor, RegistryObject<Block>> STAINED_GLASS_TILES_PANE = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("glass/pane/tiles/" + color.getName()), () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops())));
 
 
 

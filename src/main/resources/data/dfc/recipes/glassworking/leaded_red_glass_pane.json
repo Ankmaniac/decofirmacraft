@@ -1,0 +1,13 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "tin",
+    "table_pour"
+  ],
+  "batch": {
+    "tag": "dfc:leaded_glass_batches_tier_2"
+  },
+  "result": {
+    "item": "dfc:red_poured_leaded_glass"
+  }
+}

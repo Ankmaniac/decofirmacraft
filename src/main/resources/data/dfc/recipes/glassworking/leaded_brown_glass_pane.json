@@ -1,0 +1,13 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "nickel",
+    "table_pour"
+  ],
+  "batch": {
+    "tag": "dfc:leaded_glass_batches"
+  },
+  "result": {
+    "item": "dfc:brown_poured_leaded_glass"
+  }
+}

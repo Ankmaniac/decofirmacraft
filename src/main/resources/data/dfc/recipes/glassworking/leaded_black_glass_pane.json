@@ -1,0 +1,13 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "graphite",
+    "table_pour"
+  ],
+  "batch": {
+    "tag": "dfc:leaded_glass_batches"
+  },
+  "result": {
+    "item": "dfc:black_poured_leaded_glass"
+  }
+}

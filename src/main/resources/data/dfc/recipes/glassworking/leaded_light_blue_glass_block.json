@@ -1,0 +1,13 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "lapis_lazuli",
+    "basin_pour"
+  ],
+  "batch": {
+    "item": "dfc:leaded_silica_glass_batch"
+  },
+  "result": {
+    "item": "dfc:glass/block/leaded/light_blue"
+  }
+}

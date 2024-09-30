@@ -1,0 +1,14 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "blow",
+    "pinch",
+    "saw"
+  ],
+  "batch": {
+    "item": "dfc:leaded_olivine_glass_batch"
+  },
+  "result": {
+    "item": "dfc:olivine_glass_bottle"
+  }
+}

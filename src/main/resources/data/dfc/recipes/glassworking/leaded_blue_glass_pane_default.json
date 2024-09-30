@@ -1,0 +1,12 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "table_pour"
+  ],
+  "batch": {
+    "item": "dfc:leaded_volcanic_glass_batch"
+  },
+  "result": {
+    "item": "dfc:blue_poured_leaded_glass"
+  }
+}

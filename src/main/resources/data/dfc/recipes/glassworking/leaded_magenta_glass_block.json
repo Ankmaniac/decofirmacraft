@@ -1,0 +1,13 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "ruby",
+    "basin_pour"
+  ],
+  "batch": {
+    "tag": "dfc:leaded_glass_batches_tier_2"
+  },
+  "result": {
+    "item": "dfc:glass/block/leaded/magenta"
+  }
+}
