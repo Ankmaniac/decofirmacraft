@@ -1443,7 +1443,12 @@
 
   "item.dfc.paintbrush": "Paintbrush",
   "item.dfc.powder.gypsum": "Gypsum Powder",
-  
+
+  "item.dfc.leaded_silica_glass_batch": "Leaded Silica Glass Batch",
+  "item.dfc.leaded_hematitic_glass_batch": "Leaded Hematitic Glass Batch",
+  "item.dfc.leaded_olivine_glass_batch": "Leaded Olivine Glass Batch",
+  "item.dfc.leaded_volcanic_glass_batch": "Leaded Volcanic Glass Batch",
+
   "block.dfc.glass.block.foggy": "Foggy Glass Block",
   "block.dfc.glass.pane.foggy": "Foggy Glass Pane",
   

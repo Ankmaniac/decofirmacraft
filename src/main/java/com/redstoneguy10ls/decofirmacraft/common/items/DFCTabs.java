@@ -267,6 +267,11 @@ public class DFCTabs {
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_STAIRS, dye);
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_PILLARS, dye);
         }
+        accept(out, DFCItems.LEADED_SILICA_GLASS_BATCH);
+        accept(out, DFCItems.LEADED_HEMATITIC_GLASS_BATCH);
+        accept(out, DFCItems.LEADED_OLIVINE_GLASS_BATCH);
+        accept(out, DFCItems.LEADED_VOLCANIC_GLASS_BATCH);
+
         accept(out, DFCBlocks.FOGGY_GLASS);
         accept(out, DFCBlocks.FOGGY_GLASS_PANE);
         accept(out, DFCBlocks.LEADED_GLASS);
