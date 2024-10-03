@@ -1,0 +1,13 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "lapis_lazuli",
+    "saw"
+  ],
+  "batch": {
+    "item": "tfc:silica_glass_batch"
+  },
+  "result": {
+    "item": "dfc:glass/brick/light_blue"
+  }
+}

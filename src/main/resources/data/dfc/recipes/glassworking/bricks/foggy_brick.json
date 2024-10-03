@@ -1,0 +1,13 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "blow",
+    "saw"
+  ],
+  "batch": {
+    "item": "tfc:silica_glass_batch"
+  },
+  "result": {
+    "item": "dfc:glass/brick/foggy"
+  }
+}

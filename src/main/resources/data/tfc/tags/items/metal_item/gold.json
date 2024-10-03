@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "dfc:metal/smooth/gold_bronze",
-    "dfc:metal/smooth/gold_bronze_slab",
-    "dfc:metal/smooth/gold_bronze_stairs",
-    "dfc:metal/bricks/gold_bronze",
-    "dfc:metal/bricks/gold_bronze_slab",
-    "dfc:metal/bricks/gold_bronze_stairs",
-    "dfc:metal/cut/gold_bronze",
-    "dfc:metal/cut/gold_bronze_slab",
-    "dfc:metal/cut/gold_bronze_stairs",
-    "dfc:metal/pillar/gold_bronze"
+    "dfc:metal/smooth/gold",
+    "dfc:metal/smooth/gold_slab",
+    "dfc:metal/smooth/gold_stairs",
+    "dfc:metal/bricks/gold",
+    "dfc:metal/bricks/gold_slab",
+    "dfc:metal/bricks/gold_stairs",
+    "dfc:metal/cut/gold",
+    "dfc:metal/cut/gold_slab",
+    "dfc:metal/cut/gold_stairs",
+    "dfc:metal/pillar/gold"
   ]
 }

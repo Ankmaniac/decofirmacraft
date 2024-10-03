@@ -1,0 +1,13 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "blow",
+    "table_pour"
+  ],
+  "batch": {
+    "item": "tfc:silica_glass_batch"
+  },
+  "result": {
+    "item": "dfc:poured_foggy_glass"
+  }
+}

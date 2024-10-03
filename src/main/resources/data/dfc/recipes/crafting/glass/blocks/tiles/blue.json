@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MBM",
+    "BMB",
+    "MBM"
+  ],
+  "key": {
+    "M": {
+      "item": "dfc:glass/brick/blue"
+    },
+    "B": {
+      "item": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:dfc:glass/block/tiles/blue",
+    "count": 4
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "MMM"
+  ],
+  "key": {
+    "M": {
+      "item": "dfc:glass/block/bricks/pink"
+    }
+  },
+  "result": {
+    "item": "dfc:glass/pane/bricks/pink",
+    "count": 64
+  }
+}

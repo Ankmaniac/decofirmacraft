@@ -3,7 +3,7 @@
   "values": [
     "dfc:brick/blueschist",
     "dfc:brick/serpentine",
-    "#tfc:metamorphic_rocks",
+    "#tfc:metamorphic_rock",
     "dfc:rock/smooth/blueschist",
     "dfc:rock/smooth/serpentine",
     "dfc:rock/smooth/blueschist_slab",

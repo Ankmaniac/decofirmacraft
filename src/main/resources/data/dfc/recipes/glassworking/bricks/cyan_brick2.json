@@ -1,0 +1,14 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "sapphire",
+    "copper",
+    "saw"
+  ],
+  "batch": {
+    "tag": "tfc:glass_batches_tier_3"
+  },
+  "result": {
+    "item": "dfc:glass/brick/cyan"
+  }
+}

@@ -257,11 +257,13 @@ public class DFCBlocks {
     public static final Map<DyeColor, RegistryObject<Block>> STAINED_LEADED_GLASS_PANE = Helpers.mapOfKeys(DyeColor.class, color ->
             register(("glass/pane/leaded/" + color.getName()), () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops())));
 
-    public static final Map<DyeColor, RegistryObject<Block>> COLORED_POURED_LEADED_GLASS = Helpers.mapOfKeys(DyeColor.class, color -> register(color.getSerializedName() + "_poured_leaded_glass", () -> new PouredGlassBlock(ExtendedProperties.of().pushReaction(PushReaction.DESTROY).strength(0.3F).sound(SoundType.GLASS).noOcclusion().requiresCorrectToolForDrops(), () -> PouredLeadedGlassColors.getLeadedStainedGlass(color))));
     public static final RegistryObject<Block> POURED_LEADED_GLASS = register("plain_poured_leaded_glass", () -> new PouredGlassBlock(ExtendedProperties.of().strength(0.3F).sound(SoundType.GLASS).pushReaction(PushReaction.DESTROY).noOcclusion().requiresCorrectToolForDrops(), () -> DFCBlocks.LEADED_GLASS_PANE.get().asItem()));
+    public static final Map<DyeColor, RegistryObject<Block>> COLORED_POURED_LEADED_GLASS = Helpers.mapOfKeys(DyeColor.class, color -> register(color.getSerializedName() + "_poured_leaded_glass", () -> new PouredGlassBlock(ExtendedProperties.of().pushReaction(PushReaction.DESTROY).strength(0.3F).sound(SoundType.GLASS).noOcclusion().requiresCorrectToolForDrops(), () -> PouredLeadedGlassColors.getLeadedStainedGlass(color))));
 
     public static final RegistryObject<Block> FOGGY_GLASS = register("glass/block/foggy", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> FOGGY_GLASS_PANE = register("glass/pane/foggy", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POURED_FOGGY_GLASS = register("poured_foggy_glass", () -> new PouredGlassBlock(ExtendedProperties.of().strength(0.3F).sound(SoundType.GLASS).pushReaction(PushReaction.DESTROY).noOcclusion().requiresCorrectToolForDrops(), () -> DFCBlocks.FOGGY_GLASS_PANE.get().asItem()));
 
     public static final RegistryObject<Block> GLASS_BRICKS = register("glass/block/bricks/plain", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> GLASS_BRICKS_PANE = register("glass/pane/bricks/plain", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).requiresCorrectToolForDrops()));

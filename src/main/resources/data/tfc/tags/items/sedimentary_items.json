@@ -3,7 +3,7 @@
   "values": [
     "dfc:brick/arkose",
     "dfc:brick/travertine",
-    "#tfc:sedimentary_rocks",
+    "#tfc:sedimentary_rock",
     "dfc:rock/smooth/arkose",
     "dfc:rock/smooth/travertine",
     "dfc:rock/smooth/arkose_slab",

@@ -1,0 +1,15 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "soda_ash",
+    "graphite",
+    "soda_ash",
+    "saw"
+  ],
+  "batch": {
+    "tag": "tfc:glass_batches"
+  },
+  "result": {
+    "item": "dfc:glass/brick/light_gray"
+  }
+}

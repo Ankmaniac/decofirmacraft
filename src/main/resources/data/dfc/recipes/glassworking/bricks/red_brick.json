@@ -1,0 +1,13 @@
+{
+  "type": "tfc:glassworking",
+  "operations": [
+    "tin",
+    "saw"
+  ],
+  "batch": {
+    "tag": "tfc:glass_batches_tier_2"
+  },
+  "result": {
+    "item": "dfc:glass/brick/red"
+  }
+}
