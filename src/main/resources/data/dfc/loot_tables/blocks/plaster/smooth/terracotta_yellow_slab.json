@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dfc:plaster/smooth/terracotta_terracotta_yellow_slab",
+          "name": "dfc:plaster/smooth/terracotta_yellow_slab",
           "functions": [
             {
               "function": "minecraft:set_count",

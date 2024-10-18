@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dfc:ceramic/tiles/normal/terracotta_terracotta_yellow_slab",
+          "name": "dfc:ceramic/tiles/normal/terracotta_yellow_slab",
           "functions": [
             {
               "function": "minecraft:set_count",

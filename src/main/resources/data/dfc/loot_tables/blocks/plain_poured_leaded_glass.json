@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dfc:glass/pane/leaded/glass"
+          "name": "dfc:glass/pane/leaded/plain"
         }
       ],
       "conditions": [
