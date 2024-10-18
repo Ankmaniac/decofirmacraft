@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/native_copper/tuff",
+  "model_stages": [
+    "dfc:item/pan/native_copper/tuff_full",
+    "dfc:item/pan/native_copper/tuff_half",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "dfc:panning/deposits/native_copper_tuff"
+}

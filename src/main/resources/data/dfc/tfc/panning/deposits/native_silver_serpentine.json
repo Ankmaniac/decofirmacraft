@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/native_silver/serpentine",
+  "model_stages": [
+    "dfc:item/pan/native_silver/serpentine_full",
+    "dfc:item/pan/native_silver/serpentine_half",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "dfc:panning/deposits/native_silver_serpentine"
+}

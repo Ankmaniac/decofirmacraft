@@ -4,7 +4,7 @@ import com.redstoneguy10ls.decofirmacraft.common.blocks.metal.DFCMetal;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.metal.GateBlock;
 import com.redstoneguy10ls.decofirmacraft.common.blocks.rock.*;
 import com.redstoneguy10ls.decofirmacraft.common.items.DFCItems;
-import com.redstoneguy10ls.decofirmacraft.util.PouredLeadedGlassColors;
+import com.redstoneguy10ls.decofirmacraft.util.DFCHelpers;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.rock.Ore;
@@ -258,7 +258,7 @@ public class DFCBlocks {
             register(("glass/pane/leaded/" + color.getName()), () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops())));
 
     public static final RegistryObject<Block> POURED_LEADED_GLASS = register("plain_poured_leaded_glass", () -> new PouredGlassBlock(ExtendedProperties.of().strength(0.3F).sound(SoundType.GLASS).pushReaction(PushReaction.DESTROY).noOcclusion().requiresCorrectToolForDrops(), () -> DFCBlocks.LEADED_GLASS_PANE.get().asItem()));
-    public static final Map<DyeColor, RegistryObject<Block>> COLORED_POURED_LEADED_GLASS = Helpers.mapOfKeys(DyeColor.class, color -> register(color.getSerializedName() + "_poured_leaded_glass", () -> new PouredGlassBlock(ExtendedProperties.of().pushReaction(PushReaction.DESTROY).strength(0.3F).sound(SoundType.GLASS).noOcclusion().requiresCorrectToolForDrops(), () -> PouredLeadedGlassColors.getLeadedStainedGlass(color))));
+    public static final Map<DyeColor, RegistryObject<Block>> COLORED_POURED_LEADED_GLASS = Helpers.mapOfKeys(DyeColor.class, color -> register(color.getSerializedName() + "_poured_leaded_glass", () -> new PouredGlassBlock(ExtendedProperties.of().pushReaction(PushReaction.DESTROY).strength(0.3F).sound(SoundType.GLASS).noOcclusion().requiresCorrectToolForDrops(), () -> DFCHelpers.getLeadedStainedGlass(color))));
 
     public static final RegistryObject<Block> FOGGY_GLASS = register("glass/block/foggy", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> FOGGY_GLASS_PANE = register("glass/pane/foggy", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS_PANE).requiresCorrectToolForDrops()));

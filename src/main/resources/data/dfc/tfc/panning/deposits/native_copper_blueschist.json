@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/native_copper/blueschist",
+  "model_stages": [
+    "dfc:item/pan/native_copper/blueschist_full",
+    "dfc:item/pan/native_copper/blueschist_half",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "dfc:panning/deposits/native_copper_blueschist"
+}

@@ -1,0 +1,5 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": "dfc:deposit/native_copper/arkose",
+  "result": "dfc:deposit/native_copper/arkose"
+}

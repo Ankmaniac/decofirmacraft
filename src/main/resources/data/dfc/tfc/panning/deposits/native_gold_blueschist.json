@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/native_gold/blueschist",
+  "model_stages": [
+    "dfc:item/pan/native_gold/blueschist_full",
+    "dfc:item/pan/native_gold/blueschist_half",
+    "tfc:item/pan/native_gold/result"
+  ],
+  "loot_table": "dfc:panning/deposits/native_gold_blueschist"
+}

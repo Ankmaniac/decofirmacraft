@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/native_copper/serpentine",
+  "model_stages": [
+    "dfc:item/pan/native_copper/serpentine_full",
+    "dfc:item/pan/native_copper/serpentine_half",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "dfc:panning/deposits/native_copper_serpentine"
+}

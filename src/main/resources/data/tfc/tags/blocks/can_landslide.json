@@ -15,6 +15,26 @@
     "dfc:rock/mossy_cobble/blueschist",
     "dfc:rock/mossy_cobble/serpentine",
     "dfc:rock/mossy_cobble/travertine",
-    "dfc:rock/mossy_cobble/tuff"
+    "dfc:rock/mossy_cobble/tuff",
+    "dfc:deposit/cassiterite/arkose",
+    "dfc:deposit/cassiterite/blueschist",
+    "dfc:deposit/cassiterite/serpentine",
+    "dfc:deposit/cassiterite/travertine",
+    "dfc:deposit/cassiterite/tuff",
+    "dfc:deposit/native_copper/arkose",
+    "dfc:deposit/native_copper/blueschist",
+    "dfc:deposit/native_copper/serpentine",
+    "dfc:deposit/native_copper/travertine",
+    "dfc:deposit/native_copper/tuff",
+    "dfc:deposit/native_gold/arkose",
+    "dfc:deposit/native_gold/blueschist",
+    "dfc:deposit/native_gold/serpentine",
+    "dfc:deposit/native_gold/travertine",
+    "dfc:deposit/native_gold/tuff",
+    "dfc:deposit/native_silver/arkose",
+    "dfc:deposit/native_silver/blueschist",
+    "dfc:deposit/native_silver/serpentine",
+    "dfc:deposit/native_silver/travertine",
+    "dfc:deposit/native_silver/tuff"
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "dfc:deposit/native_silver/arkose"
+  },
+  "loot_table": "dfc:panning/deposits/native_silver_arkose"
+}

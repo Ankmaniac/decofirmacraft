@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/cassiterite/blueschist",
+  "model_stages": [
+    "dfc:item/pan/cassiterite/blueschist_full",
+    "dfc:item/pan/cassiterite/blueschist_half",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "dfc:panning/deposits/cassiterite_blueschist"
+}

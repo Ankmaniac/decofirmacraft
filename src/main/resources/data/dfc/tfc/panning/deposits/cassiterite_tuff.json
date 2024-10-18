@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/cassiterite/tuff",
+  "model_stages": [
+    "dfc:item/pan/cassiterite/tuff_full",
+    "dfc:item/pan/cassiterite/tuff_half",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "dfc:panning/deposits/cassiterite_tuff"
+}

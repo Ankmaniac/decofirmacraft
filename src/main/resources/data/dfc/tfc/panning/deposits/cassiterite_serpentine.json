@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/cassiterite/serpentine",
+  "model_stages": [
+    "dfc:item/pan/cassiterite/serpentine_full",
+    "dfc:item/pan/cassiterite/serpentine_half",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "dfc:panning/deposits/cassiterite_serpentine"
+}

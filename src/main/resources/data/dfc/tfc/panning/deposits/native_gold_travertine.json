@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/native_gold/travertine",
+  "model_stages": [
+    "dfc:item/pan/native_gold/travertine_full",
+    "dfc:item/pan/native_gold/travertine_half",
+    "tfc:item/pan/native_gold/result"
+  ],
+  "loot_table": "dfc:panning/deposits/native_gold_travertine"
+}

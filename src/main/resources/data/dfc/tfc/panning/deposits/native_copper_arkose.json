@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/native_copper/arkose",
+  "model_stages": [
+    "dfc:item/pan/native_copper/arkose_full",
+    "dfc:item/pan/native_copper/arkose_half",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "dfc:panning/deposits/native_copper_arkose"
+}

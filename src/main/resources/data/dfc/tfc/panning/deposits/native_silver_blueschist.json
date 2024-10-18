@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/native_silver/blueschist",
+  "model_stages": [
+    "dfc:item/pan/native_silver/blueschist_full",
+    "dfc:item/pan/native_silver/blueschist_half",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "dfc:panning/deposits/native_silver_blueschist"
+}

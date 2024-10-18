@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "dfc:deposit/cassiterite/tuff"
+  },
+  "loot_table": "dfc:panning/deposits/cassiterite_tuff"
+}

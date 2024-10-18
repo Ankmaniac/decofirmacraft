@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "dfc:deposit/native_gold/blueschist"
+  },
+  "loot_table": "dfc:panning/deposits/native_gold_blueschist"
+}

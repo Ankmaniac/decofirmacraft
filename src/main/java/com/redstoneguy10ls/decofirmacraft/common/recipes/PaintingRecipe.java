@@ -285,11 +285,11 @@ public class PaintingRecipe extends SimpleBlockRecipe {
         @Override
         public PaintingRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer)
         {
-            final BlockIngredient ingredient = BlockIngredient.fromNetwork(buffer);
-            final boolean copyInputState = buffer.readBoolean();
-            final BlockState state = BuiltInRegistries.BLOCK.byId(buffer.readVarInt()).defaultBlockState();
-            final Ingredient itemIngredient = Helpers.decodeNullable(buffer, Ingredient::fromNetwork);
-            final FluidStack fluidIngredient = FluidStack.readFromPacket(buffer);
+            BlockIngredient ingredient = BlockIngredient.fromNetwork(buffer);
+            boolean copyInputState = buffer.readBoolean();
+            BlockState state = BuiltInRegistries.BLOCK.byId(buffer.readVarInt()).defaultBlockState();
+            Ingredient itemIngredient = Helpers.decodeNullable(buffer, Ingredient::fromNetwork);
+            FluidStack fluidIngredient = FluidStack.readFromPacket(buffer);
             int fluidAmount = buffer.readInt();
             return new PaintingRecipe(recipeId, ingredient, state, copyInputState, itemIngredient, fluidIngredient, fluidAmount);
         }
@@ -299,10 +299,6 @@ public class PaintingRecipe extends SimpleBlockRecipe {
         {
             recipe.ingredient.toNetwork(buffer);
             buffer.writeBoolean(recipe.copyInputState);
-            if (!recipe.copyInputState)
-            {
-                buffer.writeVarInt(BuiltInRegistries.BLOCK.getId(recipe.outputState.getBlock()));
-            }
             buffer.writeVarInt(BuiltInRegistries.BLOCK.getId(recipe.outputState.getBlock()));
             Helpers.encodeNullable(recipe.itemIngredient, buffer, Ingredient::toNetwork);
             recipe.fluidIngredient.writeToPacket(buffer);

@@ -1,0 +1,9 @@
+{
+  "ingredient": "dfc:deposit/native_silver/arkose",
+  "model_stages": [
+    "dfc:item/pan/native_silver/arkose_full",
+    "dfc:item/pan/native_silver/arkose_half",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "dfc:panning/deposits/native_silver_arkose"
+}
