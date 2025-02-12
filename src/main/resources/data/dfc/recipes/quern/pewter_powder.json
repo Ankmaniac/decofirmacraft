@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "dfc:metal/ingot/pewter"
+  },
+  "result": {
+    "item": "dfc:metal/powder/pewter",
+    "count": 4
+  }
+}

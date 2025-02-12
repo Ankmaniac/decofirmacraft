@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tfc:silica_sand"
+    },
+    {
+      "tag": "tfc:silica_sand"
+    },
+    {
+      "tag": "tfc:silica_sand"
+    },
+    {
+      "tag": "tfc:silica_sand"
+    },
+    {
+      "tag": "tfc:glassworking_potash"
+    },
+    {
+      "item": "dfc:metal/powder/lead"
+    }
+  ],
+  "result": {
+    "item": "dfc:leaded_silica_glass_batch",
+    "count": 4
+  }
+}

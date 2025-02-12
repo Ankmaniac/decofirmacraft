@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:metal/ingot/cast_iron"
+  },
+  "result": {
+    "item": "dfc:metal/powder/cast_iron",
+    "count": 4
+  }
+}

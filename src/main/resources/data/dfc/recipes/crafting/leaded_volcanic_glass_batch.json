@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tfc:volcanic_sand"
+    },
+    {
+      "tag": "tfc:volcanic_sand"
+    },
+    {
+      "tag": "tfc:volcanic_sand"
+    },
+    {
+      "tag": "tfc:volcanic_sand"
+    },
+    {
+      "tag": "tfc:glassworking_potash"
+    },
+    {
+      "item": "dfc:metal/powder/lead"
+    }
+  ],
+  "result": {
+    "item": "dfc:leaded_volcanic_glass_batch",
+    "count": 4
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:metal/ingot/brass"
+  },
+  "result": {
+    "item": "dfc:metal/powder/brass",
+    "count": 4
+  }
+}

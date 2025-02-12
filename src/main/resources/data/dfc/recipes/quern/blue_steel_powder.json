@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:metal/ingot/blue_steel"
+  },
+  "result": {
+    "item": "dfc:metal/powder/blue_steel",
+    "count": 4
+  }
+}

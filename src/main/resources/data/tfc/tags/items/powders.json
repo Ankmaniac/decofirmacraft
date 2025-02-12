@@ -1,6 +1,30 @@
 {
   "replace": false,
   "values": [
-    "dfc:powder/gypsum"
+    "dfc:powder/gypsum",
+    "dfc:metal/powder/alumina",
+    "dfc:metal/powder/aluminum",
+    "dfc:metal/powder/lead",
+    "dfc:metal/powder/pewter",
+    "dfc:metal/powder/platinum",
+    "dfc:metal/powder/bismuth",
+    "dfc:metal/powder/bismuth_bronze",
+    "dfc:metal/powder/black_bronze",
+    "dfc:metal/powder/bronze",
+    "dfc:metal/powder/brass",
+    "dfc:metal/powder/copper",
+    "dfc:metal/powder/gold",
+    "dfc:metal/powder/nickel",
+    "dfc:metal/powder/rose_gold",
+    "dfc:metal/powder/silver",
+    "dfc:metal/powder/tin",
+    "dfc:metal/powder/zinc",
+    "dfc:metal/powder/sterling_silver",
+    "dfc:metal/powder/wrought_iron",
+    "dfc:metal/powder/cast_iron",
+    "dfc:metal/powder/steel",
+    "dfc:metal/powder/black_steel",
+    "dfc:metal/powder/blue_steel",
+    "dfc:metal/powder/red_steel"
   ]
 }

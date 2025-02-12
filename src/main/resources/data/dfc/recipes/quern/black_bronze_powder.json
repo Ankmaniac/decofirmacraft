@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:metal/ingot/black_bronze"
+  },
+  "result": {
+    "item": "dfc:metal/powder/black_bronze",
+    "count": 4
+  }
+}

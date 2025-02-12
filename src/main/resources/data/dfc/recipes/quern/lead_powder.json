@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "dfc:metal/ingot/lead"
+  },
+  "result": {
+    "item": "dfc:metal/powder/lead",
+    "count": 4
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tfc:hematitic_sand"
+    },
+    {
+      "tag": "tfc:hematitic_sand"
+    },
+    {
+      "tag": "tfc:hematitic_sand"
+    },
+    {
+      "tag": "tfc:hematitic_sand"
+    },
+    {
+      "tag": "tfc:glassworking_potash"
+    },
+    {
+      "item": "dfc:metal/powder/lead"
+    }
+  ],
+  "result": {
+    "item": "dfc:leaded_hematitic_glass_batch",
+    "count": 4
+  }
+}

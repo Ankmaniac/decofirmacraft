@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:metal/ingot/bismuth_bronze"
+  },
+  "result": {
+    "item": "dfc:metal/powder/bismuth_bronze",
+    "count": 4
+  }
+}

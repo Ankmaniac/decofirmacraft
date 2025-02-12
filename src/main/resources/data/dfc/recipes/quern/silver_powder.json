@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:metal/ingot/silver"
+  },
+  "result": {
+    "item": "dfc:metal/powder/silver",
+    "count": 4
+  }
+}
