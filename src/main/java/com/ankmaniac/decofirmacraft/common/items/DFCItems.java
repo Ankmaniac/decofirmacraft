@@ -2,16 +2,22 @@ package com.ankmaniac.decofirmacraft.common.items;
 
 import com.ankmaniac.decofirmacraft.common.blocks.DFCFluids;
 import com.ankmaniac.decofirmacraft.common.blocks.metal.DFCMetal;
+import com.ankmaniac.decofirmacraft.common.blocks.metal.GateBlock;
 import com.ankmaniac.decofirmacraft.common.blocks.rock.DFCOre;
 import com.ankmaniac.decofirmacraft.common.blocks.rock.DFCRock;
 import net.dries007.tfc.common.TFCTiers;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.Metal;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -70,7 +76,14 @@ public class DFCItems {
             register("glass/brick/" + color.getName())
     );
 
+    public static final Map<Metal.Default, RegistryObject<Item>> METAL_POWDERS = Helpers.mapOfKeys(Metal.Default.class, Metal.Default::hasParts, metal ->
+            register("metal/powder/" + metal.name()
+            ));
 
+    public static final Map<DFCMetal.DFCDefault, Map<DFCMetal.DFCDefault.DFCItemType, RegistryObject<Item>>> DFC_METAL_POWDERS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
+            Helpers.mapOfKeys(DFCMetal.DFCDefault.DFCItemType.class, type ->
+                    register("metal/powder/" + metal.name())
+            ));
 
     public static final RegistryObject<BucketItem> PLASTER_FLUID_BUCKET = register("bucket/plaster", () -> new BucketItem(DFCFluids.PLASTER.source(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 

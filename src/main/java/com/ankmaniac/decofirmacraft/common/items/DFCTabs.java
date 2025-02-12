@@ -154,6 +154,19 @@ public class DFCTabs {
         }
         for(Metal.Default metal : Metal.Default.values())
         {
+            if(metal.hasParts()) {
+                accept(out, DFCItems.METAL_POWDERS.get(metal));
+            }
+        }
+        for(DFCMetal.DFCDefault dfcmetal : DFCMetal.DFCDefault.values())
+        {
+            for (DFCMetal.DFCDefault.DFCItemType type : DFCMetal.DFCDefault.DFCItemType.values())
+            {
+                accept(out, DFCItems.DFC_METAL_POWDERS, dfcmetal, type);
+            }
+        }
+        for(Metal.Default metal : Metal.Default.values())
+        {
             if(metal.hasUtilities()) {
                 accept(out, DFCBlocks.METAL_GATES.get(metal));
             }
