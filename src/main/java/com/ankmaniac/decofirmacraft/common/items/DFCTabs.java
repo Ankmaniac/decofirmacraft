@@ -160,10 +160,7 @@ public class DFCTabs {
         }
         for(DFCMetal.DFCDefault dfcmetal : DFCMetal.DFCDefault.values())
         {
-            for (DFCMetal.DFCDefault.DFCItemType type : DFCMetal.DFCDefault.DFCItemType.values())
-            {
-                accept(out, DFCItems.DFC_METAL_POWDERS, dfcmetal, type);
-            }
+                accept(out, DFCItems.DFC_METAL_POWDERS, dfcmetal);
         }
         for(Metal.Default metal : Metal.Default.values())
         {

@@ -80,10 +80,9 @@ public class DFCItems {
             register("metal/powder/" + metal.name()
             ));
 
-    public static final Map<DFCMetal.DFCDefault, Map<DFCMetal.DFCDefault.DFCItemType, RegistryObject<Item>>> DFC_METAL_POWDERS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
-            Helpers.mapOfKeys(DFCMetal.DFCDefault.DFCItemType.class, type ->
+    public static final Map<DFCMetal.DFCDefault, RegistryObject<Item>> DFC_METAL_POWDERS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
                     register("metal/powder/" + metal.name())
-            ));
+            );
 
     public static final RegistryObject<BucketItem> PLASTER_FLUID_BUCKET = register("bucket/plaster", () -> new BucketItem(DFCFluids.PLASTER.source(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
