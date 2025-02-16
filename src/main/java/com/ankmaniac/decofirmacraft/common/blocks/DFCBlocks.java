@@ -226,6 +226,16 @@ public class DFCBlocks {
             register(("ceramic/bricks/terracotta_" + color.getName() + "_stairs"), () -> new StairBlock(() -> TERRACOTTA_PAINTED_BRICKS.get(color).get().defaultBlockState(), BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F))),
             register(("ceramic/bricks/terracotta_" + color.getName() + "_wall"), () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.5F, 6.0F)))));
 
+    public static final RegistryObject<Block> PLAIN_SMOOTH_CONCRETE = register("concrete/smooth/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.8F)));
+    public static final Map<DyeColor, RegistryObject<Block>> PAINTED_SMOOTH_CONCRETE = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("concrete/smooth/" + color.getName()), () -> new Block(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.8F))));
+    public static final RegistryObject<Block> PLAIN_SLAB_CONCRETE = register("concrete/slab/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.8F)));
+    public static final Map<DyeColor, RegistryObject<Block>> PAINTED_SLAB_CONCRETE = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("concrete/slab/" + color.getName()), () -> new Block(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.8F))));
+    public static final RegistryObject<Block> PLAIN_CONCRETE_BRICKS = register("concrete/bricks/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.8F)));
+    public static final Map<DyeColor, RegistryObject<Block>> PAINTED_CONCRETE_BRICKS = Helpers.mapOfKeys(DyeColor.class, color ->
+            register(("concrete/bricks/" + color.getName()), () -> new Block(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.8F))));
+
 
     public static final RegistryObject<Block> PLAIN_PLASTER = register("plaster/smooth/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
     public static final RegistryObject<Block> PLAIN_PLASTER_SLAB = register("plaster/smooth/plain_slab", () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));

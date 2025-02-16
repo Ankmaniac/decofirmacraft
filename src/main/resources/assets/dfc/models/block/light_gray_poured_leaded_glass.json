@@ -1,4 +1,5 @@
 {
+  "render_type": "minecraft:translucent",
   "parent": "tfc:block/template_poured_glass",
   "textures": {
     "all": "dfc:block/glass/leaded/light_gray"

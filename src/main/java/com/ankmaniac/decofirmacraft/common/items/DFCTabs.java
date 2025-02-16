@@ -277,6 +277,21 @@ public class DFCTabs {
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_STAIRS, dye);
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_PILLARS, dye);
         }
+        accept(out, DFCBlocks.PLAIN_SMOOTH_CONCRETE);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.PAINTED_SMOOTH_CONCRETE, dye);
+        }
+        accept(out, DFCBlocks.PLAIN_SLAB_CONCRETE);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.PAINTED_SLAB_CONCRETE, dye);
+        }
+        accept(out, DFCBlocks.PLAIN_CONCRETE_BRICKS);
+        for(DyeColor dye : DyeColor.values())
+        {
+            accept(out, DFCBlocks.PAINTED_CONCRETE_BRICKS, dye);
+        }
         accept(out, DFCItems.LEADED_SILICA_GLASS_BATCH);
         accept(out, DFCItems.LEADED_HEMATITIC_GLASS_BATCH);
         accept(out, DFCItems.LEADED_OLIVINE_GLASS_BATCH);

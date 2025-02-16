@@ -73,16 +73,22 @@ public class DFCItems {
     public static final RegistryObject<Item> GLASS_BRICK = register("glass/brick/plain");
     public static final RegistryObject<Item> FOGGY_BRICK = register("glass/brick/foggy");
     public static final Map<DyeColor, RegistryObject<Item>> STAINED_GLASS_BRICK = Helpers.mapOfKeys(DyeColor.class, color ->
-            register("glass/brick/" + color.getName())
-    );
+            register("glass/brick/" + color.getName()));
 
     public static final Map<Metal.Default, RegistryObject<Item>> METAL_POWDERS = Helpers.mapOfKeys(Metal.Default.class, Metal.Default::hasParts, metal ->
-            register("metal/powder/" + metal.name()
-            ));
+            register("metal/powder/" + metal.name()));
 
     public static final Map<DFCMetal.DFCDefault, RegistryObject<Item>> DFC_METAL_POWDERS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
-                    register("metal/powder/" + metal.name())
-            );
+                    register("metal/powder/" + metal.name()));
+
+    public static final RegistryObject<Item> CINDER_BLOCK_MOLD = register("wood/mold/brick");
+    public static final RegistryObject<Item> SLAB_MOLD = register("wood/mold/slab");
+    public static final RegistryObject<Item> FILLED_CINDER_BLOCK_MOLD = register("wood/mold/brick_filled");
+    public static final RegistryObject<Item> FILLED_SLAB_MOLD = register("wood/mold/slab_filled");
+    public static final RegistryObject<Item> CINDER_BLOCK = register("concrete/brick");
+    public static final RegistryObject<Item> CONCRETE_SLAB = register("concrete/slab");
+
+
 
     public static final RegistryObject<BucketItem> PLASTER_FLUID_BUCKET = register("bucket/plaster", () -> new BucketItem(DFCFluids.PLASTER.source(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
