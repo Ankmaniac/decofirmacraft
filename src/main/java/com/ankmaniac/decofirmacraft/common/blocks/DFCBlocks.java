@@ -305,6 +305,8 @@ public class DFCBlocks {
 
     public static final RegistryObject<LiquidBlock> PLASTER_FLUID = registerNoItem("fluid/plaster", () -> new LiquidBlock(DFCFluids.PLASTER.flowing(), BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
+    public static final RegistryObject<LiquidBlock> CONCRETE_FLUID = registerNoItem("fluid/concrete", () -> new LiquidBlock(DFCFluids.CONCRETE.flowing(), BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> blockSupplier)
     {
         return register(name, blockSupplier, (Function<T, ? extends BlockItem>) null);

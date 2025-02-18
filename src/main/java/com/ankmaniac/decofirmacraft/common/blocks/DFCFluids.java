@@ -56,6 +56,20 @@ public class DFCFluids {
             MixingFluid.Flowing::new
     );
 
+    public static final FluidRegistryObject<ForgeFlowingFluid> CONCRETE = register(
+            "dfc_concrete",
+            properties -> properties
+                    .block(DFCBlocks.CONCRETE_FLUID)
+                    .bucket(DFCItems.CONCRETE_FLUID_BUCKET),
+            waterLike()
+                    .descriptionId("fluid.dfc.concrete"),
+            new FluidTypeClientProperties(
+                    ALPHA_MASK | 0x9A9C97, (level, pos) -> level.getBlockTint(pos, TFCColors.SALT_WATER) | TFCFluids.ALPHA_MASK,
+                    WATER_STILL, WATER_FLOW, WATER_OVERLAY, UNDERWATER_LOCATION
+            ),
+            MixingFluid.Source::new,
+            MixingFluid.Flowing::new
+    );
 
 
 

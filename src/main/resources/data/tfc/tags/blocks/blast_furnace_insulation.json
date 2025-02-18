@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "dfc:metal/block/aluminum",
-    "dfc:metal/bricks/aluminum",
-    "dfc:metal/cut/aluminum",
-    "dfc:metal/smooth/aluminum"
-  ]
-}

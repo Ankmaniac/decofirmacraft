@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "tag": "tfc:lumber"
+    }
+  },
+  "result": {
+    "item": "dfc:wood/mold/brick"
+  }
+}

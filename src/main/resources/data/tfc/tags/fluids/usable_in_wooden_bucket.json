@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "dfc:plaster"
+    "dfc:plaster",
+    "dfc:dfc_concrete"
   ]
 }

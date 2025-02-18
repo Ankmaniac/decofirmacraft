@@ -92,6 +92,8 @@ public class DFCItems {
 
     public static final RegistryObject<BucketItem> PLASTER_FLUID_BUCKET = register("bucket/plaster", () -> new BucketItem(DFCFluids.PLASTER.source(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
+    public static final RegistryObject<BucketItem> CONCRETE_FLUID_BUCKET = register("bucket/concrete", () -> new BucketItem(DFCFluids.CONCRETE.source(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
 
     private static RegistryObject<Item> register(String name)
     {

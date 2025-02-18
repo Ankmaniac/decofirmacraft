@@ -1,0 +1,21 @@
+{
+  "type": "tfc:extra_products_shapeless_crafting",
+  "extra_products": [
+    {
+      "item": "dfc:wood/mold/slab"
+    }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dfc:wood/mold/slab_filled"
+      }
+    ],
+    "result": {
+      "stack": {
+        "item": "dfc:concrete/slab"
+      }
+    }
+  }
+}

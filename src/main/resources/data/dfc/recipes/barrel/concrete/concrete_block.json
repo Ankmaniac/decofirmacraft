@@ -1,0 +1,11 @@
+{
+  "type": "tfc:barrel_sealed",
+  "input_fluid": {
+    "ingredient": "dfc:dfc_concrete",
+    "amount": 25
+  },
+  "output_item": {
+    "item": "dfc:concrete/smooth/plain"
+  },
+  "duration": 1000
+}

@@ -11,6 +11,7 @@ import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
 import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.SelfTests;
 import net.minecraft.core.registries.Registries;
@@ -68,7 +69,10 @@ public class DFCTabs {
                 {
                     accept(out, DFCBlocks.DFC_ROCK_DECORATIONS.get(rock).get(type));
                 }
-
+                if(rock.category() == RockCategory.IGNEOUS_EXTRUSIVE)
+                {
+                   accept(out, DFCBlocks.DFC_MAGMA_BLOCKS.get(rock));
+                }
             }
         }
         for(DFCRock rock : DFCRock.VALUES)
