@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:concrete/bricks/white",
+    "dfc:concrete/bricks/orange",
+    "dfc:concrete/bricks/magenta",
+    "dfc:concrete/bricks/light_blue",
+    "dfc:concrete/bricks/yellow",
+    "dfc:concrete/bricks/lime",
+    "dfc:concrete/bricks/pink",
+    "dfc:concrete/bricks/gray",
+    "dfc:concrete/bricks/light_gray",
+    "dfc:concrete/bricks/cyan",
+    "dfc:concrete/bricks/purple",
+    "dfc:concrete/bricks/blue",
+    "dfc:concrete/bricks/brown",
+    "dfc:concrete/bricks/green",
+    "dfc:concrete/bricks/red",
+    "dfc:concrete/bricks/black"
+  ]
+}

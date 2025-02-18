@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:concrete/bricks"
+  },
+  "copy_input": true,
+  "result": "dfc:concrete/bricks/cyan",
+  "fluid_ingredient": {
+    "fluid": "tfc:cyan_dye"
+  },
+  "fluid_amount": 25
+}

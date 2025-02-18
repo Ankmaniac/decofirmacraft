@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:concrete/smooth"
+  },
+  "copy_input": true,
+  "result": "dfc:concrete/smooth/light_blue",
+  "fluid_ingredient": {
+    "fluid": "tfc:light_blue_dye"
+  },
+  "fluid_amount": 25
+}

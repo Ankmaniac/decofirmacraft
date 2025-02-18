@@ -281,6 +281,12 @@ public class DFCTabs {
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_STAIRS, dye);
             accept(out, DFCBlocks.TERRACOTTA_PAINTED_PLASTER_PILLARS, dye);
         }
+        accept(out, DFCItems.CINDER_BLOCK_MOLD);
+        accept(out, DFCItems.SLAB_MOLD);
+        accept(out, DFCItems.FILLED_CINDER_BLOCK_MOLD);
+        accept(out, DFCItems.FILLED_SLAB_MOLD);
+        accept(out, DFCItems.CINDER_BLOCK);
+        accept(out, DFCItems.CONCRETE_SLAB);
         accept(out, DFCBlocks.PLAIN_SMOOTH_CONCRETE);
         for(DyeColor dye : DyeColor.values())
         {

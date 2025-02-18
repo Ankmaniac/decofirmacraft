@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:concrete/smooth/plain",
+    "dfc:concrete/smooth/white",
+    "dfc:concrete/smooth/orange",
+    "dfc:concrete/smooth/magenta",
+    "dfc:concrete/smooth/light_blue",
+    "dfc:concrete/smooth/yellow",
+    "dfc:concrete/smooth/lime",
+    "dfc:concrete/smooth/pink",
+    "dfc:concrete/smooth/gray",
+    "dfc:concrete/smooth/light_gray",
+    "dfc:concrete/smooth/cyan",
+    "dfc:concrete/smooth/purple",
+    "dfc:concrete/smooth/blue",
+    "dfc:concrete/smooth/brown",
+    "dfc:concrete/smooth/green",
+    "dfc:concrete/smooth/red",
+    "dfc:concrete/smooth/black"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "tfc:barrel_sealed",
+  "input_item": {
+    "ingredient": {
+      "tag": "dfc:concrete/bricks"
+    }
+  },
+  "input_fluid": {
+    "ingredient": "tfc:yellow_dye",
+    "amount": 25
+  },
+  "output_item": {
+    "item": "dfc:concrete/bricks/yellow"
+  },
+  "duration": 1000
+}

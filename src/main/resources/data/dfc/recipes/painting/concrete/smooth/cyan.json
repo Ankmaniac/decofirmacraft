@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:concrete/smooth"
+  },
+  "copy_input": true,
+  "result": "dfc:concrete/smooth/cyan",
+  "fluid_ingredient": {
+    "fluid": "tfc:cyan_dye"
+  },
+  "fluid_amount": 25
+}

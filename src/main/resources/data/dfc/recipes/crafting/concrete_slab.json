@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XMX",
+    "MXM",
+    "XMX"
+  ],
+  "key": {
+    "X": {
+      "item": "dfc:concrete/slab"
+    },
+    "M": {
+      "tag": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:concrete/slab/plain",
+    "count": 4
+  }
+}

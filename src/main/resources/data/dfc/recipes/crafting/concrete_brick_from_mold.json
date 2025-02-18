@@ -5,17 +5,18 @@
       "item": "dfc:wood/mold/brick"
     }
   ],
-  "recipe": {
+  "recipe":
+  {
     "type": "minecraft:crafting_shapeless",
-      "ingredients": [
+      "ingredients":
+      [
         {
         "item": "dfc:wood/mold/brick_filled"
         }
       ],
-      "result": {
-        "stack": {
-          "item": "dfc:concrete/brick"
-        }
-      }
+    "result":
+    {
+      "item": "dfc:concrete/brick"
     }
+  }
 }

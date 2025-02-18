@@ -1,0 +1,16 @@
+{
+  "type": "tfc:barrel_sealed",
+  "input_item": {
+    "ingredient": {
+      "tag": "dfc:concrete/smooth"
+    }
+  },
+  "input_fluid": {
+    "ingredient": "tfc:green_dye",
+    "amount": 25
+  },
+  "output_item": {
+    "item": "dfc:concrete/smooth/green"
+  },
+  "duration": 1000
+}

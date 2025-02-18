@@ -1,0 +1,12 @@
+{
+  "type": "dfc:painting",
+  "ingredient": {
+    "tag": "dfc:concrete/slab"
+  },
+  "copy_input": true,
+  "result": "dfc:concrete/slab/green",
+  "fluid_ingredient": {
+    "fluid": "tfc:green_dye"
+  },
+  "fluid_amount": 25
+}
