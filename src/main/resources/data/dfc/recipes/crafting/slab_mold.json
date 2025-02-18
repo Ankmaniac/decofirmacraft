@@ -1,15 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X X",
-    "XXX"
-  ],
-  "key": {
-    "X": {
-      "tag": "tfc:lumber"
+  "type": "tfc:damage_inputs_shaped_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "XYX",
+      "XXX"
+    ],
+    "key": {
+      "X": {
+        "tag": "tfc:lumber"
+      }
+    },
+    "Y": {
+      "tag": "tfc:hammers"
+    },
+    "result": {
+      "item": "dfc:wood/mold/slab"
     }
-  },
-  "result": {
-    "item": "dfc:wood/mold/slab"
   }
 }
