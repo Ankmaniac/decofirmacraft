@@ -13,7 +13,7 @@
               "condition": "minecraft:block_state_property",
               "block": "dfc:metal/gate/black_steel",
               "properties": {
-                "half": "bottom"
+                "half": "lower"
               }
             }
           ]

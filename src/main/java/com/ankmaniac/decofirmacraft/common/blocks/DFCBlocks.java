@@ -20,6 +20,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
@@ -169,7 +170,8 @@ public class DFCBlocks {
                             .requiresCorrectToolForDrops()
                             .strength(6.0F, 7.0F)
                             .sound(SoundType.METAL)
-                            .noOcclusion()))));
+                            .noOcclusion(),
+                            new BlockSetType(metals.getSerializedName())))));
 
     public static final RegistryObject<Block> PLAIN_TILES = register("ceramic/tiles/normal/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
     public static final RegistryObject<Block> PLAIN_TILES_SLAB = register("ceramic/tiles/normal/plain_slab", () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
@@ -297,6 +299,7 @@ public class DFCBlocks {
     public static final Map<DyeColor, RegistryObject<Block>> STAINED_GLASS_TILES_PANE = Helpers.mapOfKeys(DyeColor.class, color ->
             register(("glass/pane/tiles/" + color.getName()), () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops())));
 
+    public static final RegistryObject<Block> OAK_PANELING = register("wood/panel/oak", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
 
     public static final Map<DFCMetal.DFCDefault, RegistryObject<LiquidBlock>> DFC_METAL_FLUIDS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->

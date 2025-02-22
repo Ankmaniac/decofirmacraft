@@ -13,7 +13,7 @@
               "condition": "minecraft:block_state_property",
               "block": "dfc:metal/gate/bismuth_bronze",
               "properties": {
-                "half": "bottom"
+                "half": "lower"
               }
             }
           ]

@@ -1,0 +1,8 @@
+{
+  "parent": "dfc:block/sideways_column_sides_upright",
+  "textures": {
+    "end": "dfc:block/wood/panel/oaktop",
+    "side": "dfc:block/wood/panel/oak",
+    "particle": "dfc:block/wood/panel/oak"
+  }
+}
