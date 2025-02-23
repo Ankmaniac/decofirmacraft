@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/wood/panel/kapok"
+    },
+    "axis=z": {
+      "model": "dfc:block/wood/panel/kapoksideways"
+    },
+    "axis=x": {
+      "model": "dfc:block/wood/panel/kapoksideways",
+      "y": 90
+    }
+  }
+}

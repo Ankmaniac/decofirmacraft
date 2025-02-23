@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "dfc:block/wood/panel/oaktop",
+    "end": "dfc:block/wood/panel_top/oak",
     "side": "dfc:block/wood/panel/oak"
   }
 }

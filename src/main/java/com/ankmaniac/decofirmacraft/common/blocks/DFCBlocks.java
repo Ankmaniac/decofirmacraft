@@ -11,6 +11,7 @@ import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockAnvilBlock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
@@ -299,8 +300,8 @@ public class DFCBlocks {
     public static final Map<DyeColor, RegistryObject<Block>> STAINED_GLASS_TILES_PANE = Helpers.mapOfKeys(DyeColor.class, color ->
             register(("glass/pane/tiles/" + color.getName()), () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).requiresCorrectToolForDrops())));
 
-    public static final RegistryObject<Block> OAK_PANELING = register("wood/panel/oak", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-
+    public static final Map<Wood, RegistryObject<Block>>  WOOD_PANELS = Helpers.mapOfKeys(Wood.class, wood ->
+            register(("wood/panel/" + wood.getSerializedName()), () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS))));
 
     public static final Map<DFCMetal.DFCDefault, RegistryObject<LiquidBlock>> DFC_METAL_FLUIDS = Helpers.mapOfKeys(DFCMetal.DFCDefault.class, metal ->
             registerNoItem("metal/fluid/" + metal.name(), () -> new LiquidBlock(DFCFluids.METALS.get(metal).source(), BlockBehaviour.Properties.copy(Blocks.LAVA).noLootTable()))

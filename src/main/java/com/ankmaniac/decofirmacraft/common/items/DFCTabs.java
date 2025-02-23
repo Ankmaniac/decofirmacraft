@@ -12,6 +12,7 @@ import net.dries007.tfc.common.blocks.OreDeposit;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.SelfTests;
 import net.minecraft.core.registries.Registries;
@@ -260,6 +261,10 @@ public class DFCTabs {
 
     private static void fillMisc(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
     {
+        for(Wood wood : Wood.values())
+        {
+            accept(out, DFCBlocks.WOOD_PANELS, wood);
+        }
         accept(out, DFCItems.PAINTBRUSH);
         accept(out, DFCItems.GYPSUM_POWDER);
         accept(out, DFCItems.PLASTER_FLUID_BUCKET);

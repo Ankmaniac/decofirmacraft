@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/wood/panel/blackwood"
+    },
+    "axis=z": {
+      "model": "dfc:block/wood/panel/blackwoodsideways"
+    },
+    "axis=x": {
+      "model": "dfc:block/wood/panel/blackwoodsideways",
+      "y": 90
+    }
+  }
+}

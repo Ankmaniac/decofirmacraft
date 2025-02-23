@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/sideways_column_sides_upright",
+  "textures": {
+    "end": "dfc:block/wood/panel_top/kapok",
+    "side": "dfc:block/wood/panel/kapok"
+  }
+}

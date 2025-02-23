@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/wood/panel/mangrove"
+    },
+    "axis=z": {
+      "model": "dfc:block/wood/panel/mangrovesideways"
+    },
+    "axis=x": {
+      "model": "dfc:block/wood/panel/mangrovesideways",
+      "y": 90
+    }
+  }
+}
