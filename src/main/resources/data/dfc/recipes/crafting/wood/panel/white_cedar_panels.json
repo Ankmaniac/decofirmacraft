@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "   ",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/white_cedar"
+    }
+  },
+  "result": {
+    "item": "dfc:wood/panel/white_cedar"
+  }
+}

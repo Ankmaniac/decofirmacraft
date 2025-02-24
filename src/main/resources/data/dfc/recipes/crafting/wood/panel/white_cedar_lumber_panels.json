@@ -1,0 +1,18 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dfc:wood/panel/white_cedar"
+      },
+      {
+        "tag": "tfc:saws"
+      }
+    ],
+    "result": {
+      "item": "tfc:wood/lumber/white_cedar",
+      "count": 4
+    }
+  }
+}
