@@ -15,6 +15,8 @@ public class DFCRecipeSerializers {
 
     public static final RegistryObject<PaintingRecipe.Serializer> PAINTING = register("painting", PaintingRecipe.Serializer::new);
 
+    public static final RegistryObject<AsbestosRecipe.Serializer> ASBESTOS = register("asbestos", AsbestosRecipe.Serializer::new);
+
     private static <S extends RecipeSerializer<?>> RegistryObject<S> register(String name, Supplier<S> factory)
     {
         return RECIPE_SERIALIZERS.register(name, factory);

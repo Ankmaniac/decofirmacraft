@@ -24,6 +24,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
@@ -58,7 +59,7 @@ public class DFCBlocks {
     );
 
     public static final Map<DFCRock, RegistryObject<Block>> DFC_MAGMA_BLOCKS = Helpers.mapOfKeys(DFCRock.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock ->
-            register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(TFCBlocks::always)))
+            register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(ExtendedProperties.of().mapColor(MapColor.NETHER).pathType(BlockPathTypes.DAMAGE_FIRE).adjacentPathType(BlockPathTypes.DANGER_FIRE).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(TFCBlocks::always)))
     );
 
     //pillar,roads,tiles
@@ -238,6 +239,7 @@ public class DFCBlocks {
     public static final RegistryObject<Block> PLAIN_CONCRETE_BRICKS = register("concrete/bricks/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.8F)));
     public static final Map<DyeColor, RegistryObject<Block>> PAINTED_CONCRETE_BRICKS = Helpers.mapOfKeys(DyeColor.class, color ->
             register(("concrete/bricks/" + color.getName()), () -> new Block(BlockBehaviour.Properties.of().mapColor(color.getMapColor()).requiresCorrectToolForDrops().strength(1.8F))));
+    public static final RegistryObject<Block> PLAIN_LARGE_SLAB_CONCRETE = register("concrete/large_slab/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.8F)));
 
 
     public static final RegistryObject<Block> PLAIN_PLASTER = register("plaster/smooth/plain", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));

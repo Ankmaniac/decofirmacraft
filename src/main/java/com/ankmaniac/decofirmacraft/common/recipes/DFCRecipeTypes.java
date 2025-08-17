@@ -13,6 +13,8 @@ public class DFCRecipeTypes {
 
     public static final RegistryObject<RecipeType<PaintingRecipe>> PAINTING = register("painting");
 
+    public static final RegistryObject<RecipeType<AsbestosRecipe>> ASBESTOS = register("asbestos");
+
     private static <R extends Recipe<?>> RegistryObject<RecipeType<R>> register(String name)
     {
         return RECIPE_TYPES.register(name, () -> new RecipeType<>() {

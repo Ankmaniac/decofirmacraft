@@ -308,6 +308,7 @@ public class DFCTabs {
         {
             accept(out, DFCBlocks.PAINTED_CONCRETE_BRICKS, dye);
         }
+        accept(out, DFCBlocks.PLAIN_LARGE_SLAB_CONCRETE);
         accept(out, DFCItems.LEADED_SILICA_GLASS_BATCH);
         accept(out, DFCItems.LEADED_HEMATITIC_GLASS_BATCH);
         accept(out, DFCItems.LEADED_OLIVINE_GLASS_BATCH);

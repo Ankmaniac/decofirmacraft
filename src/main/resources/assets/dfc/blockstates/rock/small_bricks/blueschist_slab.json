@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dfc:block/rock/small_bricks/blueschist_slab"
+    },
+    "type=top": {
+      "model": "dfc:block/rock/small_bricks/blueschist_slab_top"
+    },
+    "type=double": {
+      "model": "dfc:block/rock/small_bricks/blueschist"
+    }
+  }
+}

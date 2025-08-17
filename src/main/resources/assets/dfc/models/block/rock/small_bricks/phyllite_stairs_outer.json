@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/small_bricks/phyllite",
+    "top": "dfc:block/rock/small_bricks/phyllite",
+    "side": "dfc:block/rock/small_bricks/phyllite"
+  }
+}

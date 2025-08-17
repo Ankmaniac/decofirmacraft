@@ -1,0 +1,28 @@
+{
+  "type": "tfc:welding",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "artisanal"
+    }
+  ],
+  "first_input": {
+    "item": "tfc:metal/double_sheet/wrought_iron"
+  },
+  "second_input": {
+    "item": "dfc:metal/sheet/aluminum"
+  },
+  "tier": 0,
+  "result": {
+    "stack": {
+      "item": "artisanal:metal/tinplate",
+      "count": 8
+    },
+    "modifiers": [
+      {
+        "type": "artisanal:cap_heat",
+        "max_temp": 229
+      }
+    ]
+  }
+}

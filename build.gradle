@@ -115,9 +115,9 @@ dependencies {
 
     implementation fg.deobf("curse.maven:patchouli-306770:4636277")
     
-    implementation fg.deobf("curse.maven:fusionctm-854949:5129294")
+    implementation fg.deobf("curse.maven:fusionctm-854949:6826826")
 
-    implementation fg.deobf("curse.maven:terrafirmacraft-302973:5571484")
+    implementation fg.deobf("curse.maven:terrafirmacraft-302973:6835820")
 
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-81-FORGE")
 }

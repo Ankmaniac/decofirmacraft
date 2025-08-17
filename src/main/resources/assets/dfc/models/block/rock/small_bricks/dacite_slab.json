@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/rock/small_bricks/dacite",
+    "top": "dfc:block/rock/small_bricks/dacite",
+    "side": "dfc:block/rock/small_bricks/dacite"
+  }
+}

@@ -50,10 +50,8 @@ public class PaintingRecipe extends SimpleBlockRecipe {
                 @Nullable BlockState painted;
 
                 if (recipe.copyInputState) {
-                    // Copy the blockstate from the input state
                     painted = recipe.copyBlockState(state);
                 } else {
-                    // Use the predefined output block state
                     painted = recipe.getBlockCraftingResult(state);
                 }
 
@@ -62,7 +60,6 @@ public class PaintingRecipe extends SimpleBlockRecipe {
                     return Either.right(InteractionResult.FAIL);
                 }
 
-                // Pass the fluid ingredient from the recipe for proper validation
                 if (consumeFluidIfPresent(player, recipe.getFluidAmount(), recipe.getFluidIngredient())) {
                     return Either.left(painted);
                 } else {
@@ -78,9 +75,7 @@ public class PaintingRecipe extends SimpleBlockRecipe {
     public BlockState copyBlockState(BlockState inputState) {
         BlockState newState = outputState;
 
-        // Iterate through all the properties of the input block state
         for (Property<?> property : inputState.getProperties()) {
-            // Use capture helper to get the correct value type for the property
             newState = copyProperty(inputState, newState, property);
         }
 
@@ -101,14 +96,12 @@ public class PaintingRecipe extends SimpleBlockRecipe {
     public static boolean consumeFluidIfPresent(Player player, int amount, @Nullable FluidStack fluidIngredient) {
         ItemStack offHandStack = player.getOffhandItem();
 
-        // Check if the off-hand item contains a fluid handler (bucket or other fluid container)
         LazyOptional<IFluidHandlerItem> fluidHandlerCap = offHandStack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM);
 
         if (fluidHandlerCap.isPresent()) {
             IFluidHandlerItem fluidHandler = fluidHandlerCap.orElseThrow(IllegalStateException::new);
             FluidStack fluidInItem = fluidHandler.getFluidInTank(0);
 
-            // Verify that the fluid in the container matches the required fluid ingredient
             if (fluidIngredient != null && !fluidIngredient.isEmpty()) {
                 if (fluidInItem.getFluid() == fluidIngredient.getFluid() && fluidInItem.getAmount() >= amount) {
                     fluidHandler.drain(amount, IFluidHandler.FluidAction.EXECUTE);
@@ -125,12 +118,10 @@ public class PaintingRecipe extends SimpleBlockRecipe {
     public static PaintingRecipe getRecipe(BlockState state, ItemStack held, @Nullable FluidStack fluidInHand) {
         PaintingRecipe bestMatch = null;
 
-        // Iterate through all recipes for the block tag
         for (PaintingRecipe recipe : CACHE.getAll(state.getBlock())) {
-            // Check if the block state matches, and then test the item and fluid ingredients
             if (recipe.matches(state, held, fluidInHand)) {
                 if (bestMatch == null || isMoreSpecificMatch(recipe, bestMatch)) {
-                    bestMatch = recipe;  // Keep track of the best (most specific) match
+                    bestMatch = recipe;
                 }
             }
         }
@@ -166,29 +157,25 @@ public class PaintingRecipe extends SimpleBlockRecipe {
     }
 
     public boolean matches(BlockState state, ItemStack stack, @Nullable FluidStack fluidInHand) {
-        // First, check if the block state matches
         if (!matches(state)) {
             return false;
         }
 
-        // Check if the item ingredient matches
         if (itemIngredient != null && !itemIngredient.test(stack)) {
             return false;
         }
 
-        // Check if the fluid ingredient matches (if a fluid ingredient is defined in the recipe)
         if (fluidIngredient != null && !fluidIngredient.isEmpty()) {
             if (fluidInHand == null || fluidInHand.isEmpty()) {
-                return false; // No fluid in hand, but recipe requires fluid
+                return false;
             }
 
-            // Check if the fluid in hand matches the fluid ingredient in the recipe
             if (!fluidInHand.isFluidEqual(fluidIngredient) || fluidInHand.getAmount() < fluidAmount) {
                 return false;
             }
         }
 
-        return true;  // All conditions are met
+        return true;
     }
 
     private static boolean isMoreSpecificMatch(PaintingRecipe candidate, PaintingRecipe currentBest) {

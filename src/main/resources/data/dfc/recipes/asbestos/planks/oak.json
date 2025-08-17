@@ -1,0 +1,10 @@
+{
+  "type": "dfc:asbestos",
+  "block_input": {
+    "type": "tfc:block_ingredient",
+    "block": "tfc:wood/planks/oak"
+  },
+  "block_output": "tfc:wood/planks/hickory",
+  "copy_input": false,
+  "item_input": "dfc:ore/asbestos"
+}

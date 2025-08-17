@@ -14,12 +14,14 @@ import java.util.function.BiFunction;
 import java.util.function.Supplier;
 
 public enum CustomRockBlocks implements StringRepresentable {
-    PILLAR((rock, self) -> new RotatedPillarBlock(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false),
-    ROAD((rock, self) -> new RoadBlock(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),true),
-    TILE((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),true),
-    THIN_OUTLINE((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false),
-    THICK_OUTLINE((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false),
-    COLUMN((rock, self) -> new ColumnBlock(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false);
+    PILLAR((rock, self) -> new RotatedPillarBlock(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false, false),
+    ROAD((rock, self) -> new RoadBlock(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),true, true),
+    TILE((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),true, false),
+    THIN_OUTLINE((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false, false),
+    THICK_OUTLINE((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false,false),
+    SMALL_BRICKS((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),true, false),
+    LARGE_BRICKS((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false, false),
+    COLUMN((rock, self) -> new ColumnBlock(properties(rock).strength(rock.category().hardness(6.5f),10).requiresCorrectToolForDrops()),false, true);
     public static final CustomRockBlocks[] VALUES = values();
 
     public static CustomRockBlocks valueOf(int i){return i >= 0 && i < VALUES.length ? VALUES[i] : PILLAR;}
@@ -29,19 +31,25 @@ public enum CustomRockBlocks implements StringRepresentable {
         return BlockBehaviour.Properties.of().mapColor(rock.color()).sound(SoundType.STONE).instrument(NoteBlockInstrument.BASEDRUM);
     }
     private final boolean variants;
+    private final boolean noItem;
     private final BiFunction<RegistryRock, CustomRockBlocks, Block> blockFactory;
     private final String serializedName;
 
-    CustomRockBlocks(BiFunction<RegistryRock, CustomRockBlocks, Block> blockFactory, boolean variants)
+    CustomRockBlocks(BiFunction<RegistryRock, CustomRockBlocks, Block> blockFactory, boolean variants, boolean noItem)
     {
         this.blockFactory = blockFactory;
         this.variants = variants;
+        this.noItem = noItem;
         this.serializedName = name().toLowerCase(Locale.ROOT);
     }
 
     public boolean hasVariants()
     {
         return variants;
+    }
+
+    public boolean noItem() {
+        return noItem();
     }
 
     public Block create(RegistryRock rock)

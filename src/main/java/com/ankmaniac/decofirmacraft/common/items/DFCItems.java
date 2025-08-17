@@ -1,12 +1,16 @@
 package com.ankmaniac.decofirmacraft.common.items;
 
+import com.ankmaniac.decofirmacraft.common.blocks.DFCBlocks;
 import com.ankmaniac.decofirmacraft.common.blocks.DFCFluids;
 import com.ankmaniac.decofirmacraft.common.blocks.metal.DFCMetal;
 import com.ankmaniac.decofirmacraft.common.blocks.metal.GateBlock;
+import com.ankmaniac.decofirmacraft.common.blocks.rock.CustomDFCRockBlocks;
+import com.ankmaniac.decofirmacraft.common.blocks.rock.CustomRockBlocks;
 import com.ankmaniac.decofirmacraft.common.blocks.rock.DFCOre;
 import com.ankmaniac.decofirmacraft.common.blocks.rock.DFCRock;
 import net.dries007.tfc.common.TFCTiers;
 import net.dries007.tfc.common.blocks.rock.Ore;
+import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.minecraft.client.renderer.item.ItemProperties;

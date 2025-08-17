@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dfc:wood/panel/panelnut"
+          "name": "dfc:wood/panel/chestnut"
         }
       ],
       "conditions": [
