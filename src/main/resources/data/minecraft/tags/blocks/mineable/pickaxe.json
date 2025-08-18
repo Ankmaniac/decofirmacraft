@@ -3,6 +3,7 @@
   "values": [
     "#dfc:metal/gates",
     "#dfc:rock/columns",
+    "#dfc:rock/large_bricks",
     "#dfc:rock/pillars",
     "#dfc:rock/roads",
     "#dfc:rock/thick_outlines",

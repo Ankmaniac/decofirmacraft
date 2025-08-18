@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MBM",
+    "BMB",
+    "MBM"
+  ],
+  "key": {
+    "M": {
+      "item": "dfc:rock/smooth/serpentine"
+    },
+    "B": {
+      "item": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/large_bricks/serpentine",
+    "count": 5
+  }
+}

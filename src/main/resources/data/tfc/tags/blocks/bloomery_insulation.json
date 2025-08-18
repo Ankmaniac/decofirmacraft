@@ -1,6 +1,7 @@
 {"replace": false,
   "values": [
     "#dfc:rock/roads",
+    "#dfc:rock/large_bricks",
     "#dfc:rock/tiles",
     "#dfc:rock/thick_outlines",
     "#dfc:rock/thin_outlines"

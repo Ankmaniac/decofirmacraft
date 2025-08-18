@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MBM",
+    "BMB",
+    "MBM"
+  ],
+  "key": {
+    "M": {
+      "item": "tfc:rock/smooth/gabbro"
+    },
+    "B": {
+      "item": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "dfc:rock/large_bricks/gabbro",
+    "count": 5
+  }
+}
