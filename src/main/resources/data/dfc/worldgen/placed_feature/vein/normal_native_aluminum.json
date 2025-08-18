@@ -1,4 +1,9 @@
 {
   "feature": "dfc:vein/normal_native_aluminum",
-  "placement": []
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "max_temperature": -18
+    }
+  ]
 }
