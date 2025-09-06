@@ -1,9 +1,8 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "dfc:block/rock/road/gneiss",
-    "top": "dfc:block/rock/road/gneiss",
-    "side": "dfc:block/rock/road/gneiss"
+    "bottom": "dfc:block/rock/small_bricks/gneiss",
+    "top": "dfc:block/rock/small_bricks/gneiss",
+    "side": "dfc:block/rock/small_bricks/gneiss"
   }
 }

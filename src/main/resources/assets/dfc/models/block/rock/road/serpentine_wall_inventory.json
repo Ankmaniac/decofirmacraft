@@ -1,6 +1,6 @@
 {
   "parent": "block/wall_inventory",
   "textures": {
-    "wall": "dfc:block/rock/road/serpentine"
+    "wall": "dfc:block/rock/small_bricks/serpentine"
   }
 }

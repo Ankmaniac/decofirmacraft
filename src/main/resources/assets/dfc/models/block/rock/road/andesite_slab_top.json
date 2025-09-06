@@ -1,9 +1,8 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "dfc:block/rock/road/andesite",
-    "top": "dfc:block/rock/road/andesite",
-    "side": "dfc:block/rock/road/andesite"
+    "bottom": "dfc:block/rock/small_bricks/andesite",
+    "top": "dfc:block/rock/small_bricks/andesite",
+    "side": "dfc:block/rock/small_bricks/andesite"
   }
 }

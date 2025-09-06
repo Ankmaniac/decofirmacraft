@@ -1,9 +1,8 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "dfc:block/rock/road/basalt",
-    "top": "dfc:block/rock/road/basalt",
-    "side": "dfc:block/rock/road/basalt"
+    "bottom": "dfc:block/rock/small_bricks/basalt",
+    "top": "dfc:block/rock/small_bricks/basalt",
+    "side": "dfc:block/rock/small_bricks/basalt"
   }
 }

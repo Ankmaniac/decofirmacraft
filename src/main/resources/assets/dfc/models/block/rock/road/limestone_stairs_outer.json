@@ -1,9 +1,8 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "dfc:block/rock/road/limestone",
-    "top": "dfc:block/rock/road/limestone",
-    "side": "dfc:block/rock/road/limestone"
+    "bottom": "dfc:block/rock/small_bricks/limestone",
+    "top": "dfc:block/rock/small_bricks/limestone",
+    "side": "dfc:block/rock/small_bricks/limestone"
   }
 }

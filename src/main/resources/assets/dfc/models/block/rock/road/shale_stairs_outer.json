@@ -1,9 +1,8 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "dfc:block/rock/road/shale",
-    "top": "dfc:block/rock/road/shale",
-    "side": "dfc:block/rock/road/shale"
+    "bottom": "dfc:block/rock/small_bricks/shale",
+    "top": "dfc:block/rock/small_bricks/shale",
+    "side": "dfc:block/rock/small_bricks/shale"
   }
 }

@@ -1,9 +1,8 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "dfc:block/rock/road/phyllite",
-    "top": "dfc:block/rock/road/phyllite",
-    "side": "dfc:block/rock/road/phyllite"
+    "bottom": "dfc:block/rock/small_bricks/phyllite",
+    "top": "dfc:block/rock/small_bricks/phyllite",
+    "side": "dfc:block/rock/small_bricks/phyllite"
   }
 }

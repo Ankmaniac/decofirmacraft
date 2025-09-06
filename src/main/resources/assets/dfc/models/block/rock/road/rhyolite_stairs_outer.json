@@ -1,9 +1,8 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "dfc:block/rock/road/rhyolite",
-    "top": "dfc:block/rock/road/rhyolite",
-    "side": "dfc:block/rock/road/rhyolite"
+    "bottom": "dfc:block/rock/small_bricks/rhyolite",
+    "top": "dfc:block/rock/small_bricks/rhyolite",
+    "side": "dfc:block/rock/small_bricks/rhyolite"
   }
 }
