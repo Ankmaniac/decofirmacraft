@@ -112,6 +112,7 @@ dependencies {
     annotationProcessor("org.spongepowered:mixin:${mixin_version}:processor")
 
     implementation fg.deobf("curse.maven:jei-238222:5074448")
+    runtimeOnly fg.deobf("curse.maven:jade-324717:4614153")
 
     implementation fg.deobf("curse.maven:patchouli-306770:4636277")
     
