@@ -1,33 +1,24 @@
 package com.ankmaniac.decofirmacraft.common.items;
 
-import com.ankmaniac.decofirmacraft.common.blocks.DFCBlocks;
 import com.ankmaniac.decofirmacraft.common.blocks.DFCFluids;
 import com.ankmaniac.decofirmacraft.common.blocks.metal.DFCMetal;
-import com.ankmaniac.decofirmacraft.common.blocks.metal.GateBlock;
-import com.ankmaniac.decofirmacraft.common.blocks.rock.CustomDFCRockBlocks;
-import com.ankmaniac.decofirmacraft.common.blocks.rock.CustomRockBlocks;
 import com.ankmaniac.decofirmacraft.common.blocks.rock.DFCOre;
 import com.ankmaniac.decofirmacraft.common.blocks.rock.DFCRock;
-import net.dries007.tfc.common.TFCTiers;
-import net.dries007.tfc.common.blocks.rock.Ore;
-import net.dries007.tfc.common.blocks.rock.Rock;
-import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.util.Metal;
-import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-
 import java.util.Locale;
 import java.util.Map;
 import java.util.function.Supplier;
+
+import net.dries007.tfc.common.TFCTiers;
+import net.dries007.tfc.common.blocks.rock.Ore;
+import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.Metal;
 
 import static com.ankmaniac.decofirmacraft.DecoFirmaCraft.MOD_ID;
 

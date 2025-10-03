@@ -1,5 +1,6 @@
 package com.ankmaniac.decofirmacraft;
 
+import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
 import com.mojang.logging.LogUtils;
 import com.ankmaniac.decofirmacraft.common.blocks.DFCBlocks;
 import com.ankmaniac.decofirmacraft.common.blocks.DFCFluids;
@@ -29,6 +30,7 @@ public class DecoFirmaCraft {
         DFCBlocks.BLOCKS.register(bus);
         DFCFluids.FLUIDS.register(bus);
         DFCItems.ITEMS.register(bus);
+        DFCBlockEntities.BLOCK_ENTITIES.register(bus);
         DFCTabs.CREATIVE_TABS.register(bus);
         DFCRecipeTypes.RECIPE_TYPES.register(bus);
         DFCRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
