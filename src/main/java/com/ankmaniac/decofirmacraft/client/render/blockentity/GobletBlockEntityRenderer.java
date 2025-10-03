@@ -1,6 +1,7 @@
 package com.ankmaniac.decofirmacraft.client.render.blockentity;
 
 import com.ankmaniac.decofirmacraft.common.blockentities.GobletBlockEntity;
+import com.ankmaniac.decofirmacraft.config.DFCConfig;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -15,7 +16,7 @@ public class GobletBlockEntityRenderer implements BlockEntityRenderer<GobletBloc
     {
         goblet.getCapability(Capabilities.FLUID).map(handler -> handler.getFluidInTank(0)).filter(fluid -> !fluid.isEmpty()).ifPresent(fluidStack ->
         {
-            final float fillPercent = (float) fluidStack.getAmount() / GobletBlockEntity.GOBLET_CAPACITY;
+            final float fillPercent = (float) fluidStack.getAmount() / DFCConfig.SERVER.gobletCapacity.get();
             RenderHelpers.renderFluidFace(poseStack, fluidStack, buffer,
                 0.4375f, 0.4375f,
                 0.5625f, 0.5625f,

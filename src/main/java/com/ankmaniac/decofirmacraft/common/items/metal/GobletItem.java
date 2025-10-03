@@ -1,9 +1,9 @@
 package com.ankmaniac.decofirmacraft.common.items.metal;
 
 import java.util.List;
-import java.util.function.Supplier;
 import com.ankmaniac.decofirmacraft.common.blockentities.GobletBlockEntity;
 import com.ankmaniac.decofirmacraft.common.blocks.DFCBlocks;
+import com.ankmaniac.decofirmacraft.config.DFCConfig;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
@@ -37,7 +37,6 @@ import org.jetbrains.annotations.Nullable;
 import net.dries007.tfc.common.capabilities.Capabilities;
 import net.dries007.tfc.common.capabilities.DelegateFluidHandler;
 import net.dries007.tfc.common.capabilities.FluidTankCallback;
-import net.dries007.tfc.common.capabilities.food.TFCFoodData;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.util.Drinkable;
 import net.dries007.tfc.util.Helpers;
@@ -50,13 +49,11 @@ import net.dries007.tfc.util.Tooltips;
 public class GobletItem extends BlockItem
 {
     protected final TagKey<Fluid> whitelist;
-    protected final Supplier<Integer> capacity;
 
-    public GobletItem(Properties properties, Supplier<Integer> capacity, TagKey<Fluid> whitelist)
+    public GobletItem(Properties properties, TagKey<Fluid> whitelist)
     {
         super(DFCBlocks.GOBLET_BLOCK.get(), properties);
         this.whitelist = whitelist;
-        this.capacity = capacity;
     }
 
     @Override
@@ -96,10 +93,6 @@ public class GobletItem extends BlockItem
         final Drinkable drinkable = Drinkable.get(handler.getFluidInTank(0).getFluid());
         if (drinkable != null)
         {
-            if (!drinkable.mayDrinkWhenFull() && player.getFoodData() instanceof TFCFoodData food && food.getThirst() >= TFCFoodData.MAX_THIRST)
-            {
-                return InteractionResultHolder.fail(stack);
-            }
             return ItemUtils.startUsingInstantly(level, player, hand);
         }
 
@@ -115,7 +108,7 @@ public class GobletItem extends BlockItem
         final IFluidHandler handler = stack.getCapability(Capabilities.FLUID_ITEM).resolve().orElse(null);
         if (handler != null)
         {
-            final FluidStack drained = handler.drain(GobletBlockEntity.DRINK_SIZE, IFluidHandler.FluidAction.EXECUTE);
+            final FluidStack drained = handler.drain(100, IFluidHandler.FluidAction.EXECUTE);
             if (entity instanceof Player player)
             {
                 final Drinkable drinkable = Drinkable.get(drained.getFluid());
@@ -167,9 +160,9 @@ public class GobletItem extends BlockItem
     {
         stack.getCapability(Capabilities.FLUID_ITEM).ifPresent(cap -> {
             final FluidStack fluid = cap.getFluidInTank(0);
-            if (!fluid.isEmpty() && fluid.getAmount() < capacity.get())
+            if (!fluid.isEmpty() && fluid.getAmount() < DFCConfig.SERVER.gobletCapacity.get())
             {
-                tooltips.add(Tooltips.fluidUnitsAndCapacityOf(fluid, capacity.get()));
+                tooltips.add(Tooltips.fluidUnitsAndCapacityOf(fluid, DFCConfig.SERVER.gobletCapacity.get()));
             }
         });
     }

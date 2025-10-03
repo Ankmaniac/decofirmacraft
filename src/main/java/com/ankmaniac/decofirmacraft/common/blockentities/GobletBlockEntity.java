@@ -1,6 +1,7 @@
 package com.ankmaniac.decofirmacraft.common.blockentities;
 
 import com.ankmaniac.decofirmacraft.common.items.metal.GobletItem;
+import com.ankmaniac.decofirmacraft.config.DFCConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -26,9 +27,6 @@ public class GobletBlockEntity extends TFCBlockEntity implements FluidTankCallba
 {
     private GobletTank tank;
     private final LazyOptional<IFluidHandler> holder = LazyOptional.of(() -> tank);
-
-    public static final int GOBLET_CAPACITY = 300;
-    public static final int DRINK_SIZE = 100;
 
     public GobletBlockEntity(BlockPos pos, BlockState state)
     {
@@ -80,7 +78,7 @@ public class GobletBlockEntity extends TFCBlockEntity implements FluidTankCallba
         public GobletTank(FluidTankCallback callback)
         {
             this.callback = callback;
-            this.tank = new InventoryFluidTank(GobletBlockEntity.GOBLET_CAPACITY, stack -> Helpers.isFluid(stack.getFluid(), TFCTags.Fluids.USABLE_IN_JUG), this);
+            this.tank = new InventoryFluidTank(DFCConfig.SERVER.gobletCapacity.get(), stack -> Helpers.isFluid(stack.getFluid(), TFCTags.Fluids.USABLE_IN_JUG), this);
         }
 
         @NotNull

@@ -4,6 +4,7 @@ import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
 import com.ankmaniac.decofirmacraft.common.blockentities.GobletBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -24,7 +26,6 @@ import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import org.jetbrains.annotations.Nullable;
 
-import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.ExtendedBlock;
 import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
@@ -37,10 +38,12 @@ import net.dries007.tfc.util.loot.CopyFluidFunction;
 public class GobletBlock extends ExtendedBlock implements EntityBlockExtension
 {
     protected static final VoxelShape GOBLET_SHAPE = Block.box(6, 0, 6, 10, 7, 10);
+    protected final TagKey<Fluid> whitelist;
 
-    public GobletBlock(ExtendedProperties properties)
+    public GobletBlock(ExtendedProperties properties, TagKey<Fluid> whitelist)
     {
         super(properties);
+        this.whitelist = whitelist;
     }
 
     @Override
@@ -76,7 +79,7 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension
                         return InteractionResult.PASS;
                     }
 
-                    final FluidStack drained = handler.drain(GobletBlockEntity.DRINK_SIZE, IFluidHandler.FluidAction.EXECUTE);
+                    final FluidStack drained = handler.drain(100, IFluidHandler.FluidAction.EXECUTE);
                     goblet.markForSync();
 
                     if (!level.isClientSide)
@@ -90,7 +93,7 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension
             else
             {
                 IFluidHandlerItem itemHandler = Helpers.getCapability(item, Capabilities.FLUID_ITEM);
-                if (itemHandler != null && Helpers.isFluid(itemHandler.getFluidInTank(0).getFluid(), TFCTags.Fluids.USABLE_IN_JUG))
+                if (itemHandler != null && Helpers.isFluid(itemHandler.getFluidInTank(0).getFluid(), whitelist))
                 {
                     if (FluidHelpers.transferBetweenBlockEntityAndItem(item, goblet, player, hand))
                     {
