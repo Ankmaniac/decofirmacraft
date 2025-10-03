@@ -6,15 +6,6 @@ import com.ankmaniac.decofirmacraft.common.blocks.rock.CustomDFCRockBlocks;
 import com.ankmaniac.decofirmacraft.common.blocks.rock.CustomRockBlocks;
 import com.ankmaniac.decofirmacraft.common.blocks.rock.DFCOre;
 import com.ankmaniac.decofirmacraft.common.blocks.rock.DFCRock;
-import net.dries007.tfc.TerraFirmaCraft;
-import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
-import net.dries007.tfc.common.blocks.OreDeposit;
-import net.dries007.tfc.common.blocks.rock.Ore;
-import net.dries007.tfc.common.blocks.rock.Rock;
-import net.dries007.tfc.common.blocks.rock.RockCategory;
-import net.dries007.tfc.common.blocks.wood.Wood;
-import net.dries007.tfc.util.Metal;
-import net.dries007.tfc.util.SelfTests;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -24,9 +15,18 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-
 import java.util.Map;
 import java.util.function.Supplier;
+
+import net.dries007.tfc.TerraFirmaCraft;
+import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
+import net.dries007.tfc.common.blocks.OreDeposit;
+import net.dries007.tfc.common.blocks.rock.Ore;
+import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.blocks.wood.Wood;
+import net.dries007.tfc.util.Metal;
+import net.dries007.tfc.util.SelfTests;
 
 import static com.ankmaniac.decofirmacraft.DecoFirmaCraft.MOD_ID;
 
@@ -194,6 +194,8 @@ public class DFCTabs {
                 accept(out, DFCBlocks.DFC_METALS, dfcmetal, type);
             }
         }
+        // todo: add all decorative metals, not just gold
+        accept(out, DFCBlocks.GOBLET_BLOCK);
     }
 
     private static void fillCeramics(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)

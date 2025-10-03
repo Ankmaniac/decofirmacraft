@@ -1,20 +1,13 @@
 package com.ankmaniac.decofirmacraft.common.blocks;
 
+import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
 import com.ankmaniac.decofirmacraft.common.blocks.metal.DFCMetal;
 import com.ankmaniac.decofirmacraft.common.blocks.metal.GateBlock;
+import com.ankmaniac.decofirmacraft.common.blocks.metal.GobletBlock;
 import com.ankmaniac.decofirmacraft.common.blocks.rock.*;
 import com.ankmaniac.decofirmacraft.common.items.DFCItems;
+import com.ankmaniac.decofirmacraft.common.items.metal.GobletItem;
 import com.ankmaniac.decofirmacraft.util.DFCHelpers;
-import net.dries007.tfc.common.blockentities.TFCBlockEntities;
-import net.dries007.tfc.common.blocks.*;
-import net.dries007.tfc.common.blocks.rock.Ore;
-import net.dries007.tfc.common.blocks.rock.Rock;
-import net.dries007.tfc.common.blocks.rock.RockAnvilBlock;
-import net.dries007.tfc.common.blocks.rock.RockCategory;
-import net.dries007.tfc.common.blocks.wood.Wood;
-import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.util.Metal;
-import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -28,10 +21,21 @@ import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
-
 import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
+
+import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blockentities.TFCBlockEntities;
+import net.dries007.tfc.common.blocks.*;
+import net.dries007.tfc.common.blocks.rock.Ore;
+import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.rock.RockAnvilBlock;
+import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.blocks.wood.Wood;
+import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.Metal;
+import net.dries007.tfc.util.registry.RegistrationHelpers;
 
 import static com.ankmaniac.decofirmacraft.DecoFirmaCraft.MOD_ID;
 
@@ -312,6 +316,10 @@ public class DFCBlocks {
     public static final RegistryObject<LiquidBlock> PLASTER_FLUID = registerNoItem("fluid/plaster", () -> new LiquidBlock(DFCFluids.PLASTER.flowing(), BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
     public static final RegistryObject<LiquidBlock> CONCRETE_FLUID = registerNoItem("fluid/concrete", () -> new LiquidBlock(DFCFluids.CONCRETE.flowing(), BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
+
+    // todo: register for all decorative blocks, chose proper block properties
+    public static final RegistryObject<GobletBlock> GOBLET_BLOCK = register("metal/goblet/gold", () -> new GobletBlock(ExtendedProperties.of().mapColor(MapColor.METAL).sound(SoundType.METAL).instabreak().blockEntity(DFCBlockEntities.GOBLET), TFCTags.Fluids.USABLE_IN_JUG), block -> new GobletItem(new Item.Properties().stacksTo(1), TFCTags.Fluids.USABLE_IN_JUG));
+
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> blockSupplier)
     {

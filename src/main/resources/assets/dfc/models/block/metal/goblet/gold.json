@@ -1,0 +1,8 @@
+{
+  "render_type": "cutout",
+  "parent": "dfc:block/metal/goblet/template_goblet",
+  "textures": {
+	"metal": "dfc:block/metal/goblet/gold",
+	"particle": "tfc:block/metal/block/gold"
+  }
+}
