@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.function.Supplier;
 import com.ankmaniac.decofirmacraft.common.blockentities.GobletBlockEntity;
 import com.ankmaniac.decofirmacraft.common.blocks.DFCBlocks;
-import com.mojang.logging.LogUtils;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
@@ -63,7 +62,6 @@ public class GobletItem extends BlockItem
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand)
     {
-        LogUtils.getLogger().warn("use()");
         final ItemStack stack = player.getItemInHand(hand);
         final BlockHitResult hit = Helpers.rayTracePlayer(level, player, ClipContext.Fluid.SOURCE_ONLY);
 
@@ -257,15 +255,12 @@ public class GobletItem extends BlockItem
 
         private void save()
         {
-            LogUtils.getLogger().warn("save()");
             if (tank.isEmpty())
             {
-                LogUtils.getLogger().warn("isEmpty()");
                 stack.removeTagKey(Helpers.BLOCK_ENTITY_TAG);
             }
             else
             {
-                LogUtils.getLogger().warn("not isEmpty()");
                 stack.getOrCreateTagElement(Helpers.BLOCK_ENTITY_TAG).put("tank", tank.serializeNBT());
             }
         }

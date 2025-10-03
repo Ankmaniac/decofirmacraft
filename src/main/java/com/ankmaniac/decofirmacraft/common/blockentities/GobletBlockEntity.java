@@ -1,7 +1,6 @@
 package com.ankmaniac.decofirmacraft.common.blockentities;
 
 import com.ankmaniac.decofirmacraft.common.items.metal.GobletItem;
-import com.mojang.logging.LogUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -113,7 +112,6 @@ public class GobletBlockEntity extends TFCBlockEntity implements FluidTankCallba
 
         public boolean isEmpty()
         {
-            LogUtils.getLogger().warn("isEmpty(), capacity = {}, amount = {}", tank.getCapacity(), tank.getFluidAmount());
             return tank.isEmpty();
         }
 

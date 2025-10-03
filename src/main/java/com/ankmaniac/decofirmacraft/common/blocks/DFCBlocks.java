@@ -318,8 +318,8 @@ public class DFCBlocks {
 
     public static final RegistryObject<LiquidBlock> CONCRETE_FLUID = registerNoItem("fluid/concrete", () -> new LiquidBlock(DFCFluids.CONCRETE.flowing(), BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
-    // todo: register for all decorative blocks
-    public static final RegistryObject<GobletBlock> GOBLET_BLOCK = register("metal/goblet/gold", () -> new GobletBlock(ExtendedProperties.of(Blocks.OAK_PLANKS).blockEntity(DFCBlockEntities.GOBLET)), block -> new GobletItem(new Item.Properties().stacksTo(1), () -> GobletBlockEntity.GOBLET_CAPACITY, TFCTags.Fluids.USABLE_IN_JUG)); // todo: proper block properties, metal types
+    // todo: register for all decorative blocks, chose proper block properties
+    public static final RegistryObject<GobletBlock> GOBLET_BLOCK = register("metal/goblet/gold", () -> new GobletBlock(ExtendedProperties.of(Blocks.IRON_BLOCK).instabreak().blockEntity(DFCBlockEntities.GOBLET)), block -> new GobletItem(new Item.Properties().stacksTo(1), () -> GobletBlockEntity.GOBLET_CAPACITY, TFCTags.Fluids.USABLE_IN_JUG));
 
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> blockSupplier)

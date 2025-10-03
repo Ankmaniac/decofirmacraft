@@ -36,7 +36,7 @@ import net.dries007.tfc.util.loot.CopyFluidFunction;
 
 public class GobletBlock extends ExtendedBlock implements EntityBlockExtension
 {
-    protected static final VoxelShape GOBLET_SHAPE = Block.box(6, 0, 6, 9, 7, 9);
+    protected static final VoxelShape GOBLET_SHAPE = Block.box(6, 0, 6, 10, 7, 10);
 
     public GobletBlock(ExtendedProperties properties)
     {
@@ -55,6 +55,17 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension
 
             if (hand.equals(InteractionHand.MAIN_HAND) && item.isEmpty())
             {
+                // Allow breaking the block by shift-right-clicking it
+                if (player.isShiftKeyDown())
+                {
+                    if (!level.isClientSide)
+                    {
+                        level.destroyBlock(pos, true, player);
+                    }
+
+                    return InteractionResult.sidedSuccess(level.isClientSide);
+                }
+
                 final IFluidHandler handler = goblet.getCapability(Capabilities.FLUID).resolve().orElse(null);
 
                 if (handler != null)
