@@ -39,7 +39,7 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension {
 
     protected static final VoxelShape GOBLET_SHAPE = Block.box(6, 0, 6, 10, 7, 10);
 
-    public GobletBlock(ExtendedProperties properties, TagKey<Fluid> whitelist)
+    public GobletBlock(ExtendedProperties properties)
     {
         super(properties);
     }
@@ -51,7 +51,6 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension {
 
         if (goblet != null)
         {
-
             if (hand.equals(InteractionHand.MAIN_HAND) && stack.isEmpty())
             {
                 if (player.isShiftKeyDown())
@@ -64,7 +63,7 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension {
                     return ItemInteractionResult.sidedSuccess(level.isClientSide);
                 }
 
-                final IFluidHandler handler = stack.getCapability(Capabilities.FluidHandler.ITEM);
+                final IFluidHandler handler = goblet.getTank(null);
 
                 if (handler != null)
                 {

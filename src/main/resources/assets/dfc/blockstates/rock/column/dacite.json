@@ -109,7 +109,7 @@
       "model": "dfc:block/rock/column/dacite_tuscan"
     },
     "down=false,axis=x,up=false,style=tuscan": {
-      "model": "dfc:block/rock/column/dacite_tuscan",,
+      "model": "dfc:block/rock/column/dacite_tuscan",
       "y": 90
     }
   }
