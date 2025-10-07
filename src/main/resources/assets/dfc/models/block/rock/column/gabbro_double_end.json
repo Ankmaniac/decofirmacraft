@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_column_double_end",
+  "textures": {
+    "rock": "dfc:block/rock/column/gabbro",
+    "particle": "tfc:block/rock/raw/gabbro"
+  }
+}

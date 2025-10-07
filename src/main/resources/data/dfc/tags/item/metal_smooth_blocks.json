@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/smooth/alumina",
+    "dfc:metal/smooth/aluminum",
+    "dfc:metal/smooth/lead",
+    "dfc:metal/smooth/pewter",
+    "dfc:metal/smooth/platinum",
+    "dfc:metal/smooth/bismuth",
+    "dfc:metal/smooth/bismuth_bronze",
+    "dfc:metal/smooth/black_bronze",
+    "dfc:metal/smooth/bronze",
+    "dfc:metal/smooth/brass",
+    "dfc:metal/smooth/copper",
+    "dfc:metal/smooth/gold",
+    "dfc:metal/smooth/nickel",
+    "dfc:metal/smooth/rose_gold",
+    "dfc:metal/smooth/silver",
+    "dfc:metal/smooth/tin",
+    "dfc:metal/smooth/zinc",
+    "dfc:metal/smooth/sterling_silver",
+    "dfc:metal/smooth/wrought_iron",
+    "dfc:metal/smooth/cast_iron",
+    "dfc:metal/smooth/steel",
+    "dfc:metal/smooth/black_steel",
+    "dfc:metal/smooth/blue_steel",
+    "dfc:metal/smooth/red_steel"
+  ]
+}

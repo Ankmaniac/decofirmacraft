@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "dfc:block/plaster/pillar/terracotta_light_bluetop",
+    "side": "dfc:block/plaster/pillar/terracotta_light_blue"
+  }
+}

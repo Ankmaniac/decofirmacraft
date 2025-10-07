@@ -1,0 +1,10 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "tfc:block/ore_column",
+  "textures": {
+    "side": "tfc:block/rock/raw/shale",
+    "end": "tfc:block/rock/raw/shale_top",
+    "overlay": "dfc:block/ore/poor_native_platinum",
+    "overlay_end": "dfc:block/ore/poor_native_platinum"
+  }
+}

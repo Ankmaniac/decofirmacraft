@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "dfc:block/plaster/smooth/purple",
+    "top": "dfc:block/plaster/smooth/purple",
+    "side": "dfc:block/plaster/smooth/purple"
+  }
+}

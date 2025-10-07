@@ -1,0 +1,9 @@
+{
+  "parent": "dfc:block/cinderblocks",
+  "textures": {
+    "x": "dfc:block/concrete/bricks/pink1",
+    "y": "dfc:block/concrete/bricks/pinktop",
+    "z": "dfc:block/concrete/bricks/pink2",
+    "particle": "dfc:block/concrete/smooth/pink"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/metal/bricks/sterling_silver",
+    "particle": "dfc:block/metal/bricks/sterling_silver"
+  }
+}

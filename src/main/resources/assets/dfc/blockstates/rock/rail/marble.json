@@ -1,0 +1,136 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail/marble_post"
+      },
+      "when": {
+        "OR": [
+          {
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "north": "true",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "true",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "false",
+            "south": "true",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "true"
+          },
+          {
+            "north": "true",
+            "east": "true",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "true",
+            "south": "true",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "false",
+            "south": "true",
+            "west": "true"
+          },
+          {
+            "north": "true",
+            "east": "false",
+            "south": "false",
+            "west": "true"
+          },
+          {
+            "north": "true",
+            "east": "true",
+            "south": "true",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "true",
+            "south": "true",
+            "west": "true"
+          },
+          {
+            "north": "true",
+            "east": "false",
+            "south": "true",
+            "west": "true"
+          },
+          {
+            "north": "true",
+            "east": "true",
+            "south": "false",
+            "west": "true"
+          },
+          {
+            "north": "true",
+            "east": "true",
+            "south": "true",
+            "west": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail/marble_side",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail/marble_side",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail/marble_side",
+        "uvlock": true
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail/marble_side",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "west": "true"
+      }
+    }
+  ]
+}

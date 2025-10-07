@@ -1,0 +1,49 @@
+{
+  "render_type": "minecraft:translucent",
+  "format_version": "1.9.0",
+  "credit": "Made with Blockbench",
+  "textures": {
+    "1": "dfc:block/glass/leaded/black",
+    "2": "tfc:block/wood/planks/oak",
+    "particle": "tfc:block/wood/planks/oak"
+  },
+  "elements": [
+    {
+      "from": [1, 1, 1],
+      "to": [15, 15, 15],
+      "faces": {
+        "north": {"uv": [1, 1, 15, 15], "texture": "#2"},
+        "east": {"uv": [1, 1, 15, 15], "texture": "#2"},
+        "south": {"uv": [1, 1, 15, 15], "texture": "#2"},
+        "west": {"uv": [1, 1, 15, 15], "texture": "#2"},
+        "up": {"uv": [1, 1, 15, 15], "texture": "#2"},
+        "down": {"uv": [1, 1, 15, 15], "texture": "#2"}
+      }
+    },
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "texture": "#1"},
+        "east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+        "south": {"uv": [0, 0, 16, 16], "texture": "#1"},
+        "west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+        "up": {"uv": [0, 0, 16, 16], "texture": "#1"},
+        "down": {"uv": [0, 0, 16, 16], "texture": "#1"}
+      }
+    },
+    {
+      "from": [16, 16, 16],
+      "to": [0, 0, 0],
+      "rotation": {"angle": 0, "axis": "y", "origin": [16, 16, 16]},
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#1"},
+        "east": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#1"},
+        "south": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#1"},
+        "west": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#1"},
+        "up": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#1"},
+        "down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#1"}
+      }
+    }
+  ]
+}

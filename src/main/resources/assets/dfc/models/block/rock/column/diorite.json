@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_column_middle",
+  "textures": {
+    "rock": "dfc:block/rock/column/diorite",
+    "particle": "tfc:block/rock/raw/diorite"
+  }
+}
