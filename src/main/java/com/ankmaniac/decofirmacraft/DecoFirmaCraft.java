@@ -2,6 +2,8 @@ package com.ankmaniac.decofirmacraft;
 
 import com.ankmaniac.decofirmacraft.common.block.DFCBlocks;
 import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
+import com.ankmaniac.decofirmacraft.common.capabilities.BlockCapabilities;
+import com.ankmaniac.decofirmacraft.common.capabilities.ItemCapabilities;
 import com.ankmaniac.decofirmacraft.common.item.DFCCreativeTabs;
 import com.ankmaniac.decofirmacraft.common.item.DFCItems;
 import com.ankmaniac.decofirmacraft.config.DFCConfig;
@@ -12,7 +14,6 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig.Type;
 import net.neoforged.fml.loading.FMLEnvironment;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.slf4j.Logger;
 
@@ -39,7 +40,8 @@ public final class DecoFirmaCraft {
 		DFCBlockEntities.BLOCK_ENTITIES.register(modBus);
 		DFCCreativeTabs.CREATIVE_TABS.register(modBus);
 
-		DecoFirmaCraftForgeEvents.init(NeoForge.EVENT_BUS);
+        modBus.addListener(BlockCapabilities::register);
+        modBus.addListener(ItemCapabilities::register);
 
 		if (FMLEnvironment.dist == Dist.CLIENT)
 		{

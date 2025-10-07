@@ -1,22 +1,14 @@
 package com.ankmaniac.decofirmacraft.common.item.metal;
 
 
-import com.ankmaniac.decofirmacraft.common.block.DFCBlocks;
-import com.ankmaniac.decofirmacraft.common.blockentities.GobletBlockEntity;
 import com.ankmaniac.decofirmacraft.config.DFCConfig;
-import net.dries007.tfc.common.capabilities.DelegateFluidHandler;
-import net.dries007.tfc.common.capabilities.FluidTankCallback;
 import net.dries007.tfc.common.component.TFCComponents;
 import net.dries007.tfc.common.component.fluid.FluidComponent;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.player.IPlayerInfo;
 import net.dries007.tfc.common.player.PlayerInfo;
-import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.data.Drinkable;
 import net.dries007.tfc.util.tooltip.Tooltips;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -27,7 +19,6 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
@@ -35,11 +26,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.capabilities.ICapabilityProvider;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
-import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.function.Supplier;
@@ -72,7 +60,9 @@ public class GobletItem extends BlockItem
         final Player player = context.getPlayer();
         if (player != null)
         {
-            final InteractionResult result = tryInteractWithFluid(context.getLevel(), player, context.getHand());
+            final ItemStack stack = player.getItemInHand(context.getHand());
+            final InteractionResult result = tryPickUpFluid(stack, context.getLevel(), player, context.getHand());
+
             if (result != InteractionResult.PASS)
             {
                 return result;
@@ -92,16 +82,27 @@ public class GobletItem extends BlockItem
         }
 
         // Try to interact with liquid from the world (i.e. take water sources, fill up / empty out barrels, etc.)
+        final InteractionResult result = tryPickUpFluid(stack, level, player, hand);
+        if (result != InteractionResult.PASS)
+        {
+            return result;
+        }
+
+        // If nothing could be done in-world, try to empty the goblet
+        if (!handler.getFluidInTank(0).isEmpty())
+        {
+            return attemptEmptying(handler, level, player, stack, hand);
+        }
+
+        return InteractionResult.PASS;
+    }
+
+    public InteractionResult tryPickUpFluid(ItemStack stack, Level level, Player player, InteractionHand hand)
+    {
         final BlockHitResult hit = getPlayerPOVHitResult(level, player, ClipContext.Fluid.SOURCE_ONLY);
         if (FluidHelpers.transferBetweenWorldAndItem(stack, level, hit, player, hand, false, false, true))
         {
             return InteractionResult.sidedSuccess(level.isClientSide);
-        }
-
-        // If nothing could be done in-world, try to empty the goblet
-        if (handler != null && !handler.getFluidInTank(0).isEmpty())
-        {
-            return attemptEmptying(handler, level, player, stack, hand);
         }
 
         return InteractionResult.PASS;

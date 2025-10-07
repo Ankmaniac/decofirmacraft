@@ -20,7 +20,11 @@ public class DFCBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MOD_ID);
 
 
-    public static final Id<GobletBlockEntity> GOBLET = register("goblet", GobletBlockEntity::new, DFCBlocks.DFC_DECORATIVE_METAL_BLOCKS.values().stream().filter(map -> map.get(DFCExtendedMetal.DFCMetalBlockType.GOBLET) != null).map(map -> map.get(DFCExtendedMetal.DFCMetalBlockType.GOBLET)));
+    public static final Id<GobletBlockEntity> GOBLET = register("goblet", GobletBlockEntity::new,
+        DFCBlocks.DFC_DECORATIVE_METAL_BLOCKS.values().stream().filter(map ->
+            map.get(DFCExtendedMetal.DFCMetalBlockType.GOBLET) != null)
+            .map(map ->
+                map.get(DFCExtendedMetal.DFCMetalBlockType.GOBLET)));
 
 
     private static <T extends BlockEntity> Id<T> register(String name, BlockEntityType.BlockEntitySupplier<T> factory, Supplier<? extends Block> block)

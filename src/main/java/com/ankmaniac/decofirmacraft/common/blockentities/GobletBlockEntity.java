@@ -5,10 +5,14 @@ import com.ankmaniac.decofirmacraft.config.DFCConfig;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blockentities.TFCBlockEntity;
 import net.dries007.tfc.common.capabilities.*;
+import net.dries007.tfc.common.component.TFCComponents;
+import net.dries007.tfc.common.component.fluid.FluidComponent;
 import net.dries007.tfc.common.component.fluid.FluidContainerInfo;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -17,6 +21,7 @@ import net.neoforged.neoforge.common.util.INBTSerializable;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class GobletBlockEntity extends TFCBlockEntity implements FluidTankCallback
 {
@@ -34,7 +39,8 @@ public class GobletBlockEntity extends TFCBlockEntity implements FluidTankCallba
         this.tank = new GobletTank(this);
     }
 
-    public GobletTank getTank() {
+    public IFluidHandler getTank(@Nullable Direction context)
+    {
         return tank;
     }
 
@@ -50,6 +56,24 @@ public class GobletBlockEntity extends TFCBlockEntity implements FluidTankCallba
     {
         tag.put("tank", tank.serializeNBT(provider));
         super.saveAdditional(tag, provider);
+    }
+
+    @Override
+    protected void applyImplicitComponents(DataComponentInput components)
+    {
+        final FluidComponent goblet = components.getOrDefault(TFCComponents.FLUID, FluidComponent.EMPTY);
+        if (!goblet.content().isEmpty())
+        {
+            tank.tank.setFluid(goblet.content().copy());
+        }
+        super.applyImplicitComponents(components);
+    }
+
+    @Override
+    protected void collectImplicitComponents(DataComponentMap.Builder builder)
+    {
+        builder.set(TFCComponents.FLUID, new FluidComponent(tank.tank.getFluid().copy()));
+        super.collectImplicitComponents(builder);
     }
 
     /**

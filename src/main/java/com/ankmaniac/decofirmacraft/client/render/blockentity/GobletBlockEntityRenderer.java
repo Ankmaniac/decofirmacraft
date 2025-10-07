@@ -8,13 +8,14 @@ import net.dries007.tfc.client.RenderHelpers;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 
 public class GobletBlockEntityRenderer implements BlockEntityRenderer<GobletBlockEntity>
 {
     @Override
     public void render(GobletBlockEntity goblet, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay)
     {
-        final GobletBlockEntity.GobletTank tank = goblet.getTank();
+        final IFluidHandler tank = goblet.getTank(null);
         final FluidStack fluidStack = tank.getFluidInTank(0);
         if (!fluidStack.isEmpty())
         {
