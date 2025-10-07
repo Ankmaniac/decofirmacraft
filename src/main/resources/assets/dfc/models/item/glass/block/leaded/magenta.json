@@ -1,0 +1,4 @@
+{
+  "render_type": "minecraft:translucent",
+  "parent": "dfc:block/glass/block/leaded/magenta"
+}

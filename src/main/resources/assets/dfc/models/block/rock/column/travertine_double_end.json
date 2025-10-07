@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_column_double_end",
+  "textures": {
+    "rock": "dfc:block/rock/column/travertine",
+    "particle": "dfc:block/rock/raw/travertine"
+  }
+}

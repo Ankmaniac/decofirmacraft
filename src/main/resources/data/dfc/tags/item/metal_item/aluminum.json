@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/block/aluminum",
+    "dfc:metal/block/aluminum_slab",
+    "dfc:metal/block/aluminum_stairs",
+    "dfc:metal/smooth/aluminum",
+    "dfc:metal/smooth/aluminum_slab",
+    "dfc:metal/smooth/aluminum_stairs",
+    "dfc:metal/bricks/aluminum",
+    "dfc:metal/bricks/aluminum_slab",
+    "dfc:metal/bricks/aluminum_stairs",
+    "dfc:metal/cut/aluminum",
+    "dfc:metal/cut/aluminum_slab",
+    "dfc:metal/cut/aluminum_stairs",
+    "dfc:metal/pillar/aluminum"
+  ]
+}

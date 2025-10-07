@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "dfc:block/ceramic/tiles/small/terracotta_pink",
+    "top": "dfc:block/ceramic/tiles/small/terracotta_pink",
+    "side": "dfc:block/ceramic/tiles/small/terracotta_pink"
+  }
+}

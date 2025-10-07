@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dfc:block/ceramic/tiles/normal/terracotta_lime_slab"
+    },
+    "type=top": {
+      "model": "dfc:block/ceramic/tiles/normal/terracotta_lime_slab_top"
+    },
+    "type=double": {
+      "model": "dfc:block/ceramic/tiles/normal/terracotta_lime"
+    }
+  }
+}

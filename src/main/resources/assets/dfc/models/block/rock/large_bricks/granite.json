@@ -1,0 +1,9 @@
+{
+  "loader": "fusion:model",
+  "type": "base",
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/rock/large_bricks/granite",
+    "particle": "tfc:block/rock/bricks/granite"
+  }
+}

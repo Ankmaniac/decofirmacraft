@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/ceramic/shingles/shingles_outer",
+  "textures": {
+    "0": "dfc:block/ceramic/shingles/terracotta_red",
+    "particle": "dfc:block/ceramic/shingles/terracotta_red"
+  }
+}

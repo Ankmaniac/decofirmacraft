@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "dfc:block/groundcover/native_platinum",
+        "y": 90
+      },
+      {
+        "model": "dfc:block/groundcover/native_platinum"
+      },
+      {
+        "model": "dfc:block/groundcover/native_platinum",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/groundcover/native_platinum",
+        "y": 270
+      }
+    ]
+  }
+}

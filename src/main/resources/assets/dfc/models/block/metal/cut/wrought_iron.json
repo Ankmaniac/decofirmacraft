@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/metal/cut/wrought_iron",
+    "particle": "dfc:block/metal/cut/wrought_iron"
+  }
+}

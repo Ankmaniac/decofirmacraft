@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "dfc:block/metal/pillar/bismuth_bronzetop",
+    "side": "dfc:block/metal/pillar/bismuth_bronze"
+  }
+}

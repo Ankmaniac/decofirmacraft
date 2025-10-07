@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "dfc:block/ceramic/tiles/small/magenta",
+    "top": "dfc:block/ceramic/tiles/small/magenta",
+    "side": "dfc:block/ceramic/tiles/small/magenta"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "tfc:block/ore_column",
+  "textures": {
+    "side": "tfc:block/rock/raw/claystone",
+    "end": "tfc:block/rock/raw/claystone_top",
+    "overlay": "dfc:block/ore/normal_native_aluminum",
+    "overlay_end": "dfc:block/ore/normal_native_aluminum"
+  }
+}

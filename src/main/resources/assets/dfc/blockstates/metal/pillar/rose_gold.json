@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/metal/pillar/rose_gold"
+    },
+    "axis=z": {
+      "model": "dfc:block/metal/pillar/rose_gold",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "dfc:block/metal/pillar/rose_gold",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "dfc:block/rock/smooth/arkose"
+  }
+}

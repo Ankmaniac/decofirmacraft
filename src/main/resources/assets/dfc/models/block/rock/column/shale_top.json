@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_column_top",
+  "textures": {
+    "rock": "dfc:block/rock/column/shale",
+    "particle": "tfc:block/rock/raw/shale"
+  }
+}

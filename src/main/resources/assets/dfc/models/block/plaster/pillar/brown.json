@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "dfc:block/plaster/pillar/browntop",
+    "side": "dfc:block/plaster/pillar/brown"
+  }
+}

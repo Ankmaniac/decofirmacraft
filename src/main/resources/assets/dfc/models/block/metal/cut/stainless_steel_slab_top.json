@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "dfc:block/metal/cut/stainless_steel",
+    "top": "dfc:block/metal/cut/stainless_steel",
+    "side": "dfc:block/metal/cut/stainless_steel"
+  }
+}

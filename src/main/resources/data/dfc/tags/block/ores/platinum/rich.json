@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:ore/rich_native_platinum/granite",
+    "dfc:ore/rich_native_platinum/diorite",
+    "dfc:ore/rich_native_platinum/gabbro",
+    "dfc:ore/rich_native_platinum/shale",
+    "dfc:ore/rich_native_platinum/claystone",
+    "dfc:ore/rich_native_platinum/limestone",
+    "dfc:ore/rich_native_platinum/conglomerate",
+    "dfc:ore/rich_native_platinum/dolomite",
+    "dfc:ore/rich_native_platinum/chert",
+    "dfc:ore/rich_native_platinum/chalk",
+    "dfc:ore/rich_native_platinum/rhyolite",
+    "dfc:ore/rich_native_platinum/basalt",
+    "dfc:ore/rich_native_platinum/andesite",
+    "dfc:ore/rich_native_platinum/dacite",
+    "dfc:ore/rich_native_platinum/quartzite",
+    "dfc:ore/rich_native_platinum/slate",
+    "dfc:ore/rich_native_platinum/phyllite",
+    "dfc:ore/rich_native_platinum/schist",
+    "dfc:ore/rich_native_platinum/gneiss",
+    "dfc:ore/rich_native_platinum/marble",
+    "dfc:ore/rich_native_platinum/arkose",
+    "dfc:ore/rich_native_platinum/blueschist",
+    "dfc:ore/rich_native_platinum/serpentine",
+    "dfc:ore/rich_native_platinum/travertine",
+    "dfc:ore/rich_native_platinum/tuff"
+  ]
+}

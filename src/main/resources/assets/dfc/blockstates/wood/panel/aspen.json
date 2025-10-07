@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/wood/panel/aspen"
+    },
+    "axis=z": {
+      "model": "dfc:block/wood/panel/aspensideways"
+    },
+    "axis=x": {
+      "model": "dfc:block/wood/panel/aspensideways",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:metal/bricks/alumina",
+    "dfc:metal/bricks/aluminum",
+    "dfc:metal/bricks/lead",
+    "dfc:metal/bricks/pewter",
+    "dfc:metal/bricks/platinum",
+    "dfc:metal/bricks/bismuth",
+    "dfc:metal/bricks/bismuth_bronze",
+    "dfc:metal/bricks/black_bronze",
+    "dfc:metal/bricks/bronze",
+    "dfc:metal/bricks/brass",
+    "dfc:metal/bricks/copper",
+    "dfc:metal/bricks/gold",
+    "dfc:metal/bricks/nickel",
+    "dfc:metal/bricks/rose_gold",
+    "dfc:metal/bricks/silver",
+    "dfc:metal/bricks/tin",
+    "dfc:metal/bricks/zinc",
+    "dfc:metal/bricks/sterling_silver",
+    "dfc:metal/bricks/wrought_iron",
+    "dfc:metal/bricks/cast_iron",
+    "dfc:metal/bricks/steel",
+    "dfc:metal/bricks/black_steel",
+    "dfc:metal/bricks/blue_steel",
+    "dfc:metal/bricks/red_steel"
+  ]
+}

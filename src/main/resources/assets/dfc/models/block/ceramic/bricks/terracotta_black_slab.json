@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/ceramic/bricks/terracotta_black",
+    "top": "dfc:block/ceramic/bricks/terracotta_black",
+    "side": "dfc:block/ceramic/bricks/terracotta_black"
+  }
+}

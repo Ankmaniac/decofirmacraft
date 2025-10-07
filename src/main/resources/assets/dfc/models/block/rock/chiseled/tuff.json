@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "dfc:block/rock/chiseled/tufftop",
+    "side": "dfc:block/rock/chiseled/tuff",
+    "particle": "dfc:block/rock/chiseled/tuff"
+  }
+}

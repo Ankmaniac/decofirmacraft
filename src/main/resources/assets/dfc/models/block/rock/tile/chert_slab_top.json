@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "dfc:block/rock/tile/chert",
+    "top": "dfc:block/rock/tile/chert",
+    "side": "dfc:block/rock/tile/chert"
+  }
+}

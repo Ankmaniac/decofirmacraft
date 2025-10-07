@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/rock/pillar/gneiss"
+    },
+    "axis=z": {
+      "model": "dfc:block/rock/pillar/gneiss",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "dfc:block/rock/pillar/gneiss",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

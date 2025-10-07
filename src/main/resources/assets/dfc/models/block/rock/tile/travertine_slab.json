@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/rock/tile/travertine",
+    "top": "dfc:block/rock/tile/travertine",
+    "side": "dfc:block/rock/tile/travertine"
+  }
+}

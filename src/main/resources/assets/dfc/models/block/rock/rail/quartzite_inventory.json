@@ -1,0 +1,6 @@
+{
+  "parent": "dfc:block/rock/template_rail_inventory",
+  "textures": {
+    "rock": "tfc:block/rock/raw/quartzite"
+  }
+}

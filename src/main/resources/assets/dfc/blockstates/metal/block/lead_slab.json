@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dfc:block/metal/block/lead_slab"
+    },
+    "type=top": {
+      "model": "dfc:block/metal/block/lead_slab_top"
+    },
+    "type=double": {
+      "model": "dfc:block/metal/block/lead"
+    }
+  }
+}

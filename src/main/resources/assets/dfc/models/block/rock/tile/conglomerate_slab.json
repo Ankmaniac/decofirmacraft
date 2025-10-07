@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/rock/tile/conglomerate",
+    "top": "dfc:block/rock/tile/conglomerate",
+    "side": "dfc:block/rock/tile/conglomerate"
+  }
+}

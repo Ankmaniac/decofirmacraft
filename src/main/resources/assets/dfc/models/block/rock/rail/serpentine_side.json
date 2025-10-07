@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_rail_side",
+  "textures": {
+    "rock": "dfc:block/rock/raw/serpentine",
+    "particle": "dfc:block/rock/raw/serpentine"
+  }
+}

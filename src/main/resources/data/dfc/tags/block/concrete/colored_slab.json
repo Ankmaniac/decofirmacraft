@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:concrete/slab/white",
+    "dfc:concrete/slab/orange",
+    "dfc:concrete/slab/magenta",
+    "dfc:concrete/slab/light_blue",
+    "dfc:concrete/slab/yellow",
+    "dfc:concrete/slab/lime",
+    "dfc:concrete/slab/pink",
+    "dfc:concrete/slab/gray",
+    "dfc:concrete/slab/light_gray",
+    "dfc:concrete/slab/cyan",
+    "dfc:concrete/slab/purple",
+    "dfc:concrete/slab/blue",
+    "dfc:concrete/slab/brown",
+    "dfc:concrete/slab/green",
+    "dfc:concrete/slab/red",
+    "dfc:concrete/slab/black"
+  ]
+}

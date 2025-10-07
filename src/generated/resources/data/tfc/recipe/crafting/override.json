@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "some_mod_id"
+    }
+  ],
+  "type": "tfc:advanced_shaped_crafting",
+  "input_row": 1,
+  "key": {
+    "S": {
+      "tag": "c:tools/saw"
+    },
+    "s": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "s",
+    "S"
+  ],
+  "remainder": {
+    "modifiers": [
+      {
+        "type": "tfc:damage_crafting_remainder"
+      }
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "examplemod:example_item"
+  }
+}

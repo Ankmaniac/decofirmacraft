@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "dfc:block/metal/pillar/zinctop",
+    "side": "dfc:block/metal/pillar/zinc"
+  }
+}

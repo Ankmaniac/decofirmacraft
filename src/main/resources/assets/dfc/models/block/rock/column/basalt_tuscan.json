@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_column_middle_tuscan",
+  "textures": {
+    "rock": "dfc:block/rock/column/basalt",
+    "particle": "tfc:block/rock/raw/basalt"
+  }
+}

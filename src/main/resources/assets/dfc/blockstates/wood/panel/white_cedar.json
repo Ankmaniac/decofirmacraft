@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/wood/panel/white_cedar"
+    },
+    "axis=z": {
+      "model": "dfc:block/wood/panel/white_cedarsideways"
+    },
+    "axis=x": {
+      "model": "dfc:block/wood/panel/white_cedarsideways",
+      "y": 90
+    }
+  }
+}

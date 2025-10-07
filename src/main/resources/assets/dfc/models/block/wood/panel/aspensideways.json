@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/sideways_column_sides_upright",
+  "textures": {
+    "end": "dfc:block/wood/panel_top/aspen",
+    "side": "dfc:block/wood/panel/aspen"
+  }
+}

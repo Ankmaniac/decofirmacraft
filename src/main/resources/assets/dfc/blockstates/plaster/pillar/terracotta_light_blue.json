@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/plaster/pillar/terracotta_light_blue"
+    },
+    "axis=z": {
+      "model": "dfc:block/plaster/pillar/terracotta_light_blue",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "dfc:block/plaster/pillar/terracotta_light_blue",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

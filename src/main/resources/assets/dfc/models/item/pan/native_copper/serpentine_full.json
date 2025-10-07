@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:item/pan/full",
+  "textures": {
+    "material": "dfc:block/rock/gravel/serpentine"
+  }
+}

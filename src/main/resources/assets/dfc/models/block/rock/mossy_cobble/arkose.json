@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/rock/mossy_cobble/arkose",
+    "particle": "dfc:block/rock/mossy_cobble/arkose"
+  }
+}

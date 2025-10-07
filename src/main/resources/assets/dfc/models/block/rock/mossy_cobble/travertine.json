@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/rock/mossy_cobble/travertine",
+    "particle": "dfc:block/rock/mossy_cobble/travertine"
+  }
+}

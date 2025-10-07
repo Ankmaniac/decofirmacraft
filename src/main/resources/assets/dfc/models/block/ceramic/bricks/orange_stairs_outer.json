@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "dfc:block/ceramic/bricks/orange",
+    "top": "dfc:block/ceramic/bricks/orange",
+    "side": "dfc:block/ceramic/bricks/orange"
+  }
+}

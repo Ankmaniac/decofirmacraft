@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:item/pan/half",
+  "textures": {
+    "material": "dfc:block/rock/gravel/blueschist"
+  }
+}

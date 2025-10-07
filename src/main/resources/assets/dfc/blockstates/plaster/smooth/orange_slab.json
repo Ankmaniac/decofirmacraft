@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dfc:block/plaster/smooth/orange_slab"
+    },
+    "type=top": {
+      "model": "dfc:block/plaster/smooth/orange_slab_top"
+    },
+    "type=double": {
+      "model": "dfc:block/plaster/smooth/orange"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "dfc:block/metal/smooth/sterling_silver",
+    "top": "dfc:block/metal/smooth/sterling_silver",
+    "side": "dfc:block/metal/smooth/sterling_silver"
+  }
+}

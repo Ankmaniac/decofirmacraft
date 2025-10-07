@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/rock/gravel/serpentine",
+    "particle": "dfc:block/rock/gravel/serpentine"
+  }
+}

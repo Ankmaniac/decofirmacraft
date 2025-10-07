@@ -1,0 +1,55 @@
+{
+  "variants": {
+    "count=1": [
+      {
+        "model": "dfc:block/rock/loose/arkose_1_mossy",
+        "y": 90
+      },
+      {
+        "model": "dfc:block/rock/loose/arkose_1_mossy"
+      },
+      {
+        "model": "dfc:block/rock/loose/arkose_1_mossy",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/rock/loose/arkose_1_mossy",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "dfc:block/rock/loose/arkose_2_mossy",
+        "y": 90
+      },
+      {
+        "model": "dfc:block/rock/loose/arkose_2_mossy"
+      },
+      {
+        "model": "dfc:block/rock/loose/arkose_2_mossy",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/rock/loose/arkose_2_mossy",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "dfc:block/rock/loose/arkose_3_mossy",
+        "y": 90
+      },
+      {
+        "model": "dfc:block/rock/loose/arkose_3_mossy"
+      },
+      {
+        "model": "dfc:block/rock/loose/arkose_3_mossy",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/rock/loose/arkose_3_mossy",
+        "y": 270
+      }
+    ]
+  }
+}

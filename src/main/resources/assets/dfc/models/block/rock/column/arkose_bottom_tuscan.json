@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_column_bottom_tuscan",
+  "textures": {
+    "rock": "dfc:block/rock/column/arkose",
+    "particle": "dfc:block/rock/raw/arkose"
+  }
+}

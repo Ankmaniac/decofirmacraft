@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "dfc:wood/panel/acacia",
+    "dfc:wood/panel/ash",
+    "dfc:wood/panel/aspen",
+    "dfc:wood/panel/birch",
+    "dfc:wood/panel/blackwood",
+    "dfc:wood/panel/chestnut",
+    "dfc:wood/panel/douglas_fir",
+    "dfc:wood/panel/hickory",
+    "dfc:wood/panel/kapok",
+    "dfc:wood/panel/mangrove",
+    "dfc:wood/panel/maple",
+    "dfc:wood/panel/oak",
+    "dfc:wood/panel/palm",
+    "dfc:wood/panel/pine",
+    "dfc:wood/panel/rosewood",
+    "dfc:wood/panel/sequoia",
+    "dfc:wood/panel/spruce",
+    "dfc:wood/panel/sycamore",
+    "dfc:wood/panel/white_cedar",
+    "dfc:wood/panel/willow"
+  ]
+}

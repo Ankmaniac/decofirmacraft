@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_rail_side",
+  "textures": {
+    "rock": "tfc:block/rock/raw/schist",
+    "particle": "tfc:block/rock/raw/schist"
+  }
+}

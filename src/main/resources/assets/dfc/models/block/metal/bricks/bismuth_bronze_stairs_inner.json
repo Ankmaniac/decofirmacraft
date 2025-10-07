@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "dfc:block/metal/bricks/bismuth_bronze",
+    "top": "dfc:block/metal/bricks/bismuth_bronze",
+    "side": "dfc:block/metal/bricks/bismuth_bronze"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "variants": {
+    "down=true,axis=z,up=true,style=doric": {
+      "model": "dfc:block/rock/column/limestone_double_end"
+    },
+    "down=true,axis=x,up=true,style=doric": {
+      "model": "dfc:block/rock/column/limestone_double_end",
+      "y": 90
+    },
+    "down=false,axis=z,up=true,style=doric": {
+      "model": "dfc:block/rock/column/limestone_top"
+    },
+    "down=false,axis=x,up=true,style=doric": {
+      "model": "dfc:block/rock/column/limestone_top",
+      "y": 90
+    },
+    "down=true,axis=z,up=false,style=doric": {
+      "model": "dfc:block/rock/column/limestone_bottom"
+    },
+    "down=true,axis=x,up=false,style=doric": {
+      "model": "dfc:block/rock/column/limestone_bottom",
+      "y": 90
+    },
+    "down=false,axis=z,up=false,style=doric": {
+      "model": "dfc:block/rock/column/limestone"
+    },
+    "down=false,axis=x,up=false,style=doric": {
+      "model": "dfc:block/rock/column/limestone",
+      "y": 90
+    },
+    "down=true,axis=z,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/limestone_double_end_ionic"
+    },
+    "down=true,axis=x,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/limestone_double_end_ionic",
+      "y": 90
+    },
+    "down=false,axis=z,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/limestone_top_ionic"
+    },
+    "down=false,axis=x,up=true,style=ionic": {
+      "model": "dfc:block/rock/column/limestone_top_ionic",
+      "y": 90
+    },
+    "down=true,axis=z,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/limestone_bottom"
+    },
+    "down=true,axis=x,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/limestone_bottom",
+      "y": 90
+    },
+    "down=false,axis=z,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/limestone"
+    },
+    "down=false,axis=x,up=false,style=ionic": {
+      "model": "dfc:block/rock/column/limestone",
+      "y": 90
+    },
+    "down=true,axis=z,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/limestone_double_end_corinthian"
+    },
+    "down=true,axis=x,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/limestone_double_end_corinthian",
+      "y": 90
+    },
+    "down=false,axis=z,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/limestone_top_corinthian"
+    },
+    "down=false,axis=x,up=true,style=corinthian": {
+      "model": "dfc:block/rock/column/limestone_top_corinthian",
+      "y": 90
+    },
+    "down=true,axis=z,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/limestone_bottom"
+    },
+    "down=true,axis=x,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/limestone_bottom",
+      "y": 90
+    },
+    "down=false,axis=z,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/limestone"
+    },
+    "down=false,axis=x,up=false,style=corinthian": {
+      "model": "dfc:block/rock/column/limestone",
+      "y": 90
+    },
+    "down=true,axis=z,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/limestone_double_end_tuscan"
+    },
+    "down=true,axis=x,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/limestone_double_end_tuscan",
+      "y": 90
+    },
+    "down=false,axis=z,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/limestone_top_tuscan"
+    },
+    "down=false,axis=x,up=true,style=tuscan": {
+      "model": "dfc:block/rock/column/limestone_top_tuscan",
+      "y": 90
+    },
+    "down=true,axis=z,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/limestone_bottom_tuscan"
+    },
+    "down=true,axis=x,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/limestone_bottom_tuscan",
+      "y": 90
+    },
+    "down=false,axis=z,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/limestone_tuscan"
+    },
+    "down=false,axis=x,up=false,style=tuscan": {
+      "model": "dfc:block/rock/column/limestone_tuscan",
+      "y": 90
+    }
+  }
+}

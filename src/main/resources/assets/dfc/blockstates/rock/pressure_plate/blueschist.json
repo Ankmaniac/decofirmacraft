@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "dfc:block/rock/pressure_plate/blueschist"
+    },
+    "powered=true": {
+      "model": "dfc:block/rock/pressure_plate/blueschist_down"
+    }
+  }
+}

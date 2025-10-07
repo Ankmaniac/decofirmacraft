@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "dfc:block/wood/panel/chestnut"
+    },
+    "axis=z": {
+      "model": "dfc:block/wood/panel/chestnutsideways"
+    },
+    "axis=x": {
+      "model": "dfc:block/wood/panel/chestnutsideways",
+      "y": 90
+    }
+  }
+}

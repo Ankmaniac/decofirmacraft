@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/rock/cracked_bricks/blueschist",
+    "particle": "dfc:block/rock/cracked_bricks/blueschist"
+  }
+}

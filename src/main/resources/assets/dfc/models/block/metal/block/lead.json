@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/metal/block/lead",
+    "particle": "dfc:block/metal/block/lead"
+  }
+}

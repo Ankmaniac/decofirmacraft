@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "dfc:block/metal/cut/alumina",
+    "top": "dfc:block/metal/cut/alumina",
+    "side": "dfc:block/metal/cut/alumina"
+  }
+}

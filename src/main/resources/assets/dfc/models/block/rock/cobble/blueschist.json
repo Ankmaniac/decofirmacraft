@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/rock/cobble/blueschist",
+    "particle": "dfc:block/rock/cobble/blueschist"
+  }
+}

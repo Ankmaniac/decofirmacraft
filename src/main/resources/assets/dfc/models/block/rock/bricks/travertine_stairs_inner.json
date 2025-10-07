@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/bricks/travertine",
+    "top": "dfc:block/rock/bricks/travertine",
+    "side": "dfc:block/rock/bricks/travertine"
+  }
+}

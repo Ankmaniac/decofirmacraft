@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/small_bricks/basalt",
+    "top": "dfc:block/rock/small_bricks/basalt",
+    "side": "dfc:block/rock/small_bricks/basalt"
+  }
+}
