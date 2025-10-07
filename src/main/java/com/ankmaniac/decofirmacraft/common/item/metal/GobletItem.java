@@ -12,7 +12,6 @@ import net.dries007.tfc.util.tooltip.Tooltips;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -23,21 +22,28 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 
 import java.util.List;
-import java.util.function.Supplier;
 
 public class GobletItem extends BlockItem
 {
-
-    public GobletItem(Block block, Properties properties, Supplier<Integer> capacity, TagKey<Fluid> whitelist)
+    public GobletItem(Block block, Properties properties)
     {
         super(block, properties.component(TFCComponents.FLUID, FluidComponent.EMPTY));
+    }
+
+    /**
+     * Necessary because for some reason setting the max stack size via {@link Item.Properties} doesn't work.
+     * Probably the TFC item size system is interfering, if I had to guess
+     */
+    @Override
+    public int getMaxStackSize(ItemStack stack)
+    {
+        return 1;
     }
 
     @Override
@@ -189,7 +195,7 @@ public class GobletItem extends BlockItem
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag isAdvanced)
     {
         final FluidStack fluid = FluidHelpers.getContainedFluid(stack);
-        if (!fluid.isEmpty() && fluid.getAmount() < DFCConfig.SERVER.gobletCapacity.get())
+        if (!fluid.isEmpty())
         {
             tooltip.add(Tooltips.fluidUnitsAndCapacityOf(fluid, DFCConfig.SERVER.gobletCapacity.get()));
         }

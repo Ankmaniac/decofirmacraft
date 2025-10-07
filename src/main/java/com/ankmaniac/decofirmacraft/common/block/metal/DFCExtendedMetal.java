@@ -177,7 +177,7 @@ public enum DFCExtendedMetal implements StringRepresentable, DFCHelpers.DFCMetal
         WEATHERED_PILLAR(false, PartType.WEATHERED, block(Age.WEATHERED)),
         OXIDIZED_PILLAR(false, PartType.WEATHERED, block(Age.OXIDIZED)),
         GATE(false, PartType.ALL, metal -> new GateBlock(BlockSetType.IRON, blockProperties(metal).noOcclusion().pushReaction(PushReaction.DESTROY))),
-        GOBLET(true, PartType.DEFAULT, metal -> new GobletBlock(ExtendedProperties.of().mapColor(metal.mapColor()).noOcclusion().sound(SoundType.METAL).instabreak().blockEntity(DFCBlockEntities.GOBLET), TFCTags.Fluids.USABLE_IN_JUG), (block, properties) -> new GobletItem(block, new Item.Properties().stacksTo(1), DFCConfig.SERVER.gobletCapacity, TFCTags.Fluids.USABLE_IN_JUG));
+        GOBLET(true, PartType.DEFAULT, metal -> new GobletBlock(ExtendedProperties.of().mapColor(metal.mapColor()).noOcclusion().sound(SoundType.METAL).instabreak().blockEntity(DFCBlockEntities.GOBLET)), GobletItem::new);
 
         private static Function<DFCHelpers.DFCMetalHelpers, Block> block(Age age)
         {
