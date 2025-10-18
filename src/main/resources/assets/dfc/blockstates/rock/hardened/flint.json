@@ -1,0 +1,32 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "axis=x": [
+      {
+        "model": "dfc:block/rock/raw/flint",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "dfc:block/rock/raw/flint"
+      },
+      {
+        "model": "dfc:block/rock/raw/flint",
+        "y": 180
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "dfc:block/rock/raw/flint",
+        "x": 90
+      },
+      {
+        "model": "dfc:block/rock/raw/flint",
+        "x": 90,
+        "y": 180
+      }
+    ]
+  }
+}

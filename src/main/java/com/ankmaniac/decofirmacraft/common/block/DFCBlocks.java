@@ -3,6 +3,7 @@ package com.ankmaniac.decofirmacraft.common.block;
 import com.ankmaniac.decofirmacraft.common.block.metal.DFCExtendedMetal;
 import com.ankmaniac.decofirmacraft.common.block.rock.DFCExtendedRock.DFCRockBlockType;
 import com.ankmaniac.decofirmacraft.common.block.rock.DFCExtendedRock;
+import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
 import com.ankmaniac.decofirmacraft.common.item.DFCItems;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
@@ -10,6 +11,7 @@ import net.dries007.tfc.common.blocks.TFCMagmaBlock;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockAnvilBlock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
@@ -44,18 +46,18 @@ public final class DFCBlocks
 {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, MOD_ID);
 
-    public static final Map<DFCExtendedRock, Map<Rock.BlockType, Id<Block>>> DFC_ROCK_BLOCKS = Helpers.mapOf(DFCExtendedRock.class, DFCExtendedRock::isDFCRock, rock ->
-            Helpers.mapOf(Rock.BlockType.class, type ->
+    public static final Map<DFCExtendedRock, Map<DFCRockBlockType, Id<Block>>> DFC_ROCK_BLOCKS = Helpers.mapOf(DFCExtendedRock.class, rock ->
+            Helpers.mapOf(DFCRockBlockType.class, type -> type.has(rock), type ->
                     register(("rock/" + type.name() + "/" + rock.name()), () -> type.create(rock))
             )
     );
 
-    public static final Map<DFCExtendedRock, Map<Rock.BlockType, DFCDecorationBlockHolder>> DFC_ROCK_DECORATIONS = Helpers.mapOf(DFCExtendedRock.class, DFCExtendedRock::isDFCRock, rock ->
-            Helpers.mapOf(Rock.BlockType.class, Rock.BlockType::hasVariants, type -> registerDecorations(
+    public static final Map<DFCExtendedRock, Map<DFCRockBlockType, DFCDecorationBlockHolder>> DFC_ROCK_DECORATIONS = Helpers.mapOf(DFCExtendedRock.class, rock ->
+            Helpers.mapOf(DFCRockBlockType.class, type -> type.has(rock) && type.hasVariants(), type -> registerDecorations(
                     "rock/" + type.name() + "/" + rock.name(),
-                    () -> type.createSlab(rock),
-                    () -> type.createStairs(rock),
-                    () -> type.createWall(rock),
+                    () -> type.dfcCreateSlab(rock),
+                    () -> type.dfcCreateStairs(rock),
+                    () -> type.dfcCreateWall(rock),
                     rock.createItemProperties()
             ))
     );
@@ -68,43 +70,21 @@ public final class DFCBlocks
             register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(ExtendedProperties.of().pathType(PathType.LAVA).mapColor(MapColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(DFCBlocks::always)), b -> new BlockItem(b, rock.createItemProperties()))
     );
 
-    public static final Map<DFCExtendedRock, Map<DFCRockBlockType, Id<Block>>> DFC_ROCK_TYPES = Helpers.mapOf(DFCExtendedRock.class, rock ->
-            Helpers.mapOf(DFCRockBlockType.class, type ->
-                    register(("rock/" + type.name() + "/" + rock.name()), () -> type.create(rock), rock.createItemProperties())
-            )
-    );
-
-    public static final Map<DFCExtendedRock, Map<DFCRockBlockType, DFCDecorationBlockHolder>> DFC_ROCK_TYPE_DECORATIONS = Helpers.mapOf(DFCExtendedRock.class, rock ->
-            Helpers.mapOf(DFCRockBlockType.class, DFCRockBlockType::hasVariants, type -> registerDecorations(
-                    "rock/" + type.name() + "/" + rock.name(),
-                    () -> new SlabBlock(Properties.of().mapColor(rock.color()).requiresCorrectToolForDrops().strength(6.5F, 10)),
-                    () -> new StairBlock(DFC_ROCK_TYPES.get(rock).get(type).get().defaultBlockState(), Properties.of().mapColor(rock.color()).requiresCorrectToolForDrops().strength(6.5F, 10)),
-                    () -> new WallBlock(Properties.of().mapColor(rock.color()).requiresCorrectToolForDrops().strength(6.5F, 10)),
-                    new Item.Properties()
-            ))
-    );
-//
-//    public static final Map<DFCExtendedRock, Map<DFCRockBlockType, DFCDecorationBlockHolder>> DFC_ROCK_TYPE_DECORATIONS = Helpers.mapOf(DFCExtendedRock.class, DFCExtendedRock::isDFCRock, rock ->
-//            Helpers.mapOf(DFCRockBlockType.class, DFCRockBlockType::hasVariants, type -> registerDecorations(
-//                    "rock/" + type.name() + "/" + rock.name(),
-//                    () -> type.dfcCreateSlab(rock),
-//                    () -> type.dfcCreateStairs(rock),
-//                    () -> type.dfcCreateWall(rock),
-//                    rock.createItemProperties()
-//            ))
-//    );
-
     public static final Map<DFCExtendedMetal, Map<DFCExtendedMetal.DFCMetalBlockType, Id<Block>>> DFC_METAL_BLOCKS = Helpers.mapOf(DFCExtendedMetal.class, metal ->
-            Helpers.mapOf(DFCExtendedMetal.DFCMetalBlockType.class, type -> type.has(metal) && !type.requiresDecorative(), type ->
+            Helpers.mapOf(DFCExtendedMetal.DFCMetalBlockType.class, type -> type.has(metal), type ->
                     register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
             )
     );
 
-    public static final Map<DFCExtendedMetal, Map<DFCExtendedMetal.DFCMetalBlockType, Id<Block>>> DFC_DECORATIVE_METAL_BLOCKS = Helpers.mapOf(DFCExtendedMetal.class, metal -> metal.hasDecorations(), metal ->
-            Helpers.mapOf(DFCExtendedMetal.DFCMetalBlockType.class, type -> type.has(metal) && type.requiresDecorative(), type ->
-                    register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
-            )
+    public static final Map<Wood, Id<Block>> DFC_SHELF_BLOCKS = Helpers.mapOf(Wood.class, wood ->
+            register("wood/shelf/" + wood.name(), () -> new DFCShelfBlock(ExtendedProperties.of(Blocks.OAK_PLANKS).blockEntity(DFCBlockEntities.DFC_SHELVES)))
     );
+
+    public static final Id<Block> CRAFTING_CLOTH = register("crafting_cloth", () ->
+            new CraftingClothBlock(ExtendedProperties
+                    .of(Blocks.BROWN_CARPET)
+                    .noOcclusion()
+                    .noCollission()));
 
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {

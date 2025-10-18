@@ -24,46 +24,46 @@ import java.util.function.Supplier;
 
 public enum DFCExtendedMetal implements StringRepresentable, DFCHelpers.DFCMetalHelpers {
 
-    BISMUTH(0xFF486B72, MapColor.TERRACOTTA_GREEN, Rarity.COMMON, -1, PartType.DEFAULT, false),
-    BISMUTH_BRONZE(0xFF418E4F, MapColor.TERRACOTTA_BLUE, Rarity.COMMON, -1, PartType.ALL, true),
-    BLACK_BRONZE(0xFF3B2636, MapColor.TERRACOTTA_PINK, Rarity.COMMON, -1, PartType.ALL, true),
-    BRONZE(0xFF96892E, MapColor.TERRACOTTA_ORANGE, Rarity.COMMON, 0.7f, PartType.ALL_WEATHERING, true),
-    BRASS(0xFF7C5E33, MapColor.GOLD, Rarity.COMMON, 0.7f, PartType.DEFAULT_WEATHERING, false),
-    COPPER(0xFFB64027, MapColor.COLOR_ORANGE, Rarity.COMMON, 0f, PartType.ALL_WEATHERING, true),
-    GOLD(0xFFDCBF1B, MapColor.GOLD, Rarity.COMMON, -1, PartType.DEFAULT, true),
-    NICKEL(0xFF4E4E3C, MapColor.STONE, Rarity.COMMON, -1, PartType.DEFAULT, false),
-    ROSE_GOLD(0xFFEB7137, MapColor.COLOR_PINK, Rarity.COMMON, -1, PartType.DEFAULT, true),
-    SILVER(0xFF949495, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, 0.95f, PartType.DEFAULT_WEATHERING, true),
-    TIN(0xFF90A4BB, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, -1, PartType.DEFAULT, false),
-    ZINC(0xFFBBB9C4, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, -1, PartType.DEFAULT, false),
-    STERLING_SILVER(0xFFAC927B, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, 0.95f, PartType.DEFAULT_WEATHERING, true),
-    WROUGHT_IRON(0xFF989897, MapColor.METAL, Rarity.COMMON, 0f, PartType.ALL_WEATHERING, false),
-    CAST_IRON(0xFF989897, MapColor.COLOR_BROWN, Rarity.COMMON, -1, PartType.DEFAULT, false),
-    PIG_IRON(0xFF6A595C, MapColor.COLOR_GRAY, Rarity.COMMON, -1, PartType.INGOT, false),
-    STEEL(0xFF5F5F5F, MapColor.COLOR_LIGHT_GRAY, Rarity.UNCOMMON, 0.9f, PartType.ALL_WEATHERING, false),
-    BLACK_STEEL(0xFF111111, MapColor.COLOR_BLACK, Rarity.RARE, -1, PartType.ALL_WEATHERING, false),
-    BLUE_STEEL(0xFF2D5596, MapColor.COLOR_BLUE, Rarity.EPIC, -1, PartType.ALL_WEATHERING, false),
-    RED_STEEL(0xFF700503, MapColor.COLOR_RED, Rarity.EPIC, -1, PartType.ALL_WEATHERING, false),
-    WEAK_STEEL(0xFF111111, MapColor.COLOR_GRAY, Rarity.COMMON, -1, PartType.INGOT, false),
-    WEAK_BLUE_STEEL(0xFF2D5596, MapColor.COLOR_BLUE, Rarity.COMMON, -1, PartType.INGOT, false),
-    WEAK_RED_STEEL(0xFF700503, MapColor.COLOR_RED, Rarity.COMMON, -1, PartType.INGOT, false),
-    HIGH_CARBON_STEEL(0xFF5F5F5F, MapColor.COLOR_GRAY, Rarity.COMMON, -1, PartType.INGOT, false),
-    HIGH_CARBON_BLACK_STEEL(0xFF111111, MapColor.COLOR_BLACK, Rarity.COMMON, -1, PartType.INGOT, false),
-    HIGH_CARBON_BLUE_STEEL(0xFF2D5596, MapColor.COLOR_BLUE, Rarity.COMMON, -1, PartType.INGOT, false),
-    HIGH_CARBON_RED_STEEL(0xFF700503, MapColor.COLOR_RED, Rarity.COMMON, -1, PartType.INGOT, false),
-    UNKNOWN(0xFF2F2B27, MapColor.COLOR_BLACK, Rarity.COMMON, -1, PartType.DEFAULT, false),
-    ALUMINUM(0xFFD9D8C5, MapColor.COLOR_LIGHT_GRAY, Rarity.UNCOMMON, -1, PartType.DEFAULT, false),
-    ALUMINA(0xFFE3E3DC, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, -1, PartType.INGOT, false),
-    LEAD(0xFF7E789C, MapColor.COLOR_PURPLE, Rarity.COMMON, -1, PartType.DEFAULT, false),
-    PEWTER(0xFFBBBD9F, MapColor.COLOR_YELLOW, Rarity.COMMON, -1, PartType.DEFAULT, true),
-    PLATINUM(0xFFDCF2F5, MapColor.COLOR_LIGHT_BLUE, Rarity.COMMON, -1, PartType.DEFAULT, true),
-    CHROMIUM(0xFFF5FEFF, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, -1, PartType.INGOT, false),
-    STAINLESS_STEEL(0xFFD9FCFF, MapColor.COLOR_LIGHT_GRAY, Rarity.RARE, -1, PartType.ALL, false),
-    ELECTRUM(0xFCB74A, MapColor.COLOR_YELLOW, Rarity.EPIC, -1, PartType.DEFAULT, false),
-    CONSTANTAN(0xEC8068, MapColor.COLOR_ORANGE, Rarity.EPIC, -1, PartType.DEFAULT, false),
-    IE_ALUMINUM(0xCCC1BC, MapColor.CLAY, Rarity.COMMON, -1, PartType.DEFAULT, false),
-    IE_LEAD(0x433F4D, MapColor.TERRACOTTA_BLUE, Rarity.RARE, -1, PartType.DEFAULT, false),
-    URANIUM(0x738A6C, MapColor.TERRACOTTA_GREEN, Rarity.EPIC, -1, PartType.DEFAULT, false);
+    BISMUTH(0xFF486B72, MapColor.TERRACOTTA_GREEN, Rarity.COMMON, -1, PartType.DEFAULT),
+    BISMUTH_BRONZE(0xFF418E4F, MapColor.TERRACOTTA_BLUE, Rarity.COMMON, -1, PartType.ALL_DECORATIVE),
+    BLACK_BRONZE(0xFF3B2636, MapColor.TERRACOTTA_PINK, Rarity.COMMON, -1, PartType.ALL_DECORATIVE),
+    BRONZE(0xFF96892E, MapColor.TERRACOTTA_ORANGE, Rarity.COMMON, 0.7f, PartType.ALL_DECORATIVE_WEATHERING),
+    BRASS(0xFF7C5E33, MapColor.GOLD, Rarity.COMMON, 0.7f, PartType.DEFAULT_WEATHERING),
+    COPPER(0xFFB64027, MapColor.COLOR_ORANGE, Rarity.COMMON, 0f, PartType.ALL_DECORATIVE_WEATHERING),
+    GOLD(0xFFDCBF1B, MapColor.GOLD, Rarity.COMMON, -1, PartType.DECORATIVE),
+    NICKEL(0xFF4E4E3C, MapColor.STONE, Rarity.COMMON, -1, PartType.DEFAULT),
+    ROSE_GOLD(0xFFEB7137, MapColor.COLOR_PINK, Rarity.COMMON, -1, PartType.DECORATIVE),
+    SILVER(0xFF949495, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, 0.95f, PartType.DECORATIVE_WEATHERING),
+    TIN(0xFF90A4BB, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, -1, PartType.DEFAULT),
+    ZINC(0xFFBBB9C4, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, -1, PartType.DEFAULT),
+    STERLING_SILVER(0xFFAC927B, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, 0.95f, PartType.DECORATIVE_WEATHERING),
+    WROUGHT_IRON(0xFF989897, MapColor.METAL, Rarity.COMMON, 0f, PartType.ALL_WEATHERING),
+    CAST_IRON(0xFF989897, MapColor.COLOR_BROWN, Rarity.COMMON, -1, PartType.DEFAULT),
+    PIG_IRON(0xFF6A595C, MapColor.COLOR_GRAY, Rarity.COMMON, -1, PartType.INGOT),
+    STEEL(0xFF5F5F5F, MapColor.COLOR_LIGHT_GRAY, Rarity.UNCOMMON, 0.9f, PartType.ALL_WEATHERING),
+    BLACK_STEEL(0xFF111111, MapColor.COLOR_BLACK, Rarity.RARE, -1, PartType.ALL_WEATHERING),
+    BLUE_STEEL(0xFF2D5596, MapColor.COLOR_BLUE, Rarity.EPIC, -1, PartType.ALL_WEATHERING),
+    RED_STEEL(0xFF700503, MapColor.COLOR_RED, Rarity.EPIC, -1, PartType.ALL_WEATHERING),
+    WEAK_STEEL(0xFF111111, MapColor.COLOR_GRAY, Rarity.COMMON, -1, PartType.INGOT),
+    WEAK_BLUE_STEEL(0xFF2D5596, MapColor.COLOR_BLUE, Rarity.COMMON, -1, PartType.INGOT),
+    WEAK_RED_STEEL(0xFF700503, MapColor.COLOR_RED, Rarity.COMMON, -1, PartType.INGOT),
+    HIGH_CARBON_STEEL(0xFF5F5F5F, MapColor.COLOR_GRAY, Rarity.COMMON, -1, PartType.INGOT),
+    HIGH_CARBON_BLACK_STEEL(0xFF111111, MapColor.COLOR_BLACK, Rarity.COMMON, -1, PartType.INGOT),
+    HIGH_CARBON_BLUE_STEEL(0xFF2D5596, MapColor.COLOR_BLUE, Rarity.COMMON, -1, PartType.INGOT),
+    HIGH_CARBON_RED_STEEL(0xFF700503, MapColor.COLOR_RED, Rarity.COMMON, -1, PartType.INGOT),
+    UNKNOWN(0xFF2F2B27, MapColor.COLOR_BLACK, Rarity.COMMON, -1, PartType.DEFAULT),
+    ALUMINUM(0xFFD9D8C5, MapColor.COLOR_LIGHT_GRAY, Rarity.UNCOMMON, -1, PartType.DEFAULT),
+    ALUMINA(0xFFE3E3DC, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, -1, PartType.INGOT),
+    LEAD(0xFF7E789C, MapColor.COLOR_PURPLE, Rarity.COMMON, -1, PartType.DEFAULT),
+    PEWTER(0xFFBBBD9F, MapColor.COLOR_YELLOW, Rarity.COMMON, -1, PartType.DECORATIVE),
+    PLATINUM(0xFFDCF2F5, MapColor.COLOR_LIGHT_BLUE, Rarity.COMMON, -1, PartType.DECORATIVE),
+    CHROMIUM(0xFFF5FEFF, MapColor.COLOR_LIGHT_GRAY, Rarity.COMMON, -1, PartType.DEFAULT),
+    STAINLESS_STEEL(0xFFD9FCFF, MapColor.COLOR_LIGHT_GRAY, Rarity.RARE, -1, PartType.ALL),
+    ELECTRUM(0xFCB74A, MapColor.COLOR_YELLOW, Rarity.EPIC, -1, PartType.DEFAULT),
+    CONSTANTAN(0xEC8068, MapColor.COLOR_ORANGE, Rarity.EPIC, -1, PartType.DEFAULT),
+    IE_ALUMINUM(0xCCC1BC, MapColor.CLAY, Rarity.COMMON, -1, PartType.DEFAULT),
+    IE_LEAD(0x433F4D, MapColor.TERRACOTTA_BLUE, Rarity.RARE, -1, PartType.DEFAULT),
+    URANIUM(0x738A6C, MapColor.TERRACOTTA_GREEN, Rarity.EPIC, -1, PartType.DEFAULT);
 
     private final String serializedName;
     private final PartType partType;
@@ -71,9 +71,8 @@ public enum DFCExtendedMetal implements StringRepresentable, DFCHelpers.DFCMetal
     private final Rarity rarity;
     private final int color;
     private final float weathering;
-    private final boolean decorative;
 
-    DFCExtendedMetal(int color, MapColor mapColor, Rarity rarity, float weathering, PartType partType, boolean decorative)
+    DFCExtendedMetal(int color, MapColor mapColor, Rarity rarity, float weathering, PartType partType)
     {
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.rarity = rarity;
@@ -81,7 +80,6 @@ public enum DFCExtendedMetal implements StringRepresentable, DFCHelpers.DFCMetal
         this.color = color;
         this.partType = partType;
         this.weathering = weathering;
-        this.decorative = decorative;
     }
 
     @Override
@@ -114,12 +112,7 @@ public enum DFCExtendedMetal implements StringRepresentable, DFCHelpers.DFCMetal
 
     public boolean allParts()
     {
-        return partType == PartType.ALL || partType == PartType.ALL_WEATHERING;
-    }
-
-    public boolean hasDecorations()
-    {
-        return decorative;
+        return partType == PartType.ALL || partType == PartType.ALL_WEATHERING || partType == PartType.ALL_DECORATIVE || partType == PartType.ALL_DECORATIVE_WEATHERING;
     }
 
     @Override
@@ -136,48 +129,48 @@ public enum DFCExtendedMetal implements StringRepresentable, DFCHelpers.DFCMetal
 
     public enum DFCMetalBlockType
     {
-        SMOOTH(false, PartType.DEFAULT, block(Age.NONE)),
-        EXPOSED_SMOOTH(false, PartType.WEATHERED, block(Age.EXPOSED)),
-        WEATHERED_SMOOTH(false, PartType.WEATHERED, block(Age.WEATHERED)),
-        OXIDIZED_SMOOTH(false, PartType.WEATHERED, block(Age.OXIDIZED)),
-        SMOOTH_SLAB(false, PartType.DEFAULT, slab(Age.NONE)),
-        EXPOSED_SMOOTH_SLAB(false, PartType.WEATHERED, slab(Age.EXPOSED)),
-        WEATHERED_SMOOTH_SLAB(false, PartType.WEATHERED, slab(Age.WEATHERED)),
-        OXIDIZED_SMOOTH_SLAB(false, PartType.WEATHERED, slab(Age.OXIDIZED)),
-        SMOOTH_STAIRS(false, PartType.DEFAULT, stairs(SMOOTH, Age.NONE)),
-        EXPOSED_SMOOTH_STAIRS(false, PartType.WEATHERED, stairs(EXPOSED_SMOOTH, Age.EXPOSED)),
-        WEATHERED_SMOOTH_STAIRS(false, PartType.WEATHERED, stairs(WEATHERED_SMOOTH, Age.WEATHERED)),
-        OXIDIZED_SMOOTH_STAIRS(false, PartType.WEATHERED, stairs(OXIDIZED_SMOOTH, Age.OXIDIZED)),
-        CUT(false, PartType.DEFAULT, block(Age.NONE)),
-        EXPOSED_CUT(false, PartType.WEATHERED, block(Age.EXPOSED)),
-        WEATHERED_CUT(false, PartType.WEATHERED, block(Age.WEATHERED)),
-        OXIDIZED_CUT(false, PartType.WEATHERED, block(Age.OXIDIZED)),
-        CUT_SLAB(false, PartType.DEFAULT, slab(Age.NONE)),
-        EXPOSED_CUT_SLAB(false, PartType.WEATHERED, slab(Age.EXPOSED)),
-        WEATHERED_CUT_SLAB(false, PartType.WEATHERED, slab(Age.WEATHERED)),
-        OXIDIZED_CUT_SLAB(false, PartType.WEATHERED, slab(Age.OXIDIZED)),
-        CUT_STAIRS(false, PartType.DEFAULT, stairs(CUT, Age.NONE)),
-        EXPOSED_CUT_STAIRS(false, PartType.WEATHERED, stairs(EXPOSED_CUT, Age.EXPOSED)),
-        WEATHERED_CUT_STAIRS(false, PartType.WEATHERED, stairs(WEATHERED_CUT, Age.WEATHERED)),
-        OXIDIZED_CUT_STAIRS(false, PartType.WEATHERED, stairs(OXIDIZED_CUT, Age.OXIDIZED)),
-        BRICKS(false, PartType.DEFAULT, block(Age.NONE)),
-        EXPOSED_BRICKS(false, PartType.WEATHERED, block(Age.EXPOSED)),
-        WEATHERED_BRICKS(false, PartType.WEATHERED, block(Age.WEATHERED)),
-        OXIDIZED_BRICKS(false, PartType.WEATHERED, block(Age.OXIDIZED)),
-        BRICKS_SLAB(false, PartType.DEFAULT, slab(Age.NONE)),
-        EXPOSED_BRICKS_SLAB(false, PartType.WEATHERED, slab(Age.EXPOSED)),
-        WEATHERED_BRICKS_SLAB(false, PartType.WEATHERED, slab(Age.WEATHERED)),
-        OXIDIZED_BRICKS_SLAB(false, PartType.WEATHERED, slab(Age.OXIDIZED)),
-        BRICKS_STAIRS(false, PartType.DEFAULT, stairs(BRICKS, Age.NONE)),
-        EXPOSED_BRICKS_STAIRS(false, PartType.WEATHERED, stairs(EXPOSED_BRICKS, Age.EXPOSED)),
-        WEATHERED_BRICKS_STAIRS(false, PartType.WEATHERED, stairs(WEATHERED_BRICKS, Age.WEATHERED)),
-        OXIDIZED_BRICKS_STAIRS(false, PartType.WEATHERED, stairs(OXIDIZED_BRICKS, Age.OXIDIZED)),
-        PILLAR(false, PartType.DEFAULT, block(Age.NONE)),
-        EXPOSED_PILLAR(false, PartType.WEATHERED, block(Age.EXPOSED)),
-        WEATHERED_PILLAR(false, PartType.WEATHERED, block(Age.WEATHERED)),
-        OXIDIZED_PILLAR(false, PartType.WEATHERED, block(Age.OXIDIZED)),
-        GATE(false, PartType.ALL, metal -> new GateBlock(BlockSetType.IRON, blockProperties(metal).noOcclusion().pushReaction(PushReaction.DESTROY))),
-        GOBLET(true, PartType.DEFAULT, metal -> new GobletBlock(ExtendedProperties.of().mapColor(metal.mapColor()).noOcclusion().sound(SoundType.METAL).instabreak().blockEntity(DFCBlockEntities.GOBLET), TFCTags.Fluids.USABLE_IN_JUG), (block, properties) -> new GobletItem(block, new Item.Properties().stacksTo(1), DFCConfig.SERVER.gobletCapacity, TFCTags.Fluids.USABLE_IN_JUG));
+        SMOOTH(PartType.DEFAULT, block(Age.NONE)),
+        EXPOSED_SMOOTH(PartType.WEATHERED, block(Age.EXPOSED)),
+        WEATHERED_SMOOTH(PartType.WEATHERED, block(Age.WEATHERED)),
+        OXIDIZED_SMOOTH(PartType.WEATHERED, block(Age.OXIDIZED)),
+        SMOOTH_SLAB(PartType.DEFAULT, slab(Age.NONE)),
+        EXPOSED_SMOOTH_SLAB(PartType.WEATHERED, slab(Age.EXPOSED)),
+        WEATHERED_SMOOTH_SLAB(PartType.WEATHERED, slab(Age.WEATHERED)),
+        OXIDIZED_SMOOTH_SLAB(PartType.WEATHERED, slab(Age.OXIDIZED)),
+        SMOOTH_STAIRS(PartType.DEFAULT, stairs(SMOOTH, Age.NONE)),
+        EXPOSED_SMOOTH_STAIRS(PartType.WEATHERED, stairs(EXPOSED_SMOOTH, Age.EXPOSED)),
+        WEATHERED_SMOOTH_STAIRS(PartType.WEATHERED, stairs(WEATHERED_SMOOTH, Age.WEATHERED)),
+        OXIDIZED_SMOOTH_STAIRS(PartType.WEATHERED, stairs(OXIDIZED_SMOOTH, Age.OXIDIZED)),
+        CUT(PartType.DEFAULT, block(Age.NONE)),
+        EXPOSED_CUT(PartType.WEATHERED, block(Age.EXPOSED)),
+        WEATHERED_CUT(PartType.WEATHERED, block(Age.WEATHERED)),
+        OXIDIZED_CUT(PartType.WEATHERED, block(Age.OXIDIZED)),
+        CUT_SLAB(PartType.DEFAULT, slab(Age.NONE)),
+        EXPOSED_CUT_SLAB(PartType.WEATHERED, slab(Age.EXPOSED)),
+        WEATHERED_CUT_SLAB(PartType.WEATHERED, slab(Age.WEATHERED)),
+        OXIDIZED_CUT_SLAB(PartType.WEATHERED, slab(Age.OXIDIZED)),
+        CUT_STAIRS(PartType.DEFAULT, stairs(CUT, Age.NONE)),
+        EXPOSED_CUT_STAIRS(PartType.WEATHERED, stairs(EXPOSED_CUT, Age.EXPOSED)),
+        WEATHERED_CUT_STAIRS(PartType.WEATHERED, stairs(WEATHERED_CUT, Age.WEATHERED)),
+        OXIDIZED_CUT_STAIRS(PartType.WEATHERED, stairs(OXIDIZED_CUT, Age.OXIDIZED)),
+        BRICKS(PartType.DEFAULT, block(Age.NONE)),
+        EXPOSED_BRICKS(PartType.WEATHERED, block(Age.EXPOSED)),
+        WEATHERED_BRICKS(PartType.WEATHERED, block(Age.WEATHERED)),
+        OXIDIZED_BRICKS(PartType.WEATHERED, block(Age.OXIDIZED)),
+        BRICKS_SLAB(PartType.DEFAULT, slab(Age.NONE)),
+        EXPOSED_BRICKS_SLAB(PartType.WEATHERED, slab(Age.EXPOSED)),
+        WEATHERED_BRICKS_SLAB(PartType.WEATHERED, slab(Age.WEATHERED)),
+        OXIDIZED_BRICKS_SLAB(PartType.WEATHERED, slab(Age.OXIDIZED)),
+        BRICKS_STAIRS(PartType.DEFAULT, stairs(BRICKS, Age.NONE)),
+        EXPOSED_BRICKS_STAIRS(PartType.WEATHERED, stairs(EXPOSED_BRICKS, Age.EXPOSED)),
+        WEATHERED_BRICKS_STAIRS(PartType.WEATHERED, stairs(WEATHERED_BRICKS, Age.WEATHERED)),
+        OXIDIZED_BRICKS_STAIRS(PartType.WEATHERED, stairs(OXIDIZED_BRICKS, Age.OXIDIZED)),
+        PILLAR(PartType.DEFAULT, pillar(Age.NONE)),
+        EXPOSED_PILLAR(PartType.WEATHERED, pillar(Age.EXPOSED)),
+        WEATHERED_PILLAR(PartType.WEATHERED, pillar(Age.WEATHERED)),
+        OXIDIZED_PILLAR(PartType.WEATHERED, pillar(Age.OXIDIZED)),
+        GATE(PartType.ALL, metal -> new GateBlock(BlockSetType.IRON, blockProperties(metal).noOcclusion().pushReaction(PushReaction.DESTROY))),
+        GOBLET(PartType.DECORATIVE, metal -> new GobletBlock(ExtendedProperties.of().mapColor(metal.mapColor()).noOcclusion().sound(SoundType.METAL).instabreak().blockEntity(DFCBlockEntities.GOBLET)), GobletItem::new);
 
         private static Function<DFCHelpers.DFCMetalHelpers, Block> block(Age age)
         {
@@ -216,24 +209,18 @@ public enum DFCExtendedMetal implements StringRepresentable, DFCHelpers.DFCMetal
         private final BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory;
         private final PartType type;
         private final String serializedName;
-        private final boolean requiresDecorative;
 
-        DFCMetalBlockType(boolean requiresDecorative, PartType type, Function<DFCHelpers.DFCMetalHelpers, Block> blockFactory, BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory)
+        DFCMetalBlockType(PartType type, Function<DFCHelpers.DFCMetalHelpers, Block> blockFactory, BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory)
         {
             this.type = type;
             this.blockFactory = blockFactory;
             this.blockItemFactory = blockItemFactory;
             this.serializedName = name().toLowerCase(Locale.ROOT);
-            this.requiresDecorative = requiresDecorative;
         }
 
-        DFCMetalBlockType(boolean requiresDecorative, PartType type, Function<DFCHelpers.DFCMetalHelpers, Block> blockFactory)
+        DFCMetalBlockType(PartType type, Function<DFCHelpers.DFCMetalHelpers, Block> blockFactory)
         {
-            this(requiresDecorative, type, blockFactory, BlockItem::new);
-        }
-
-        public boolean requiresDecorative() {
-            return requiresDecorative;
+            this(type, blockFactory, BlockItem::new);
         }
 
         public Supplier<Block> create(DFCHelpers.DFCMetalHelpers metal)
@@ -303,7 +290,17 @@ public enum DFCExtendedMetal implements StringRepresentable, DFCHelpers.DFCMetal
 
     enum PartType
     {
-        INGOT, DEFAULT, DEFAULT_WEATHERING, ALL, ALL_WEATHERING, WEATHERED, ALL_WEATHERED;
+        INGOT,
+        DEFAULT,
+        DEFAULT_WEATHERING,
+        DECORATIVE,
+        DECORATIVE_WEATHERING,
+        ALL,
+        ALL_WEATHERING,
+        ALL_DECORATIVE,
+        ALL_DECORATIVE_WEATHERING,
+        WEATHERED,
+        ALL_WEATHERED;
 
         /**
          * Assuming {@code this} represents a block or item type, which must be one of four values, does the {@code metal}
@@ -313,10 +310,11 @@ public enum DFCExtendedMetal implements StringRepresentable, DFCHelpers.DFCMetal
         {
             return switch (this)
             {
-                case WEATHERED -> metal == DEFAULT_WEATHERING || metal == ALL_WEATHERING;
-                case ALL_WEATHERED -> metal == ALL_WEATHERING;
+                case WEATHERED -> metal == DEFAULT_WEATHERING || metal == ALL_WEATHERING || metal == DECORATIVE_WEATHERING;
+                case ALL_WEATHERED -> metal == ALL_WEATHERING || metal == ALL_DECORATIVE_WEATHERING;
                 case ALL -> metal.ordinal() >= ALL.ordinal();
                 case DEFAULT -> metal.ordinal() >= DEFAULT.ordinal();
+                case DECORATIVE -> metal == DECORATIVE || metal == DECORATIVE_WEATHERING || metal == ALL_DECORATIVE || metal == ALL_DECORATIVE_WEATHERING;
                 case INGOT -> true;
                 default -> throw new AssertionError("Invalid choice for a metal type " + this);
             };

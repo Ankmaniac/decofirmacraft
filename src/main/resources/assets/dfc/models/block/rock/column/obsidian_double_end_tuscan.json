@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_column_double_end_tuscan",
+  "textures": {
+    "rock": "dfc:block/rock/column/obsidian",
+    "particle": "dfc:block/rock/raw/obsidian"
+  }
+}

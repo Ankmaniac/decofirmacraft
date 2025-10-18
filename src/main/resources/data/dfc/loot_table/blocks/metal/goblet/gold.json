@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "loot_pool",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "dfc:metal/goblet/gold",
+              "functions": [
+                {
+                  "function": "minecraft:copy_components",
+                  "source": "block_entity",
+                  "include": [
+                    "minecraft:custom_name",
+                    "tfc:fluid"
+                  ]
+                },
+                {
+                  "function": "tfc:apply_stack_size"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "dfc:metal/goblet/gold"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

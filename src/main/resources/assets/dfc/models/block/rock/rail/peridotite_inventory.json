@@ -1,0 +1,6 @@
+{
+  "parent": "dfc:block/rock/template_rail_inventory",
+  "textures": {
+    "rock": "dfc:block/rock/raw/peridotite"
+  }
+}

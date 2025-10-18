@@ -12,9 +12,9 @@ public final class DecoFirmaCraftForgeEvents {
 
 	@SubscribeEvent
 	private static void onTick(final LevelTickEvent.Post event) {
-		if (event.getLevel().getGameTime() % 100 != 0) {
-			return;
-		}
-		DecoFirmaCraft.LOG.debug("This is a debug log every 100 ticks! (5 seconds)");
+//		if (event.getLevel().getGameTime() % 100 != 0) {
+//			return;
+//		}
+//		DecoFirmaCraft.LOG.debug("This is a debug log every 100 ticks! (5 seconds)");
 	}
 }

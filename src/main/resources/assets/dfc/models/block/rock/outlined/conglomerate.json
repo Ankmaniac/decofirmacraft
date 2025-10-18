@@ -3,7 +3,7 @@
   "type": "connecting",
   "connections": [
     {
-      "type": "is_same_block"
+      "type": "is_same_state"
     }
   ],
   "parent": "block/cube_all",

@@ -1,7 +1,53 @@
 {
+  "__comment__": "This file was automatically created by mcresources",
   "variants": {
-    "": {
-      "model": "dfc:block/rock/raw/travertine"
-    }
+    "axis=x": [
+      {
+        "model": "dfc:block/rock/raw/travertine",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "dfc:block/rock/raw/travertine_mirrored",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "dfc:block/rock/raw/travertine"
+      },
+      {
+        "model": "dfc:block/rock/raw/travertine_mirrored"
+      },
+      {
+        "model": "dfc:block/rock/raw/travertine",
+        "y": 180
+      },
+      {
+        "model": "dfc:block/rock/raw/travertine_mirrored",
+        "y": 180
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "dfc:block/rock/raw/travertine",
+        "x": 90
+      },
+      {
+        "model": "dfc:block/rock/raw/travertine_mirrored",
+        "x": 90
+      },
+      {
+        "model": "dfc:block/rock/raw/travertine",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "dfc:block/rock/raw/travertine_mirrored",
+        "x": 90,
+        "y": 180
+      }
+    ]
   }
 }

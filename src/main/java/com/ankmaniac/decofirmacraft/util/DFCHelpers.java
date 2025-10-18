@@ -3,9 +3,12 @@ package com.ankmaniac.decofirmacraft.util;
 import com.ankmaniac.decofirmacraft.common.block.metal.DFCExtendedMetal;
 import com.ankmaniac.decofirmacraft.common.block.rock.DFCExtendedRock;
 import net.dries007.tfc.common.LevelTier;
+import net.dries007.tfc.common.component.size.ItemSizeManager;
+import net.dries007.tfc.common.component.size.Size;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
@@ -67,5 +70,4 @@ public class DFCHelpers {
     {
         return ResourceLocation.fromNamespaceAndPath(domain, path);
     }
-
 }

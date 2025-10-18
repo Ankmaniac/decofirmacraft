@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/bricks/white_sandstone",
+    "top": "dfc:block/rock/bricks/white_sandstone",
+    "side": "dfc:block/rock/bricks/white_sandstone"
+  }
+}

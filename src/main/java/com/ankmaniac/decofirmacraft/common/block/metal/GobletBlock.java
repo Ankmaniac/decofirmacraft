@@ -12,6 +12,8 @@ import net.dries007.tfc.util.data.Drinkable;
 import net.dries007.tfc.util.loot.CopyFluidFunction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
@@ -19,8 +21,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -39,7 +43,7 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension {
 
     protected static final VoxelShape GOBLET_SHAPE = Block.box(6, 0, 6, 10, 7, 10);
 
-    public GobletBlock(ExtendedProperties properties, TagKey<Fluid> whitelist)
+    public GobletBlock(ExtendedProperties properties)
     {
         super(properties);
     }
@@ -58,13 +62,18 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension {
                 {
                     if (!level.isClientSide)
                     {
-                        level.destroyBlock(pos, true, player);
+                        ItemStack gobletItem = state.getCloneItemStack(result, level, pos, player);
+                        if (!player.addItem(gobletItem)) {
+                            player.drop(gobletItem, false);
+                        }
+                        level.removeBlock(pos, false);
+                        level.playSound(null, pos, SoundEvents.METAL_BREAK, SoundSource.PLAYERS, 1f, 1f);
+                        level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 1f, 1f);
                     }
-
                     return ItemInteractionResult.sidedSuccess(level.isClientSide);
                 }
 
-                final IFluidHandler handler = stack.getCapability(Capabilities.FluidHandler.ITEM);
+                final IFluidHandler handler = goblet.getTank(null);
 
                 if (handler != null)
                 {
@@ -79,6 +88,7 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension {
 
                     if (!level.isClientSide)
                     {
+                        level.playSound((Player) null, pos, SoundEvents.GENERIC_DRINK, SoundSource.PLAYERS, 1f, 1f);
                         drink.onDrink(player, drained.getAmount());
                     }
 
@@ -109,7 +119,6 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension {
     }
 
     @Override
-    @SuppressWarnings("deprecation")
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
         return GOBLET_SHAPE;
@@ -127,5 +136,10 @@ public class GobletBlock extends ExtendedBlock implements EntityBlockExtension {
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
     {
         return Block.canSupportCenter(level, pos.relative(Direction.DOWN), Direction.UP);
+    }
+
+    @Override
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
+        return !state.canSurvive(level, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, facing, facingState, level, currentPos, facingPos);
     }
 }

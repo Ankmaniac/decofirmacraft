@@ -22,7 +22,7 @@ import java.util.List;
 
 public class RoadBlock extends Block {
     public RoadBlock(Properties properties) {
-        super(properties.forceSolidOff());
+        super(properties);
     }
 
     @Override

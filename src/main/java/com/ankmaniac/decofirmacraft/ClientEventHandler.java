@@ -1,6 +1,7 @@
 package com.ankmaniac.decofirmacraft;
 
 import com.ankmaniac.decofirmacraft.client.render.blockentity.GobletBlockEntityRenderer;
+import com.ankmaniac.decofirmacraft.client.render.blockentity.DFCShelfBlockEntityRenderer;
 import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.bus.api.IEventBus;
@@ -16,5 +17,6 @@ public class ClientEventHandler
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event)
     {
         event.registerBlockEntityRenderer(DFCBlockEntities.GOBLET.get(), ctw -> new GobletBlockEntityRenderer());
+        event.registerBlockEntityRenderer(DFCBlockEntities.DFC_SHELVES.get(), ctw -> new DFCShelfBlockEntityRenderer());
     }
 }

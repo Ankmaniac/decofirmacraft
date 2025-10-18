@@ -113,37 +113,35 @@ public class ColumnBlock extends Block {
         VoxelShape bottomShape = Shapes.box(1f/16f, 0.0, 1f/16f, 15f/16f, 3f/16f, 15f/16f);
         VoxelShape middleShape = Shapes.box(3f/16f, 0.0, 3f/16f, 13f/16f, 1.0, 13f/16f);
 
-        if (up && down) {
+        if (up) {
             switch (style) {
                 case DORIC, TUSCAN:
                 default:
-                    return Shapes.or(topShape, middleShape, bottomShape);
-                case IONIC:
-                    if (axis == X){
-                        return Shapes.or(topShape, topShapeIonicX, middleShape, bottomShape);
+                    if (down){
+                        return Shapes.or(topShape, middleShape, bottomShape);
                     }
-                    else{
-                        return Shapes.or(topShape, topShapeIonicZ, middleShape, bottomShape);
-                    }
-                case CORINTHIAN:
-                    return Shapes.or(topShape, topShapeCorinthian, middleShape, bottomShape);
-            }
-        } else if (up) {
-            switch (style) {
-                case DORIC, TUSCAN:
-                default:
                     return Shapes.or(topShape, middleShape);
                 case IONIC:
                     if (axis == X){
+                        if (down){
+                            return Shapes.or(topShape, topShapeIonicX, middleShape, bottomShape);
+                        }
                         return Shapes.or(topShape, topShapeIonicX, middleShape);
                     }
                     else{
+                        if (down){
+                            return Shapes.or(topShape, topShapeIonicZ, middleShape, bottomShape);
+                        }
                         return Shapes.or(topShape, topShapeIonicZ, middleShape);
                     }
                 case CORINTHIAN:
+                    if (down){
+                        return Shapes.or(topShape, topShapeCorinthian, middleShape, bottomShape);
+                    }
                     return Shapes.or(topShape, topShapeCorinthian, middleShape);
             }
-        } else if (down) {
+        }
+        else if (down) {
             return Shapes.or(bottomShape, middleShape);
         }
         return middleShape;

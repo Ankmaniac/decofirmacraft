@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "dfc:block/rock/pressure_plate/green_sandstone"
+    },
+    "powered=true": {
+      "model": "dfc:block/rock/pressure_plate/green_sandstone_down"
+    }
+  }
+}

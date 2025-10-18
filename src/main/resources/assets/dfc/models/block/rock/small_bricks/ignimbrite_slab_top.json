@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "dfc:block/rock/small_bricks/ignimbrite",
+    "top": "dfc:block/rock/small_bricks/ignimbrite",
+    "side": "dfc:block/rock/small_bricks/ignimbrite"
+  }
+}

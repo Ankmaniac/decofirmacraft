@@ -2,6 +2,8 @@ package com.ankmaniac.decofirmacraft;
 
 import com.ankmaniac.decofirmacraft.common.block.DFCBlocks;
 import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
+import com.ankmaniac.decofirmacraft.common.capabilities.DFCBlockCapabilities;
+import com.ankmaniac.decofirmacraft.common.capabilities.DFCItemCapabilities;
 import com.ankmaniac.decofirmacraft.common.item.DFCCreativeTabs;
 import com.ankmaniac.decofirmacraft.common.item.DFCItems;
 import com.ankmaniac.decofirmacraft.config.DFCConfig;
@@ -32,6 +34,9 @@ public final class DecoFirmaCraft {
 		modContainer.registerConfig(Type.CLIENT, DFCConfig.CLIENT.spec());
 		modContainer.registerConfig(Type.SERVER, DFCConfig.SERVER.spec());
 		modContainer.registerConfig(Type.STARTUP, DFCConfig.STARTUP.spec());
+
+		modBus.addListener(DFCItemCapabilities::register);
+		modBus.addListener(DFCBlockCapabilities::register);
 
 		modBus.register(DecoFirmaCraft.class);
 		DFCItems.ITEMS.register(modBus);

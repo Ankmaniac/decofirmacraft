@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/wood/template_shelf_left",
+  "textures": {
+    "wood": "tfc:block/wood/planks/oak",
+    "particle": "tfc:block/wood/planks/oak"
+  }
+}

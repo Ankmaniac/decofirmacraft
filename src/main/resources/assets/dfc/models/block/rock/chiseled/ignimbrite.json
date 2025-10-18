@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "dfc:block/rock/smooth/ignimbrite",
+    "side": "dfc:block/rock/chiseled/ignimbrite",
+    "particle": "dfc:block/rock/chiseled/ignimbrite"
+  }
+}

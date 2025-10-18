@@ -26,7 +26,7 @@ public final class DFCCreativeTabs {
 
 
     public static final Id MISC = register("misc_tab", () -> new ItemStack(TFCBlocks.PLAIN_ALABASTER), DFCCreativeTabs::fillMiscTab);
-    public static final Id ROCK = register("rock_tab", () -> new ItemStack(DFCBlocks.DFC_ROCK_BLOCKS.get(DFCExtendedRock.SERPENTINE).get(Rock.BlockType.RAW)), DFCCreativeTabs::fillRockTab);
+    public static final Id ROCK = register("rock_tab", () -> new ItemStack(DFCBlocks.DFC_ROCK_BLOCKS.get(DFCExtendedRock.MARBLE).get(DFCExtendedRock.DFCRockBlockType.COLUMN)), DFCCreativeTabs::fillRockTab);
     public static final Id METAL = register("metal_tab", () -> new ItemStack(DFCBlocks.DFC_METAL_BLOCKS.get(DFCExtendedMetal.GOLD).get(DFCExtendedMetal.DFCMetalBlockType.BRICKS)), DFCCreativeTabs::fillMetalTab);
 
     public static Stream<CreativeModeTab.DisplayItemsGenerator> generators() {
@@ -37,10 +37,26 @@ public final class DFCCreativeTabs {
     }
 
     private static void fillRockTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out) {
-        for (DFCExtendedRock rock : DFCExtendedRock.VALUES)
+        for (DFCExtendedRock rock : DFCExtendedRock.values())
         {
             for (DFCExtendedRock.DFCRockBlockType type : new DFCExtendedRock.DFCRockBlockType[]
                     {
+                            DFCExtendedRock.DFCRockBlockType.HARDENED,
+                            DFCExtendedRock.DFCRockBlockType.RAW,
+                            DFCExtendedRock.DFCRockBlockType.PRESSURE_PLATE,
+                            DFCExtendedRock.DFCRockBlockType.BUTTON,
+                            DFCExtendedRock.DFCRockBlockType.SPIKE,
+                            DFCExtendedRock.DFCRockBlockType.COBBLE,
+                            DFCExtendedRock.DFCRockBlockType.MOSSY_COBBLE,
+                            DFCExtendedRock.DFCRockBlockType.BRICKS,
+                            DFCExtendedRock.DFCRockBlockType.CRACKED_BRICKS,
+                            DFCExtendedRock.DFCRockBlockType.MOSSY_BRICKS,
+                            DFCExtendedRock.DFCRockBlockType.SMOOTH,
+                            DFCExtendedRock.DFCRockBlockType.CHISELED,
+                            DFCExtendedRock.DFCRockBlockType.AQUEDUCT,
+                            DFCExtendedRock.DFCRockBlockType.GRAVEL,
+                            DFCExtendedRock.DFCRockBlockType.LOOSE,
+                            DFCExtendedRock.DFCRockBlockType.MOSSY_LOOSE,
                             DFCExtendedRock.DFCRockBlockType.PILLAR,
                             DFCExtendedRock.DFCRockBlockType.ROAD,
                             DFCExtendedRock.DFCRockBlockType.TILE,
@@ -51,35 +67,10 @@ public final class DFCCreativeTabs {
                             DFCExtendedRock.DFCRockBlockType.COLUMN,
                             DFCExtendedRock.DFCRockBlockType.RAIL,
                     }) {
-                accept(out, DFCBlocks.DFC_ROCK_TYPES, rock, type);
-                if (type.hasVariants()) {
-                    accept(out, DFCBlocks.DFC_ROCK_TYPE_DECORATIONS.get(rock).get(type));
-                }
-            }
-            for (Rock.BlockType tfcType : new Rock.BlockType[]
-                    {
-                            Rock.BlockType.HARDENED,
-                            Rock.BlockType.RAW,
-                            Rock.BlockType.PRESSURE_PLATE,
-                            Rock.BlockType.BUTTON,
-                            Rock.BlockType.SPIKE,
-                            Rock.BlockType.COBBLE,
-                            Rock.BlockType.MOSSY_COBBLE,
-                            Rock.BlockType.BRICKS,
-                            Rock.BlockType.CRACKED_BRICKS,
-                            Rock.BlockType.MOSSY_BRICKS,
-                            Rock.BlockType.SMOOTH,
-                            Rock.BlockType.CHISELED,
-                            Rock.BlockType.AQUEDUCT,
-                            Rock.BlockType.GRAVEL,
-                            Rock.BlockType.LOOSE,
-                            Rock.BlockType.MOSSY_LOOSE,
-                    }) {
-                if (rock.isDFCRock()) {
-                    accept(out, DFCBlocks.DFC_ROCK_BLOCKS, rock, tfcType);
-                    if (tfcType.hasVariants()) {
-                        accept(out, DFCBlocks.DFC_ROCK_DECORATIONS.get(rock).get(tfcType));
-                    }
+                accept(out, DFCBlocks.DFC_ROCK_BLOCKS, rock, type);
+                if (type.has(rock) && type.hasVariants())
+                {
+                    accept(out, DFCBlocks.DFC_ROCK_DECORATIONS.get(rock).get(type));
                 }
             }
         }
@@ -135,12 +126,7 @@ public final class DFCCreativeTabs {
                             DFCExtendedMetal.DFCMetalBlockType.GATE,
                             DFCExtendedMetal.DFCMetalBlockType.GOBLET
                     }) {
-                if (!type.requiresDecorative()) {
-                        accept(out, DFCBlocks.DFC_METAL_BLOCKS, metal, type);
-                }
-                else if (metal.hasDecorations()) {
-                        accept(out, DFCBlocks.DFC_DECORATIVE_METAL_BLOCKS, metal, type);
-                }
+                accept(out, DFCBlocks.DFC_METAL_BLOCKS, metal, type);
             }
         }
     }

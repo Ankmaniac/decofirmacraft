@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_column_double_end_corinthian",
+  "textures": {
+    "rock": "dfc:block/rock/column/brown_sandstone",
+    "particle": "dfc:block/rock/raw/brown_sandstone"
+  }
+}

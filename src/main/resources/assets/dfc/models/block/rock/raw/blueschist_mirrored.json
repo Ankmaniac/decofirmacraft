@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/cube_column_mirrored",
+  "textures": {
+    "side": "dfc:block/rock/raw/blueschist",
+    "end": "dfc:block/rock/raw/blueschist_top"
+  }
+}

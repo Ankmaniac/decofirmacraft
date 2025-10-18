@@ -1,7 +1,8 @@
 {
-  "parent": "block/cube_all",
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "dfc:block/rock/raw/travertine",
-    "particle": "dfc:block/rock/raw/travertine"
+    "side": "dfc:block/rock/raw/travertine",
+    "end": "dfc:block/rock/raw/travertine_top"
   }
 }

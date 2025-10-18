@@ -44,12 +44,20 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.function.Supplier;
 
+import static net.neoforged.neoforge.fluids.FluidUtil.tryPickUpFluid;
+
 public class GobletItem extends BlockItem
 {
 
-    public GobletItem(Block block, Properties properties, Supplier<Integer> capacity, TagKey<Fluid> whitelist)
+    public GobletItem(Block block, Properties properties)
     {
         super(block, properties.component(TFCComponents.FLUID, FluidComponent.EMPTY));
+    }
+
+    @Override
+    public int getMaxStackSize(ItemStack stack)
+    {
+        return 1;
     }
 
     @Override
@@ -72,7 +80,8 @@ public class GobletItem extends BlockItem
         final Player player = context.getPlayer();
         if (player != null)
         {
-            final InteractionResult result = tryInteractWithFluid(context.getLevel(), player, context.getHand());
+            final ItemStack stack = player.getItemInHand(context.getHand());
+            final InteractionResult result = tryPickUpFluid(stack, context.getLevel(), player, context.getHand());
             if (result != InteractionResult.PASS)
             {
                 return result;
@@ -90,18 +99,26 @@ public class GobletItem extends BlockItem
         {
             return InteractionResult.PASS;
         }
-
         // Try to interact with liquid from the world (i.e. take water sources, fill up / empty out barrels, etc.)
+        final InteractionResult result = tryPickUpFluid(stack, level, player, hand);
+        if (result != InteractionResult.PASS)
+        {
+            return result;
+        }
+        // If nothing could be done in-world, try to empty the goblet
+        if (!handler.getFluidInTank(0).isEmpty())
+        {
+            return attemptEmptying(handler, level, player, stack, hand);
+        }
+        return InteractionResult.PASS;
+    }
+
+    public InteractionResult tryPickUpFluid(ItemStack stack, Level level, Player player, InteractionHand hand)
+    {
         final BlockHitResult hit = getPlayerPOVHitResult(level, player, ClipContext.Fluid.SOURCE_ONLY);
         if (FluidHelpers.transferBetweenWorldAndItem(stack, level, hit, player, hand, false, false, true))
         {
             return InteractionResult.sidedSuccess(level.isClientSide);
-        }
-
-        // If nothing could be done in-world, try to empty the goblet
-        if (handler != null && !handler.getFluidInTank(0).isEmpty())
-        {
-            return attemptEmptying(handler, level, player, stack, hand);
         }
 
         return InteractionResult.PASS;
@@ -176,7 +193,7 @@ public class GobletItem extends BlockItem
         final FluidStack fluid = FluidHelpers.getContainedFluid(stack);
         if (!fluid.isEmpty())
         {
-            return Component.translatable(getDescriptionId(stack) + ".filled", fluid.getHoverName());
+            return Component.translatable(getDescriptionId(stack) + ".filled.", fluid.getHoverName());
         }
         return super.getName(stack);
     }
@@ -188,7 +205,7 @@ public class GobletItem extends BlockItem
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag isAdvanced)
     {
         final FluidStack fluid = FluidHelpers.getContainedFluid(stack);
-        if (!fluid.isEmpty() && fluid.getAmount() < DFCConfig.SERVER.gobletCapacity.get())
+        if (!fluid.isEmpty())
         {
             tooltip.add(Tooltips.fluidUnitsAndCapacityOf(fluid, DFCConfig.SERVER.gobletCapacity.get()));
         }

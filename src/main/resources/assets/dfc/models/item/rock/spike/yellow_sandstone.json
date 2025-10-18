@@ -1,0 +1,6 @@
+{
+  "parent": "dfc:block/rock/spike/yellow_sandstone_base",
+  "textures": {
+    "layer0": "dfc:block/rock/raw/yellow_sandstone"
+  }
+}

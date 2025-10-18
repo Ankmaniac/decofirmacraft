@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=base": {
+      "model": "dfc:block/rock/spike/yellow_sandstone_base"
+    },
+    "part=middle": {
+      "model": "dfc:block/rock/spike/yellow_sandstone_middle"
+    },
+    "part=tip": {
+      "model": "dfc:block/rock/spike/yellow_sandstone_tip"
+    }
+  }
+}

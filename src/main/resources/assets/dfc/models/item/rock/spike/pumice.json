@@ -1,0 +1,6 @@
+{
+  "parent": "dfc:block/rock/spike/pumice_base",
+  "textures": {
+    "layer0": "dfc:block/rock/raw/pumice"
+  }
+}

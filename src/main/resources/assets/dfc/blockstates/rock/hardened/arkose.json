@@ -1,7 +1,46 @@
 {
+  "__comment__": "This file was automatically created by mcresources",
   "variants": {
-    "": {
-      "model": "dfc:block/rock/raw/arkose"
-    }
+    "axis=x": [
+      {
+        "model": "dfc:block/rock/raw/arkose",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "dfc:block/rock/raw/arkose_mirrored",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "dfc:block/rock/raw/arkose"
+      },
+      {
+        "model": "dfc:block/rock/raw/arkose",
+        "y": 180
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "dfc:block/rock/raw/arkose",
+        "x": 90
+      },
+      {
+        "model": "dfc:block/rock/raw/arkose_mirrored",
+        "x": 90
+      },
+      {
+        "model": "dfc:block/rock/raw/arkose",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "dfc:block/rock/raw/arkose_mirrored",
+        "x": 90,
+        "y": 180
+      }
+    ]
   }
 }

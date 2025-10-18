@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/mossy_cobble/peridotite",
+    "top": "dfc:block/rock/mossy_cobble/peridotite",
+    "side": "dfc:block/rock/mossy_cobble/peridotite"
+  }
+}

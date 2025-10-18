@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.Objects;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
@@ -19,9 +20,8 @@ import static com.ankmaniac.decofirmacraft.DecoFirmaCraft.MOD_ID;
 public class DFCBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MOD_ID);
 
-
-    public static final Id<GobletBlockEntity> GOBLET = register("goblet", GobletBlockEntity::new, DFCBlocks.DFC_DECORATIVE_METAL_BLOCKS.values().stream().filter(map -> map.get(DFCExtendedMetal.DFCMetalBlockType.GOBLET) != null).map(map -> map.get(DFCExtendedMetal.DFCMetalBlockType.GOBLET)));
-
+    public static final Id<GobletBlockEntity> GOBLET = register("goblet", GobletBlockEntity::new, DFCBlocks.DFC_METAL_BLOCKS.values().stream().map(m -> m.get(DFCExtendedMetal.DFCMetalBlockType.GOBLET)).filter(Objects::nonNull));
+    public static final Id<DFCShelfBlockEntity> DFC_SHELVES = register("dfc_shelf", DFCShelfBlockEntity::new, DFCBlocks.DFC_SHELF_BLOCKS.values().stream());
 
     private static <T extends BlockEntity> Id<T> register(String name, BlockEntityType.BlockEntitySupplier<T> factory, Supplier<? extends Block> block)
     {

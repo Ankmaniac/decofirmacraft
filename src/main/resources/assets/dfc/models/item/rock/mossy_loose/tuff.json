@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "dfc:item/loose_rock/tuff",
-    "layer1": "tfc:item/loose_rock/moss"
-  }
-}

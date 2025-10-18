@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_column_top_tuscan",
+  "textures": {
+    "rock": "dfc:block/rock/column/ignimbrite",
+    "particle": "dfc:block/rock/raw/ignimbrite"
+  }
+}
