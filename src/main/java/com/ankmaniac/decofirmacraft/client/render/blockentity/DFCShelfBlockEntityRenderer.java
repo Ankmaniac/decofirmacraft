@@ -69,7 +69,7 @@ public class DFCShelfBlockEntityRenderer implements BlockEntityRenderer<DFCShelf
                     }
                     else if (iterationCounter(itemWeight, j, perBlock)){
                         poseStack.popPose();
-                        if (j == stackSize - 1 && j % 2 == 0){
+                        if (iteration == stackCount && iteration % 2 == 0){
                             poseStack.translate(0, j > 4 ? .5f : 0f, j > 1 ? .5f : 0);
                         }
                         else {
