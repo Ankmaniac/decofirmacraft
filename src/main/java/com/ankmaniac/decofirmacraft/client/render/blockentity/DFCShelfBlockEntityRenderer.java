@@ -49,7 +49,6 @@ public class DFCShelfBlockEntityRenderer implements BlockEntityRenderer<DFCShelf
                 int stackSize = item.getCount();
                 Weight itemWeight = ItemSizeManager.get(item).getWeight(item);
                 int maxStackSize = Math.min(itemWeight.stackSize, shelf.getSlotStackLimit(i));
-                float filled = (float) stackSize / (float) maxStackSize;
                 int perBlock = maxStackSize / 8;
                 int stackCount = (int) Math.floor((double) (item.getCount() - 1) / (double) perBlock);
                 int maxStacks = 8;
