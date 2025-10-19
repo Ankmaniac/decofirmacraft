@@ -16,6 +16,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
+import org.apache.commons.lang3.Range;
 
 import static com.ankmaniac.decofirmacraft.common.block.DFCShelfBlock.DIRECTION;
 import static com.ankmaniac.decofirmacraft.common.blockentities.DFCShelfBlockEntity.*;
@@ -33,16 +34,24 @@ public class DFCShelfBlockEntityRenderer implements BlockEntityRenderer<DFCShelf
                 final ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
                 poseStack.pushPose();
 
+                final int angle = switch (shelf.getBlockState().getValue(DIRECTION))
+                {
+                    case SOUTH -> 0;
+                    case EAST -> 90;
+                    case WEST, DOWN, UP -> 270;
+                    case NORTH -> 180;
+                };
+
                 final Vec3 pos = DFCShelfBlock.SLOT_CENTERS.get(shelf.getBlockState().getValue(DIRECTION)).get(i);
                 poseStack.translate(pos.x, pos.y, pos.z);
-                poseStack.mulPose(Axis.YP.rotationDegrees(shelf.getBlockState().getValue(DIRECTION).toYRot()));
+                poseStack.mulPose(Axis.YP.rotationDegrees(angle));
 
                 int stackSize = item.getCount();
                 Weight itemWeight = ItemSizeManager.get(item).getWeight(item);
                 int maxStackSize = Math.min(itemWeight.stackSize, shelf.getSlotStackLimit(i));
                 float filled = (float) stackSize / (float) maxStackSize;
                 int perBlock = maxStackSize / 8;
-                int stackCount = (int) Math.floor((double) item.getCount() / (double) perBlock);
+                int stackCount = (int) Math.floor((double) (item.getCount() - 1) / (double) perBlock);
                 int maxStacks = 8;
 
 
@@ -52,36 +61,66 @@ public class DFCShelfBlockEntityRenderer implements BlockEntityRenderer<DFCShelf
                         poseStack.scale(0.3f, 0.3f, 0.3f);
                         if (itemWeight == Weight.HEAVY){
                             maxStacks = 4;
+                            perBlock = 1;
                         }
                         break;
                     case VERY_HEAVY:
                         poseStack.scale(0.5f, 0.5f, 0.5f);
                         poseStack.translate(0f, 0.15f, 0f);
                         maxStacks = 1;
+                        perBlock = 1;
                         break;
                 }
 
                 int iteration = 0;
                 for (int j = 0; j < stackSize; j++) {
-                    poseStack.pushPose();
                     if (iteration >= maxStacks){
                         break;
                     }
                     else if (iterationCounter(itemWeight, j, perBlock)){
-                        poseStack.popPose();
-                        if (iteration == stackCount && iteration % 2 == 0){
-                            poseStack.translate(0, j > 4 ? .5f : 0f, j > 1 ? .5f : 0);
+                        poseStack.pushPose();
+                        float translateX = 0;
+                        float translateY = 0;
+                        float translateZ = 0;
+                        if (iteration == stackCount && iteration % 2 == 0) {
+                            if (iteration > 3) translateY = .5f;
+                            if (iteration == 2 || iteration == 6) translateZ = -.25f;
                         }
                         else {
-                            poseStack.translate(j % 2 == 0 ? .5f : -.5f, j > 4 ? .5f : 0f, j > 1 ? .5f : -.5f);
+                            if (iteration % 2 == 0) {translateX = .25f;}
+                            else {translateX = -.25f;}
+                            if (iteration % 3 == 0) {
+                                if (iteration % 2 == 0) {
+                                    translateZ = .01f;
+                                }
+                                else {
+                                    translateZ = -.01f;
+                                }
+                            }
+                            if (iteration > 3) translateY = .5f;
+                            if ((stackCount > 1 && iteration < 4) || stackCount > 5) {
+                                if ((iteration > 1 && iteration < 4) || iteration > 5) {
+                                    translateZ -= .25f;
+                                } else {
+                                    translateZ += .25f;
+                                }
+                            }
                         }
+                        poseStack.translate(translateX, translateY, translateZ);
+
+                        itemRenderer.renderStatic(item,
+                                ItemDisplayContext.FIXED,
+                                combinedLight,
+                                combinedOverlay,
+                                poseStack,
+                                buffer,
+                                shelf.getLevel(),
+                                0
+                        );
                         poseStack.popPose();
                         iteration++;
                     }
-                    poseStack.popPose();
                 }
-
-                Minecraft.getInstance().getItemRenderer().renderStatic(item, ItemDisplayContext.FIXED, combinedLight, combinedOverlay, poseStack, buffer, shelf.getLevel(), 0);
                 poseStack.popPose();
             }
         }

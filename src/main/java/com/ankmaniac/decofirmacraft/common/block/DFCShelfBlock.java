@@ -266,12 +266,12 @@ public class DFCShelfBlock extends DeviceBlock implements IHighlightHandler {
         return shelfInteraction(stack, state, level, pos, player, hitResult);
     }
 
-    @Override
-    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit){
-        ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
-        System.out.println("DEBUG SHELF 002 ");
-        return shelfInteraction(stack, state, level, pos, player, hit).result();
-    }
+//    @Override
+//    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit){
+//        ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
+//        System.out.println("DEBUG SHELF 002 ");
+//        return shelfInteraction(stack, state, level, pos, player, hit).result();
+//    }
 
     private ItemInteractionResult shelfInteraction(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult){
 
