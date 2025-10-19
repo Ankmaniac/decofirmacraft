@@ -50,7 +50,7 @@ public class DFCShelfBlockEntityRenderer implements BlockEntityRenderer<DFCShelf
                 Weight itemWeight = ItemSizeManager.get(item).getWeight(item);
                 int maxStackSize = Math.min(itemWeight.stackSize, shelf.getSlotStackLimit(i));
                 int perBlock = maxStackSize / 8;
-                int stackCount = (int) Math.floor((double) (item.getCount() - 1) / (double) perBlock);
+                int stackCount = (int) Math.floor((double) (stackSize - 1) / (double) perBlock);
                 int maxStacks = 8;
 
 
@@ -97,12 +97,27 @@ public class DFCShelfBlockEntityRenderer implements BlockEntityRenderer<DFCShelf
                                 }
                             }
                             if (iteration > 3) translateY = .5f;
-                            if ((stackCount > 1 && iteration < 4) || stackCount > 5) {
-                                if ((iteration > 1 && iteration < 4) || iteration > 5) {
-                                    translateZ -= .25f;
-                                } else {
-                                    translateZ += .25f;
-                                }
+                            switch (itemWeight){
+                                case VERY_LIGHT, LIGHT, MEDIUM:
+                                default:
+                                    if ((stackCount > 1 && iteration < 4) || stackCount > 5) {
+                                        if ((iteration > 1 && iteration < 4) || iteration > 5) {
+                                            translateZ -= .25f;
+                                        } else {
+                                            translateZ += .25f;
+                                        }
+                                    }
+                                    break;
+                                case HEAVY, VERY_HEAVY:
+                                    if (stackSize > 2){
+                                        if (iteration > 1){
+                                            translateZ -= .25f;
+                                        }
+                                        else {
+                                            translateZ += .25f;
+                                        }
+                                    }
+                                    break;
                             }
                         }
                         poseStack.translate(translateX, translateY, translateZ);
