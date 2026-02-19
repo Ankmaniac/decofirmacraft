@@ -1,0 +1,68 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "dfc:block/chiseled_block/top_northeast"
+      },
+      "when": {
+        "top_northeast": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/chiseled_block/top_northwest"
+      },
+      "when": {
+        "top_northwest": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/chiseled_block/top_southeast"
+      },
+      "when": {
+        "top_southeast": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/chiseled_block/top_southwest"
+      },
+      "when": {
+        "top_southwest": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/chiseled_block/bottom_northeast"
+      },
+      "when": {
+        "bottom_northeast": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/chiseled_block/bottom_northwest"
+      },
+      "when": {
+        "bottom_northwest": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/chiseled_block/bottom_southeast"
+      },
+      "when": {
+        "bottom_southeast": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/chiseled_block/bottom_southwest"
+      },
+      "when": {
+        "bottom_southwest": "true"
+      }
+    }
+  ]
+}

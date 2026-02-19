@@ -88,14 +88,10 @@ public class DFCShelfBlockEntityRenderer implements BlockEntityRenderer<DFCShelf
                         else {
                             if (iteration % 2 == 0) {translateX = .25f;}
                             else {translateX = -.25f;}
-                            if (iteration % 3 == 0) {
-                                if (iteration % 2 == 0) {
-                                    translateZ = .01f;
+                            if (iteration % 2 == 0) {
+                                    translateZ += .01f;
+                                    translateY -= .01f;
                                 }
-                                else {
-                                    translateZ = -.01f;
-                                }
-                            }
                             if (iteration > 3) translateY = .5f;
                             switch (itemWeight){
                                 case VERY_LIGHT, LIGHT, MEDIUM:

@@ -20,5 +20,6 @@ public final class DataGenerators {
 
 		generator.addProvider(event.includeClient(), new BuiltInLanguage(packOutput));
 		generator.addProvider(event.includeClient(), new BuiltInItemModels(packOutput, existingFileHelper));
+//		generator.addProvider(event.includeClient(), new BuiltInBlockStates(packOutput, existingFileHelper));
 	}
 }

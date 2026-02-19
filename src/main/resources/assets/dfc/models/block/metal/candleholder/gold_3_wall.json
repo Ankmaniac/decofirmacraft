@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/metal/template_candleholder_3_wall",
+  "textures": {
+    "metal": "dfc:block/metal/candleholder/gold",
+    "particle": "tfc:block/metal/block/gold"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "values": {
+    "dfc:rock/tile/marble": {
+      "block": "dfc:chiseled_block",
+      "dynamic_textures": "dfc:rock/tile/marble"
+    },
+    "dfc:rock/tile/basalt": {
+      "block": "dfc:chiseled_block",
+      "dynamic_textures": "dfc:rock/tile/basalt"
+    }
+  }
+}

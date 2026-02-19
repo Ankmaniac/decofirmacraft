@@ -194,6 +194,14 @@ repositories {
 }
 
 dependencies {
+    // Lombok
+    compileOnly(libs.lombok)
+    annotationProcessor(libs.lombok)
+    "datagenCompileOnly"(libs.lombok)
+    "datagenAnnotationProcessor"(libs.lombok)
+    testCompileOnly(libs.lombok)
+    testAnnotationProcessor(libs.lombok)
+
     // datagen can use mod code
     "datagenImplementation"(sourceSets["main"].output)
 

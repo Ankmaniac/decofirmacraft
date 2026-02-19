@@ -1,62 +1,62 @@
 {
   "variants": {
-    "facing=north,up=false,down=false": {
+    "facing=north,left=false,right=false": {
       "model": "dfc:block/wood/shelf/oak"
     },
-    "facing=north,up=true,down=false": {
+    "facing=north,left=true,right=false": {
       "model": "dfc:block/wood/shelf/oak_left"
     },
-    "facing=north,up=false,down=true": {
+    "facing=north,left=false,right=true": {
       "model": "dfc:block/wood/shelf/oak_right"
     },
-    "facing=north,up=true,down=true": {
+    "facing=north,left=true,right=true": {
       "model": "dfc:block/wood/shelf/oak_both"
     },
-    "facing=east,up=false,down=false": {
+    "facing=east,left=false,right=false": {
       "model": "dfc:block/wood/shelf/oak",
       "y": 90
     },
-    "facing=east,up=true,down=false": {
+    "facing=east,left=true,right=false": {
       "model": "dfc:block/wood/shelf/oak_left",
       "y": 90
     },
-    "facing=east,up=false,down=true": {
+    "facing=east,left=false,right=true": {
       "model": "dfc:block/wood/shelf/oak_right",
       "y": 90
     },
-    "facing=east,up=true,down=true": {
+    "facing=east,left=true,right=true": {
       "model": "dfc:block/wood/shelf/oak_both",
       "y": 90
     },
-    "facing=south,up=false,down=false": {
+    "facing=south,left=false,right=false": {
       "model": "dfc:block/wood/shelf/oak",
       "y": 180
     },
-    "facing=south,up=true,down=false": {
+    "facing=south,left=true,right=false": {
       "model": "dfc:block/wood/shelf/oak_left",
       "y": 180
     },
-    "facing=south,up=false,down=true": {
+    "facing=south,left=false,right=true": {
       "model": "dfc:block/wood/shelf/oak_right",
       "y": 180
     },
-    "facing=south,up=true,down=true": {
+    "facing=south,left=true,right=true": {
       "model": "dfc:block/wood/shelf/oak_both",
       "y": 180
     },
-    "facing=west,up=false,down=false": {
+    "facing=west,left=false,right=false": {
       "model": "dfc:block/wood/shelf/oak",
       "y": 270
     },
-    "facing=west,up=true,down=false": {
+    "facing=west,left=true,right=false": {
       "model": "dfc:block/wood/shelf/oak_left",
       "y": 270
     },
-    "facing=west,up=false,down=true": {
+    "facing=west,left=false,right=true": {
       "model": "dfc:block/wood/shelf/oak_right",
       "y": 270
     },
-    "facing=west,up=true,down=true": {
+    "facing=west,left=true,right=true": {
       "model": "dfc:block/wood/shelf/oak_both",
       "y": 270
     }

@@ -1,0 +1,8 @@
+{
+  "render_type": "cutout",
+  "parent": "dfc:block/metal/template_candleholder_1_floor",
+  "textures": {
+    "metal": "dfc:block/metal/candleholder/gold",
+    "particle": "tfc:block/metal/block/gold"
+  }
+}

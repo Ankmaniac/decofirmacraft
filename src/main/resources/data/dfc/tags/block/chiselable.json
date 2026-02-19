@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#dfc:stones/tiles",
+    "dfc:chiseled_block"
+  ]
+}

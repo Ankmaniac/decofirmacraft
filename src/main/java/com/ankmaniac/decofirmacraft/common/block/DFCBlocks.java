@@ -86,6 +86,11 @@ public final class DFCBlocks
                     .noOcclusion()
                     .noCollission()));
 
+    //This as an item would probably crash the game or maybe not im not quite sure dont try it though ;p
+    public static final Id<Block> CHISELED_BLOCK = registerNoItem("chiseled_block", () ->
+            new ChiseledBlock(ExtendedProperties
+                    .of(Blocks.STONE).blockEntity(DFCBlockEntities.CHISELED_BLOCK_ENTITY)));
+
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {
         return true;

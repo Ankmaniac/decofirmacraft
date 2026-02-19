@@ -170,7 +170,8 @@ public enum DFCExtendedMetal implements StringRepresentable, DFCHelpers.DFCMetal
         WEATHERED_PILLAR(PartType.WEATHERED, pillar(Age.WEATHERED)),
         OXIDIZED_PILLAR(PartType.WEATHERED, pillar(Age.OXIDIZED)),
         GATE(PartType.ALL, metal -> new GateBlock(BlockSetType.IRON, blockProperties(metal).noOcclusion().pushReaction(PushReaction.DESTROY))),
-        GOBLET(PartType.DECORATIVE, metal -> new GobletBlock(ExtendedProperties.of().mapColor(metal.mapColor()).noOcclusion().sound(SoundType.METAL).instabreak().blockEntity(DFCBlockEntities.GOBLET)), GobletItem::new);
+        GOBLET(PartType.DECORATIVE, metal -> new GobletBlock(ExtendedProperties.of().mapColor(metal.mapColor()).noOcclusion().sound(SoundType.METAL).instabreak().pushReaction(PushReaction.DESTROY).blockEntity(DFCBlockEntities.GOBLET)), GobletItem::new),
+        CANDLEHOLDER(PartType.DECORATIVE, metal -> new CandleholderBlock(ExtendedProperties.of().mapColor(metal.mapColor()).noOcclusion().sound(SoundType.METAL).strength(2.0F, 6.0F).pushReaction(PushReaction.DESTROY).randomTicks().lightLevel(CandleholderBlock.LIGHTING_SCALE).blockEntity(DFCBlockEntities.CANDLEHOLDER)));
 
         private static Function<DFCHelpers.DFCMetalHelpers, Block> block(Age age)
         {

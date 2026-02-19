@@ -21,6 +21,7 @@ public final class DFCBlockCapabilities {
     public static void register(RegisterCapabilitiesEvent event) {
         event.registerBlockEntity(FLUID, DFCBlockEntities.GOBLET.get(), GobletBlockEntity::getTank);
         registerInventory(event, DFCBlockEntities.DFC_SHELVES);
+        registerInventory(event, DFCBlockEntities.CANDLEHOLDER);
     }
 
     private static void registerInventory(RegisterCapabilitiesEvent event, Supplier<? extends BlockEntityType<? extends InventoryBlockEntity<?>>> type)

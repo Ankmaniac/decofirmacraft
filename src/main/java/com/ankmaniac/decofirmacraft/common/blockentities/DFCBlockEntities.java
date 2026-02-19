@@ -22,6 +22,8 @@ public class DFCBlockEntities {
 
     public static final Id<GobletBlockEntity> GOBLET = register("goblet", GobletBlockEntity::new, DFCBlocks.DFC_METAL_BLOCKS.values().stream().map(m -> m.get(DFCExtendedMetal.DFCMetalBlockType.GOBLET)).filter(Objects::nonNull));
     public static final Id<DFCShelfBlockEntity> DFC_SHELVES = register("dfc_shelf", DFCShelfBlockEntity::new, DFCBlocks.DFC_SHELF_BLOCKS.values().stream());
+    public static final Id<CandleholderBlockEntity> CANDLEHOLDER = register("candleholder", CandleholderBlockEntity::new, DFCBlocks.DFC_METAL_BLOCKS.values().stream().map(m -> m.get(DFCExtendedMetal.DFCMetalBlockType.CANDLEHOLDER)).filter(Objects::nonNull));
+    public static final Id<ChiseledBlockEntity> CHISELED_BLOCK_ENTITY = register("chiseled_block_entity", ChiseledBlockEntity::new, DFCBlocks.CHISELED_BLOCK);
 
     private static <T extends BlockEntity> Id<T> register(String name, BlockEntityType.BlockEntitySupplier<T> factory, Supplier<? extends Block> block)
     {

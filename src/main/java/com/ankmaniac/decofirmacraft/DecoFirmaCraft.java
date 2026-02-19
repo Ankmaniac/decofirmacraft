@@ -1,11 +1,14 @@
 package com.ankmaniac.decofirmacraft;
 
+import com.ankmaniac.decofirmacraft.common.DecoFirmaCraftBuiltInRegistries;
+import com.ankmaniac.decofirmacraft.common.DecoFirmaCraftDataMaps;
 import com.ankmaniac.decofirmacraft.common.block.DFCBlocks;
 import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
 import com.ankmaniac.decofirmacraft.common.capabilities.DFCBlockCapabilities;
 import com.ankmaniac.decofirmacraft.common.capabilities.DFCItemCapabilities;
 import com.ankmaniac.decofirmacraft.common.item.DFCCreativeTabs;
 import com.ankmaniac.decofirmacraft.common.item.DFCItems;
+import com.ankmaniac.decofirmacraft.common.player.DFCChiselMode;
 import com.ankmaniac.decofirmacraft.config.DFCConfig;
 import com.mojang.logging.LogUtils;
 import net.neoforged.api.distmarker.Dist;
@@ -43,6 +46,11 @@ public final class DecoFirmaCraft {
 		DFCBlocks.BLOCKS.register(modBus);
 		DFCBlockEntities.BLOCK_ENTITIES.register(modBus);
 		DFCCreativeTabs.CREATIVE_TABS.register(modBus);
+
+		DFCChiselMode.MODES.register(modBus);
+
+		modBus.addListener(DecoFirmaCraftBuiltInRegistries::registerDatapackRegistries);
+		modBus.addListener(DecoFirmaCraftDataMaps::registerDataMaps);
 
 		DecoFirmaCraftForgeEvents.init(NeoForge.EVENT_BUS);
 

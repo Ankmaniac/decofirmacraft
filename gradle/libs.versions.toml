@@ -10,14 +10,15 @@ modDevGradle = "2.0.78"
 minecraft = "1.21.1"
 # You can find the latest versions here: https://projects.neoforged.net/neoforged/neoforge
 # The Minecraft version must agree with the Neo version to get a valid artifact
-neforge = "21.1.197"
+neforge = "21.1.219"
 emi = "1.1.10+1.21"
 jei = "19.25.0.322"
 top = "1.21_neo-12.0.4-6"
 patchouli = "1.21.1-92-NEOFORGE"
+lombok = "1.18.36"
 # IMPORTANT change both this and the tfc file id for things to update correclty
-tfc = "4.0.6-beta"
-tfcFileId = "7060432"
+tfc = "4.0.18-beta"
+tfcFileId = "7476548"
 fusionctm = "1.21.11"
 fusionctmFileId = "6916658"
 # Non standard version
@@ -27,7 +28,10 @@ modernfixFileId = "6766126"
 junit-jupiter = "5.10.3"
 junit-platform-launcher = "1.10.3"
 
+
+
 [libraries]
+lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
 jei-common-api = { group = "mezz.jei", name = "jei-1.21.1-common-api", version.ref = "jei" }
 jei-neoforge-api = { group = "mezz.jei", name = "jei-1.21.1-neoforge-api", version.ref = "jei" }
 jei = { group = "mezz.jei", name = "jei-1.21.1-neoforge", version.ref = "jei" }

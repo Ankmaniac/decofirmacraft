@@ -1,23 +1,17 @@
 package com.ankmaniac.decofirmacraft.common.block;
 
-import com.ankmaniac.decofirmacraft.common.block.rock.ColumnBlock;
-import com.ankmaniac.decofirmacraft.common.block.rock.ColumnStyles;
+import com.ankmaniac.decofirmacraft.common.block.state.DFCBlockStateProperties;
 import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
 import com.ankmaniac.decofirmacraft.common.blockentities.DFCShelfBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.dries007.tfc.client.IHighlightHandler;
-import net.dries007.tfc.common.blockentities.InventoryBlockEntity;
-import net.dries007.tfc.common.blocks.EntityBlockExtension;
-import net.dries007.tfc.common.blocks.ExtendedBlock;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.devices.DeviceBlock;
 import net.dries007.tfc.common.component.size.ItemSizeManager;
-import net.dries007.tfc.util.Helpers;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -26,7 +20,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -156,8 +149,8 @@ public class DFCShelfBlock extends DeviceBlock implements IHighlightHandler {
             Shapes.box(0.0, 0.0, 15f/16f, 8f/16f, 1.0, 1.0);
 
     public static final EnumProperty<Direction> DIRECTION = BlockStateProperties.HORIZONTAL_FACING;
-    public static final BooleanProperty LEFT = BlockStateProperties.UP;
-    public static final BooleanProperty RIGHT = BlockStateProperties.DOWN;
+    public static final BooleanProperty LEFT = DFCBlockStateProperties.LEFT;
+    public static final BooleanProperty RIGHT = DFCBlockStateProperties.RIGHT;
 
     public DFCShelfBlock(ExtendedProperties properties){
         super(properties, InventoryRemoveBehavior.DROP);
@@ -262,10 +255,10 @@ public class DFCShelfBlock extends DeviceBlock implements IHighlightHandler {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult)
     {
-        System.out.println("DEBUG SHELF 001 ");
         return shelfInteraction(stack, state, level, pos, player, hitResult);
     }
 
+    /* Fruitless attempt at getting it to work with items while shifting rightclicking */
 //    @Override
 //    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit){
 //        ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
@@ -276,36 +269,27 @@ public class DFCShelfBlock extends DeviceBlock implements IHighlightHandler {
     private ItemInteractionResult shelfInteraction(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult){
 
         final DFCShelfBlockEntity shelf = level.getBlockEntity(pos, DFCBlockEntities.DFC_SHELVES.get()).orElse(null);
-        System.out.println("DEBUG SHELF 000 if this isnt here it didnt happen at all");
 
         if (shelf != null) {
-            System.out.println("DEBUG SHELF 00 ");
             final IItemHandlerModifiable inventory = shelf.getInventory();
             final int slot = getSlotForSelection(hitResult, state.getValue(DIRECTION));
             final ItemStack current = slot == -1 ? ItemStack.EMPTY : inventory.getStackInSlot(slot);
 
             if (slot != -1) {
-                System.out.println("DEBUG SHELF 0 ");
                 if (!stack.isEmpty() && inventory.isItemValid(slot, stack)) {
                     int maxTransfer = Math.min(inventory.getSlotLimit(slot), stack.getCount()) - current.getCount();
-                    System.out.println("DEBUG SHELF 1 ");
                     if (current.isEmpty()) {
-                        System.out.println("DEBUG SHELF 2 ");
                         if (player.isShiftKeyDown()) {
-                            System.out.println("DEBUG SHELF 3 " + maxTransfer);
                             ItemHandlerHelper.giveItemToPlayer(player, inventory.insertItem(slot, stack.split(maxTransfer), false));
                         } else {
-                            System.out.println("DEBUG SHELF 4 single item inserted to empty slot");
                             ItemHandlerHelper.giveItemToPlayer(player, inventory.insertItem(slot, stack.split(1), false));
                         }
                         return ItemInteractionResult.sidedSuccess(level.isClientSide);
                     } else if (current.getItem().equals(stack.getItem()) && Math.min(ItemSizeManager.get(current).getWeight(current).stackSize, inventory.getSlotLimit(slot)) > current.getCount() ) {
-                        System.out.println("DEBUG SHELF 5 max stack = " + Math.min(ItemSizeManager.get(current).getWeight(current).stackSize, inventory.getSlotLimit(slot)) + ", current stack = " + current.getCount());
+                        //this cant happen because rightclicking with an item doesn't do useItemOn
                         if (player.isShiftKeyDown()) {
-                            System.out.println("DEBUG SHELF 6 stack inserted " + maxTransfer);
                             ItemHandlerHelper.giveItemToPlayer(player, inventory.insertItem(slot, stack.split(maxTransfer), false));
                         } else {
-                            System.out.println("DEBUG SHELF 7 single item inserted to full slot");
                             ItemHandlerHelper.giveItemToPlayer(player, inventory.insertItem(slot, stack.split(1), false));
                         }
                         return ItemInteractionResult.sidedSuccess(level.isClientSide);
@@ -313,19 +297,16 @@ public class DFCShelfBlock extends DeviceBlock implements IHighlightHandler {
                 }
                 if (!current.isEmpty() && !stack.getItem().equals(current.getItem())) {
                     int removeBy;
-
+                    //this cant actually happen because if you're shift rightclicking with an item it cant call useItemOn
                     if (player.isShiftKeyDown()) {
                         removeBy = current.getCount();
                     } else {
                         removeBy = 1;
                     }
 
-                    System.out.println("DEBUG SHELF 8 amount removed = " + removeBy + ", item is " + stack.getItem());
                     if (stack.isEmpty()) {
-                        System.out.println("DEBUG SHELF 9 ");
                         ItemHandlerHelper.giveItemToPlayer(player, inventory.extractItem(slot, removeBy, false), player.getInventory().selected);
                     } else {
-                        System.out.println("DEBUG SHELF 10 ");
                         ItemHandlerHelper.giveItemToPlayer(player, inventory.extractItem(slot, removeBy, false));
                     }
                     return ItemInteractionResult.sidedSuccess(level.isClientSide);

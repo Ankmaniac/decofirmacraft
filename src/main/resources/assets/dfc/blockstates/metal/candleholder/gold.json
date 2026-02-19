@@ -1,0 +1,154 @@
+{
+  "variants": {
+    "facing=north,on_wall=false,candles=0": {
+      "model": "dfc:block/metal/candleholder/gold_1_floor"
+    },
+    "facing=north,on_wall=false,candles=1": {
+      "model": "dfc:block/metal/candleholder/gold_1_floor"
+    },
+    "facing=north,on_wall=false,candles=2": {
+      "model": "dfc:block/metal/candleholder/gold_2_floor"
+    },
+    "facing=north,on_wall=false,candles=3": {
+      "model": "dfc:block/metal/candleholder/gold_3_floor"
+    },
+    "facing=north,on_wall=false,candles=4": {
+      "model": "dfc:block/metal/candleholder/gold_4_floor"
+    },
+    "facing=north,on_wall=true,candles=0": {
+      "model": "dfc:block/metal/candleholder/gold_1_wall"
+    },
+    "facing=north,on_wall=true,candles=1": {
+      "model": "dfc:block/metal/candleholder/gold_1_wall"
+    },
+    "facing=north,on_wall=true,candles=2": {
+      "model": "dfc:block/metal/candleholder/gold_2_wall"
+    },
+    "facing=north,on_wall=true,candles=3": {
+      "model": "dfc:block/metal/candleholder/gold_3_wall"
+    },
+    "facing=north,on_wall=true,candles=4": {
+      "model": "dfc:block/metal/candleholder/gold_4_wall"
+    },
+    "facing=east,on_wall=false,candles=0": {
+      "model": "dfc:block/metal/candleholder/gold_1_floor",
+      "y": 90
+    },
+    "facing=east,on_wall=false,candles=1": {
+      "model": "dfc:block/metal/candleholder/gold_1_floor",
+      "y": 90
+    },
+    "facing=east,on_wall=false,candles=2": {
+      "model": "dfc:block/metal/candleholder/gold_2_floor",
+      "y": 90
+    },
+    "facing=east,on_wall=false,candles=3": {
+      "model": "dfc:block/metal/candleholder/gold_3_floor",
+      "y": 90
+    },
+    "facing=east,on_wall=false,candles=4": {
+      "model": "dfc:block/metal/candleholder/gold_4_floor",
+      "y": 90
+    },
+    "facing=east,on_wall=true,candles=0": {
+      "model": "dfc:block/metal/candleholder/gold_1_wall",
+      "y": 90
+    },
+    "facing=east,on_wall=true,candles=1": {
+      "model": "dfc:block/metal/candleholder/gold_1_wall",
+      "y": 90
+    },
+    "facing=east,on_wall=true,candles=2": {
+      "model": "dfc:block/metal/candleholder/gold_2_wall",
+      "y": 90
+    },
+    "facing=east,on_wall=true,candles=3": {
+      "model": "dfc:block/metal/candleholder/gold_3_wall",
+      "y": 90
+    },
+    "facing=east,on_wall=true,candles=4": {
+      "model": "dfc:block/metal/candleholder/gold_4_wall",
+      "y": 90
+    },
+    "facing=south,on_wall=false,candles=0": {
+      "model": "dfc:block/metal/candleholder/gold_1_floor",
+      "y": 180
+    },
+    "facing=south,on_wall=false,candles=1": {
+      "model": "dfc:block/metal/candleholder/gold_1_floor",
+      "y": 180
+    },
+    "facing=south,on_wall=false,candles=2": {
+      "model": "dfc:block/metal/candleholder/gold_2_floor",
+      "y": 180
+    },
+    "facing=south,on_wall=false,candles=3": {
+      "model": "dfc:block/metal/candleholder/gold_3_floor",
+      "y": 180
+    },
+    "facing=south,on_wall=false,candles=4": {
+      "model": "dfc:block/metal/candleholder/gold_4_floor",
+      "y": 180
+    },
+    "facing=south,on_wall=true,candles=0": {
+      "model": "dfc:block/metal/candleholder/gold_1_wall",
+      "y": 180
+    },
+    "facing=south,on_wall=true,candles=1": {
+      "model": "dfc:block/metal/candleholder/gold_1_wall",
+      "y": 180
+    },
+    "facing=south,on_wall=true,candles=2": {
+      "model": "dfc:block/metal/candleholder/gold_2_wall",
+      "y": 180
+    },
+    "facing=south,on_wall=true,candles=3": {
+      "model": "dfc:block/metal/candleholder/gold_3_wall",
+      "y": 180
+    },
+    "facing=south,on_wall=true,candles=4": {
+      "model": "dfc:block/metal/candleholder/gold_4_wall",
+      "y": 180
+    },
+    "facing=west,on_wall=false,candles=0": {
+      "model": "dfc:block/metal/candleholder/gold_1_floor",
+      "y": 270
+    },
+    "facing=west,on_wall=false,candles=1": {
+      "model": "dfc:block/metal/candleholder/gold_1_floor",
+      "y": 270
+    },
+    "facing=west,on_wall=false,candles=2": {
+      "model": "dfc:block/metal/candleholder/gold_2_floor",
+      "y": 270
+    },
+    "facing=west,on_wall=false,candles=3": {
+      "model": "dfc:block/metal/candleholder/gold_3_floor",
+      "y": 270
+    },
+    "facing=west,on_wall=false,candles=4": {
+      "model": "dfc:block/metal/candleholder/gold_4_floor",
+      "y": 270
+    },
+    "facing=west,on_wall=true,candles=0": {
+      "model": "dfc:block/metal/candleholder/gold_1_wall",
+      "y": 270
+    },
+    "facing=west,on_wall=true,candles=1": {
+      "model": "dfc:block/metal/candleholder/gold_1_wall",
+      "y": 270
+    },
+    "facing=west,on_wall=true,candles=2": {
+      "model": "dfc:block/metal/candleholder/gold_2_wall",
+      "y": 270
+    },
+    "facing=west,on_wall=true,candles=3": {
+      "model": "dfc:block/metal/candleholder/gold_3_wall",
+      "y": 270
+    },
+    "facing=west,on_wall=true,candles=4": {
+      "model": "dfc:block/metal/candleholder/gold_4_wall",
+      "y": 270
+    }
+  }
+}
