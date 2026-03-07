@@ -123,7 +123,6 @@ public class ChiseledBlockEntity extends TFCBlockEntity
         this.defaultHolder = dynamicTextureRegistry.getHolder(DynamicTextureData.DEFAULT).or(dynamicTextureRegistry::getAny).orElseThrow();
         for (BooleanProperty property : properties)
         {
-            System.out.println("DEBUG 2 " + defaultHolder);
             this.holderMap.putIfAbsent(property, defaultHolder);
         }
     }

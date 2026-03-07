@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/smooth/yellow_sandstone",
+    "top": "dfc:block/rock/smooth/yellow_sandstone",
+    "side": "dfc:block/rock/smooth/yellow_sandstone"
+  }
+}

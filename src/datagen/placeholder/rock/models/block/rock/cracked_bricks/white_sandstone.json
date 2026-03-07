@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/rock/cracked_bricks/white_sandstone",
+    "particle": "dfc:block/rock/cracked_bricks/white_sandstone"
+  }
+}

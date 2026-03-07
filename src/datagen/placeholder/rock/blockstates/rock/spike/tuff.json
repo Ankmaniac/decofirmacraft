@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=base": {
+      "model": "dfc:block/rock/spike/tuff_base"
+    },
+    "part=middle": {
+      "model": "dfc:block/rock/spike/tuff_middle"
+    },
+    "part=tip": {
+      "model": "dfc:block/rock/spike/tuff_tip"
+    }
+  }
+}

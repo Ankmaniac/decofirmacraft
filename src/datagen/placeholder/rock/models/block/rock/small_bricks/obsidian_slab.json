@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/rock/small_bricks/obsidian",
+    "top": "dfc:block/rock/small_bricks/obsidian",
+    "side": "dfc:block/rock/small_bricks/obsidian"
+  }
+}

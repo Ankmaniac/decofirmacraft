@@ -1,0 +1,32 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "axis=x": [
+      {
+        "model": "dfc:block/rock/raw/serpentine",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "dfc:block/rock/raw/serpentine"
+      },
+      {
+        "model": "dfc:block/rock/raw/serpentine",
+        "y": 180
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "dfc:block/rock/raw/serpentine",
+        "x": 90
+      },
+      {
+        "model": "dfc:block/rock/raw/serpentine",
+        "x": 90,
+        "y": 180
+      }
+    ]
+  }
+}

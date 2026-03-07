@@ -1,7 +1,7 @@
 package com.ankmaniac.decofirmacraft.common.block.rock;
 
-import com.ankmaniac.decofirmacraft.common.block.state.ColumnStyles;
 import com.ankmaniac.decofirmacraft.common.block.state.DFCBlockStateProperties;
+import com.ankmaniac.decofirmacraft.common.block.state.DFCBlockStateProperties.ColumnStyles;
 import com.ankmaniac.decofirmacraft.util.DFCTags;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.util.Helpers;
@@ -45,7 +45,7 @@ public class ColumnBlock extends Block {
     public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.HORIZONTAL_AXIS;
     public static final BooleanProperty UP = BlockStateProperties.UP;
     public static final BooleanProperty DOWN = BlockStateProperties.DOWN;
-    public static final EnumProperty<ColumnStyles> STYLE = DFCBlockStateProperties.STYLES;
+    public static final EnumProperty<DFCBlockStateProperties.ColumnStyles> STYLE = DFCBlockStateProperties.STYLES;
 
     private static final Random RANDOM = new Random();
 

@@ -1,0 +1,6 @@
+{
+  "parent": "dfc:block/rock/spike/peridotite_base",
+  "textures": {
+    "layer0": "dfc:block/rock/raw/peridotite"
+  }
+}

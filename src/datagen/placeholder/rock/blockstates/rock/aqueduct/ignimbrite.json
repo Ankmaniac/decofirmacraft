@@ -1,0 +1,42 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "apply": {
+        "model": "dfc:block/rock/aqueduct/ignimbrite/base"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "dfc:block/rock/aqueduct/ignimbrite/north"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "dfc:block/rock/aqueduct/ignimbrite/east"
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "dfc:block/rock/aqueduct/ignimbrite/south"
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "dfc:block/rock/aqueduct/ignimbrite/west"
+      }
+    }
+  ]
+}

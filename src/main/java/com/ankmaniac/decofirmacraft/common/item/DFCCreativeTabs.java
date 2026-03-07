@@ -5,6 +5,7 @@ import com.ankmaniac.decofirmacraft.common.block.DFCBlocks;
 import com.ankmaniac.decofirmacraft.common.block.DFCDecorationBlockHolder;
 import com.ankmaniac.decofirmacraft.common.block.metal.DFCExtendedMetal;
 import com.ankmaniac.decofirmacraft.common.block.rock.DFCExtendedRock;
+import com.ankmaniac.decofirmacraft.common.block.wood.DFCExtendedWood;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.minecraft.core.registries.Registries;
@@ -28,15 +29,19 @@ public final class DFCCreativeTabs {
     public static final Id MISC = register("misc_tab", () -> new ItemStack(TFCBlocks.PLAIN_ALABASTER), DFCCreativeTabs::fillMiscTab);
     public static final Id ROCK = register("rock_tab", () -> new ItemStack(DFCBlocks.DFC_ROCK_BLOCKS.get(DFCExtendedRock.MARBLE).get(DFCExtendedRock.DFCRockBlockType.COLUMN)), DFCCreativeTabs::fillRockTab);
     public static final Id METAL = register("metal_tab", () -> new ItemStack(DFCBlocks.DFC_METAL_BLOCKS.get(DFCExtendedMetal.GOLD).get(DFCExtendedMetal.DFCMetalBlockType.BRICKS)), DFCCreativeTabs::fillMetalTab);
+    public static final Id WOOD = register("wood_tab", () -> new ItemStack(DFCBlocks.DFC_WOOD_BLOCKS.get(DFCExtendedWood.OAK).get(DFCExtendedWood.DFCWoodBlockType.SHELF)), DFCCreativeTabs::fillWoodTab);
 
-    public static Stream<CreativeModeTab.DisplayItemsGenerator> generators() {
+    public static Stream<CreativeModeTab.DisplayItemsGenerator> generators()
+    {
         return Stream.of(MISC).map(holder -> holder.generator);
     }
 
-    private static void fillMiscTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out) {
+    private static void fillMiscTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
     }
 
-    private static void fillRockTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out) {
+    private static void fillRockTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
         for (DFCExtendedRock rock : DFCExtendedRock.values())
         {
             for (DFCExtendedRock.DFCRockBlockType type : new DFCExtendedRock.DFCRockBlockType[]
@@ -78,7 +83,8 @@ public final class DFCCreativeTabs {
         DFCBlocks.DFC_MAGMA_BLOCKS.values().forEach(out::accept);
     }
 
-    private static void fillMetalTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out) {
+    private static void fillMetalTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
         for (DFCExtendedMetal metal : DFCExtendedMetal.values())
         {
             for (DFCExtendedMetal.DFCMetalBlockType type : new DFCExtendedMetal.DFCMetalBlockType[]
@@ -125,14 +131,56 @@ public final class DFCCreativeTabs {
                             DFCExtendedMetal.DFCMetalBlockType.OXIDIZED_PILLAR,
                             DFCExtendedMetal.DFCMetalBlockType.GATE,
                             DFCExtendedMetal.DFCMetalBlockType.GOBLET
-                    }) {
+                    })
+            {
                 accept(out, DFCBlocks.DFC_METAL_BLOCKS, metal, type);
             }
         }
     }
 
+    private static void fillWoodTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        for (DFCExtendedWood wood : DFCExtendedWood.values())
+        {
+            DFCBlocks.DFC_WOOD_BLOCKS.get(wood).forEach((type, reg) ->
+            {
+                if (type.needsItem())
+                {
+                    out.accept(reg);
+                }
+                if (type == DFCExtendedWood.DFCWoodBlockType.SAPLING)
+                {
+                    switch (wood)
+                    {
+                        case PINE -> out.accept(TFCBlocks.PINE_KRUMMHOLZ);
+                        case SPRUCE -> out.accept(TFCBlocks.SPRUCE_KRUMMHOLZ);
+                        case WHITE_CEDAR -> out.accept(TFCBlocks.WHITE_CEDAR_KRUMMHOLZ);
+                        case DOUGLAS_FIR -> out.accept(TFCBlocks.DOUGLAS_FIR_KRUMMHOLZ);
+                        case ASPEN -> out.accept(TFCBlocks.ASPEN_KRUMMHOLZ);
+                    }
+                }
+            });
+//            out.accept(TFCBlocks.GOLDEN_BAMBOO_BLOCK);
+//                        accept(out, TFCItems.LUMBER, wood);
+//                        accept(out, TFCItems.BOATS, wood);
+//                        accept(out, TFCItems.SUPPORTS, wood);
+//                        accept(out, TFCItems.CHEST_MINECARTS, wood);
+//                        accept(out, TFCItems.SIGNS, wood);
 
-    private static Id register(String name, Supplier<ItemStack> icon, CreativeModeTab.DisplayItemsGenerator displayItems) {
+//                        for (Metal metal : Metal.values())
+//                        {
+//                            accept(out, TFCItems.HANGING_SIGNS.get(wood), metal);
+//                        }
+            for (DFCExtendedWood.DFCWoodBlockType type : DFCExtendedWood.DFCWoodBlockType.values())
+            {
+                accept(out, DFCBlocks.DFC_WOOD_BLOCKS, wood, type);
+            }
+        }
+    }
+
+
+    private static Id register(String name, Supplier<ItemStack> icon, CreativeModeTab.DisplayItemsGenerator displayItems)
+    {
         final var holder = CREATIVE_TABS.register(name, () -> CreativeModeTab.builder()
                 .icon(icon)
                 .title(Component.translatable("dfc.creative_tab." + name))
@@ -141,19 +189,24 @@ public final class DFCCreativeTabs {
         return new Id(holder, displayItems);
     }
 
-    private static <R extends ItemLike, K1, K2> void accept(CreativeModeTab.Output out, Map<K1, Map<K2, R>> map, K1 key1, K2 key2) {
-        if (map.containsKey(key1)) {
+    private static <R extends ItemLike, K1, K2> void accept(CreativeModeTab.Output out, Map<K1, Map<K2, R>> map, K1 key1, K2 key2)
+    {
+        if (map.containsKey(key1))
+        {
             accept(out, map.get(key1), key2);
         }
     }
 
-    private static <R extends ItemLike, K> void accept(CreativeModeTab.Output out, Map<K, R> map, K key) {
-        if (map.containsKey(key)) {
+    private static <R extends ItemLike, K> void accept(CreativeModeTab.Output out, Map<K, R> map, K key)
+    {
+        if (map.containsKey(key))
+        {
             out.accept(map.get(key));
         }
     }
 
-    private static void accept(CreativeModeTab.Output out, DFCDecorationBlockHolder decoration) {
+    private static void accept(CreativeModeTab.Output out, DFCDecorationBlockHolder decoration)
+    {
         out.accept(decoration.stair());
         out.accept(decoration.slab());
         out.accept(decoration.wall());

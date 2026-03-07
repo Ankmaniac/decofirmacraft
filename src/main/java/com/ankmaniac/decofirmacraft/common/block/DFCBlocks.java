@@ -3,6 +3,7 @@ package com.ankmaniac.decofirmacraft.common.block;
 import com.ankmaniac.decofirmacraft.common.block.metal.DFCExtendedMetal;
 import com.ankmaniac.decofirmacraft.common.block.rock.DFCExtendedRock.DFCRockBlockType;
 import com.ankmaniac.decofirmacraft.common.block.rock.DFCExtendedRock;
+import com.ankmaniac.decofirmacraft.common.block.wood.DFCExtendedWood;
 import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
 import com.ankmaniac.decofirmacraft.common.item.DFCItems;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
@@ -27,7 +28,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.pathfinder.PathType;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -76,8 +76,10 @@ public final class DFCBlocks
             )
     );
 
-    public static final Map<Wood, Id<Block>> DFC_SHELF_BLOCKS = Helpers.mapOf(Wood.class, wood ->
-            register("wood/shelf/" + wood.name(), () -> new DFCShelfBlock(ExtendedProperties.of(Blocks.OAK_PLANKS).blockEntity(DFCBlockEntities.DFC_SHELVES)))
+    public static final Map<DFCExtendedWood, Map<DFCExtendedWood.DFCWoodBlockType, Id<Block>>> DFC_WOOD_BLOCKS = Helpers.mapOf(DFCExtendedWood.class, wood ->
+            Helpers.mapOf(DFCExtendedWood.DFCWoodBlockType.class, type -> type.has(wood), type ->
+                    register(type.nameFor(wood), type.create(wood), type.createBlockItem(wood, new Item.Properties()))
+            )
     );
 
     public static final Id<Block> CRAFTING_CLOTH = register("crafting_cloth", () ->

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/spike_tip",
+  "textures": {
+    "texture": "dfc:block/rock/raw/green_sandstone",
+    "particle": "dfc:block/rock/raw/green_sandstone"
+  }
+}

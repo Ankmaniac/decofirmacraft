@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "dfc:block/rock/pressure_plate/obsidian"
+    },
+    "powered=true": {
+      "model": "dfc:block/rock/pressure_plate/obsidian_down"
+    }
+  }
+}

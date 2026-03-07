@@ -3,6 +3,7 @@ package com.ankmaniac.decofirmacraft;
 import com.ankmaniac.decofirmacraft.common.DecoFirmaCraftBuiltInRegistries;
 import com.ankmaniac.decofirmacraft.common.DecoFirmaCraftDataMaps;
 import com.ankmaniac.decofirmacraft.common.block.DFCBlocks;
+import com.ankmaniac.decofirmacraft.common.block.wood.DFCExtendedWood;
 import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
 import com.ankmaniac.decofirmacraft.common.capabilities.DFCBlockCapabilities;
 import com.ankmaniac.decofirmacraft.common.capabilities.DFCItemCapabilities;
@@ -11,14 +12,19 @@ import com.ankmaniac.decofirmacraft.common.item.DFCItems;
 import com.ankmaniac.decofirmacraft.common.player.DFCChiselMode;
 import com.ankmaniac.decofirmacraft.config.DFCConfig;
 import com.mojang.logging.LogUtils;
+import net.dries007.tfc.network.PacketHandler;
+import net.dries007.tfc.util.Helpers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.*;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig.Type;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 
 import net.minecraft.resources.ResourceLocation;
@@ -30,6 +36,8 @@ public final class DecoFirmaCraft {
 	public static final String MOD_ID = "dfc";
 	public static final String MOD_NAME = "DecoFirmaCraft";
 
+	private @Nullable Throwable syncLoadError;
+
 	public DecoFirmaCraft(final ModContainer modContainer, final IEventBus modBus, final Dist dist) {
 
 		// You likely don't want all of these.
@@ -38,6 +46,7 @@ public final class DecoFirmaCraft {
 		modContainer.registerConfig(Type.SERVER, DFCConfig.SERVER.spec());
 		modContainer.registerConfig(Type.STARTUP, DFCConfig.STARTUP.spec());
 
+		modBus.addListener(this::setup);
 		modBus.addListener(DFCItemCapabilities::register);
 		modBus.addListener(DFCBlockCapabilities::register);
 
@@ -60,6 +69,22 @@ public final class DecoFirmaCraft {
 		}
 	}
 
+	public void setup(FMLCommonSetupEvent event)
+	{
+		event.enqueueWork(() -> {
+			DFCExtendedWood.registerBlockSetTypes();
+
+//			TFCBlocks.registerFlowerPotFlowers();
+		}).exceptionally(e -> {
+			LOG.error("An unhandled exception was thrown during synchronous mod loading:", e);
+			syncLoadError = e;
+			return null;
+		});
+
+		//PatchouliIntegration.registerMultiBlocks();
+		//if (JADE) JadeIntegration.registerToolHandlers();
+	}
+
 	@SubscribeEvent
 	private static void onCreativeTabBuild(final BuildCreativeModeTabContentsEvent event) {
 	}
@@ -76,5 +101,13 @@ public final class DecoFirmaCraft {
 	 */
 	public static String lang(final String langKey) {
 		return MOD_ID + "." + langKey;
+	}
+
+	public void loadComplete(FMLLoadCompleteEvent event)
+	{
+		if (syncLoadError != null)
+		{
+			Helpers.throwAsUnchecked(syncLoadError);
+		}
 	}
 }

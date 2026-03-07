@@ -1,0 +1,9 @@
+{
+  "loader": "fusion:model",
+  "type": "base",
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dfc:block/rock/large_bricks/white_sandstone",
+    "particle": "dfc:block/rock/bricks/white_sandstone"
+  }
+}

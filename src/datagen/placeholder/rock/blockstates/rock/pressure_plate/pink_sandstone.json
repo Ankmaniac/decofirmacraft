@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "dfc:block/rock/pressure_plate/pink_sandstone"
+    },
+    "powered=true": {
+      "model": "dfc:block/rock/pressure_plate/pink_sandstone_down"
+    }
+  }
+}

@@ -3,7 +3,7 @@ import shutil
 
 source_dir = "D:/Modding/decofirmacraft/decofirmacraft 1.21/src/datagen/placeholder/rock1"
 output_dir = "D:/Modding/decofirmacraft/decofirmacraft 1.21/src/datagen/placeholder/rock"
-replacements = ["brown_sandstone", "white_sandstone", "black_sandstone", "red_sandstone", "yellow_sandstone", "green_sandstone", "pink_sandstone"]
+replacements = ["brown_sandstone", "white_sandstone", "black_sandstone", "red_sandstone", "yellow_sandstone", "green_sandstone", "pink_sandstone", "tuff", "flint", "ignimbrite", "obsidian", "peridotite", "pumice", "serpentine", "soapstone"]
 
 target_word = "serpentine"
 

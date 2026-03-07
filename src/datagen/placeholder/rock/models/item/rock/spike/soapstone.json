@@ -1,0 +1,6 @@
+{
+  "parent": "dfc:block/rock/spike/soapstone_base",
+  "textures": {
+    "layer0": "dfc:block/rock/raw/soapstone"
+  }
+}

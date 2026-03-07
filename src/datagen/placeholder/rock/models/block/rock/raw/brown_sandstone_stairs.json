@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/raw/brown_sandstone",
+    "top": "dfc:block/rock/raw/brown_sandstone",
+    "side": "dfc:block/rock/raw/brown_sandstone"
+  }
+}

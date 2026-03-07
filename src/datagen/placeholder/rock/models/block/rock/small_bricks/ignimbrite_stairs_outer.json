@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/small_bricks/ignimbrite",
+    "top": "dfc:block/rock/small_bricks/ignimbrite",
+    "side": "dfc:block/rock/small_bricks/ignimbrite"
+  }
+}

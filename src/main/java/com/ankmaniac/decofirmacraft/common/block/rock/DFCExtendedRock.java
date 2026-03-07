@@ -1,13 +1,10 @@
 package com.ankmaniac.decofirmacraft.common.block.rock;
 
 import com.ankmaniac.decofirmacraft.common.block.DFCBlocks;
-import com.ankmaniac.decofirmacraft.common.block.metal.DFCExtendedMetal;
 import com.ankmaniac.decofirmacraft.util.DFCHelpers;
 import net.dries007.tfc.common.Lore;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.*;
-import net.dries007.tfc.common.blocks.soil.SandBlockType;
-import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -23,7 +20,7 @@ import java.util.Objects;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
 
-public enum DFCExtendedRock implements DFCHelpers.DFCRockHelpers {
+public enum DFCExtendedRock implements DFCHelpers.DFCRockRegistry {
     GRANITE(RockDisplayCategory.FELSIC_IGNEOUS_INTRUSIVE, MapColor.RAW_IRON, RockType.TFC),
     DIORITE(RockDisplayCategory.INTERMEDIATE_IGNEOUS_INTRUSIVE, MapColor.METAL, RockType.TFC),
     GABBRO(RockDisplayCategory.MAFIC_IGNEOUS_INTRUSIVE, MapColor.COLOR_GRAY, RockType.TFC),
@@ -179,7 +176,7 @@ public enum DFCExtendedRock implements DFCHelpers.DFCRockHelpers {
             return i >= 0 && i < VALUES.length ? VALUES[i] : PILLAR;
         }
 
-        private static BlockBehaviour.Properties properties(DFCHelpers.DFCRockHelpers rock) {
+        private static BlockBehaviour.Properties properties(DFCHelpers.DFCRockRegistry rock) {
             return BlockBehaviour.Properties.of()
                     .mapColor(rock.color())
                     .sound(SoundType.STONE)
@@ -187,11 +184,11 @@ public enum DFCExtendedRock implements DFCHelpers.DFCRockHelpers {
         }
 
         private final boolean variants;
-        private final BiFunction<DFCHelpers.DFCRockHelpers, DFCRockBlockType, Block> blockFactory;
+        private final BiFunction<DFCHelpers.DFCRockRegistry, DFCRockBlockType, Block> blockFactory;
         private final String serializedName;
         private final RockType type;
 
-        DFCRockBlockType(BiFunction<DFCHelpers.DFCRockHelpers, DFCRockBlockType, Block> blockFactory, boolean variants, RockType type) {
+        DFCRockBlockType(BiFunction<DFCHelpers.DFCRockRegistry, DFCRockBlockType, Block> blockFactory, boolean variants, RockType type) {
             this.blockFactory = blockFactory;
             this.variants = variants;
             this.serializedName = name().toLowerCase(Locale.ROOT);
@@ -206,11 +203,11 @@ public enum DFCExtendedRock implements DFCHelpers.DFCRockHelpers {
             return type.hasRock(rock.rockType);
         }
 
-        public Block create(DFCHelpers.DFCRockHelpers rock) {
+        public Block create(DFCHelpers.DFCRockRegistry rock) {
             return blockFactory.apply(rock, this);
         }
 
-        public SlabBlock dfcCreateSlab(DFCHelpers.DFCRockHelpers rock) {
+        public SlabBlock dfcCreateSlab(DFCHelpers.DFCRockRegistry rock) {
             final BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(1.5f, 10).requiresCorrectToolForDrops();
             final DFCRockBlockType mossy = mossy();
             if (mossy == this)
@@ -224,7 +221,7 @@ public enum DFCExtendedRock implements DFCHelpers.DFCRockHelpers {
             return new SlabBlock(properties);
         }
 
-        public StairBlock dfcCreateStairs(DFCHelpers.DFCRockHelpers rock) {
+        public StairBlock dfcCreateStairs(DFCHelpers.DFCRockRegistry rock) {
             final Supplier<BlockState> state = () -> rock.dfcGetBlock(this).get().defaultBlockState();
             final BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(1.5f, 10).requiresCorrectToolForDrops();
             final DFCRockBlockType mossy = mossy();
@@ -239,7 +236,7 @@ public enum DFCExtendedRock implements DFCHelpers.DFCRockHelpers {
             return new StairBlock(state.get(), properties);
         }
 
-        public WallBlock dfcCreateWall(DFCHelpers.DFCRockHelpers rock) {
+        public WallBlock dfcCreateWall(DFCHelpers.DFCRockRegistry rock) {
             final BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(1.5f, 10).requiresCorrectToolForDrops();
             final DFCRockBlockType mossy = mossy();
             if (mossy == this)

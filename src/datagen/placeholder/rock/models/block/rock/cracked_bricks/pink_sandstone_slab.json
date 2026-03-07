@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/rock/cracked_bricks/pink_sandstone",
+    "top": "dfc:block/rock/cracked_bricks/pink_sandstone",
+    "side": "dfc:block/rock/cracked_bricks/pink_sandstone"
+  }
+}

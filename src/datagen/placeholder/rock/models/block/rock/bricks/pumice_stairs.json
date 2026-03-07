@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "dfc:block/rock/bricks/pumice",
+    "top": "dfc:block/rock/bricks/pumice",
+    "side": "dfc:block/rock/bricks/pumice"
+  }
+}

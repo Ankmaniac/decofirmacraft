@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "dfc:block/rock/tile/white_sandstone",
+    "top": "dfc:block/rock/tile/white_sandstone",
+    "side": "dfc:block/rock/tile/white_sandstone"
+  }
+}
