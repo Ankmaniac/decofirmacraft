@@ -2,12 +2,17 @@ package com.ankmaniac.decofirmacraft.common.player;
 
 import com.ankmaniac.decofirmacraft.DecoFirmaCraft;
 import com.ankmaniac.decofirmacraft.common.block.ChiseledBlock;
+import com.ankmaniac.decofirmacraft.common.block.rock.RockRailBlock;
 import com.ankmaniac.decofirmacraft.common.block.state.DFCBlockStateProperties;
 import net.dries007.tfc.client.IngameOverlays;
+import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.player.ChiselMode;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -24,6 +29,36 @@ public abstract class DFCChiselMode {
         @Override
         public BlockState modifyStateForPlacement(BlockState state, BlockState chiseled, Player player, BlockHitResult hit)
         {
+            return chiseled;
+        }
+
+
+        @Override
+        public <T> T createIcon(IconCallback<T> callback)
+        {
+            return callback.accept(IngameOverlays.TEXTURE, 0, 58, 20, 20);
+        }
+
+        @Override
+        public void createHotbarIcon(HotbarIconCallback callback)
+        {
+            callback.accept(IngameOverlays.TEXTURE, 0, 58);
+        }
+    });
+
+    public static final DeferredHolder<ChiselMode, ChiselMode> RAIL = register("rail", new ChiselMode(300) {
+        @Override
+        public BlockState modifyStateForPlacement(BlockState state, BlockState chiseled, Player player, BlockHitResult hit)
+        {
+            if (chiseled.getBlock() instanceof RockRailBlock stair)
+            {
+                // Use the stair placement state, but fill with fluid after the fact
+                chiseled = stair.getStateForPlacement(new BlockPlaceContext(player, InteractionHand.MAIN_HAND, new ItemStack(stair), hit));
+                if (chiseled != null)
+                {
+                    chiseled = FluidHelpers.fillWithFluid(chiseled, state.getFluidState().getType());
+                }
+            }
             return chiseled;
         }
 

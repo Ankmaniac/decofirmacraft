@@ -71,6 +71,8 @@ public final class DFCCreativeTabs {
                             DFCExtendedRock.DFCRockBlockType.LARGE_BRICKS,
                             DFCExtendedRock.DFCRockBlockType.COLUMN,
                             DFCExtendedRock.DFCRockBlockType.RAIL,
+                            DFCExtendedRock.DFCRockBlockType.RAIL_BLOCK,
+                            DFCExtendedRock.DFCRockBlockType.RAIL_STAIRS_BLOCK,
                     }) {
                 accept(out, DFCBlocks.DFC_ROCK_BLOCKS, rock, type);
                 if (type.has(rock) && type.hasVariants())

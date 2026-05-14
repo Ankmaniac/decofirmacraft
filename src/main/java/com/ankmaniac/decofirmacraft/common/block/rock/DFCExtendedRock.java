@@ -59,7 +59,6 @@ public enum DFCExtendedRock implements DFCHelpers.DFCRockRegistry {
     SERPENTINE(RockDisplayCategory.METAMORPHIC, MapColor.COLOR_GREEN, RockType.DFC),
     SOAPSTONE(RockDisplayCategory.METAMORPHIC, MapColor.TERRACOTTA_WHITE, RockType.DFC),
     TRAVERTINE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_WHITE, RockType.DFC);
-
     public static final DFCExtendedRock[] VALUES = values();
 
     private final String serializedName;
@@ -168,7 +167,9 @@ public enum DFCExtendedRock implements DFCHelpers.DFCRockRegistry {
         SMALL_BRICKS((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), true, RockType.DFC_BLOCK),
         LARGE_BRICKS((rock, self) -> new Block(properties(rock).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), false, RockType.DFC_BLOCK),
         COLUMN((rock, self) -> new ColumnBlock(properties(rock).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), false, RockType.DFC_BLOCK),
-        RAIL((rock, self) -> new RailBlock(properties(rock).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), false, RockType.DFC_BLOCK);
+        RAIL((rock, self) -> new RailBlock(properties(rock).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), false, RockType.DFC_BLOCK),
+        RAIL_BLOCK((rock, self) -> new RockRailBlock(properties(rock).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), false, RockType.DFC_BLOCK),
+        RAIL_STAIRS_BLOCK((rock, self) -> new RockRailStairsBlock(properties(rock).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), false, RockType.DFC_BLOCK);
 
         public static final DFCRockBlockType[] VALUES = DFCRockBlockType.values();
 

@@ -1,0 +1,78 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "tfc:block/rock/raw/andesite_stairs",
+        "uvlock": true
+      },
+      "when": {
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "tfc:block/rock/raw/andesite_stairs",
+        "y": 270,
+        "uvlock": true
+      },
+      "when": {
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "tfc:block/rock/raw/andesite_stairs",
+        "y": 180,
+        "uvlock": true
+      },
+      "when": {
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "tfc:block/rock/raw/andesite_stairs",
+        "y": 90,
+        "uvlock": true
+      },
+      "when": {
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail_stairs_block/andesite",
+        "y": 270
+      },
+      "when": {
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail_stairs_block/andesite",
+        "y": 180
+      },
+      "when": {
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail_stairs_block/andesite"
+      },
+      "when": {
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail_stairs_block/andesite",
+        "y": 90
+      },
+      "when": {
+        "facing": "west"
+      }
+    }
+  ]
+}

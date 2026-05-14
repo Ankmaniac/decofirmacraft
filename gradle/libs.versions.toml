@@ -17,8 +17,8 @@ top = "1.21_neo-12.0.4-6"
 patchouli = "1.21.1-92-NEOFORGE"
 lombok = "1.18.36"
 # IMPORTANT change both this and the tfc file id for things to update correclty
-tfc = "4.0.18-beta"
-tfcFileId = "7476548"
+tfc = "4.0.19-beta"
+tfcFileId = "7634816"
 fusionctm = "1.21.11"
 fusionctmFileId = "6916658"
 # Non standard version

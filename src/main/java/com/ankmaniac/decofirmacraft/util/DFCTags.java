@@ -22,6 +22,9 @@ public class DFCTags {
         public static final TagKey<Block> PLASTERABLE_BLOCKS = create("plasterable_blocks");
         public static final TagKey<Block> MINEABLE_WITH_PAINTBRUSH = create("mineable_with_paintbrush"); //its stupid this needs to exist
         public static final TagKey<Block> CHISELABLE = create("chiselable");
+        public static final TagKey<Block> RAIL_BLOCKS = create("rail_blocks");
+        public static final TagKey<Block> RAIL_STAIRS_BLOCKS = create("rail_stairs_blocks");
+        public static final TagKey<Block> LOW_FRICTION_BLOCKS = create("low_friction_blocks");
 
         private static TagKey<Block> create(String id)
         {

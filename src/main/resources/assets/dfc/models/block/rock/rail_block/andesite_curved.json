@@ -1,0 +1,7 @@
+{
+  "parent": "dfc:block/rock/template_rail_block",
+  "textures": {
+    "rail": "dfc:block/rock/curved_rail_overlay/andesite",
+    "particle": "tfc:block/rock/raw/andesite"
+  }
+}

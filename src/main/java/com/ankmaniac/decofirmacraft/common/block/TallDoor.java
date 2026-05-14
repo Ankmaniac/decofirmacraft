@@ -250,6 +250,7 @@ public class TallDoor extends ExtendedBlock
 
     }
 
+    //Update to also check blocks parallel with the top block
     protected DoorHingeSide getHinge(BlockPlaceContext context) {
         Direction direction = context.getHorizontalDirection();
         Direction directionClockWise = direction.getClockWise();

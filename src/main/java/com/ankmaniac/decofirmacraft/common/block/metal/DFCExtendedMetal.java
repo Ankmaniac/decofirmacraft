@@ -65,7 +65,7 @@ public enum DFCExtendedMetal implements StringRepresentable, DFCMetalRegistry {
     IE_LEAD(0x433F4D, MapColor.TERRACOTTA_BLUE, Rarity.RARE, -1, PartType.DEFAULT),
     URANIUM(0x738A6C, MapColor.TERRACOTTA_GREEN, Rarity.EPIC, -1, PartType.DEFAULT),
     //TFC MetaullurgyU2 metals
-    COMPRESSED_IRON(0x6F6C6B, MapColor.COLOR_GRAY, Rarity.UNCOMMON, 0f, PartType.DEFAULT_WEATHERING),
+    COMPRESSED_IRON(0x6F6C6B, MapColor.COLOR_GRAY, Rarity.UNCOMMON, -1, PartType.DEFAULT_WEATHERING),
     MU_PLATINUM(0x627C8B, MapColor.COLOR_BLUE, Rarity.RARE, -1, PartType.DEFAULT),
     NAQUADAH(0x4D5742, MapColor.COLOR_BLACK, Rarity.RARE, -1, PartType.DEFAULT),
     IRIDIUM(0xADC4CE, MapColor.SNOW, Rarity.UNCOMMON, -1, PartType.DEFAULT),

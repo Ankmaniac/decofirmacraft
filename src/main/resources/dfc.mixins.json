@@ -4,6 +4,10 @@
   "package": "com.ankmaniac.decofirmacraft.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
+  "mixins": [
+    "AbstractMinecartMixin",
+    "RailStateMixin"
+  ],
   "client": [
     "client.accessors.ElementsModelAccessor"
   ],

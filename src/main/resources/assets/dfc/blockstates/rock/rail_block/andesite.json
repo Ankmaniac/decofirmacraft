@@ -1,0 +1,62 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "tfc:block/rock/raw/andesite",
+        "uvlock": true
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail_block/andesite_straight"
+      },
+      "when": {
+        "shape": "north_south"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail_block/andesite_straight",
+        "y": 90
+      },
+      "when": {
+        "shape": "east_west"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail_block/andesite_curved",
+        "y": 270
+      },
+      "when": {
+        "shape": "north_east"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail_block/andesite_curved",
+        "y": 180
+      },
+      "when": {
+        "shape": "north_west"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail_block/andesite_curved"
+      },
+      "when": {
+        "shape": "south_east"
+      }
+    },
+    {
+      "apply": {
+        "model": "dfc:block/rock/rail_block/andesite_curved",
+        "y": 90
+      },
+      "when": {
+        "shape": "south_west"
+      }
+    }
+  ]
+}

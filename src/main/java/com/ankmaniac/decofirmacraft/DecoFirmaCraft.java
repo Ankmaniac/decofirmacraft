@@ -7,10 +7,12 @@ import com.ankmaniac.decofirmacraft.common.block.wood.DFCExtendedWood;
 import com.ankmaniac.decofirmacraft.common.blockentities.DFCBlockEntities;
 import com.ankmaniac.decofirmacraft.common.capabilities.DFCBlockCapabilities;
 import com.ankmaniac.decofirmacraft.common.capabilities.DFCItemCapabilities;
+import com.ankmaniac.decofirmacraft.common.container.DFCContainerTypes;
 import com.ankmaniac.decofirmacraft.common.item.DFCCreativeTabs;
 import com.ankmaniac.decofirmacraft.common.item.DFCItems;
 import com.ankmaniac.decofirmacraft.common.player.DFCChiselMode;
 import com.ankmaniac.decofirmacraft.config.DFCConfig;
+import com.ankmaniac.decofirmacraft.network.DFCPackets;
 import com.mojang.logging.LogUtils;
 import net.dries007.tfc.network.PacketHandler;
 import net.dries007.tfc.util.Helpers;
@@ -49,23 +51,28 @@ public final class DecoFirmaCraft {
 		modBus.addListener(this::setup);
 		modBus.addListener(DFCItemCapabilities::register);
 		modBus.addListener(DFCBlockCapabilities::register);
+		modBus.addListener(DFCPackets::setup);
 
 		modBus.register(DecoFirmaCraft.class);
 		DFCItems.ITEMS.register(modBus);
 		DFCBlocks.BLOCKS.register(modBus);
 		DFCBlockEntities.BLOCK_ENTITIES.register(modBus);
 		DFCCreativeTabs.CREATIVE_TABS.register(modBus);
+		DFCContainerTypes.CONTAINERS.register(modBus);
 
 		DFCChiselMode.MODES.register(modBus);
+
+		DFCAttachments.TYPES.register(modBus);
 
 		modBus.addListener(DecoFirmaCraftBuiltInRegistries::registerDatapackRegistries);
 		modBus.addListener(DecoFirmaCraftDataMaps::registerDataMaps);
 
-		DecoFirmaCraftForgeEvents.init(NeoForge.EVENT_BUS);
+		DFCForgeEventHandler.init(NeoForge.EVENT_BUS);
 
 		if (FMLEnvironment.dist == Dist.CLIENT)
 		{
 			ClientEventHandler.init(modContainer, modBus);
+			DFCClientForgeEventHolder.init();
 		}
 	}
 

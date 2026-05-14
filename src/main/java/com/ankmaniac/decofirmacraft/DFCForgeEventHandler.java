@@ -1,36 +1,28 @@
 package com.ankmaniac.decofirmacraft;
 
-import com.ankmaniac.decofirmacraft.client.model.DynamicTextureRecords;
 import com.ankmaniac.decofirmacraft.common.DecoFirmaCraftDataMaps;
 import com.ankmaniac.decofirmacraft.common.block.ChiseledBlock;
 import com.ankmaniac.decofirmacraft.common.block.DFCBlocks;
 import com.ankmaniac.decofirmacraft.common.block.metal.CandleholderBlock;
-import com.ankmaniac.decofirmacraft.common.block.metal.ChandelierBlock;
 import com.ankmaniac.decofirmacraft.common.blockentities.CandleholderBlockEntity;
 import com.ankmaniac.decofirmacraft.common.blockentities.ChiseledBlockEntity;
 import com.ankmaniac.decofirmacraft.common.blockentities.ChiseledBlockEntity.*;
 import com.ankmaniac.decofirmacraft.common.player.DFCChiselMode;
 import com.ankmaniac.decofirmacraft.util.DFCTags;
 import com.ankmaniac.decofirmacraft.util.DynamicTextureDataMap;
-import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
-import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.items.ChiselItem;
 import net.dries007.tfc.common.player.ChiselMode;
 import net.dries007.tfc.common.player.IPlayerInfo;
-import net.dries007.tfc.common.recipes.ChiselRecipe;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.events.DouseFireEvent;
 import net.dries007.tfc.util.events.StartFireEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
@@ -39,14 +31,14 @@ import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
 import net.neoforged.neoforge.event.tick.LevelTickEvent;
 import net.neoforged.neoforge.registries.datamaps.DataMapType;
 
-public final class DecoFirmaCraftForgeEvents {
+public final class DFCForgeEventHandler {
 
 	public static void init(final IEventBus eventBus) {
 		// Register all static @SubscribeEvent annotated event methods
-		eventBus.register(DecoFirmaCraftForgeEvents.class);
-		eventBus.addListener(DecoFirmaCraftForgeEvents::onFireStart);
-		eventBus.addListener(DecoFirmaCraftForgeEvents::onFireStop);
-		eventBus.addListener(DecoFirmaCraftForgeEvents::onUseItemOnBlock);
+		eventBus.register(DFCForgeEventHandler.class);
+		eventBus.addListener(DFCForgeEventHandler::onFireStart);
+		eventBus.addListener(DFCForgeEventHandler::onFireStop);
+		eventBus.addListener(DFCForgeEventHandler::onUseItemOnBlock);
 	}
 
 	public static void onFireStart(StartFireEvent event) {
