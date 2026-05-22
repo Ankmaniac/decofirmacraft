@@ -3,13 +3,14 @@
   "minVersion": "0.8",
   "package": "com.ankmaniac.decofirmacraft.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
   "mixins": [
     "AbstractMinecartMixin",
-    "RailStateMixin"
+    "RailStateMixin",
+    "AbstractContainerScreenMixin"
   ],
   "client": [
-    "client.accessors.ElementsModelAccessor"
+    "client.accessors.ElementsModelAccessor",
+    "client.accessors.AbstractContainerScreenAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

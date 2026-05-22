@@ -24,7 +24,10 @@ public record DFCSwitchInventoryTabPacket(DFCPlayerInventoryTabButton.Tab tab) i
     {
         if (player != null)
         {
-            player.doCloseContainer();
+            if (player.containerMenu != player.inventoryMenu)
+            {
+            player.containerMenu.removed(player);
+            }
             switch (tab)
             {
                 case INVENTORY -> player.openMenu(DFCContainerProviders.INVENTORY);

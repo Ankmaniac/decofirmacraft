@@ -8,5 +8,5 @@ import net.minecraft.world.SimpleMenuProvider;
 
 public class DFCContainerProviders
 {
-    public static final MenuProvider INVENTORY = new SimpleMenuProvider((windowId, inv, player) -> Container.create(DFCContainerTypes.INVENTORY.get(), windowId, player.getInventory()), Component.translatable("dfc.screen.calendar"));
+    public static final MenuProvider INVENTORY = new SimpleMenuProvider((windowId, inv, player) -> DFCInventoryMenu.create(player.getInventory(), windowId, player), Component.translatable("dfc.screen.crafting"));
 }

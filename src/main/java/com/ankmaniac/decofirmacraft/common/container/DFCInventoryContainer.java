@@ -6,21 +6,14 @@ import lombok.Setter;
 import net.dries007.tfc.common.container.ISlotCallback;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.util.Mth;
-import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.SlotItemHandler;
 import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.CheckForNull;
-import javax.swing.*;
 import java.util.Optional;
 
 public class DFCInventoryContainer extends AbstractContainerMenu
@@ -284,559 +277,201 @@ public class DFCInventoryContainer extends AbstractContainerMenu
         TRASH
     }
 
-    public class ScrollingSlot extends Slot implements Scrollable
+    public class Scroller
     {
-        private final boolean vertical;
+        @Getter
+        @Setter
         private int offset = 0;
-
-        public ScrollingSlot(Container container, int slot, int x, int y, boolean vertical)
-        {
-            this(container, slot, x, y, vertical, 0);
-        }
-
-        public ScrollingSlot(Container container, int slot, int x, int y, boolean vertical, int startingOffset)
-        {
-            super(container, slot, x, y);
-
-            this.vertical = vertical;
-            this.setOffset(startingOffset);
-        }
-
-        @Override
-        public int getOffset()
-        {
-            return offset;
-        }
-
-        @Override
-        public void setOffset(int offset)
-        {
-            this.offset = offset < 16 ? offset > 0 ? Mth.clamp(offset, 0, 16) : offset + 16 : offset - 16;
-        }
-
-        @Override
-        public void addToOffset(int offset)
-        {
-            this.setOffset(this.getOffset() + offset);
-        }
-
-        @Override
-        public boolean isVertical()
-        {
-            return vertical;
-        }
-    }
-
-    public class ScrollingSlotItemHandler extends SlotItemHandler implements Scrollable
-    {
+        @Getter
         private final boolean vertical;
-        private int offset = 0;
+        @Getter
+        @Setter
+        private int maxScrollPixels;
+        @Getter
+        private final int windowSize;
+        @Getter
+        private final int windowOffset;
 
-        public ScrollingSlotItemHandler(IItemHandler itemHandler, int slot, int x, int y, boolean vertical)
+        public Scroller(boolean vertical, int startingMaxPixels, int windowSize, int windowOffset)
         {
-            this(itemHandler, slot, x, y, vertical, 0);
+            this(vertical, 0, startingMaxPixels, windowSize, windowOffset);
         }
 
-        public ScrollingSlotItemHandler(IItemHandler itemHandler, int slot, int x, int y, boolean vertical, int startingOffset)
+        public Scroller(boolean vertical, int startingOffset, int startingMaxPixels, int windowSize, int windowOffset)
         {
-            super(itemHandler, slot, x, y);
-
             this.vertical = vertical;
-            this.setOffset(startingOffset);
+            this.offset = startingOffset;
+            this.maxScrollPixels = startingMaxPixels;
+            this.windowSize = windowSize;
+            this.windowOffset = windowOffset;
         }
 
-        @Override
-        public int getOffset()
+        public int getCutoffSize(int firstPosition, int lastPosition)
         {
-            return offset;
-        }
+            firstPosition -= offset % 18;
+            lastPosition -= offset % 18;
+            final int firstEdge = this.windowOffset;
+            final int lastEdge = this.windowOffset + this.windowSize;
 
-        @Override
-        public void setOffset(int offset)
-        {
-            this.offset = offset < 16 ? offset > 0 ? Mth.clamp(offset, 0, 16) : offset + 16 : offset - 16;
-        }
-
-        @Override
-        public void addToOffset(int offset)
-        {
-            this.setOffset(this.getOffset() + offset);
-        }
-
-        @Override
-        public boolean isVertical()
-        {
-            return vertical;
-        }
-    }
-
-    public class ToggledScrollingSlot extends ScrollingSlot implements Togglable
-    {
-        private boolean enabled;
-
-        public ToggledScrollingSlot(Container container, int slot, int x, int y, boolean vertical)
-        {
-            super(container, slot, x, y, vertical);
-        }
-
-        public ToggledScrollingSlot(Container container, int slot, int x, int y, boolean vertical, int startingOffset)
-        {
-            super(container, slot, x, y, vertical, startingOffset);
-        }
-
-        public ToggledScrollingSlot(Container container, int slot, int x, int y, boolean vertical, boolean enabled)
-        {
-            super(container, slot, x, y, vertical);
-
-            this.enabled = enabled;
-        }
-
-        public ToggledScrollingSlot(Container container, int slot, int x, int y, boolean vertical, int startingOffset, boolean enabled)
-        {
-            super(container, slot, x, y, vertical, startingOffset);
-
-            this.enabled = enabled;
-        }
-
-        @Override
-        public boolean isActive()
-        {
-            return this.enabled;
-        }
-
-        @Override
-        public void setEnabled(boolean enable)
-        {
-            this.enabled = enable;
-        }
-
-        @Override
-        public boolean mayPlace(ItemStack stack)
-        {
-            return this.enabled;
-        }
-
-        @Override
-        public boolean mayPickup(Player player)
-        {
-            return this.enabled;
-        }
-
-        @Override
-        public boolean isHighlightable()
-        {
-            return this.enabled;
-        }
-    }
-
-    public class ToggledScrollingSlotItemHandler extends ScrollingSlotItemHandler implements Togglable
-    {
-        private boolean enabled;
-
-        public ToggledScrollingSlotItemHandler(IItemHandler itemHandler, int slot, int x, int y, boolean vertical)
-        {
-            super(itemHandler, slot, x, y, vertical);
-        }
-
-        public ToggledScrollingSlotItemHandler(IItemHandler itemHandler, int slot, int x, int y, boolean vertical, int startingOffset)
-        {
-            super(itemHandler, slot, x, y, vertical, startingOffset);
-        }
-
-        public ToggledScrollingSlotItemHandler(IItemHandler itemHandler, int slot, int x, int y, boolean vertical, boolean enabled)
-        {
-            super(itemHandler, slot, x, y, vertical);
-
-            this.enabled = enabled;
-        }
-
-        public ToggledScrollingSlotItemHandler(IItemHandler itemHandler, int slot, int x, int y, boolean vertical, int startingOffset, boolean enabled)
-        {
-            super(itemHandler, slot, x, y, vertical, startingOffset);
-
-            this.enabled = enabled;
-        }
-
-        @Override
-        public boolean isActive()
-        {
-            return this.enabled;
-        }
-
-        @Override
-        public void setEnabled(boolean enable)
-        {
-            this.enabled = enable;
-        }
-
-        @Override
-        public boolean mayPlace(ItemStack stack)
-        {
-            return this.enabled;
-        }
-
-        @Override
-        public boolean mayPickup(Player player)
-        {
-            return this.enabled;
-        }
-
-        @Override
-        public boolean isHighlightable()
-        {
-            return this.enabled;
-        }
-    }
-
-    public class ToggledRemappableScrollingSlot extends RemappableContainerSlot implements Togglable, Scrollable
-    {
-        private final boolean vertical;
-        private int offset = 0;
-        private boolean enabled;
-
-        public ToggledRemappableScrollingSlot(IItemHandler itemHandler, int slot, int x, int y, boolean vertical)
-        {
-            this(itemHandler, slot, x, y, vertical, 0);
-        }
-
-        public ToggledRemappableScrollingSlot(IItemHandler itemHandler, int slot, int x, int y, boolean vertical, int startingOffset)
-        {
-            this(itemHandler, slot, x, y,  vertical, startingOffset, false);
-        }
-
-        public ToggledRemappableScrollingSlot(IItemHandler itemHandler, int slot, int x, int y, boolean vertical, boolean enabled)
-        {
-            this(itemHandler, slot, x, y, vertical, 0, enabled);
-        }
-
-        public ToggledRemappableScrollingSlot(IItemHandler itemHandler, int slot, int x, int y, boolean vertical, int startingOffset, boolean enabled)
-        {
-            super(itemHandler, slot, x, y);
-
-            this.enabled = enabled;
-            this.vertical = vertical;
-            this.setOffset(startingOffset);
-        }
-
-        @Override
-        public boolean isActive()
-        {
-            return this.enabled;
-        }
-
-        @Override
-        public void setEnabled(boolean enable)
-        {
-            this.enabled = enable;
-        }
-
-        @Override
-        public boolean mayPlace(ItemStack stack)
-        {
-            return this.enabled && super.mayPlace(stack);
-        }
-
-        @Override
-        public boolean mayPickup(Player player)
-        {
-            return this.enabled && super.mayPickup(player);
-        }
-
-        @Override
-        public int getOffset()
-        {
-            return offset;
-        }
-
-        @Override
-        public void setOffset(int offset)
-        {
-            this.offset = offset < 16 ? offset > 0 ? Mth.clamp(offset, 0, 16) : offset + 16 : offset - 16;
-        }
-
-        @Override
-        public void addToOffset(int offset)
-        {
-            this.setOffset(this.getOffset() + offset);
-        }
-
-        @Override
-        public boolean isVertical()
-        {
-            return vertical;
-        }
-
-        @Override
-        public boolean isHighlightable()
-        {
-            return this.enabled;
-        }
-    }
-
-    public class ToggledRemappableScrollingContainerSlot extends RemappableSlot implements Togglable, Scrollable
-    {
-        private final boolean vertical;
-        private int offset = 0;
-        private boolean enabled;
-
-        public ToggledRemappableScrollingContainerSlot(IItemHandler itemHandler, int slot, int x, int y, boolean vertical)
-        {
-            this(itemHandler, slot, x, y, vertical, 0);
-        }
-
-        public ToggledRemappableScrollingContainerSlot(IItemHandler itemHandler, int slot, int x, int y, boolean vertical, int startingOffset)
-        {
-            this(itemHandler, slot, x, y,  vertical, startingOffset, false);
-        }
-
-        public ToggledRemappableScrollingContainerSlot(IItemHandler itemHandler, int slot, int x, int y, boolean vertical, boolean enabled)
-        {
-            this(itemHandler, slot, x, y, vertical, 0, enabled);
-        }
-
-        public ToggledRemappableScrollingContainerSlot(IItemHandler itemHandler, int slot, int x, int y, boolean vertical, int startingOffset, boolean enabled)
-        {
-            super(itemHandler, slot, x, y);
-
-            this.enabled = enabled;
-            this.vertical = vertical;
-            this.setOffset(startingOffset);
-        }
-
-        @Override
-        public boolean isActive()
-        {
-            return this.enabled;
-        }
-
-        @Override
-        public void setEnabled(boolean enable)
-        {
-            this.enabled = enable;
-        }
-
-        @Override
-        public boolean mayPlace(ItemStack stack)
-        {
-            return this.enabled && super.mayPlace(stack);
-        }
-
-        @Override
-        public boolean mayPickup(Player player)
-        {
-            return this.enabled && super.mayPickup(player);
-        }
-
-        @Override
-        public int getOffset()
-        {
-            return offset;
-        }
-
-        @Override
-        public void setOffset(int offset)
-        {
-            this.offset = offset < 16 ? offset > 0 ? Mth.clamp(offset, 0, 16) : offset + 16 : offset - 16;
-        }
-
-        @Override
-        public void addToOffset(int offset)
-        {
-            this.setOffset(this.getOffset() + offset);
-        }
-
-        @Override
-        public boolean isVertical()
-        {
-            return vertical;
-        }
-
-        @Override
-        public boolean isHighlightable()
-        {
-            return this.enabled;
-        }
-    }
-
-
-    public interface Scrollable
-    {
-        int getOffset();
-        void setOffset(int offset);
-        void addToOffset(int offset);
-        boolean isVertical();
-    }
-
-    public interface Togglable
-    {
-        void setEnabled(boolean enable);
-    }
-
-    public class RemappableContainerSlot extends Slot
-    {
-        private static Container emptyInventory = new SimpleContainer(0);
-        @Nullable
-        protected IItemHandler itemHandler;
-        protected int slot;
-
-        public RemappableContainerSlot(@Nullable IItemHandler itemHandler, int slot, int xPosition, int yPosition) {
-            super(emptyInventory, slot, xPosition, yPosition);
-            this.itemHandler = itemHandler;
-            this.slot = slot;
+            if (firstPosition < firstEdge)
+            {
+                return Math.clamp(lastPosition - firstEdge, 0, lastPosition - firstPosition);
+            }
+            if (lastPosition > lastEdge)
+            {
+                return Math.clamp(lastEdge - firstPosition, 0, lastPosition - firstPosition);
+            }
+            return lastPosition - firstPosition;
         }
 
         /**
-        / if you are setting itemHandler to null, set itemSlot to -1
+        /false is the first edge, as in top/left depending on orientation
         */
-        public void setItemHandler(IItemHandler itemHandler, int slot)
+        public boolean getCutoffSide(int firstPosition, int lastPosition)
         {
-            if (itemHandler != null)
-            {
-                this.itemHandler = itemHandler;
-                this.slot = slot;
-            }
-            else
-            {
-                this.itemHandler = null;
-                this.slot = -1;
-            }
-        }
+            firstPosition += offset % 18;
+            lastPosition += offset % 18;
+            final int firstEdge = this.windowOffset;
+            final int lastEdge = this.windowOffset + this.windowSize;
 
-        public boolean mayPlace(ItemStack stack)
-        {
-            if (this.itemHandler != null)
-            {
-                return stack.isEmpty() ? false : this.itemHandler.isItemValid(this.slot, stack);
-            }
-            return false;
-        }
-
-        public ItemStack getItem()
-        {
-            if (this.itemHandler != null)
-            {
-                return this.getItemHandler().getStackInSlot(this.slot);
-            }
-            return ItemStack.EMPTY;
-        }
-
-        public void set(ItemStack stack)
-        {
-            if (this.itemHandler != null)
-            {
-                ((IItemHandlerModifiable)this.getItemHandler()).setStackInSlot(this.index, stack);
-                this.setChanged();
-            }
-        }
-
-        public void initialize(ItemStack stack)
-        {
-            if (this.itemHandler != null)
-            {
-                ((IItemHandlerModifiable)this.getItemHandler()).setStackInSlot(this.index, stack);
-                this.setChanged();
-            }
-        }
-
-        public void onQuickCraft(ItemStack oldStackIn, ItemStack newStackIn)
-        {
-        }
-
-        public int getMaxStackSize()
-        {
-            if (this.itemHandler != null)
-            {
-                return this.itemHandler.getSlotLimit(this.index);
-            }
-            return 0;
-        }
-
-        public int getMaxStackSize(ItemStack stack)
-        {
-            if (this.itemHandler != null)
-            {
-                return Math.min(stack.getMaxStackSize(), this.itemHandler.getSlotLimit(this.index));
-            }
-            return 0;
-        }
-
-        public boolean mayPickup(Player playerIn)
-        {
-            if (this.itemHandler != null)
-            {
-                return !this.getItemHandler().extractItem(this.index, 1, true).isEmpty();
-            }
-            return false;
-        }
-
-        public ItemStack remove(int amount)
-        {
-            if (this.itemHandler != null)
-            {
-                return this.getItemHandler().extractItem(this.index, amount, false);
-            }
-            return ItemStack.EMPTY;
-        }
-
-        public IItemHandler getItemHandler()
-        {
-            return this.itemHandler;
+            return lastPosition > lastEdge;
         }
     }
     
-    public class RemappableSlot extends SlotItemHandler
+    public class RemappableSlot extends Slot
     {
-        @Setter
         @Getter
-        protected int slot;
-        private final IItemHandler itemHandler;
+        private final Scroller scroller;
+        protected final int slot;
+        private final SlotWrappingContainer wrapper;
 
-        public RemappableSlot(IItemHandler itemHandler, int slot, int xPosition, int yPosition) {
-            super(itemHandler, slot, xPosition, yPosition);
-            this.itemHandler = itemHandler;
+        public RemappableSlot(SlotWrappingContainer wrapper, int slot, int xPosition, int yPosition, Scroller scroller) {
+            super(wrapper, slot, xPosition, yPosition);
+            this.wrapper = wrapper;
             this.slot = slot;
+            this.scroller = scroller;
+        }
+
+        public boolean hasItem()
+        {
+            return !this.wrapper.getItem(slot).isEmpty();
         }
 
         public boolean mayPlace(ItemStack stack) 
         {
-            return stack.isEmpty() ? false : this.itemHandler.isItemValid(this.slot, stack);
+            return this.wrapper.isItemValid(this.slot, stack);
         }
 
         public ItemStack getItem() 
         {
-            return this.getItemHandler().getStackInSlot(this.slot);
+            return this.wrapper.getItem(this.slot);
         }
 
         public void set(ItemStack stack) 
         {
-            ((IItemHandlerModifiable)this.getItemHandler()).setStackInSlot(this.slot, stack);
+            this.wrapper.setItem(this.slot, stack);
             this.setChanged();
         }
 
         public void initialize(ItemStack stack) 
         {
-            ((IItemHandlerModifiable)this.getItemHandler()).setStackInSlot(this.slot, stack);
+            this.wrapper.setItem(this.slot, stack);
             this.setChanged();
         }
 
         public int getMaxStackSize() 
         {
-            return this.itemHandler.getSlotLimit(this.slot);
+            return this.wrapper.getSlotLimit(this.slot);
         }
 
         public int getMaxStackSize(ItemStack stack) 
         {
-            return Math.min(stack.getMaxStackSize(), this.itemHandler.getSlotLimit(this.slot));
+            return Math.min(stack.getMaxStackSize(), this.wrapper.getSlotLimit(this.slot));
         }
 
         public boolean mayPickup(Player playerIn) 
         {
-            return !this.getItemHandler().extractItem(this.slot, 1, true).isEmpty();
+            return this.wrapper.mayPickup(this.slot);
         }
 
         public ItemStack remove(int amount) 
         {
-            return this.getItemHandler().extractItem(this.slot, amount, false);
+            return this.wrapper.extractItem(this.slot, amount);
+        }
+
+        @Override
+        public boolean isActive()
+        {
+            return this.wrapper.isActive(this.slot);
+        }
+
+        @Override
+        public boolean isHighlightable()
+        {
+            return this.wrapper.isActive(this.slot);
+        }
+
+        public int getOffset()
+        {
+            return this.scroller.getOffset();
+        }
+
+        public boolean isVertical()
+        {
+            return this.scroller.isVertical();
+        }
+    }
+
+    public class SlotWrappingContainer extends SimpleContainer
+    {
+        @Getter
+        private final SlotMap slotMap;
+
+        SlotWrappingContainer(int size, SlotMap slotMap)
+        {
+            super(size);
+            this.slotMap = slotMap;
+        }
+
+        public boolean isItemValid(int slot, ItemStack stack)
+        {
+            return slotMap.mayPlace(stack, slot);
+        }
+
+        public int getSlotLimit(int slot)
+        {
+            return this.slotMap.getMaxStackSize(slot);
+        }
+
+        public boolean mayPickup(int slot)
+        {
+            return this.slotMap.mayPickup(slot);
+        }
+
+        public ItemStack extractItem(int slot,  int amount)
+        {
+            return this.slotMap.remove(slot, amount);
+        }
+
+        public boolean isActive(int slot)
+        {
+            return this.slotMap.isActive(slot);
+        }
+
+        @Override
+        public ItemStack getItem(int index)
+        {
+            if (index >= 0 && index < this.getItems().size())
+            {
+                return slotMap.getItem(index);
+            }
+            return ItemStack.EMPTY;
+        }
+
+        @Override
+        public void setItem(int slot, ItemStack stack)
+        {
+            this.slotMap.set(stack, slot);
         }
     }
 }

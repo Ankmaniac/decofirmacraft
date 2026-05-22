@@ -1,6 +1,7 @@
 package com.ankmaniac.decofirmacraft.common.container;
 
 import com.ankmaniac.decofirmacraft.DFCAttachments;
+import lombok.Getter;
 import lombok.Setter;
 import net.dries007.tfc.common.capabilities.ItemCapabilities;
 import net.dries007.tfc.common.component.item.ItemContainer;
@@ -12,15 +13,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.items.SlotItemHandler;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
-public class DFCInventoryMenu extends DFCInventoryContainer
+public class DFCInventoryMenu extends DFCInventoryContainer implements Scrollable
 {
     public static DFCInventoryMenu create(Inventory playerInv, int windowId, Player player)
     {
-        return new DFCInventoryMenu(playerInv, player, windowId).init(playerInv, 0);
+        return new DFCInventoryMenu(playerInv, player, windowId).init(playerInv);
     }
 
     public static final int RESULT_SLOT = 0;
@@ -39,13 +41,18 @@ public class DFCInventoryMenu extends DFCInventoryContainer
     private final Inventory playerInv;
     private final CraftingContainer craftSlots = new TransientCraftingContainer(this, 3, 3);
     private final ResultContainer resultSlots = new ResultContainer();
-    private Map<Integer, int[]> containerPositions;
+    private final SlotWrappingContainer containers;
+    private final SlotWrappingContainer contents;
+    @Getter
+    private final Scroller containerScroller;
+    @Getter
+    private final Scroller contentsScroller;
     private int containerOffset = 0;
     private int contentOffset = 0;
-    private int openContentSlots = 0;
-    private int openContainerSlots = 4;
     private int maxContainerPixels = 70;
     private int maxContentPixels = 70;
+    private final SlotMap containerMap;
+    private final SlotMap contentsMap;
 
     public DFCInventoryMenu(Inventory playerInventory, final Player player, int windowId)
     {
@@ -53,120 +60,46 @@ public class DFCInventoryMenu extends DFCInventoryContainer
 
         this.player = player;
         this.playerInv = playerInventory;
-        this.containerPositions = new HashMap<>();
+        this.containerScroller = new Scroller(true, maxContainerPixels, 72, 7);
+        this.contentsScroller = new Scroller(true, maxContentPixels, 72, 7);
+        this.containerMap = new SlotMap(1, 5, this.player.getData(DFCAttachments.EXTRA_PLAYER_SLOTS), this.containerScroller);
+        this.contentsMap = new SlotMap(3, 5, this.player.getData(DFCAttachments.EXTRA_PLAYER_SLOTS), this.contentsScroller);
+        this.containers = new SlotWrappingContainer(5, this.containerMap);
+        this.contents = new SlotWrappingContainer(15, this.contentsMap);
+        this.containerMap.setContainer(this.containers);
+        this.contentsMap.setContainer(this.contents);
     }
 
-    private void updateContainerSlots()
+    public void scroll(int id, int offset)
     {
-        int topSlotOffset = Math.floorDiv(this.containerOffset, 18);
-        for (int i = CONTAINER_SLOT_START; i < CONTAINER_SLOT_END; i++)
+        if (id == 0)
         {
-            ToggledRemappableScrollingContainerSlot slot = (ToggledRemappableScrollingContainerSlot) this.getSlot(i);
-
-            slot.setSlot(i - CONTAINER_SLOT_START + topSlotOffset);
-            this.slots.set(i, slot);
-        }
-    }
-
-    private void updateContentSlots()
-    {
-        System.out.println("UPDATING CONTENT SLOTS");
-        int topSlotOffset = Math.floorDiv(this.contentOffset, 18) * 3;
-        for (int i = CONTENTS_SLOT_START; i < CONTENTS_SLOT_END; i++)
-        {
-            ToggledRemappableScrollingSlot slot = (ToggledRemappableScrollingSlot) this.getSlot(i);
-
-            int[] newSlots = this.containerPositions.get(i - CONTENTS_SLOT_START + topSlotOffset);
-            if (newSlots != null)
+            final int oldOffset = this.containerOffset;
+            final int maxScrollAmount = this.containerScroller.getMaxScrollPixels();
+            this.containerOffset = Math.clamp(this.containerOffset + offset, 0, maxScrollAmount);
+            if (oldOffset != this.containerOffset)
             {
-                System.out.println("UPDATING CONTENT SLOTS " + i);
-                ItemStack stack = player.getData(DFCAttachments.EXTRA_PLAYER_SLOTS).getStackInSlot(newSlots[0]);
-
-                IItemHandler container = getItemHandler(stack);
-                if (container != null)
-                {
-                    slot.setItemHandler(container, newSlots[1]);
-                    slot.setEnabled(true);
-                }
-                else
-                {
-                    slot.setItemHandler(null, -1);
-                    slot.setEnabled(false);
-                }
+                this.containerScroller.setOffset(containerOffset);
             }
-            else
+            if (Math.floorDiv(this.containerOffset, 18) != Math.floorDiv(oldOffset, 18))
             {
-                slot.setItemHandler(null, -1);
-                slot.setEnabled(false);
-            }
-            this.slots.set(i, slot);
-        }
-    }
-
-    private void updateContents()
-    {
-        System.out.println("UPDATING CONTENTS");
-        this.openContentSlots = 0;
-        for (int i = 0; i < MAX_CONTAINERS; ++i)
-        {
-            ItemStack stack = player.getData(DFCAttachments.EXTRA_PLAYER_SLOTS).getStackInSlot(i);
-
-            IItemHandler container = getItemHandler(stack);
-            if (container != null)
-            {
-                System.out.println("CONTAINER " + i);
-                for (int j = 0; j < container.getSlots(); ++j)
-                {
-                    int[] pair = {i, j};
-                    this.containerPositions.put(openContentSlots + j + 1, pair);
-                }
-                this.openContentSlots += container.getSlots();
+                this.containerMap.updatePositions();
+                this.broadcastChanges();
             }
         }
-        this.maxContentPixels = Math.max(Math.ceilDiv(this.openContentSlots, 3) * 18, 70);
-        updateContentSlots();
-    }
-
-    public void scrollContainers(int scrollAmount)
-    {
-        final int oldOffset = this.containerOffset;
-        scrollAmount = scrollAmount + this.containerOffset > 0 ? scrollAmount + this.containerOffset < maxContainerPixels ? scrollAmount : scrollAmount + this.containerOffset - maxContainerPixels : this.containerOffset;
-        this.containerOffset += scrollAmount;
-        if (Math.floorDiv(this.containerOffset, 18) != Math.floorDiv(oldOffset, 18))
+        else if (id == 1)
         {
-            this.updateContainerSlots();
-        }
-        if (oldOffset != this.containerOffset)
-        {
-            for (int i = CONTAINER_SLOT_START; i < CONTAINER_SLOT_END; i++)
+            final int oldOffset = this.contentOffset;
+            final int maxScrollAmount = this.contentsScroller.getMaxScrollPixels();
+            this.contentOffset = Math.clamp(this.contentOffset + offset, 0, maxScrollAmount);
+            if (oldOffset != this.contentOffset)
             {
-                ToggledRemappableScrollingContainerSlot slot = (ToggledRemappableScrollingContainerSlot) this.getSlot(i);
-
-                slot.addToOffset(scrollAmount);
-
-                this.slots.set(i, slot);
+                this.contentsScroller.setOffset(contentOffset);
             }
-        }
-    }
-
-    public void scrollContent(int scrollAmount)
-    {
-        final int oldOffset = this.contentOffset;
-        scrollAmount = scrollAmount + this.contentOffset > 0 ? scrollAmount + this.contentOffset < maxContentPixels ? scrollAmount : scrollAmount + this.contentOffset - maxContentPixels : this.contentOffset;
-        this.contentOffset += scrollAmount;
-        if (Math.floorDiv(this.contentOffset, 18) != Math.floorDiv(oldOffset, 18))
-        {
-            this.updateContentSlots();
-        }
-        if (oldOffset != this.contentOffset)
-        {
-            for (int i = CONTENTS_SLOT_START; i < CONTENTS_SLOT_END; i++)
+            if (Math.floorDiv(this.contentOffset, 18) != Math.floorDiv(oldOffset, 18))
             {
-                ToggledRemappableScrollingSlot slot = (ToggledRemappableScrollingSlot) this.getSlot(i);
-
-                slot.addToOffset(scrollAmount);
-
-                this.slots.set(i, slot);
+                this.contentsMap.updatePositions();
+                this.broadcastChanges();
             }
         }
     }
@@ -174,32 +107,20 @@ public class DFCInventoryMenu extends DFCInventoryContainer
     @Override
     public void clicked(int slot, int button, ClickType clickType, Player player)
     {
-        if ((slot >= CONTAINER_SLOT_START && slot < CONTAINER_SLOT_END) && (button == 0 || button == 1))
-        {
-            this.updateContents();
-        }
-        if (slot < CRAFT_SLOT_END)
-        {
-            System.out.println("CRAFTING SLOT " + slot);
-        }
-        if (slot >= CONTAINER_SLOT_START && slot < CONTAINER_SLOT_END)
-        {
-            System.out.println("CONTAINER SLOT " + slot);
-        }
-        if (slot >= CONTENTS_SLOT_START && slot < CONTENTS_SLOT_END)
-        {
-            System.out.println("CONTENT SLOT " + slot);
-        }
         super.clicked(slot, button, clickType, player);
+        if ((slot >= CONTAINER_SLOT_START && slot < CONTAINER_SLOT_END))
+        {
+            this.containerMap.updateContainers();
+            this.contentsMap.updateContents();
+            this.broadcastChanges();
+        }
     }
 
     @Override
     protected void addContainerSlots()
     {
         // Result Index 0
-        this.addSlot(new ResultSlot(playerInv.player, this.craftSlots, this.resultSlots, 0, 170, 36));
-
-        System.out.println("result slot index: " + this.slots.size());
+        this.addSlot(new ResultSlot(this.player, this.craftSlots, this.resultSlots, 0, 170, 36));
 
         // Crafting Slots always on Indexes 1, 2, 4, 5
         // Togglable Crafting Slots Indexes 3, 6, 7, 8, 9
@@ -209,38 +130,35 @@ public class DFCInventoryMenu extends DFCInventoryContainer
             {
                 if (i == 2 || j == 2)
                 {
-                    this.addSlot(new ToggledCraftingSlot(this.craftSlots, j + i * 2, 96 + j * 18, 18 + i * 18, player));
+                    this.addSlot(new ToggledCraftingSlot(this.craftSlots, j + i * 3, 96 + j * 18, 18 + i * 18, player));
                 }
                 else
                 {
-                    this.addSlot(new Slot(this.craftSlots, j + i * 2, 96 + j * 18, 18 + i * 18));
+                    this.addSlot(new Slot(this.craftSlots, j + i * 3, 96 + j * 18, 18 + i * 18));
                 }
             }
         }
-        System.out.println("crafting slot index: " + this.slots.size());
 
         // Scrolling Container Slots Indexes [10, 15)
         for(int i = 0; i < 5; ++i)
         {
-            this.addSlot(new ToggledRemappableScrollingContainerSlot(player.getData(DFCAttachments.EXTRA_PLAYER_SLOTS), i, 8, 8 + i * 18, true, true));
+            this.addSlot(new RemappableSlot(this.containers, i, 8, 8 + i * 18, this.containerScroller));
         }
-
-        System.out.println("container slot index: " + this.slots.size());
 
         // Scrolling Container Slots Indexes [15, 30)
         for(int i = 0; i < 5; ++i)
         {
             for(int j = 0; j < 3; ++j)
             {
-                this.addSlot(new ToggledRemappableScrollingSlot(null, j + i * 3, 33 + j * 18, 8 + i * 18, true, false));
+                this.addSlot(new RemappableSlot(this.contents, j + i * 3, 33 + j * 18, 8 + i * 18, this.contentsScroller));
             }
         }
 
-        System.out.println("content slot index: " + this.slots.size());
-
-        this.updateContents();
-        this.updateContainerSlots();
-        this.updateContentSlots();
+        this.containerMap.updateContainers();
+        this.contentsMap.updateContents();
+        this.containerMap.updatePositions();
+        this.contentsMap.updatePositions();
+        this.broadcastChanges();
     }
 
     @Nullable
@@ -251,8 +169,6 @@ public class DFCInventoryMenu extends DFCInventoryContainer
 
     public class ToggledCraftingSlot extends Slot
     {
-        @Setter
-        private boolean canUse = false;
         private final Player player;
 
         public ToggledCraftingSlot(Container container, int slot, int x, int y, Player player)
@@ -262,7 +178,6 @@ public class DFCInventoryMenu extends DFCInventoryContainer
             //TODO - add events that can detect when a crafting table is crafted and
             // updates this instantly
             this.player = player;
-            canUse = player.getData(DFCAttachments.PLAYER_INFO).isFullCraftingEnabled();
         }
 
         public boolean canUse()
@@ -271,15 +186,27 @@ public class DFCInventoryMenu extends DFCInventoryContainer
         }
 
         @Override
+        public boolean isActive()
+        {
+            return this.canUse();
+        }
+
+        @Override
+        public boolean isHighlightable()
+        {
+            return this.canUse();
+        }
+
+        @Override
         public boolean mayPlace(ItemStack stack)
         {
-            return canUse;
+            return canUse();
         }
 
         @Override
         public boolean mayPickup(Player player)
         {
-            return canUse;
+            return canUse();
         }
     }
 }

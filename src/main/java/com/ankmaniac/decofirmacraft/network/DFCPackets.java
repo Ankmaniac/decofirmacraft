@@ -31,6 +31,7 @@ public final class DFCPackets
         register.playToServer(StartContinuousUsePacket.TYPE, StartContinuousUsePacket.CODEC, onServer(StartContinuousUsePacket::handle));
         register.playToServer(StopContinuousUsePacket.TYPE, StopContinuousUsePacket.CODEC, onServer(StopContinuousUsePacket::handle));
         register.playToServer(DFCSwitchInventoryTabPacket.TYPE, DFCSwitchInventoryTabPacket.CODEC, onServer(DFCSwitchInventoryTabPacket::handle));
+        register.playToServer(ScrollMenuPacket.TYPE, ScrollMenuPacket.CODEC, onServer(ScrollMenuPacket::handle));
     }
 
     private static <T extends CustomPacketPayload> IPayloadHandler<T> onClient(Consumer<T> handler)

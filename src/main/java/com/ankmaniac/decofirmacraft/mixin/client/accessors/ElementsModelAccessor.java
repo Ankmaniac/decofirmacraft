@@ -8,7 +8,8 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 import java.util.List;
 
 @Mixin(ElementsModel.class)
-public interface ElementsModelAccessor {
+public interface ElementsModelAccessor
+{
     @Accessor
     List<BlockElement> getElements();
 }
